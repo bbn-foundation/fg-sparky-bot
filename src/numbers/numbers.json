@@ -1,0 +1,18 @@
+{
+  "easy": [
+    { "name": "Endless", "image": "src/numbers/easy/endless.png" },
+    { "name": "Absolute Breakdown", "image": "src/numbers/easy/absolute-breakdown.png" },
+    { "name": "Absolute Infinity", "image": "src/numbers/easy/absolute-infinity.png" },
+    { "name": "Absolute Fictional Numbers", "image": "src/numbers/easy/absolute-fictional-numbers.png" },
+    { "name": "Too Much Massive Finity", "image": "src/numbers/easy/too-much-massive-finity.png" }
+  ],
+  "medium": [
+    { "name": "placeholder", "image": "yay.png" }
+  ],
+  "hard": [
+    { "name": "placeholder", "image": "yay.png" }
+  ],
+  "legendary": [
+    { "name": "placeholder", "image": "yay.png" }
+  ]
+}

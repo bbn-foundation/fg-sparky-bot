@@ -16,14 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-import { ApplicationCommandOptionType, type Client, type CommandInteraction } from "discord.js";
-import type { Command } from "./types.ts";
+import { ApplicationCommandOptionType, type Client, type ContextMenuCommandInteraction } from "discord.js";
+import { findRandomNumber, type Difficulties } from "../numbers/get-random-number.ts";
+import type { ContextMenuCommand } from "./types.ts";
 
-const Guess: Command = {
-  async run(client: Client, interaction: CommandInteraction): Promise<void> {
-    await interaction.followUp("Not implemented yet!");
+const Guess: ContextMenuCommand = {
+  async run(client: Client, interaction: ContextMenuCommandInteraction): Promise<void> {
+    const difficulty = interaction.options.get("difficulty", true).value as Difficulties;
+    const number = findRandomNumber(difficulty);
+    await interaction.followUp({ content: `Guess the number, you have 60 seconds.`, files: [number.symbol] });
   },
-  description: "Say hi to the bot",
+  description: "Generates a number that you have to guess.",
   name: "guess",
   options: [{
     name: "difficulty",
