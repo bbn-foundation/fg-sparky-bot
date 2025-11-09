@@ -18,6 +18,7 @@
  */
 import type { Client, CommandInteraction } from "discord.js";
 import { Logger } from "../utils/logger";
+import { enforceCooldown } from "./cooldowns";
 import type { Command } from "./types";
 
 export async function handleSlashCommand(
@@ -34,6 +35,8 @@ export async function handleSlashCommand(
     return;
   }
 
+  Logger.info(`Making sure the command ${interaction.commandName} isn't on cooldown...`);
+  if (await enforceCooldown(slashCommand, interaction)) return;
   Logger.info(`Running command ${interaction.commandName}`);
   await slashCommand.run(client, interaction);
 };

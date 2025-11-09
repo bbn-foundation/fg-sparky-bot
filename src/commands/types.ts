@@ -20,8 +20,10 @@ import type { ChatInputApplicationCommandData, ChatInputCommandInteraction, Clie
 
 export interface Command extends ChatInputApplicationCommandData {
   run: (client: Client, interaction: CommandInteraction) => Promise<void>;
+  cooldown?: number | undefined;
 }
 
 export interface ChatInputCommand extends ChatInputApplicationCommandData {
   run: (client: Client, interaction: ChatInputCommandInteraction) => Promise<void>;
+  cooldown?: number | undefined;
 }

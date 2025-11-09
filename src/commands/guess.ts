@@ -79,6 +79,7 @@ const Guess: ChatInputCommand = {
       { name: "Random", value: "random" },
     ],
   }],
+  cooldown: 10,
 };
 
 export default Guess;
