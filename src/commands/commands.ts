@@ -17,6 +17,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 import Hello from "./hello.ts";
+import StartSession from "./start-session.ts";
 import type { Command } from "./types.ts";
 
-export const Commands: readonly Command[] = [Hello];
+export const Commands: readonly Command[] = [Hello, StartSession];
