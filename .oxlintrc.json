@@ -120,7 +120,6 @@
     "eslint/prefer-object-has-own": "warn",
     "eslint/prefer-object-spread": "warn",
     "eslint/prefer-spread": "warn",
-    "eslint/sort-imports": "warn",
     "eslint/sort-vars": "warn",
     /// eslint-plugin-import
     "import/no-cycle": "warn",

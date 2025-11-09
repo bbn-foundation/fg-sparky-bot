@@ -1,7 +1,6 @@
-// @ts-check
-import { type Config, defineConfig, globalIgnores } from "eslint/config";
-import oxlint from "eslint-plugin-oxlint";
 import stylistic from "@stylistic/eslint-plugin";
+import oxlint from "eslint-plugin-oxlint";
+import { type Config, defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
 const _default: Config[] = defineConfig(
