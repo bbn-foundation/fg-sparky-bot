@@ -2014,9 +2014,24 @@
   ],
   "medium": [
     {
+      "name": "Absolute Ultimate Cycle",
+      "hashedName": "6e20874431d4f0b89e6aa42fe707f1632d0f6dce999865aaf9e6e6556db77e01d8696bd2b2bb4d5f93d5909b3deeafb4447e50024572c3d373515eca6e76e98f",
+      "image": "src/numbers/medium/6e20874431d4f0b89e6aa42fe707f1632d0f6dce999865aaf9e6e6556db77e01d8696bd2b2bb4d5f93d5909b3deeafb4447e50024572c3d373515eca6e76e98f.jpg"
+    },
+    {
       "name": "Dunix-Circledfinity",
       "hashedName": "5b79b68a126396e41d9725e3448242d05a1fba1ab65183de292c12860ecf7d6de59c997fa88d0bfc668b4a089e1a09099e0247fe1803d6895f398833db56a583",
       "image": "src/numbers/medium/5b79b68a126396e41d9725e3448242d05a1fba1ab65183de292c12860ecf7d6de59c997fa88d0bfc668b4a089e1a09099e0247fe1803d6895f398833db56a583.jpg"
+    },
+    {
+      "name": "Alphilia-Numbers",
+      "hashedName": "dc080b064f1c5102ec86751df15e5a2ac073ed3cf63639c3467c13c7af47254b624f1819797be1737a7c37b503808def35fb23b81e18d11f0224880dd4c62dce",
+      "image": "src/numbers/medium/dc080b064f1c5102ec86751df15e5a2ac073ed3cf63639c3467c13c7af47254b624f1819797be1737a7c37b503808def35fb23b81e18d11f0224880dd4c62dce.jpg"
+    },
+    {
+      "name": "Loop Loop #1",
+      "hashedName": "c634c85adffc79037d3f9b501114673ab3ea7e2f46d21b6d129c0dbd4b4c9963b4e1792d8a20ae0941a4b01f76de71fe2f6e2f604f827e4a1d03d25185f9f91b",
+      "image": "src/numbers/medium/c634c85adffc79037d3f9b501114673ab3ea7e2f46d21b6d129c0dbd4b4c9963b4e1792d8a20ae0941a4b01f76de71fe2f6e2f604f827e4a1d03d25185f9f91b.jpg"
     },
     {
       "name": "Errorifinity",
@@ -2024,14 +2039,39 @@
       "image": "src/numbers/medium/ed0f997d8d5f8c3ca33752c2b1b3b8d3eaefa3326d89aae585e949b5a0c550c5945b6017297ca70fb7ee2b554909e30ce370e62ca49efa40268b86668929a820.jpg"
     },
     {
+      "name": "Iteldelrothing",
+      "hashedName": "0dce19cb0510ffeec956d06c4738372465712ebb74f33038070d418b14be36009781d77815a85ad48b916157ba3d5f0359cbe64fc163cc7eb83db570a8dd581a",
+      "image": "src/numbers/medium/0dce19cb0510ffeec956d06c4738372465712ebb74f33038070d418b14be36009781d77815a85ad48b916157ba3d5f0359cbe64fc163cc7eb83db570a8dd581a.jpg"
+    },
+    {
+      "name": "Beta-Hyper One Cardinal",
+      "hashedName": "b9a5d666a03b3423a5c9dadea77245d9760af3e6d08f169192d57a29cd3fd13df60ff7df8dbacea5c605da83e2d4623f6262fd2bd87a7e028aca55d757940134",
+      "image": "src/numbers/medium/b9a5d666a03b3423a5c9dadea77245d9760af3e6d08f169192d57a29cd3fd13df60ff7df8dbacea5c605da83e2d4623f6262fd2bd87a7e028aca55d757940134.jpg"
+    },
+    {
       "name": "Proximifinity",
       "hashedName": "f18260494942982e418f42d305707323ad28b3950ec3f0494b9506e46fde57cfddd89b2c6a382f1641c9dded47940bab3c66611ad33f4e43c6b7a336242708c7",
       "image": "src/numbers/medium/f18260494942982e418f42d305707323ad28b3950ec3f0494b9506e46fde57cfddd89b2c6a382f1641c9dded47940bab3c66611ad33f4e43c6b7a336242708c7.jpg"
     },
     {
-      "name": "Trisifinity",
-      "hashedName": "a1b5efd67512fedcd1fcaddbef5acf674f3738ee9711aff66776f2ebb75a851897433093755636406f2bb3750117edd60919e0487b9103bce13a6d637d2470f8",
-      "image": "src/numbers/medium/a1b5efd67512fedcd1fcaddbef5acf674f3738ee9711aff66776f2ebb75a851897433093755636406f2bb3750117edd60919e0487b9103bce13a6d637d2470f8.jpg"
+      "name": "Pre-Alphafinitium",
+      "hashedName": "87092fa6529ef5f80cd9607ce1d4b9f3f9fe8f555b13e4fb57268f1d32fde8b7057d29e608060209542ddf2bdb263b69dadd9aa2135e21ecbdc6f390e26f21bb",
+      "image": "src/numbers/medium/87092fa6529ef5f80cd9607ce1d4b9f3f9fe8f555b13e4fb57268f1d32fde8b7057d29e608060209542ddf2bdb263b69dadd9aa2135e21ecbdc6f390e26f21bb.jpg"
+    },
+    {
+      "name": "The Giga",
+      "hashedName": "a561d1f03236dbe05741bbd881eb4c7730604864d3e2b0b8e5f1d526a17d68132068462868214d7f87806f5cc4ff303a5ab332753cfc32a22e8deed1f754e5e3",
+      "image": "src/numbers/medium/a561d1f03236dbe05741bbd881eb4c7730604864d3e2b0b8e5f1d526a17d68132068462868214d7f87806f5cc4ff303a5ab332753cfc32a22e8deed1f754e5e3.jpg"
+    },
+    {
+      "name": "The XLOAY Limit",
+      "hashedName": "790600f610d2e6d8bf9d69442841a5c8908c2db781c1e3821bceb584ac6d32f3f085aafcb0baa8cb9f8cb2e47ae6b372f66923f753e73b6d288c882fbf0254df",
+      "image": "src/numbers/medium/790600f610d2e6d8bf9d69442841a5c8908c2db781c1e3821bceb584ac6d32f3f085aafcb0baa8cb9f8cb2e47ae6b372f66923f753e73b6d288c882fbf0254df.jpg"
+    },
+    {
+      "name": "Cetatafinity",
+      "hashedName": "c0cd7481b21aac8f6b154371a68fe5fcd5951605c7f8df9d975bb931705c47fdc292ff93ab4ba7dc58260fe6d34a1a10b7b994d8afd1db0d1f211ed775747c08",
+      "image": "src/numbers/medium/c0cd7481b21aac8f6b154371a68fe5fcd5951605c7f8df9d975bb931705c47fdc292ff93ab4ba7dc58260fe6d34a1a10b7b994d8afd1db0d1f211ed775747c08.jpg"
     },
     {
       "name": "Pentifinity",
@@ -2044,14 +2084,29 @@
       "image": "src/numbers/medium/51a2266c759ca5987cf28f7a45ca2da2a8e3683a9cec558a76b1e8e028cb3e9edbabfc60edcc163722aa4a8f899fa0f4a5e2eef59cd56bd836a1a335cee87393.jpg"
     },
     {
-      "name": "Unreliafinity",
-      "hashedName": "192f3a98bf5da4fc1191e1a372b158a192a623951c9bafec1b39add067e9bce2ee9dbf11dad8b935fb7bdf461ef57b752e73334fd27be0b896bc7914e59cd1f8",
-      "image": "src/numbers/medium/192f3a98bf5da4fc1191e1a372b158a192a623951c9bafec1b39add067e9bce2ee9dbf11dad8b935fb7bdf461ef57b752e73334fd27be0b896bc7914e59cd1f8.jpg"
+      "name": "THE B.E.YGOOGOLOGY",
+      "hashedName": "0fce556cee176978f835615c594347667c61595165ff1e001e988f750b51a965eae94f309908a5aa1d642138069fea44362c3587436c51856471de36c8413c89",
+      "image": "src/numbers/medium/0fce556cee176978f835615c594347667c61595165ff1e001e988f750b51a965eae94f309908a5aa1d642138069fea44362c3587436c51856471de36c8413c89.jpg"
     },
     {
-      "name": "Trufinity",
-      "hashedName": "ef6be1e01079ce19299a0769691ed17f9c99615de53fec05e10ab3a80f0c457d206e8b67b103ed528d158b134f397b580ad51c0cce8fd19d442ea0aaf14f1b18",
-      "image": "src/numbers/medium/ef6be1e01079ce19299a0769691ed17f9c99615de53fec05e10ab3a80f0c457d206e8b67b103ed528d158b134f397b580ad51c0cce8fd19d442ea0aaf14f1b18.jpg"
+      "name": "ENDERATIONLESS",
+      "hashedName": "9f0d62aba177c77ff108d2205eb8f2165f1e02df19587e376ff2345bd672e4ef465267746f58dee6246baa9d719f172d9cfd1891d5476cf2c19b2d66662ec031",
+      "image": "src/numbers/medium/9f0d62aba177c77ff108d2205eb8f2165f1e02df19587e376ff2345bd672e4ef465267746f58dee6246baa9d719f172d9cfd1891d5476cf2c19b2d66662ec031.jpg"
+    },
+    {
+      "name": "Supermassive Absolute",
+      "hashedName": "77668e156763b37190bb77f638ba0ab086e599d9123b0540684efeec8c01edbb6c284d883ba6febef0a25123e6777be8fe67608206579e68cb92e383c6ff3f17",
+      "image": "src/numbers/medium/77668e156763b37190bb77f638ba0ab086e599d9123b0540684efeec8c01edbb6c284d883ba6febef0a25123e6777be8fe67608206579e68cb92e383c6ff3f17.jpg"
+    },
+    {
+      "name": "The Opposings",
+      "hashedName": "e82ab78675614795beb48bb90f28ee3084359ec1f214d9f00c39a1e89ef8515fb06442b43b8f56dd8869731d366fe36ad8df46174e80c6ae989f292f9746423a",
+      "image": "src/numbers/medium/e82ab78675614795beb48bb90f28ee3084359ec1f214d9f00c39a1e89ef8515fb06442b43b8f56dd8869731d366fe36ad8df46174e80c6ae989f292f9746423a.jpg"
+    },
+    {
+      "name": "Fictional Esciopalypse",
+      "hashedName": "3c6b597c013069890a47f889b088b2e756e542e66b9a573273d4399f64b629e0e939f2135210526633bd9e3b64cce3f6ac16f77cd0cf9f0162b14c3cf7ebc09f",
+      "image": "src/numbers/medium/3c6b597c013069890a47f889b088b2e756e542e66b9a573273d4399f64b629e0e939f2135210526633bd9e3b64cce3f6ac16f77cd0cf9f0162b14c3cf7ebc09f.jpg"
     },
     {
       "name": "Lastfinity",
@@ -2069,9 +2124,9 @@
       "image": "src/numbers/medium/3d978666269f4a77872ea75c09b44a89e46ecd53c5111c22f140cdc35ec13d90e2093b2d638197fdabbbf5bd8f1efba740333e79ca0bcff7c0fc9b4ae863defa.jpg"
     },
     {
-      "name": "Soulifinity",
-      "hashedName": "de79c5e76c14248c3ce6b0c5760738cc0d7b6a1dd7a4474c61ed0cc9d41bba50887fad5838c51ae5ddee5c7450d5cd2238e3e03d04782000ab2b7ce5c47945de",
-      "image": "src/numbers/medium/de79c5e76c14248c3ce6b0c5760738cc0d7b6a1dd7a4474c61ed0cc9d41bba50887fad5838c51ae5ddee5c7450d5cd2238e3e03d04782000ab2b7ce5c47945de.jpg"
+      "name": "Absolute Equivalent",
+      "hashedName": "42a450de4796272bbed76137e61b9023283dea2ec354ee62f57b63dc465205f484a698778aedbe1646b50ec34391f6236b234f914ad75d476c1a5fd634c6d2ae",
+      "image": "src/numbers/medium/42a450de4796272bbed76137e61b9023283dea2ec354ee62f57b63dc465205f484a698778aedbe1646b50ec34391f6236b234f914ad75d476c1a5fd634c6d2ae.jpg"
     },
     {
       "name": "Absolute Quantence",
@@ -2079,14 +2134,29 @@
       "image": "src/numbers/medium/fa50787867dc74972c19be89bbf1229ef2d0993f7c504dd19d713982f3f159a8f123d0da6754928f694ad2f28ca4ac6ae57a2ca5b8550154743d19e49acc6416.jpg"
     },
     {
-      "name": "Tveryifinity",
-      "hashedName": "2fae37b10e8bc247b852a2a86bbee88cfa0276b72f78d6304622100773ea52a50a8008fc6df3e99335107c4738fe646eff1fcc74975c5f6fcd0b4ceef5fb3758",
-      "image": "src/numbers/medium/2fae37b10e8bc247b852a2a86bbee88cfa0276b72f78d6304622100773ea52a50a8008fc6df3e99335107c4738fe646eff1fcc74975c5f6fcd0b4ceef5fb3758.jpg"
+      "name": "ULTRONIMATION",
+      "hashedName": "ef3b76ae25c21db86e3ee7210fdf9a03907c40bd6cd6a21e2c152beb8b90cc766d063f3a8bd1d4137a874ac25fdb490cac5da649ab96de72b66e05923712b8c0",
+      "image": "src/numbers/medium/ef3b76ae25c21db86e3ee7210fdf9a03907c40bd6cd6a21e2c152beb8b90cc766d063f3a8bd1d4137a874ac25fdb490cac5da649ab96de72b66e05923712b8c0.jpg"
+    },
+    {
+      "name": "The Absolute Limit",
+      "hashedName": "3ffee3c9342320e956c1eee55f22c513c021b05f551ace14b516fe45b3cf1ac4822461e9ae91ac5af8d0cb59d8bde2959561d13e05dab3ac7f4805825f21a153",
+      "image": "src/numbers/medium/3ffee3c9342320e956c1eee55f22c513c021b05f551ace14b516fe45b3cf1ac4822461e9ae91ac5af8d0cb59d8bde2959561d13e05dab3ac7f4805825f21a153.jpg"
     },
     {
       "name": "Absolium One finium",
       "hashedName": "7fd6b86672ce77982364a185eeaf66e6b3a52b3c650557ec756ce0d4d3684f26ded0f0855776d06ed940b056c19292e4429f87d30bd9ab806f40622ecb555cc0",
       "image": "src/numbers/medium/7fd6b86672ce77982364a185eeaf66e6b3a52b3c650557ec756ce0d4d3684f26ded0f0855776d06ed940b056c19292e4429f87d30bd9ab806f40622ecb555cc0.jpg"
+    },
+    {
+      "name": "Layeromium #1",
+      "hashedName": "e8dbcf4e72ce5e9b3e49c10529b1030eaec39454c0074e66a62d1b4a91d79fe4e02c639a30b6952534f2af95c1ba7980601ba78019d7d620958893de66423201",
+      "image": "src/numbers/medium/e8dbcf4e72ce5e9b3e49c10529b1030eaec39454c0074e66a62d1b4a91d79fe4e02c639a30b6952534f2af95c1ba7980601ba78019d7d620958893de66423201.jpg"
+    },
+    {
+      "name": "Hepta-Hyper One Cardinal",
+      "hashedName": "f439bb6977f613fff7d954b6b2b5c0382f330ac481d267aa4f8205a639311f4bc4c84c6698d424c67a39c8a9d5e79020107140c07f868d400d8ee5e5a2fe2346",
+      "image": "src/numbers/medium/f439bb6977f613fff7d954b6b2b5c0382f330ac481d267aa4f8205a639311f4bc4c84c6698d424c67a39c8a9d5e79020107140c07f868d400d8ee5e5a2fe2346.jpg"
     },
     {
       "name": "Absolute Null Finite",
@@ -2099,19 +2169,9 @@
       "image": "src/numbers/medium/8e3d2516dd2b09e95fb39a16525925a70bf0a7812e8b5693acc1802787341211cf79d126f63ae8459590c5b1f25cffb32778c45a4b826e8046b503a37b422131.jpg"
     },
     {
-      "name": "Unknownfinity",
-      "hashedName": "1e912910a267ae7dce626206e1375c736da5a4e0bfb0d55ab30815910b1f3166a8dd8f4080757736e10936d74946e7e7470a7f4e909a84aa35e404c256dd0c27",
-      "image": "src/numbers/medium/1e912910a267ae7dce626206e1375c736da5a4e0bfb0d55ab30815910b1f3166a8dd8f4080757736e10936d74946e7e7470a7f4e909a84aa35e404c256dd0c27.jpg"
-    },
-    {
-      "name": "Ultimafinity",
-      "hashedName": "acf5091819f3e671055040c367d68c36881ad249ebddc582accf9bf9857d0e2fad99ee4497dc8046e4f5a5b631b493473c0eebd3ccc4c81c1d5228a0e88d048e",
-      "image": "src/numbers/medium/acf5091819f3e671055040c367d68c36881ad249ebddc582accf9bf9857d0e2fad99ee4497dc8046e4f5a5b631b493473c0eebd3ccc4c81c1d5228a0e88d048e.jpg"
-    },
-    {
-      "name": "Timeendifinity",
-      "hashedName": "013e200ad60487acae39de6b22de943c0311fe6da0fa86be250ac1b676583d6f2eccce2069581945a6dea3bb1916043f53447b87a93a69c9d40f135716c63a9a",
-      "image": "src/numbers/medium/013e200ad60487acae39de6b22de943c0311fe6da0fa86be250ac1b676583d6f2eccce2069581945a6dea3bb1916043f53447b87a93a69c9d40f135716c63a9a.jpg"
+      "name": "The Ultra Googology",
+      "hashedName": "a27d58df0d28e81afab468248f9c0eb46f4d60c5177c67ed8e47b182be649189cc4f3fd4d572c6304bf7c0938e047ee5e3807dfac202013998c8c1d314e983e0",
+      "image": "src/numbers/medium/a27d58df0d28e81afab468248f9c0eb46f4d60c5177c67ed8e47b182be649189cc4f3fd4d572c6304bf7c0938e047ee5e3807dfac202013998c8c1d314e983e0.jpg"
     },
     {
       "name": "Bluifinity",
@@ -2119,14 +2179,44 @@
       "image": "src/numbers/medium/c89f174e6c2a4e3367327aa4c00129599cd36a66006449269bb87a80613ff8530057262424c5391951c6c903e59a15b54ac73479b38e8aeb3af0c905844987e4.jpg"
     },
     {
+      "name": "All.Finities",
+      "hashedName": "051987cb4ebab27dbf6b043cbfb72388ea8561bae7f4fdc3e55cc58d345ed747a6f335edcbe08a11441bec4a62f2c307b8a7e15f9a4fcfa672cd51b1f7566ba8",
+      "image": "src/numbers/medium/051987cb4ebab27dbf6b043cbfb72388ea8561bae7f4fdc3e55cc58d345ed747a6f335edcbe08a11441bec4a62f2c307b8a7e15f9a4fcfa672cd51b1f7566ba8.jpg"
+    },
+    {
+      "name": "Prestige of E.N.D Numbers",
+      "hashedName": "326d0e794caec0dfcad7165e469dec97126e3a6a0399fb68829c7ef1fb78088930bcf1828d2aeaad5f789084a177b490f4b3fc3fe698ef5d15e2702def7a0147",
+      "image": "src/numbers/medium/326d0e794caec0dfcad7165e469dec97126e3a6a0399fb68829c7ef1fb78088930bcf1828d2aeaad5f789084a177b490f4b3fc3fe698ef5d15e2702def7a0147.jpg"
+    },
+    {
+      "name": "ULTIMASOULMATION",
+      "hashedName": "247e962e4801b62caf70ffe296bb2bf44545ada1cf22b4e8481eb260db593de0af8ee9abb2a335097b87c8e34f889d72adfcab434ed2884bf3533b2eeb055c01",
+      "image": "src/numbers/medium/247e962e4801b62caf70ffe296bb2bf44545ada1cf22b4e8481eb260db593de0af8ee9abb2a335097b87c8e34f889d72adfcab434ed2884bf3533b2eeb055c01.jpg"
+    },
+    {
+      "name": "Hyper of Symbols",
+      "hashedName": "3c6ce9897520b6ee9037396297324edcd4f3368f1b61438c73bf1364f536387f0a9e36849a48335d3dd87dbaa9d2ffea3384184a1d28c44614788da5cc73ec18",
+      "image": "src/numbers/medium/3c6ce9897520b6ee9037396297324edcd4f3368f1b61438c73bf1364f536387f0a9e36849a48335d3dd87dbaa9d2ffea3384184a1d28c44614788da5cc73ec18.jpg"
+    },
+    {
       "name": "Indescriblifinity",
       "hashedName": "0a9641c348c780ed7d71b4451405d1a8c8c2296c2efe256fab6db4994e5653c88486bd7e67399e8358e919bd0d6a0ed0f563eace9469a1b07dff85d9c6fedce9",
       "image": "src/numbers/medium/0a9641c348c780ed7d71b4451405d1a8c8c2296c2efe256fab6db4994e5653c88486bd7e67399e8358e919bd0d6a0ed0f563eace9469a1b07dff85d9c6fedce9.jpg"
     },
     {
-      "name": "Yearlinity Numberfinite",
-      "hashedName": "c3621f3856481ceda0672b75071ec89e2b58cd4f30deae2d136e16f8e7dd3a49a36e8ef246eb1b3f32465a59e139e3bad4f95a37e8c32265efa9c46358fc1e57",
-      "image": "src/numbers/medium/c3621f3856481ceda0672b75071ec89e2b58cd4f30deae2d136e16f8e7dd3a49a36e8ef246eb1b3f32465a59e139e3bad4f95a37e8c32265efa9c46358fc1e57.jpg"
+      "name": "ENDLESS FINAL FINITI. ENDLESS FINAL",
+      "hashedName": "d5c5e71e1c3c8f20afc77bb0408a3e2fa2338f4de5b2682c8320b6a60a8b8cbd715c23a5954f36a1c989d8ffd487c4b8d9af33b5bee847d8b2b3270a724c5fc3",
+      "image": "src/numbers/medium/d5c5e71e1c3c8f20afc77bb0408a3e2fa2338f4de5b2682c8320b6a60a8b8cbd715c23a5954f36a1c989d8ffd487c4b8d9af33b5bee847d8b2b3270a724c5fc3.jpg"
+    },
+    {
+      "name": "Beyond Cycles I",
+      "hashedName": "817d1448f5a98fec6da5056c1c176ea336d1c93d72fb36b1f841c2c701a5cf8e062d8ea18d9d6d64b2cf56b95e64fd55ec6bfcae9664be48f2ce3144b47fe818",
+      "image": "src/numbers/medium/817d1448f5a98fec6da5056c1c176ea336d1c93d72fb36b1f841c2c701a5cf8e062d8ea18d9d6d64b2cf56b95e64fd55ec6bfcae9664be48f2ce3144b47fe818.jpg"
+    },
+    {
+      "name": "Indestrumoinfinity",
+      "hashedName": "55351fe21e66ecf7dfa2b5831784d4c24d586152b71c56a7f99c0234d4ce4c14d30050ec4f8aec48136acc02fd4e9a8d0c187e6dc43053d72b59a3da5a9d063f",
+      "image": "src/numbers/medium/55351fe21e66ecf7dfa2b5831784d4c24d586152b71c56a7f99c0234d4ce4c14d30050ec4f8aec48136acc02fd4e9a8d0c187e6dc43053d72b59a3da5a9d063f.jpg"
     },
     {
       "name": "Absolute Unspecified Aleph Function",
@@ -2139,14 +2229,14 @@
       "image": "src/numbers/medium/14c54cca5ef490c9c2b48c85b66b5cfb576721d3f05a3177ed2e184852a72d2b7e1e6600ef655eade2b4a8e05eb837305faa4a3136406456178c496b2ffe336e.jpg"
     },
     {
+      "name": "The Infinitial Stage",
+      "hashedName": "1065821bae637c3c18ce0d6208088b18ef6df7907a90fb7b93a648527c2ea30accc0093ac963d76abefd8e3096df828af0e64bcb7c2330dd2ae2fa425040842f",
+      "image": "src/numbers/medium/1065821bae637c3c18ce0d6208088b18ef6df7907a90fb7b93a648527c2ea30accc0093ac963d76abefd8e3096df828af0e64bcb7c2330dd2ae2fa425040842f.jpg"
+    },
+    {
       "name": "Error Number One",
       "hashedName": "f4c3f9d6cedb05dc93af3252b35f3302ac25782bcad2142d3f06a4710b7d576ae2dbdb2047536d2cbe63536c61a99ea9c464a42c1e6c1324d753d22c6ac063c4",
       "image": "src/numbers/medium/f4c3f9d6cedb05dc93af3252b35f3302ac25782bcad2142d3f06a4710b7d576ae2dbdb2047536d2cbe63536c61a99ea9c464a42c1e6c1324d753d22c6ac063c4.jpg"
-    },
-    {
-      "name": "True Everything of Godlous",
-      "hashedName": "48bff2450e65ab837c2babc201c51042ce89c21af424d91ad7edf0342a0120741b89f3f3bb208c0487482820d6b46717949a6b36821cb650ccc375af6c309861",
-      "image": "src/numbers/medium/48bff2450e65ab837c2babc201c51042ce89c21af424d91ad7edf0342a0120741b89f3f3bb208c0487482820d6b46717949a6b36821cb650ccc375af6c309861.jpg"
     },
     {
       "name": "Infinality",
@@ -2159,14 +2249,9 @@
       "image": "src/numbers/medium/1fec2d6e15f132db0fd970ce123daf34e669355efb37e897f5a636d600f3f81e4165246afb8378ebf6d70b26db945b7e64827ee26c2915c18bedf1a927179518.jpg"
     },
     {
-      "name": "Super-Collapsing Numeral",
-      "hashedName": "85449657dd983c131fcc69e40e40ca2e9eb283efea2bc49ceb48267cd3cafe26729c57d01e2a78aef12063562b762adfc357d20d424bcfb576df6d3c393d171d",
-      "image": "src/numbers/medium/85449657dd983c131fcc69e40e40ca2e9eb283efea2bc49ceb48267cd3cafe26729c57d01e2a78aef12063562b762adfc357d20d424bcfb576df6d3c393d171d.jpg"
-    },
-    {
-      "name": "Traginfinity",
-      "hashedName": "e3fe5c84735940bddb214eef4a4b653fcf06a134463ecae86f94630985946c554dd8d165cd19c340c5edbf54fc9e576deda2cff0b2a2b2b0ae3f6992800c9398",
-      "image": "src/numbers/medium/e3fe5c84735940bddb214eef4a4b653fcf06a134463ecae86f94630985946c554dd8d165cd19c340c5edbf54fc9e576deda2cff0b2a2b2b0ae3f6992800c9398.jpg"
+      "name": "First Transistor",
+      "hashedName": "838ae8655d6c7e149e6086214cd92c401d286e0e92c568e1df7675c61e759bb4b4d459554fdaa71d5b092e69983343283ea45b92e4edc54174453ed660ec1e8f",
+      "image": "src/numbers/medium/838ae8655d6c7e149e6086214cd92c401d286e0e92c568e1df7675c61e759bb4b4d459554fdaa71d5b092e69983343283ea45b92e4edc54174453ed660ec1e8f.jpg"
     },
     {
       "name": "Meta Error Sulute One",
@@ -2174,14 +2259,34 @@
       "image": "src/numbers/medium/d060c29bf34f2c1891ea5888b0e788945b53bd9ab6b14086d8b20a46f240d96c252b51e51e4699e8ca164befeba8050ac1b170455ef45f54d9293a50afe2e529.jpg"
     },
     {
-      "name": "Saturnifinity",
-      "hashedName": "92b11970295170c126f4dada893b17c4d38eeccc2d2f66c93ed7f6c46cd70ec3e325546255b26f7d9e4897db81c81769abfa7fef70a468f85d664d7537571e67",
-      "image": "src/numbers/medium/92b11970295170c126f4dada893b17c4d38eeccc2d2f66c93ed7f6c46cd70ec3e325546255b26f7d9e4897db81c81769abfa7fef70a468f85d664d7537571e67.jpg"
+      "name": "ETATION",
+      "hashedName": "2d0e3ddb6ad448bac95095b1e2ce9e385787c5d3cb8afa813fdbce780fee9437168f90f717e6ef7720f24953b5b73d3e332023d6d353eae11675da23cfa77919",
+      "image": "src/numbers/medium/2d0e3ddb6ad448bac95095b1e2ce9e385787c5d3cb8afa813fdbce780fee9437168f90f717e6ef7720f24953b5b73d3e332023d6d353eae11675da23cfa77919.jpg"
+    },
+    {
+      "name": "The Other Side",
+      "hashedName": "5a5cd19c44ac0b3f4f3f6dbbf4b259d7259fb5e2f8a28a7c13bda26d90dd7bb457c8e989d48351439cdfeeedd9ade901d184a2c211ef3d4cb50b179be0f50db8",
+      "image": "src/numbers/medium/5a5cd19c44ac0b3f4f3f6dbbf4b259d7259fb5e2f8a28a7c13bda26d90dd7bb457c8e989d48351439cdfeeedd9ade901d184a2c211ef3d4cb50b179be0f50db8.jpg"
     },
     {
       "name": "Petilfinity",
       "hashedName": "027a38c026f4cfc0be29012aebee77267aa0b8a26a960ead44db9b520c4408143e05f382e0a4df3fe84b451624683d6f984c667f4c73ee16d40ad08756c7bc3c",
       "image": "src/numbers/medium/027a38c026f4cfc0be29012aebee77267aa0b8a26a960ead44db9b520c4408143e05f382e0a4df3fe84b451624683d6f984c667f4c73ee16d40ad08756c7bc3c.jpg"
+    },
+    {
+      "name": "Brenum",
+      "hashedName": "7ca3e946b787b1ba993b4cd012fb3693250367cd9b3253c976f0150f9289e54dc8540cf76028ea96097ad18de92d0b386c67256a9852d69c64c0ae93278a8954",
+      "image": "src/numbers/medium/7ca3e946b787b1ba993b4cd012fb3693250367cd9b3253c976f0150f9289e54dc8540cf76028ea96097ad18de92d0b386c67256a9852d69c64c0ae93278a8954.jpg"
+    },
+    {
+      "name": "Absolute Megacycle",
+      "hashedName": "c9324a680e57866309e2ff1537f6e8e8ced3390cc903b49c9dbe5c3ae802de70f1971a0f48bf1f0d5866737c8bf34f3471e2eb626f64657624736569fcd619ea",
+      "image": "src/numbers/medium/c9324a680e57866309e2ff1537f6e8e8ced3390cc903b49c9dbe5c3ae802de70f1971a0f48bf1f0d5866737c8bf34f3471e2eb626f64657624736569fcd619ea.jpg"
+    },
+    {
+      "name": "Mastery Omntuous",
+      "hashedName": "1a5058be97816a1b5a22166037d4dbdd00550b1bc2c094615f19c9cd33ffee25d9cb9c45a0cd01fafa173cd9b1a39af9dbaf5ab9892256a0c1d8896abd8e303f",
+      "image": "src/numbers/medium/1a5058be97816a1b5a22166037d4dbdd00550b1bc2c094615f19c9cd33ffee25d9cb9c45a0cd01fafa173cd9b1a39af9dbaf5ab9892256a0c1d8896abd8e303f.jpg"
     },
     {
       "name": "Cardinalfinity",
@@ -2194,9 +2299,39 @@
       "image": "src/numbers/medium/02afd5467aaef7bedf4e9f2689bfae4a92f5d8b50ec14806a6673b83dcae2c545eac9e79ac214fd14bf2fdb83b3efe729cdde68da55e64851b295a3b26350a24.jpg"
     },
     {
-      "name": "The Super Godility",
-      "hashedName": "17917105813ff01045de9e5dbf4e14496ec745c955ab1a1b9e2f13c74b1effa6f85051e0db48d69fed85276ccf392168bee9f4e2868e29e1be79b319223f7ddc",
-      "image": "src/numbers/medium/17917105813ff01045de9e5dbf4e14496ec745c955ab1a1b9e2f13c74b1effa6f85051e0db48d69fed85276ccf392168bee9f4e2868e29e1be79b319223f7ddc.jpg"
+      "name": "The Eternal",
+      "hashedName": "6a2adbb55100a6e9ecb9d39a9a115745a7aa1abcd560bf939d9f7f978669182877fef093cb45b9148011c6ac2e3a780c07eb5d577921691785a2110d44bd8bfb",
+      "image": "src/numbers/medium/6a2adbb55100a6e9ecb9d39a9a115745a7aa1abcd560bf939d9f7f978669182877fef093cb45b9148011c6ac2e3a780c07eb5d577921691785a2110d44bd8bfb.jpg"
+    },
+    {
+      "name": "Mebrun",
+      "hashedName": "278a282d50f2815453275369dbbb8670fd6f5fcf6c2d29011d379a9f6e6442a1cb98412fba426a47c7d49181bd61459a8bd157caa9a98d2337ca25ca3ed9315d",
+      "image": "src/numbers/medium/278a282d50f2815453275369dbbb8670fd6f5fcf6c2d29011d379a9f6e6442a1cb98412fba426a47c7d49181bd61459a8bd157caa9a98d2337ca25ca3ed9315d.jpg"
+    },
+    {
+      "name": "The Deleveribate",
+      "hashedName": "04840c2aba21461a6dc94b955ab920074a8c5b3fbc796cdb4ee540fabaeabccf03f6e6fb0ef807eaf8aa7d7edc5cb65360427a4fc407e660037d1b7b52e6d268",
+      "image": "src/numbers/medium/04840c2aba21461a6dc94b955ab920074a8c5b3fbc796cdb4ee540fabaeabccf03f6e6fb0ef807eaf8aa7d7edc5cb65360427a4fc407e660037d1b7b52e6d268.jpg"
+    },
+    {
+      "name": "The Enneri Numbertomin",
+      "hashedName": "1cc9e3f078fa4503beb07efa8b2ed46a3a35a73c7085e285c6764d4d7c6bb7b5d1f1511d426c5fa0804367a90c8d67613af671d9cb5cd8c199fd3420461629bf",
+      "image": "src/numbers/medium/1cc9e3f078fa4503beb07efa8b2ed46a3a35a73c7085e285c6764d4d7c6bb7b5d1f1511d426c5fa0804367a90c8d67613af671d9cb5cd8c199fd3420461629bf.jpg"
+    },
+    {
+      "name": "The Finalirestiges",
+      "hashedName": "6876710571cd2efe81d46fdb29aa5581411f31c144774be11ba73eb435fd40c5fd1eed648baf55fb1b0798d7596474d169b0ea408e83ae9d1c04a8af6ad37fb3",
+      "image": "src/numbers/medium/6876710571cd2efe81d46fdb29aa5581411f31c144774be11ba73eb435fd40c5fd1eed648baf55fb1b0798d7596474d169b0ea408e83ae9d1c04a8af6ad37fb3.jpg"
+    },
+    {
+      "name": "Absolute Multieverything",
+      "hashedName": "4c6bf9e659b9eb98318b532b1e2066ea93dbef77fadfa6eb96ac3bd5e72045d530ea2b44b89d09c9174c8380b51aeec550927d054d5b9163a28c3641e255a713",
+      "image": "src/numbers/medium/4c6bf9e659b9eb98318b532b1e2066ea93dbef77fadfa6eb96ac3bd5e72045d530ea2b44b89d09c9174c8380b51aeec550927d054d5b9163a28c3641e255a713.jpg"
+    },
+    {
+      "name": "The Super Googology",
+      "hashedName": "92bd2e2e502c2e09400f62e94489491fa95c1a36c66edeb6a9918857d70503cb4c5940f55d235b1d533fb139b190ebdb85d12c91fb7326d636291e5fbdc772f3",
+      "image": "src/numbers/medium/92bd2e2e502c2e09400f62e94489491fa95c1a36c66edeb6a9918857d70503cb4c5940f55d235b1d533fb139b190ebdb85d12c91fb7326d636291e5fbdc772f3.jpg"
     },
     {
       "name": "Absolute X of Ending",
@@ -2214,14 +2349,9 @@
       "image": "src/numbers/medium/c9db48a0d98590d1e78b537816da627372b76c8277b528ffb86bebbbea58e7d19e514afbbdc0272069c8f2d57713dc2990d1936456324e61d79b17731a7175e3.jpg"
     },
     {
-      "name": "The Barrier",
-      "hashedName": "75389308798b2042ffaca03a55403eddd7b40af8b5022e7df387878d8e5b0b832c9b18dddf50050649041f069a9ce248ce7b2f2bb349deaf1bca48060ac31439",
-      "image": "src/numbers/medium/75389308798b2042ffaca03a55403eddd7b40af8b5022e7df387878d8e5b0b832c9b18dddf50050649041f069a9ce248ce7b2f2bb349deaf1bca48060ac31439.jpg"
-    },
-    {
-      "name": "Recyclility One",
-      "hashedName": "d29ed89bd1e31f45339fcc87eee10a92504c5b4f35ad05c39aa2e8be100af1457b4961b63d0be96845abbc9ec6c786c8736594da6cb2f6a409eb4e45a1d68dbd",
-      "image": "src/numbers/medium/d29ed89bd1e31f45339fcc87eee10a92504c5b4f35ad05c39aa2e8be100af1457b4961b63d0be96845abbc9ec6c786c8736594da6cb2f6a409eb4e45a1d68dbd.jpg"
+      "name": "Enderi-hy-Ba-Ultimate",
+      "hashedName": "4d384913267cefdb3077f6afd292e756e3ed39b1401185dab7f1b0625bc879a991451749891f3479b2d30f5c5a6f54982ce094842abc62f7db804bb77c3a68a3",
+      "image": "src/numbers/medium/4d384913267cefdb3077f6afd292e756e3ed39b1401185dab7f1b0625bc879a991451749891f3479b2d30f5c5a6f54982ce094842abc62f7db804bb77c3a68a3.jpg"
     },
     {
       "name": "Enclosedfinity",
@@ -2232,6 +2362,11 @@
       "name": "Dunixfinity",
       "hashedName": "80e31133ede36e16fcb91f8c0792aa88b8a0da0f656f2a58781c03fa1e9c46b5797fb4b4cc9400d103b6270295b07471589962b8f22e6ddf012eb4aa9cb013c0",
       "image": "src/numbers/medium/80e31133ede36e16fcb91f8c0792aa88b8a0da0f656f2a58781c03fa1e9c46b5797fb4b4cc9400d103b6270295b07471589962b8f22e6ddf012eb4aa9cb013c0.jpg"
+    },
+    {
+      "name": "Absolute Ultimate Everything",
+      "hashedName": "42e14ad5210baa832a037c682aeb63c5846c00b13f94474915f51f71813bdc80060ff98e471f5d08a26bd7ab88073d3b8843586a3742029f4dfefcc9c051c9fb",
+      "image": "src/numbers/medium/42e14ad5210baa832a037c682aeb63c5846c00b13f94474915f51f71813bdc80060ff98e471f5d08a26bd7ab88073d3b8843586a3742029f4dfefcc9c051c9fb.jpg"
     },
     {
       "name": "Endiflifinity",
@@ -2249,6 +2384,16 @@
       "image": "src/numbers/medium/f264e797c4e05727168ae5629c2c35cbd30a3927a8648e845eacc78147661414087429f0f4dc90c4df6c9768e5590f1c68d5a607e8d94a2c868bba8c9bc4acf9.jpg"
     },
     {
+      "name": "Megamassive Absolute",
+      "hashedName": "352c54ee8ad2743d27ca1e597c77bd3d27056a005f03ca121e27c1299b362d127f935ddbea61bd3fce04adeda83c529d8b90269d293d00c8cf3c19471ab1120a",
+      "image": "src/numbers/medium/352c54ee8ad2743d27ca1e597c77bd3d27056a005f03ca121e27c1299b362d127f935ddbea61bd3fce04adeda83c529d8b90269d293d00c8cf3c19471ab1120a.jpg"
+    },
+    {
+      "name": "Inter-Globiafinite",
+      "hashedName": "7c9fb4b13fcd704eab3d7e0f3056439531baa22208ea15a699098ef1be8cb899c63448eb71adca162ef441d28eab5c9670c94af334a4e7a50c3ed9bd7c414d8b",
+      "image": "src/numbers/medium/7c9fb4b13fcd704eab3d7e0f3056439531baa22208ea15a699098ef1be8cb899c63448eb71adca162ef441d28eab5c9670c94af334a4e7a50c3ed9bd7c414d8b.jpg"
+    },
+    {
       "name": "Breakfinity",
       "hashedName": "86734ca04524b2f5631621a670c383ab9b06eb2c8c628d666af8bb0d50b4d008d2e6f8ed9e77b3eea8a2ec4966ee6c5f50962c1c2b95f8cce4f301533c5aa6ff",
       "image": "src/numbers/medium/86734ca04524b2f5631621a670c383ab9b06eb2c8c628d666af8bb0d50b4d008d2e6f8ed9e77b3eea8a2ec4966ee6c5f50962c1c2b95f8cce4f301533c5aa6ff.jpg"
@@ -2257,6 +2402,11 @@
       "name": "Gangiticfinity",
       "hashedName": "310699a6ab5ddcccb09fc92b9f8d65412e448c8d0a0f36b514db806140da461b59d7a223f319cb8b4620ea262d89c5a486a0d6b23e252894a68478af477dda1a",
       "image": "src/numbers/medium/310699a6ab5ddcccb09fc92b9f8d65412e448c8d0a0f36b514db806140da461b59d7a223f319cb8b4620ea262d89c5a486a0d6b23e252894a68478af477dda1a.jpg"
+    },
+    {
+      "name": "Finite Class 4",
+      "hashedName": "43259e15b7238d98e5c6495e2cee0be707bbee1c875901dbc6aa1e781c86a021861553a0806362f7fdb9102fd19d0ffe676b15935fd41c136f80756ac91aed9a",
+      "image": "src/numbers/medium/43259e15b7238d98e5c6495e2cee0be707bbee1c875901dbc6aa1e781c86a021861553a0806362f7fdb9102fd19d0ffe676b15935fd41c136f80756ac91aed9a.jpg"
     },
     {
       "name": "Masteried One",
@@ -2269,6 +2419,21 @@
       "image": "src/numbers/medium/fb2fc573fa82cc5f5dcb132fe864ae7c493f35b3ffd6fe4532d26ea1d2940b80be88277ac14e460faa31ee70415b79e291a781791223ead6d58a1b2f65750ab7.jpg"
     },
     {
+      "name": "Qalander",
+      "hashedName": "571842fe511da666c994ad2270172389b07fe468df62acd6161d63820c3fd06b1d958ca8ffd98deecb493d75e267ad14ba1a230ef3a22c47569c2b056c8725b9",
+      "image": "src/numbers/medium/571842fe511da666c994ad2270172389b07fe468df62acd6161d63820c3fd06b1d958ca8ffd98deecb493d75e267ad14ba1a230ef3a22c47569c2b056c8725b9.jpg"
+    },
+    {
+      "name": "The Superized Omega One Supercardinal",
+      "hashedName": "b5efea392225a030b7d5f78ec034b7b44ebe57942d799174d753ee063ef92b98a5c016899f8c519a6b6ff58d1b18cfd85e3e1697c7502d8979ac35f8b89af233",
+      "image": "src/numbers/medium/b5efea392225a030b7d5f78ec034b7b44ebe57942d799174d753ee063ef92b98a5c016899f8c519a6b6ff58d1b18cfd85e3e1697c7502d8979ac35f8b89af233.jpg"
+    },
+    {
+      "name": "Trastinufinion",
+      "hashedName": "1f671203e99fc239d68fd2edc3524a9f8baa3057838d06ffac04dffd62ec5600e83a1d89069b55770ccdf88f5a5c385c30c2e2186b949eb81d1fdc20b450ebc9",
+      "image": "src/numbers/medium/1f671203e99fc239d68fd2edc3524a9f8baa3057838d06ffac04dffd62ec5600e83a1d89069b55770ccdf88f5a5c385c30c2e2186b949eb81d1fdc20b450ebc9.jpg"
+    },
+    {
       "name": "Orangifinity",
       "hashedName": "fdda49988994ff2d880eda385e8ab5ec49e75371ba4e67d5ca5131f8fcda78c079606c47761510a7b27f9b624a7fce0832231fe9c9b2624dd7c6982d7d10479e",
       "image": "src/numbers/medium/fdda49988994ff2d880eda385e8ab5ec49e75371ba4e67d5ca5131f8fcda78c079606c47761510a7b27f9b624a7fce0832231fe9c9b2624dd7c6982d7d10479e.jpg"
@@ -2279,14 +2444,29 @@
       "image": "src/numbers/medium/ee8680504f0cb5ea1d626213f53ce1f6d8dd6e1b10bb091a30e9a3954397efb06c5c4c4e7dd7aef4bed49e918f49b76f9f9dce5d9ecb938ca81076e7e690987f.jpg"
     },
     {
-      "name": "The Restart",
-      "hashedName": "43f91781ff8cc5de309e16c1f5905f35be968d76dac7e837e8829a2bbbf6b293ab441ad7b7dd477f1d002865899351161d99193b8381e01662b95f9188d99038",
-      "image": "src/numbers/medium/43f91781ff8cc5de309e16c1f5905f35be968d76dac7e837e8829a2bbbf6b293ab441ad7b7dd477f1d002865899351161d99193b8381e01662b95f9188d99038.jpg"
+      "name": "Absolute Super Recycle",
+      "hashedName": "d01570008aeb987f636505f0ef90d2a8cacbf2dec8b98b1ca9aa32febdaf3bb7eba97f65fb7ed340ddf9bd6ca4800b190bc70080970a3c8df894d3bbfb41d579",
+      "image": "src/numbers/medium/d01570008aeb987f636505f0ef90d2a8cacbf2dec8b98b1ca9aa32febdaf3bb7eba97f65fb7ed340ddf9bd6ca4800b190bc70080970a3c8df894d3bbfb41d579.jpg"
     },
     {
-      "name": "The Mysterium",
-      "hashedName": "a6edb16ad260b3f608e0699c77686521122c82c56ac5558af9683be923713fc3140ff620980762231752cfe48c4bc2824634bafea09c41d3eb30eac3c792d872",
-      "image": "src/numbers/medium/a6edb16ad260b3f608e0699c77686521122c82c56ac5558af9683be923713fc3140ff620980762231752cfe48c4bc2824634bafea09c41d3eb30eac3c792d872.jpg"
+      "name": "The Real End",
+      "hashedName": "156727b35d5856f5c3cfe9c20da686c47dc47cb8edfad54fac8ca1dafa1b0a347e4c17622a522ab812519d103000d2186028047ce70ef1fb2847199188c5212a",
+      "image": "src/numbers/medium/156727b35d5856f5c3cfe9c20da686c47dc47cb8edfad54fac8ca1dafa1b0a347e4c17622a522ab812519d103000d2186028047ce70ef1fb2847199188c5212a.jpg"
+    },
+    {
+      "name": "The True Dekutomin",
+      "hashedName": "536f3be2cfda8d04ae7fe1cf2198c44756602da45b1a64bf1b36ed4ab493d4eaa71d6d587f39f7a564e21172132c638781c28899f32ec4f34042f0bc4656b006",
+      "image": "src/numbers/medium/536f3be2cfda8d04ae7fe1cf2198c44756602da45b1a64bf1b36ed4ab493d4eaa71d6d587f39f7a564e21172132c638781c28899f32ec4f34042f0bc4656b006.jpg"
+    },
+    {
+      "name": "Absolute Ultimate Cycle Rebirth",
+      "hashedName": "54448cd62e6f81eb196e3f5ddb47eae6ad113e90b36733132385e60a8f37bca7fa21e16fc20c08c65114ed5853d4cf7bf243b054d3d147cba0fb6c9eb2f4a4b6",
+      "image": "src/numbers/medium/54448cd62e6f81eb196e3f5ddb47eae6ad113e90b36733132385e60a8f37bca7fa21e16fc20c08c65114ed5853d4cf7bf243b054d3d147cba0fb6c9eb2f4a4b6.jpg"
+    },
+    {
+      "name": "Atonomic Tareunousuiuna Nullium",
+      "hashedName": "7e4e86be74a3cb5e8a865e9e5a7b58fe3f316b935aeffc37577fab9681f75a5325e7e343ef6a2ad4522a547cc12dd10ba75ce459a296d85569c45e75c8f71681",
+      "image": "src/numbers/medium/7e4e86be74a3cb5e8a865e9e5a7b58fe3f316b935aeffc37577fab9681f75a5325e7e343ef6a2ad4522a547cc12dd10ba75ce459a296d85569c45e75c8f71681.jpg"
     },
     {
       "name": "Filliendifinity",
@@ -2299,9 +2479,14 @@
       "image": "src/numbers/medium/251dc5129412dbb8b8b0aa3139e5cf90a847ec6e605dd1e6352ce7bc1f6541a07f29b54537f6919290666dd9698d3b9554530a8c7a1d4966768b3fd8c4276754.jpg"
     },
     {
-      "name": "Super Barrel Finite",
-      "hashedName": "70755e46adaea53d18c5c6c135a62d80246b9fcce0765e839074622226a7196d927503e1277b4fc49c3ebaf29ab4358179776c7d1ad8bc718be634210a6d80f0",
-      "image": "src/numbers/medium/70755e46adaea53d18c5c6c135a62d80246b9fcce0765e839074622226a7196d927503e1277b4fc49c3ebaf29ab4358179776c7d1ad8bc718be634210a6d80f0.jpg"
+      "name": "Absolute Mega Everything",
+      "hashedName": "eaace5fcdaa7ed3e4a6743c622e07498978f97d7108816099559d9a4f837f678c9d228138628b8d04ed26e45b80f3e5848e49e796dc5b5fad7772637e8290005",
+      "image": "src/numbers/medium/eaace5fcdaa7ed3e4a6743c622e07498978f97d7108816099559d9a4f837f678c9d228138628b8d04ed26e45b80f3e5848e49e796dc5b5fad7772637e8290005.jpg"
+    },
+    {
+      "name": "!A!(1)",
+      "hashedName": "ca7069ae6fd05cfb89c87ae4b8f968832538b04467a49b9d8598619991674c8eda3f3fe4cc65089826194f0d0cb1ea96ca5f4b505f915385bcfd25684352fcc5",
+      "image": "src/numbers/medium/ca7069ae6fd05cfb89c87ae4b8f968832538b04467a49b9d8598619991674c8eda3f3fe4cc65089826194f0d0cb1ea96ca5f4b505f915385bcfd25684352fcc5.jpg"
     },
     {
       "name": "Diaofinity",
@@ -2309,14 +2494,24 @@
       "image": "src/numbers/medium/2440a582197d031d8e56c70831dc8bc9daadcd18393470845aff9ff45981dba291b8a6ffeeea6be0e228fa94e15580f5083544a3a8daa098e60421adcefafce3.jpg"
     },
     {
-      "name": "Tressical Finite",
-      "hashedName": "89c65f41548f1c10267da1ecfb004fa0802077ac1bceb8131b6202b69f2e29228e6ffaf940a69d821f3405bf0f83f7fb59aa5a31bba372a74568485aa15a3dc2",
-      "image": "src/numbers/medium/89c65f41548f1c10267da1ecfb004fa0802077ac1bceb8131b6202b69f2e29228e6ffaf940a69d821f3405bf0f83f7fb59aa5a31bba372a74568485aa15a3dc2.jpg"
+      "name": "The ?(Super) End",
+      "hashedName": "89766c8ee9754fb81a920b63b9dc21ea6a33a42b766ee2b3d32a040672d281e94e975c697fd85755f0fdb033ceffbdcfc865224e668fc87065088060c13c9530",
+      "image": "src/numbers/medium/89766c8ee9754fb81a920b63b9dc21ea6a33a42b766ee2b3d32a040672d281e94e975c697fd85755f0fdb033ceffbdcfc865224e668fc87065088060c13c9530.jpg"
     },
     {
-      "name": "Yellifinity",
-      "hashedName": "4e8babfdadfc252ed9ad448d1e307dbd737bc0a74685d34f8af6384ce0466c0f8e85003015bc19259de82fd0b519a3867f302d9dbe7fae5f1e659497e4b532f6",
-      "image": "src/numbers/medium/4e8babfdadfc252ed9ad448d1e307dbd737bc0a74685d34f8af6384ce0466c0f8e85003015bc19259de82fd0b519a3867f302d9dbe7fae5f1e659497e4b532f6.jpg"
+      "name": "Limitium Infinity",
+      "hashedName": "3b720ef261179079a65b58b23dc29f6729566aa47c00440632f0b256efe523cd70e1bbcdb4a6b7e1d7d7cc990474e35fdd8638b7a505f6f23b4c54553d5f5590",
+      "image": "src/numbers/medium/3b720ef261179079a65b58b23dc29f6729566aa47c00440632f0b256efe523cd70e1bbcdb4a6b7e1d7d7cc990474e35fdd8638b7a505f6f23b4c54553d5f5590.jpg"
+    },
+    {
+      "name": "Absolutuire Infinity",
+      "hashedName": "e48082b24147517def6ebbb60a0536cd20726ad1d959581e63f27a1eaa0b57d8788579ab698948b3980c7f3ab8efc5cdc61dce8baff5b7a26eedee770deedb94",
+      "image": "src/numbers/medium/e48082b24147517def6ebbb60a0536cd20726ad1d959581e63f27a1eaa0b57d8788579ab698948b3980c7f3ab8efc5cdc61dce8baff5b7a26eedee770deedb94.jpg"
+    },
+    {
+      "name": "EVERYTHINGATION",
+      "hashedName": "2ffd995c5eb1a3c9acad7716168eeedd6afa9f297dc7f5ec410acdc1dba0054879681a7f104a9f10ed2a7c50a6510d44fb23093dcf4c3dd2165513bdaf340c7f",
+      "image": "src/numbers/medium/2ffd995c5eb1a3c9acad7716168eeedd6afa9f297dc7f5ec410acdc1dba0054879681a7f104a9f10ed2a7c50a6510d44fb23093dcf4c3dd2165513bdaf340c7f.jpg"
     },
     {
       "name": "Prestige Level 2",
@@ -2324,9 +2519,9 @@
       "image": "src/numbers/medium/89521ed1e7bc001018ff93e7dde155be8277d9c960380b1837fd6d3594939393aca1d9dd44e31be47ce674b3cb7c429ab6a93ba100978119d111a97cfb8945c8.jpg"
     },
     {
-      "name": "Waterifinity",
-      "hashedName": "6e974be24f7222653692c4e031f4281362e8d944e51b835fd18735febeddf642b0a9884636782594fcba61869d8fa8cec39c2e3ce0c1af8bbcc451b35a27e613",
-      "image": "src/numbers/medium/6e974be24f7222653692c4e031f4281362e8d944e51b835fd18735febeddf642b0a9884636782594fcba61869d8fa8cec39c2e3ce0c1af8bbcc451b35a27e613.jpg"
+      "name": "Absolute Ultimate Layer",
+      "hashedName": "7c57b885966f3ac1cf24bdb23521176161cb972b66bea848d0882443175a2b0ac85a7cfc768d02d961148de34f0f77dad7d5d72b6bee2f1ae26d76543096039a",
+      "image": "src/numbers/medium/7c57b885966f3ac1cf24bdb23521176161cb972b66bea848d0882443175a2b0ac85a7cfc768d02d961148de34f0f77dad7d5d72b6bee2f1ae26d76543096039a.jpg"
     },
     {
       "name": "Prestige One to Prestige One",
@@ -2344,9 +2539,9 @@
       "image": "src/numbers/medium/b125c1e769181238154a931371cca41fc5781934131e95563d70a1e685976e101a4a86b1f42f4d25e283415c096144dd8938f2d55022bee234fd1c206c6b28c5.jpg"
     },
     {
-      "name": "Sagiriousifinity",
-      "hashedName": "4c18b289537143d5a19da5b5796048843c9fe6927bc7eb21901a5f4d9acb4b19901c5eac830f26037a2921cba95356612e85a6c59b784c4af5bb3e5c966a19ea",
-      "image": "src/numbers/medium/4c18b289537143d5a19da5b5796048843c9fe6927bc7eb21901a5f4d9acb4b19901c5eac830f26037a2921cba95356612e85a6c59b784c4af5bb3e5c966a19ea.jpg"
+      "name": "Reality of Numbers #1",
+      "hashedName": "1f849f56d9c29a340b063edb88213c6e44293b59356b6e95a5b63328ad213069d317a9efe5aae79c478c404ff54b52c052002b451e3ed3253503980cd297a166",
+      "image": "src/numbers/medium/1f849f56d9c29a340b063edb88213c6e44293b59356b6e95a5b63328ad213069d317a9efe5aae79c478c404ff54b52c052002b451e3ed3253503980cd297a166.jpg"
     },
     {
       "name": "Prestige Collapsing Null Ending",
@@ -2354,14 +2549,39 @@
       "image": "src/numbers/medium/346385eb5466dc934bde0da8894a3f6653402116f9c3a0fc5d3758dfd4676ff13f988e8809c3201b3360b58901ed1a7c8968d8d945efe5a7ca2db25cce04805a.jpg"
     },
     {
+      "name": "Absolute Bonded Limits",
+      "hashedName": "fb9044cd30c74df9290c98492febe5d4d10767a7a397c3805aca0fe1884178df773b161d6a02825cd2a06c5872b18800e8b9080fb9adeaaed442c570be68399b",
+      "image": "src/numbers/medium/fb9044cd30c74df9290c98492febe5d4d10767a7a397c3805aca0fe1884178df773b161d6a02825cd2a06c5872b18800e8b9080fb9adeaaed442c570be68399b.jpg"
+    },
+    {
+      "name": "Breakiofinulite",
+      "hashedName": "32cfb660e7bcc011b21e787569edb4a5e49aa397da54fdb1b75c93395b0e3eaaec73fa67b3fa576530f2eb039461fa01405611bd5840af3bcf1d1c8e448c36d2",
+      "image": "src/numbers/medium/32cfb660e7bcc011b21e787569edb4a5e49aa397da54fdb1b75c93395b0e3eaaec73fa67b3fa576530f2eb039461fa01405611bd5840af3bcf1d1c8e448c36d2.jpg"
+    },
+    {
+      "name": "The Great Function",
+      "hashedName": "340aa5c0134494fb147a940c6a598290ec5e98aad5a45877ccd8019d70bdaae23941a11d560e31fe2d28ad0a528fc859ec2e8bf577a6d7e4826e0cca41abb6f1",
+      "image": "src/numbers/medium/340aa5c0134494fb147a940c6a598290ec5e98aad5a45877ccd8019d70bdaae23941a11d560e31fe2d28ad0a528fc859ec2e8bf577a6d7e4826e0cca41abb6f1.jpg"
+    },
+    {
       "name": "Infinity-Insta-Bility",
       "hashedName": "2a564524f3817f6f3817ae4e12893cf0d0b806055104a8aa118a1fe1541629be9852963002cf42011a1378d805b025a402ea5c1e08fc343e3f50230371028e79",
       "image": "src/numbers/medium/2a564524f3817f6f3817ae4e12893cf0d0b806055104a8aa118a1fe1541629be9852963002cf42011a1378d805b025a402ea5c1e08fc343e3f50230371028e79.jpg"
     },
     {
-      "name": "Timifinity",
-      "hashedName": "a2f48794ca233003600424c2899a2c475e60d370fcfb8ec65e18dc55fe6e2133c13c702564d56a7c056aaabf8ece269f39150c560b1903639ce9c06e9a098b79",
-      "image": "src/numbers/medium/a2f48794ca233003600424c2899a2c475e60d370fcfb8ec65e18dc55fe6e2133c13c702564d56a7c056aaabf8ece269f39150c560b1903639ce9c06e9a098b79.jpg"
+      "name": "Hexag-Hyper One Cardinal",
+      "hashedName": "d9ad97779f491919e47a6799e1c191fd76029510413dc5d004433f492cabfae581eab0d6390d9ee1141bced10cdef9f6f14e2614b568d504a8e857da842160d6",
+      "image": "src/numbers/medium/d9ad97779f491919e47a6799e1c191fd76029510413dc5d004433f492cabfae581eab0d6390d9ee1141bced10cdef9f6f14e2614b568d504a8e857da842160d6.jpg"
+    },
+    {
+      "name": "Godous Breakdown",
+      "hashedName": "6cf721f8775223c6e52cf0caa54816af1f3087d53b6cfe7e5c2035ab6f5357e3d72be337125ef7c55878a27e8282d8ec00a992e60fb67acfee3ba3fbfe569951",
+      "image": "src/numbers/medium/6cf721f8775223c6e52cf0caa54816af1f3087d53b6cfe7e5c2035ab6f5357e3d72be337125ef7c55878a27e8282d8ec00a992e60fb67acfee3ba3fbfe569951.jpg"
+    },
+    {
+      "name": "APSOLUTNOFIN",
+      "hashedName": "59fe01ed9270248785907bc868b732511dced17b306f1a66dacd4b7f5fe11613a0fd1d6c87ac04a913b7a153c651f05bba0ed6aea6165a2346212a36c2f0e1ec",
+      "image": "src/numbers/medium/59fe01ed9270248785907bc868b732511dced17b306f1a66dacd4b7f5fe11613a0fd1d6c87ac04a913b7a153c651f05bba0ed6aea6165a2346212a36c2f0e1ec.jpg"
     },
     {
       "name": "Keplerifinity",
@@ -2369,9 +2589,14 @@
       "image": "src/numbers/medium/9bb4d5ec4f7010bb741a06ee8c7e651dca91f6acecac2137bdbdf7f8d75e51ea92d52f6af4c31f84de79e5ebb566c601ea787d9e6614cbf9736f4de6575c360a.jpg"
     },
     {
-      "name": "Venusifinity",
-      "hashedName": "9b1a134a344c1922b2f57f00b8b4a776ea1c6be6235adba4f88ca75e51298e90897ab83f7ac5cce7713d521e57f4716f9ec2b634ddfbc94c2f8180ac803b4787",
-      "image": "src/numbers/medium/9b1a134a344c1922b2f57f00b8b4a776ea1c6be6235adba4f88ca75e51298e90897ab83f7ac5cce7713d521e57f4716f9ec2b634ddfbc94c2f8180ac803b4787.jpg"
+      "name": "Kallivorous-Cyclix",
+      "hashedName": "83a5da6eb5dbbe68d555436e84594489f6c54d197dc4a45bd5005c5d836b798ccb80151959869949bc5ce4ebeb83eee5a90c91860bd1be682a90b94f228e52cc",
+      "image": "src/numbers/medium/83a5da6eb5dbbe68d555436e84594489f6c54d197dc4a45bd5005c5d836b798ccb80151959869949bc5ce4ebeb83eee5a90c91860bd1be682a90b94f228e52cc.jpg"
+    },
+    {
+      "name": "Uncannibility",
+      "hashedName": "689cb66d5ee7031d46cad7ed5d06a14d889745703ce111876edfe5c0daed7b4e2afeb42855f30e32c7f66d68262edb2cbe12d1ac66adcbb917fb1731536079f8",
+      "image": "src/numbers/medium/689cb66d5ee7031d46cad7ed5d06a14d889745703ce111876edfe5c0daed7b4e2afeb42855f30e32c7f66d68262edb2cbe12d1ac66adcbb917fb1731536079f8.jpg"
     },
     {
       "name": "Collidifinity",
@@ -2379,14 +2604,24 @@
       "image": "src/numbers/medium/1eccdb9c9cc1a5bdec8b0bfe2f2a1604c74817a1e00727414ea240031e3fe494d9e4d62c20dd07912b21dace4d32fb3b9d0fb97e4f072634bfb2491cf8ff2fc8.jpg"
     },
     {
-      "name": "Timelessfinity",
-      "hashedName": "745d96fa628e93691dbf3a12777d41dc585e72ec3389af2cb8b4cba44d7bed7857f3a4ca1fcd3912f264219a53e60530910d983078cf75403cc78a51d63c6c5f",
-      "image": "src/numbers/medium/745d96fa628e93691dbf3a12777d41dc585e72ec3389af2cb8b4cba44d7bed7857f3a4ca1fcd3912f264219a53e60530910d983078cf75403cc78a51d63c6c5f.jpg"
+      "name": "Levelardinal Level 100",
+      "hashedName": "bbdc3bd1549cd36f37a4229e8f6aba1eee70efa7be57a6204f80f1dab945dd81eefdb1ec7be18ff360ecbe653611e8b862feb4e0c0d70206b9f6b2d4ca4cfb38",
+      "image": "src/numbers/medium/bbdc3bd1549cd36f37a4229e8f6aba1eee70efa7be57a6204f80f1dab945dd81eefdb1ec7be18ff360ecbe653611e8b862feb4e0c0d70206b9f6b2d4ca4cfb38.jpg"
+    },
+    {
+      "name": "Absolute Endless Finality",
+      "hashedName": "c010fb5ec89fadb4b0820ae8f8f2a689c7a352cf927f70a6597cbfe27ec6680466e7a058f0f6d492b46dd796d8fcee0ee5ee2c92bb652df19eac906eddf7b86c",
+      "image": "src/numbers/medium/c010fb5ec89fadb4b0820ae8f8f2a689c7a352cf927f70a6597cbfe27ec6680466e7a058f0f6d492b46dd796d8fcee0ee5ee2c92bb652df19eac906eddf7b86c.jpg"
     },
     {
       "name": "Eternal Array Point",
       "hashedName": "9c75c400bc60d94843617ac4f5a1568a0d6df72e177bea9ec330ee2d7f252e14e50eddb545e7b9bdb535733127ef5303078ec199dc4f1cdea681d0f570aa33a4",
       "image": "src/numbers/medium/9c75c400bc60d94843617ac4f5a1568a0d6df72e177bea9ec330ee2d7f252e14e50eddb545e7b9bdb535733127ef5303078ec199dc4f1cdea681d0f570aa33a4.jpg"
+    },
+    {
+      "name": "Absolute Cycle Rebirth",
+      "hashedName": "f62d7098aa8866fcd6441427ced25ce8ca791424627678501340d00533c0a8b60ef6d2b4b83dae5ff8427a14392b1cb44b429318f6b3035f9a74b43c65e3c5e9",
+      "image": "src/numbers/medium/f62d7098aa8866fcd6441427ced25ce8ca791424627678501340d00533c0a8b60ef6d2b4b83dae5ff8427a14392b1cb44b429318f6b3035f9a74b43c65e3c5e9.jpg"
     },
     {
       "name": "Not So Finite",
@@ -2404,9 +2639,9 @@
       "image": "src/numbers/medium/51c914faba55c837b361ee12d12c1ddef5f52af5c488068504f8b0be5d7d3211ea71dc9fc9346d6254cff595c1223abb6b402e03ad421d074ee2fd5121e66bdf.jpg"
     },
     {
-      "name": "The In-One",
-      "hashedName": "c6b99c21555a63be411cfe027e21e15f52e1d461e2c2d71af2773423f8afcefe811fbb1d206fc38b74acdbfa76680e1f20718c9f820f0b339921e2a8c316870c",
-      "image": "src/numbers/medium/c6b99c21555a63be411cfe027e21e15f52e1d461e2c2d71af2773423f8afcefe811fbb1d206fc38b74acdbfa76680e1f20718c9f820f0b339921e2a8c316870c.jpg"
+      "name": "Trardinal Level 10",
+      "hashedName": "73f7179c38a217b15853c7b42517cd04c9b24c82f38c4d7add59831de994f1fbc5e5783d3508142d1681cb8a0e3d506e0115388db1798fdaaf126cfdfca4f97b",
+      "image": "src/numbers/medium/73f7179c38a217b15853c7b42517cd04c9b24c82f38c4d7add59831de994f1fbc5e5783d3508142d1681cb8a0e3d506e0115388db1798fdaaf126cfdfca4f97b.jpg"
     },
     {
       "name": "One Wayfinity",
@@ -2414,9 +2649,34 @@
       "image": "src/numbers/medium/8c7615f59f80e5eca78dc9eddbf0518c6e203a2dffdcc66b2f7a6e372bdffd6470f7b3bbbbfde487c9dd9297a66f3dc5803f6be9786554239b0e3361d2960638.jpg"
     },
     {
-      "name": "hexexitialfinity",
-      "hashedName": "dec63cac537136dbe59637f129eb8ec795094b881f4920e346d749ca29fe008accb10b6afd70c7cb4d099f006f0f0b09f2cf28d3ae4bb6b347fb8622dcebb745",
-      "image": "src/numbers/medium/dec63cac537136dbe59637f129eb8ec795094b881f4920e346d749ca29fe008accb10b6afd70c7cb4d099f006f0f0b09f2cf28d3ae4bb6b347fb8622dcebb745.jpg"
+      "name": "Maximum Finities",
+      "hashedName": "8daebc53cc38865986c80efaf29ccb3b394efaebda1eaf9352a06cf056c26d547aef6aa5ceb7b9d57f37523c179a72588e308c47880854506a4cfebe8c6308e2",
+      "image": "src/numbers/medium/8daebc53cc38865986c80efaf29ccb3b394efaebda1eaf9352a06cf056c26d547aef6aa5ceb7b9d57f37523c179a72588e308c47880854506a4cfebe8c6308e2.jpg"
+    },
+    {
+      "name": "Hexexitialifinty",
+      "hashedName": "7d34ae86549615107afdbf2e9c50ed5ec15259ac8461ca57ae7ad7347267baa7a3201fc42e21fb67e73d27ab264efea8bd309143022e5bf890237e24adbd87ae",
+      "image": "src/numbers/medium/7d34ae86549615107afdbf2e9c50ed5ec15259ac8461ca57ae7ad7347267baa7a3201fc42e21fb67e73d27ab264efea8bd309143022e5bf890237e24adbd87ae.jpg"
+    },
+    {
+      "name": "New-Alli-Omnimronous",
+      "hashedName": "08aa5845b6848869c7377f139effcb0c4dfcd6e808b6d901c63c8982375cd1e6bb0aabf175d3e6ee09b74b6362d23242200de70ae2a09445d8260a45dce90315",
+      "image": "src/numbers/medium/08aa5845b6848869c7377f139effcb0c4dfcd6e808b6d901c63c8982375cd1e6bb0aabf175d3e6ee09b74b6362d23242200de70ae2a09445d8260a45dce90315.jpg"
+    },
+    {
+      "name": "The Unknown",
+      "hashedName": "d6446fbf1ab9903004ba5651bc6334ba7ef362f6482d7c050fa01c787cb0592aaf20000e2019ab5f7ac972a6298b991cf4a7ffa362db69c2e9a7a27e46f1b498",
+      "image": "src/numbers/medium/d6446fbf1ab9903004ba5651bc6334ba7ef362f6482d7c050fa01c787cb0592aaf20000e2019ab5f7ac972a6298b991cf4a7ffa362db69c2e9a7a27e46f1b498.jpg"
+    },
+    {
+      "name": "Wave #2 of Numbers",
+      "hashedName": "f9db20b525c4d281e3777bbdf455d0ad453381ed05bb6322264c473a2777b0f78ce797eecf8e56da6c201386bfaa1bdefbfc69733bbd85941550a10e59e76b5e",
+      "image": "src/numbers/medium/f9db20b525c4d281e3777bbdf455d0ad453381ed05bb6322264c473a2777b0f78ce797eecf8e56da6c201386bfaa1bdefbfc69733bbd85941550a10e59e76b5e.jpg"
+    },
+    {
+      "name": "Rebnum",
+      "hashedName": "cc1548dd4e0478a412484186bb284ec70a666cd6361f39d64129c434868f7bba839237333d885624929dcd91916939fd7daae76151d38721861624288015e968",
+      "image": "src/numbers/medium/cc1548dd4e0478a412484186bb284ec70a666cd6361f39d64129c434868f7bba839237333d885624929dcd91916939fd7daae76151d38721861624288015e968.jpg"
     },
     {
       "name": "Guidianifinity",
@@ -2424,19 +2684,39 @@
       "image": "src/numbers/medium/652d63b781d5ba6c4531a5ebad0d9cd1e974ba6a5b9776eaa825717e9142f835624ba3ef04a9337023530bbb260c9fc1373a5b140cb3056094649b2a6d7e93ea.jpg"
     },
     {
+      "name": "Bmuner",
+      "hashedName": "51eeb35597515243fdb3ce3c15fdb0c7e44290da303157a7a953fa28875af247a738f2e7b3ffb805183f5f6e2306c1ac9fc68604e1283ed766ecc0d3e75b49d8",
+      "image": "src/numbers/medium/51eeb35597515243fdb3ce3c15fdb0c7e44290da303157a7a953fa28875af247a738f2e7b3ffb805183f5f6e2306c1ac9fc68604e1283ed766ecc0d3e75b49d8.jpg"
+    },
+    {
       "name": "Filliunknifinity",
       "hashedName": "c49f38252c6e4baae23e539f897f7c536023326fc9331588c7c9a49cff565440a06442eedc3f34efeaf8a6880724cb981aec500399d82d4edb4a086ac416dd55",
       "image": "src/numbers/medium/c49f38252c6e4baae23e539f897f7c536023326fc9331588c7c9a49cff565440a06442eedc3f34efeaf8a6880724cb981aec500399d82d4edb4a086ac416dd55.jpg"
     },
     {
-      "name": "Nednifinity",
-      "hashedName": "944d80f33f9f975e5ed8d6476725675400be77ba0f800bf606a8f0924694866308d7ef4c5c539c9748ab707621d7cd46f228bf6564ff043b73c2e0ca89379c9d",
-      "image": "src/numbers/medium/944d80f33f9f975e5ed8d6476725675400be77ba0f800bf606a8f0924694866308d7ef4c5c539c9748ab707621d7cd46f228bf6564ff043b73c2e0ca89379c9d.jpg"
+      "name": "Caurioiunity Infinite",
+      "hashedName": "c8c2bd9acd3b41a74bbb52e51d74cda0ecb59960d0b5bc29ec1db1ab9853b3a0993d6ede66e17c536fa553ea9879b34f5d04c6cc9f2aa18ce184249b98e6dd1f",
+      "image": "src/numbers/medium/c8c2bd9acd3b41a74bbb52e51d74cda0ecb59960d0b5bc29ec1db1ab9853b3a0993d6ede66e17c536fa553ea9879b34f5d04c6cc9f2aa18ce184249b98e6dd1f.jpg"
     },
     {
-      "name": "Supersuper Omegacardinal",
-      "hashedName": "50be9353a85f1addae388f31d802649cd6e48e114c8a375efb31f5af5a6ae89b2e1513b0dde31e3ab4b44c58309eb8baee724ea00323dc1716258aa87bc30796",
-      "image": "src/numbers/medium/50be9353a85f1addae388f31d802649cd6e48e114c8a375efb31f5af5a6ae89b2e1513b0dde31e3ab4b44c58309eb8baee724ea00323dc1716258aa87bc30796.jpg"
+      "name": "Onetion",
+      "hashedName": "277dec38a114ee671d06a77af5c0425f6d318f55661169fb453d675e5515e7c5d4800f894fa8feac61ad1b99e153a7e90a5d02bbf94c2e4caf348a5f1f4641ca",
+      "image": "src/numbers/medium/277dec38a114ee671d06a77af5c0425f6d318f55661169fb453d675e5515e7c5d4800f894fa8feac61ad1b99e153a7e90a5d02bbf94c2e4caf348a5f1f4641ca.jpg"
+    },
+    {
+      "name": "The Mystery",
+      "hashedName": "51d429d0a10e49ec87d6114084904a38076b94cca173561168396256b5dee6810cdbf8b6f19fc96ac1969cab08d79cc9d216ea3cabcdd53c5f07d85f57e05bd8",
+      "image": "src/numbers/medium/51d429d0a10e49ec87d6114084904a38076b94cca173561168396256b5dee6810cdbf8b6f19fc96ac1969cab08d79cc9d216ea3cabcdd53c5f07d85f57e05bd8.jpg"
+    },
+    {
+      "name": "Pruelmentize Finite of Numbers",
+      "hashedName": "4b0faf9a2c8f3bf82bd0fa3eb86c6e031ff62c255ee3d1c238cdba2f6c32a4816894af2a80c6ef328e35b5497f76532b266e4d6ff7dcd3f6143ee3e2e25ba73b",
+      "image": "src/numbers/medium/4b0faf9a2c8f3bf82bd0fa3eb86c6e031ff62c255ee3d1c238cdba2f6c32a4816894af2a80c6ef328e35b5497f76532b266e4d6ff7dcd3f6143ee3e2e25ba73b.jpg"
+    },
+    {
+      "name": "Nendifinity",
+      "hashedName": "7604a0ab29241cb7bac74e6cc5994f3016b5e517431c319c268d725afbc11d0dca30ee614ee7fb8a92da659e26cbc3ce81899d639fb1f8127038a101e899dbf2",
+      "image": "src/numbers/medium/7604a0ab29241cb7bac74e6cc5994f3016b5e517431c319c268d725afbc11d0dca30ee614ee7fb8a92da659e26cbc3ce81899d639fb1f8127038a101e899dbf2.jpg"
     },
     {
       "name": "Absolute Not Delta",
@@ -2444,9 +2724,19 @@
       "image": "src/numbers/medium/c68bccec6a22897f2e73530e944675ed7c3d7e9bc2bbf76979070c8b4d00edac453fd894ca8fe3934270b043c4e338f246ce9ef780903ec5d6e9e6eec0acc57a.jpg"
     },
     {
+      "name": "The End of The End",
+      "hashedName": "2c67b81ef82d0f6c7079367bdc2acb7ed98c4ae4942496d1b8caf122ce6ee9e196c6c8a072ef4548fae888b6231e754387c9b850c248df631b65c6b8df4b9c8e",
+      "image": "src/numbers/medium/2c67b81ef82d0f6c7079367bdc2acb7ed98c4ae4942496d1b8caf122ce6ee9e196c6c8a072ef4548fae888b6231e754387c9b850c248df631b65c6b8df4b9c8e.jpg"
+    },
+    {
       "name": "Eternity Restart",
       "hashedName": "f6e0a30af5fe9e50bc6cb3c502b36e1dadd16456ed0cb2e4f1bd8da874f41a89f9eeb02d9f2f155da7c26a8770ef6517f0e45202ac98340b1b68dc593212d185",
       "image": "src/numbers/medium/f6e0a30af5fe9e50bc6cb3c502b36e1dadd16456ed0cb2e4f1bd8da874f41a89f9eeb02d9f2f155da7c26a8770ef6517f0e45202ac98340b1b68dc593212d185.jpg"
+    },
+    {
+      "name": "The Godly Rochon-Velotic End",
+      "hashedName": "449fac4e0d271d75db8f74ec354c50ee4622542b17b7945a60447f8a31641f6c157cafdb26d96fadb83702507732802749bbec6b1e64b2c6146624c176371545",
+      "image": "src/numbers/medium/449fac4e0d271d75db8f74ec354c50ee4622542b17b7945a60447f8a31641f6c157cafdb26d96fadb83702507732802749bbec6b1e64b2c6146624c176371545.jpg"
     },
     {
       "name": "Ordinal Level Ultimate Kilostack",
@@ -2454,9 +2744,24 @@
       "image": "src/numbers/medium/98fb02292c52e9232a3fe7605c1637ba0d5c09a26706a5db9feddb7a98e1cf38be86f3eee22d3d35017a3bac3ad88bc6809d92e6d781afb0e26ba372eff0055b.jpg"
     },
     {
-      "name": "Swirlifinity",
-      "hashedName": "fd20ab242c00ddb7192f5f784518dab72427f8bd6cd96c14658fa8a9b4660de72604d9f83aeb86a6c46f2fd15d584fd6ebc70121280c0a4a6d519e654aa02e39",
-      "image": "src/numbers/medium/fd20ab242c00ddb7192f5f784518dab72427f8bd6cd96c14658fa8a9b4660de72604d9f83aeb86a6c46f2fd15d584fd6ebc70121280c0a4a6d519e654aa02e39.jpg"
+      "name": "Multiversal Breakdown",
+      "hashedName": "3b80b723e3373571e954fa3a3fa9ea9d8492d6482d095790f8e236b0c97f8e9d967359316c7a1e55a853c62758451395e24c82f6f49208764f8b041c1a33aecc",
+      "image": "src/numbers/medium/3b80b723e3373571e954fa3a3fa9ea9d8492d6482d095790f8e236b0c97f8e9d967359316c7a1e55a853c62758451395e24c82f6f49208764f8b041c1a33aecc.jpg"
+    },
+    {
+      "name": "Absolute Octane",
+      "hashedName": "37d0d4837c7bedfd952225153c6a087b5d79c2bed8fc413c98f444160814c764ea218a1f5a309f164c1243a057a1493e78561c09022f8371c675fb5ecddcaa00",
+      "image": "src/numbers/medium/37d0d4837c7bedfd952225153c6a087b5d79c2bed8fc413c98f444160814c764ea218a1f5a309f164c1243a057a1493e78561c09022f8371c675fb5ecddcaa00.jpg"
+    },
+    {
+      "name": "Absolute Maximus",
+      "hashedName": "1b0e8d2bbd9870f1685dc4e31c6e65ab0595a58d4a8508c7296d9dafa5bf79b4cfcc96fb6a7ce78e6430a8a865dd9e46b7278c85806081c99482309ab3e9d6fb",
+      "image": "src/numbers/medium/1b0e8d2bbd9870f1685dc4e31c6e65ab0595a58d4a8508c7296d9dafa5bf79b4cfcc96fb6a7ce78e6430a8a865dd9e46b7278c85806081c99482309ab3e9d6fb.jpg"
+    },
+    {
+      "name": "TERMIATION",
+      "hashedName": "038819ac249de6b003746262557213b3caae00d69a20390bf9a8736fdb83a265de6b0ac36f95f951b3e544c2ac6f4678389ccfbc14ae219f40c314cea2d1b5d8",
+      "image": "src/numbers/medium/038819ac249de6b003746262557213b3caae00d69a20390bf9a8736fdb83a265de6b0ac36f95f951b3e544c2ac6f4678389ccfbc14ae219f40c314cea2d1b5d8.jpg"
     },
     {
       "name": "Endfulfinity",
@@ -2464,9 +2769,34 @@
       "image": "src/numbers/medium/c3bc83c08949469df89754a95f62fe6972acede085d1cd2ed30e36b85a41792cd2440a86fa013cc1f8f24bc6b702b010585cb93e9602606dd3fcae3c7aef0089.jpg"
     },
     {
-      "name": "Tratitic One",
-      "hashedName": "2ef5bcd480b51600a4d81d22efac5fc4202c4277047f0111fb70f9d10c5ac13ee1b3d8f5627491f092a1d0030ae05e82eac97965baa0e18e0c77cc89f7f6dcfe",
-      "image": "src/numbers/medium/2ef5bcd480b51600a4d81d22efac5fc4202c4277047f0111fb70f9d10c5ac13ee1b3d8f5627491f092a1d0030ae05e82eac97965baa0e18e0c77cc89f7f6dcfe.jpg"
+      "name": "ZETATION",
+      "hashedName": "4ebf2b99570473cac2efe925049e4935dfb270ea0863f03917e5d997ab54dfb9e1c3f8054a90ab788ebf53a6d1cc157455fc022ad830a95113910fca6f557678",
+      "image": "src/numbers/medium/4ebf2b99570473cac2efe925049e4935dfb270ea0863f03917e5d997ab54dfb9e1c3f8054a90ab788ebf53a6d1cc157455fc022ad830a95113910fca6f557678.jpg"
+    },
+    {
+      "name": "The Supi",
+      "hashedName": "c7d4ca462c2d7d1430a85c822dd4ebea280e0dc5aec7ad3fda29e07bf35dfa3e001820d1529ccbbaacc708c322ba17999274ba09fcb08e6ffb62029b171b05ca",
+      "image": "src/numbers/medium/c7d4ca462c2d7d1430a85c822dd4ebea280e0dc5aec7ad3fda29e07bf35dfa3e001820d1529ccbbaacc708c322ba17999274ba09fcb08e6ffb62029b171b05ca.jpg"
+    },
+    {
+      "name": "THE OMEGOOGOLOGY",
+      "hashedName": "f6e94d45cb1f36124e543acece76d0ea4b5c1e74ab2ccd79b209e8eb6b964f70e822aac3e2d010073b401c38ee2487b466eb01c6450d12fe3e2545997a5ff343",
+      "image": "src/numbers/medium/f6e94d45cb1f36124e543acece76d0ea4b5c1e74ab2ccd79b209e8eb6b964f70e822aac3e2d010073b401c38ee2487b466eb01c6450d12fe3e2545997a5ff343.jpg"
+    },
+    {
+      "name": "Gigamassive Absolute",
+      "hashedName": "4dc16a7dcfca1ef772099fe2fd01ea646e05172b1ceda67b49342cba2b029b859819a8b9fa86b8cb4aee311dc18b8a20692602ca50f80ae76f7b189f4844c79d",
+      "image": "src/numbers/medium/4dc16a7dcfca1ef772099fe2fd01ea646e05172b1ceda67b49342cba2b029b859819a8b9fa86b8cb4aee311dc18b8a20692602ca50f80ae76f7b189f4844c79d.jpg"
+    },
+    {
+      "name": "Overpowered-Omniomonous",
+      "hashedName": "b9ceed503e4f19fdb71eda63efbf3bc5c52687a7d47c36f83b1769934aa4150b172f2eed4894da5fe70ac49f4e464b10fc701ff0c2d4e63b59de7287e7758dd7",
+      "image": "src/numbers/medium/b9ceed503e4f19fdb71eda63efbf3bc5c52687a7d47c36f83b1769934aa4150b172f2eed4894da5fe70ac49f4e464b10fc701ff0c2d4e63b59de7287e7758dd7.jpg"
+    },
+    {
+      "name": "E.Q.U.I.V.A.L.E.N.T",
+      "hashedName": "d0766a148a3d4afad0ed98f432200c0b62e88a808887894fa84c562781e0be26cdeaf585c6d87f7deea1f5fc7600e6cdf1d65fc0d7a81630fb846cbd338683ce",
+      "image": "src/numbers/medium/d0766a148a3d4afad0ed98f432200c0b62e88a808887894fa84c562781e0be26cdeaf585c6d87f7deea1f5fc7600e6cdf1d65fc0d7a81630fb846cbd338683ce.jpg"
     },
     {
       "name": "Polyitialfinity",
@@ -2479,14 +2809,34 @@
       "image": "src/numbers/medium/0bf2404e0664484e10f210acc789cc7c087d095eacb12fed2f3de26f6601f14f9df109fe51c5860c9bf64576e1e1255fe7fa84db5c1ba81149a39ea9821c58af.jpg"
     },
     {
+      "name": "OMIDEATH PHASE",
+      "hashedName": "5387f58851d32ef493dcf7282621be2181e402ad056ce0ab01e3232a79bc2263d08c5187fbf2f6328e96f82f3e3ec1bb46ef7d815bb7250f4e788c58a59bb653",
+      "image": "src/numbers/medium/5387f58851d32ef493dcf7282621be2181e402ad056ce0ab01e3232a79bc2263d08c5187fbf2f6328e96f82f3e3ec1bb46ef7d815bb7250f4e788c58a59bb653.jpg"
+    },
+    {
       "name": "Cardinufinity",
       "hashedName": "93fdd2db11cce9d311d96658a10cec8548f8a28d875e5a7b8058a3e90c7eeb584458ffeddee91474c4a76e17445f1a1a1f6e158b07dc7fecf9ef3d4413e687d6",
       "image": "src/numbers/medium/93fdd2db11cce9d311d96658a10cec8548f8a28d875e5a7b8058a3e90c7eeb584458ffeddee91474c4a76e17445f1a1a1f6e158b07dc7fecf9ef3d4413e687d6.jpg"
     },
     {
+      "name": "EXTERMATION",
+      "hashedName": "dc442c364c27dda7bb0c7fb3520b2cd2fbeea8311231194770eb233b26db48df6c8dbd08be642af96eafd7644174197ddd8a98b3b72cb508d56bf987fc49a599",
+      "image": "src/numbers/medium/dc442c364c27dda7bb0c7fb3520b2cd2fbeea8311231194770eb233b26db48df6c8dbd08be642af96eafd7644174197ddd8a98b3b72cb508d56bf987fc49a599.jpg"
+    },
+    {
+      "name": "Small Ignorance Ordinal",
+      "hashedName": "e8bb9252d0a60765181cb3af00ea846d8b96135c13b2bf59bd7278a96f30cb8d1d990671f378835b5077e4748559b64b80b08f3bfc7762fce4d65f9073a4d7d0",
+      "image": "src/numbers/medium/e8bb9252d0a60765181cb3af00ea846d8b96135c13b2bf59bd7278a96f30cb8d1d990671f378835b5077e4748559b64b80b08f3bfc7762fce4d65f9073a4d7d0.jpg"
+    },
+    {
       "name": "Absolutely Dimensional",
       "hashedName": "c9e32b10f415e7e8ab478a5b5b1f10b7562c9575103324e2deb7630dd3415ea7ad14a22f805bea37ca0f1dd483c2b2928d10ceafd4f1c18851ecc1fca3eac56d",
       "image": "src/numbers/medium/c9e32b10f415e7e8ab478a5b5b1f10b7562c9575103324e2deb7630dd3415ea7ad14a22f805bea37ca0f1dd483c2b2928d10ceafd4f1c18851ecc1fca3eac56d.jpg"
+    },
+    {
+      "name": "Superinfinion",
+      "hashedName": "26017b4313649446e3dc8cc6183cbf18b6134faf5d4eff1cec40123cb9d448d415a04af29ba1a4e707e6293a98d992a8d1eccd42b99c8efb796714d5748c941b",
+      "image": "src/numbers/medium/26017b4313649446e3dc8cc6183cbf18b6134faf5d4eff1cec40123cb9d448d415a04af29ba1a4e707e6293a98d992a8d1eccd42b99c8efb796714d5748c941b.jpg"
     },
     {
       "name": "Multisesmic",
@@ -2529,9 +2879,39 @@
       "image": "src/numbers/medium/478e5fa0dfba435b559133f67cdeed1e9fe5125548a7307b0420d2e8d65061517caf085027b5cd03c36558733eeedc940927770221ac3648d176612e27a00c36.jpg"
     },
     {
+      "name": "PHIATION",
+      "hashedName": "b0caf3404c5d3bfc8869f24b7759af034256f75443886b424a4c7decc10708918f2f541599ef40fdae0dfdf217b6c769e979795bc9cf06b7c2c730f5cf548e3e",
+      "image": "src/numbers/medium/b0caf3404c5d3bfc8869f24b7759af034256f75443886b424a4c7decc10708918f2f541599ef40fdae0dfdf217b6c769e979795bc9cf06b7c2c730f5cf548e3e.jpg"
+    },
+    {
+      "name": "Absolute Multicycle",
+      "hashedName": "a9dcb2c01195dfce9820545607b0825670a357fb550c84b243012e60e9a642c061ba7c1585d184fb5d2cceb476bbbcd08162477ac112fbed3175f534706cadd9",
+      "image": "src/numbers/medium/a9dcb2c01195dfce9820545607b0825670a357fb550c84b243012e60e9a642c061ba7c1585d184fb5d2cceb476bbbcd08162477ac112fbed3175f534706cadd9.jpg"
+    },
+    {
       "name": "Alwaysfinity",
       "hashedName": "3e0274c72600727471c3b6e3a08eccb43b55515381c743555ecf477dd76d01ad4f6f0e7d62e39d2498618af35d708894f23b1d91f6414534eab6fbce06377513",
       "image": "src/numbers/medium/3e0274c72600727471c3b6e3a08eccb43b55515381c743555ecf477dd76d01ad4f6f0e7d62e39d2498618af35d708894f23b1d91f6414534eab6fbce06377513.jpg"
+    },
+    {
+      "name": "Asteroid-Mastrionyx Barrior",
+      "hashedName": "8319ede21fa04e1bfc8c1d8cc2aee8d6e1726e4c5f889d3d27eae406d0ec2707eb85941a76c5e23e90f3ea1bb9a25f98ef4c9ef59a89caca8a90358c1f9a6bac",
+      "image": "src/numbers/medium/8319ede21fa04e1bfc8c1d8cc2aee8d6e1726e4c5f889d3d27eae406d0ec2707eb85941a76c5e23e90f3ea1bb9a25f98ef4c9ef59a89caca8a90358c1f9a6bac.jpg"
+    },
+    {
+      "name": "Cyclion #1",
+      "hashedName": "11a96d5734c5a9a3c87e28822d6ffcf9157bf93115eb690b2f42aefc6614c888199a27e5377ca382c6e32c6495ff937efe9fa288ab01a2348f5793436cba9899",
+      "image": "src/numbers/medium/11a96d5734c5a9a3c87e28822d6ffcf9157bf93115eb690b2f42aefc6614c888199a27e5377ca382c6e32c6495ff937efe9fa288ab01a2348f5793436cba9899.jpg"
+    },
+    {
+      "name": "Metamatramt of true number",
+      "hashedName": "c2c7ce52cf51f235ed6ec2b27b86e491b06cd85695733a443a2634b088d2a8c921f510e5a965edd9339a10979de3ee35a8f3fe3ef4ae72aef1931fbca75040cc",
+      "image": "src/numbers/medium/c2c7ce52cf51f235ed6ec2b27b86e491b06cd85695733a443a2634b088d2a8c921f510e5a965edd9339a10979de3ee35a8f3fe3ef4ae72aef1931fbca75040cc.jpg"
+    },
+    {
+      "name": "The Ultimate Beyond",
+      "hashedName": "3d72a526c9de71de4c31a21a13b0edb22ae5780ef63b3238233a18308c01ef3057ee7d0e11bae24f69c2f12b111e01148687bec5942409ff4dce66c102efa989",
+      "image": "src/numbers/medium/3d72a526c9de71de4c31a21a13b0edb22ae5780ef63b3238233a18308c01ef3057ee7d0e11bae24f69c2f12b111e01148687bec5942409ff4dce66c102efa989.jpg"
     },
     {
       "name": "Pentiexfinity",
@@ -2539,9 +2919,39 @@
       "image": "src/numbers/medium/0cc2970e3aca26a71a21fa2b500af1ddf2940ef81382624c3fa52484a1bcffee1819f361eb318be04ef57ce2bec00a581c15e638867eb2b998164dc1157f2e0b.jpg"
     },
     {
+      "name": "Absolute Super Layer",
+      "hashedName": "ce6127399317a69c3168671616bee581cfe463e4ae43d2d01a1d11c61e8051af8a07d1b3d17be03fde994d1d50936708415df601938b490a16617d49b2ffe633",
+      "image": "src/numbers/medium/ce6127399317a69c3168671616bee581cfe463e4ae43d2d01a1d11c61e8051af8a07d1b3d17be03fde994d1d50936708415df601938b490a16617d49b2ffe633.jpg"
+    },
+    {
+      "name": "Endingfinition",
+      "hashedName": "91181259f05ed732f73853dd0a2d3175743fc92d27b75c340e95b6a5b30d41bc4c4059c030b55632bc5edc944edf0513a40723d1c6ff469addabdb43234fe711",
+      "image": "src/numbers/medium/91181259f05ed732f73853dd0a2d3175743fc92d27b75c340e95b6a5b30d41bc4c4059c030b55632bc5edc944edf0513a40723d1c6ff469addabdb43234fe711.jpg"
+    },
+    {
+      "name": "ULTIMANIVERSOMATION",
+      "hashedName": "146305b9a2a0bffa5ed9272801c358fa07ff3a5a54cc3fa3c857755e9b57b6778bccca34a3b14060b4f5efc48b08843a2e8c66f64d846edef6fa0edc237b46e6",
+      "image": "src/numbers/medium/146305b9a2a0bffa5ed9272801c358fa07ff3a5a54cc3fa3c857755e9b57b6778bccca34a3b14060b4f5efc48b08843a2e8c66f64d846edef6fa0edc237b46e6.jpg"
+    },
+    {
+      "name": "OMNI-Z.....Z FINITE LEVEL",
+      "hashedName": "bf85f036b0d347ad3d73c6a85481e78b3927702e92282ede34e760964d0a1ce3677e1ec65d09ce38ec3ba32c2236e91f2c9cf8ca28944198780cf36a7694301b",
+      "image": "src/numbers/medium/bf85f036b0d347ad3d73c6a85481e78b3927702e92282ede34e760964d0a1ce3677e1ec65d09ce38ec3ba32c2236e91f2c9cf8ca28944198780cf36a7694301b.jpg"
+    },
+    {
+      "name": "The Opposition",
+      "hashedName": "ca151d502ef889b5518b2a5c7d622d65b095c07374c6c752b7c12f79ddf9820cbe86c7aaa48201ecac17df87ff9fc71f2a9a93c14980618e5d2537ea5cbffb59",
+      "image": "src/numbers/medium/ca151d502ef889b5518b2a5c7d622d65b095c07374c6c752b7c12f79ddf9820cbe86c7aaa48201ecac17df87ff9fc71f2a9a93c14980618e5d2537ea5cbffb59.jpg"
+    },
+    {
       "name": "Meta Error Sulute Sulute One",
       "hashedName": "1ce2360772fc791733ae4783cc648c1ec599b70d08e9899e9c288dee3e8ad4fe5a94945b3ddf41a1e8521df8a9acfd16a42a8cc7428c3445840950548b9fb60b",
       "image": "src/numbers/medium/1ce2360772fc791733ae4783cc648c1ec599b70d08e9899e9c288dee3e8ad4fe5a94945b3ddf41a1e8521df8a9acfd16a42a8cc7428c3445840950548b9fb60b.jpg"
+    },
+    {
+      "name": "Megnoaoiunity",
+      "hashedName": "f31e78a34f0ef4d6a5778af50e3fa89b13a5adef4a93155b9852e4469b80cfdeeeb7409f23bccf06f011f68093b2565e8162b270506a37a22bd50ea647f93bcd",
+      "image": "src/numbers/medium/f31e78a34f0ef4d6a5778af50e3fa89b13a5adef4a93155b9852e4469b80cfdeeeb7409f23bccf06f011f68093b2565e8162b270506a37a22bd50ea647f93bcd.jpg"
     },
     {
       "name": "Absolutely Demoniac Infinity",
@@ -2549,9 +2959,9 @@
       "image": "src/numbers/medium/e492b7bcaefb1824fd43bb47e5d469d7b283ff7dc84fe347bba02b5c5d2cc1074f2b50e1345c23727e54b7d7904da1a402ce1b41ac5c3bdb8887f117aebe6894.jpg"
     },
     {
-      "name": "The Nanticility Error",
-      "hashedName": "2fc0f2d61591ef6766c2244f3ef4390d638dc30346d4890ce5e8331dddcbd26aba22a22a59cf408f1b70ac0c97bee04804609f7814d1cf7be91e373fb1899aef",
-      "image": "src/numbers/medium/2fc0f2d61591ef6766c2244f3ef4390d638dc30346d4890ce5e8331dddcbd26aba22a22a59cf408f1b70ac0c97bee04804609f7814d1cf7be91e373fb1899aef.jpg"
+      "name": "The True Symbol Sequence",
+      "hashedName": "efa7cd46caeaef2e946017a314923656317eed71541df900c665c2c1bdd2d685f1b39897d70f1b67bc6ce9a87efccf09511c896b496ec7ad58487c77cf94fa81",
+      "image": "src/numbers/medium/efa7cd46caeaef2e946017a314923656317eed71541df900c665c2c1bdd2d685f1b39897d70f1b67bc6ce9a87efccf09511c896b496ec7ad58487c77cf94fa81.jpg"
     },
     {
       "name": "Polyfinity",
@@ -2564,9 +2974,19 @@
       "image": "src/numbers/medium/f832ef8c3ad9290402a88ee026c5c174b0e32268f6d92546c21efdcd2bb9134ef2c53ac063f4437b1d1ec8703b44cdbcfe86a735effa7d1ed42023d19aa85e4e.jpg"
     },
     {
-      "name": "Tragiritifinity",
-      "hashedName": "46c977145eaa2a9c4ab8c0cb8de94365d2f927a62098761b1cd56fddef184cc3e27b15bf208822b2f044940212e1e0da19358c362bc789bfac00b0ebc19fb719",
-      "image": "src/numbers/medium/46c977145eaa2a9c4ab8c0cb8de94365d2f927a62098761b1cd56fddef184cc3e27b15bf208822b2f044940212e1e0da19358c362bc789bfac00b0ebc19fb719.jpg"
+      "name": "THE F.I.N.A.L I.I",
+      "hashedName": "a7d86e03d10f2fc051d02970eddf7a9eed97d40ac2b95ff452816678e919421ccda3505e544a59306736c0a39c7d7e400b1f71e75edcc980fae8effb0f2c3547",
+      "image": "src/numbers/medium/a7d86e03d10f2fc051d02970eddf7a9eed97d40ac2b95ff452816678e919421ccda3505e544a59306736c0a39c7d7e400b1f71e75edcc980fae8effb0f2c3547.jpg"
+    },
+    {
+      "name": "Absolute Rebirth",
+      "hashedName": "d9f7aec648f3feafc04366cb3fd82c096ab8645c07a7e9aaa3e406d041f553a750340bf70d5d94991bf5878462e2a6199f2e14b863214cf10f6fe358826c482f",
+      "image": "src/numbers/medium/d9f7aec648f3feafc04366cb3fd82c096ab8645c07a7e9aaa3e406d041f553a750340bf70d5d94991bf5878462e2a6199f2e14b863214cf10f6fe358826c482f.jpg"
+    },
+    {
+      "name": "Buffed Terminusfinity",
+      "hashedName": "34dbc940b13c494f3b0e7e53e82175c03e359bd9cfedc29ed69e4c27a44be301ca547d62f780c4d1031a01d2a6c2a1e560669439905e3d84b60ba74ca77bf4e2",
+      "image": "src/numbers/medium/34dbc940b13c494f3b0e7e53e82175c03e359bd9cfedc29ed69e4c27a44be301ca547d62f780c4d1031a01d2a6c2a1e560669439905e3d84b60ba74ca77bf4e2.jpg"
     },
     {
       "name": "Haratutlute One",
@@ -2579,9 +2999,24 @@
       "image": "src/numbers/medium/8e97138fec6983d11e41b530aef8e0152681024caaae00147e7b7f0760c8581e8eb4da592fcb757f587eb6fccc56e4cc9330daad2d823ec30508f47bd695e3f4.jpg"
     },
     {
+      "name": "Absolutes of Absolute",
+      "hashedName": "53c6dde87542d239c869355256b1879f203e863c28a6f5d2fd0f7010b8cd0a8c5dc52c5670dca811976ccaf0a87f3c4eb063cd12721fa64795e72db005da5778",
+      "image": "src/numbers/medium/53c6dde87542d239c869355256b1879f203e863c28a6f5d2fd0f7010b8cd0a8c5dc52c5670dca811976ccaf0a87f3c4eb063cd12721fa64795e72db005da5778.jpg"
+    },
+    {
+      "name": "The Stackirestiges",
+      "hashedName": "c91da17f97a4ecf0acaf2ce1c675f8f89d69480e783096ebd8f01911ebd4c5971337e78fbf5c1a2f069740480d588ac3e20a059e4a89b4e30dc7b1c0366a2cf4",
+      "image": "src/numbers/medium/c91da17f97a4ecf0acaf2ce1c675f8f89d69480e783096ebd8f01911ebd4c5971337e78fbf5c1a2f069740480d588ac3e20a059e4a89b4e30dc7b1c0366a2cf4.jpg"
+    },
+    {
       "name": "Astitype of Numberals",
       "hashedName": "ddac96a6f809bbab94e5a193a2e646fac3ac86a8bff0777244b0435c691907f3c4469908f21fd2a1500fab9b4bbe7d7b3a2ce2ee2cd7ae77bd558cd408897bd3",
       "image": "src/numbers/medium/ddac96a6f809bbab94e5a193a2e646fac3ac86a8bff0777244b0435c691907f3c4469908f21fd2a1500fab9b4bbe7d7b3a2ce2ee2cd7ae77bd558cd408897bd3.jpg"
+    },
+    {
+      "name": "HUNO-INFINITY LEVEL FINITE",
+      "hashedName": "b527c1d6878213c230dc078e45c5bb132163d694c3a4cb5548c7699769d38ff8c1a8f33fbb611adfe56d7d1d44cdb6b25a534bf7f33ba89982a7b4fffdf0c115",
+      "image": "src/numbers/medium/b527c1d6878213c230dc078e45c5bb132163d694c3a4cb5548c7699769d38ff8c1a8f33fbb611adfe56d7d1d44cdb6b25a534bf7f33ba89982a7b4fffdf0c115.jpg"
     },
     {
       "name": "Bronnicistal-Infinity",
@@ -2589,9 +3024,14 @@
       "image": "src/numbers/medium/2d53b7aeabff9ecf95c652f32d97ce0724a3bfa04bb80c7c20bf2d6162ce0e038c9dc836de9038c4a4a2ec7d801fc5edf042ee5ad1ca381064edd29cc931acec.jpg"
     },
     {
-      "name": "Zappifinity",
-      "hashedName": "e27fffb768e83fe4aca08b628d93b05e9c65dc3cfd8b6d23a8706aa72ca59bb0efb35f5ad9b2b5fce4c0b24716f80b71799f540ed0400623bca0c8824f35f23e",
-      "image": "src/numbers/medium/e27fffb768e83fe4aca08b628d93b05e9c65dc3cfd8b6d23a8706aa72ca59bb0efb35f5ad9b2b5fce4c0b24716f80b71799f540ed0400623bca0c8824f35f23e.jpg"
+      "name": "The Great Fish",
+      "hashedName": "8996372db66a30a601da749175cba81623af31e71c4c90ac3aac497b893af680e3cfd46f41a2419aba7778879d2e3e19b8f7b7871cd725532f88fea0f358c106",
+      "image": "src/numbers/medium/8996372db66a30a601da749175cba81623af31e71c4c90ac3aac497b893af680e3cfd46f41a2419aba7778879d2e3e19b8f7b7871cd725532f88fea0f358c106.jpg"
+    },
+    {
+      "name": "Supi Finitial Stage 100",
+      "hashedName": "7c126d1ffce214e5a79c19457692f596998a87264bd369d41c70b349641f9772fcd9e1ee3a2e355f23731cc6fca22073410dbad4b4f25c63d01eb61e301da711",
+      "image": "src/numbers/medium/7c126d1ffce214e5a79c19457692f596998a87264bd369d41c70b349641f9772fcd9e1ee3a2e355f23731cc6fca22073410dbad4b4f25c63d01eb61e301da711.jpg"
     },
     {
       "name": "Endlessfinity",
@@ -2604,14 +3044,14 @@
       "image": "src/numbers/medium/0ebd255c0f37a75369a1d7590d4577122b4dda4f4254e976c318e90d942e19f1c17e05ea67ff598cdb74105e9967e80550af2b9bb3b9b8d7b2823ab6e0626101.jpg"
     },
     {
+      "name": "The Ultimate Asiumnension",
+      "hashedName": "7ec6aa40c7599d8fd7d3aaefc992deb66aa8106d2bcbaf21a1e5703655431f020baa7a93f2130de9a629cae6db25d0654cdc41a2ea26315ba73973e8dc620512",
+      "image": "src/numbers/medium/7ec6aa40c7599d8fd7d3aaefc992deb66aa8106d2bcbaf21a1e5703655431f020baa7a93f2130de9a629cae6db25d0654cdc41a2ea26315ba73973e8dc620512.jpg"
+    },
+    {
       "name": "Complex-Universe-HYDRO",
       "hashedName": "ff66c692fc6f6582fb2677d38e1bfffcbfe4968432a5570fbc4016216b4f9c71537a8a2ccc12293fd07ad3fc242e23676eed19707c2aa53286781b2916f2d1db",
       "image": "src/numbers/medium/ff66c692fc6f6582fb2677d38e1bfffcbfe4968432a5570fbc4016216b4f9c71537a8a2ccc12293fd07ad3fc242e23676eed19707c2aa53286781b2916f2d1db.jpg"
-    },
-    {
-      "name": "Uranifinity",
-      "hashedName": "b60ec889c682acab3898456716a266b65f97458ed510965b6269b0f92a0c1e3bfd41969fbfc1157abfd3560d76ece13a7277429dc52990c95201ba785f2c9d2c",
-      "image": "src/numbers/medium/b60ec889c682acab3898456716a266b65f97458ed510965b6269b0f92a0c1e3bfd41969fbfc1157abfd3560d76ece13a7277429dc52990c95201ba785f2c9d2c.jpg"
     },
     {
       "name": "Finitebarrierility",
@@ -2619,14 +3059,44 @@
       "image": "src/numbers/medium/756a86a2c09182492bade525b50a29f0aa692e6d032897bb0bd49c62e8375e30e4221389896c004d6a991e9bd64782d6cd9cf697bad7f3c3569a7a5b9595aaed.jpg"
     },
     {
-      "name": "Voidifinity",
-      "hashedName": "c5402de21b608506901b70ff47c74896a8c7688b2b0f496bcd26ba8b34884c81d85d919535c70d48f8a5fb6bac20c80843e603210c97b41f19397f5fe546be7a",
-      "image": "src/numbers/medium/c5402de21b608506901b70ff47c74896a8c7688b2b0f496bcd26ba8b34884c81d85d919535c70d48f8a5fb6bac20c80843e603210c97b41f19397f5fe546be7a.jpg"
+      "name": "Ultimate Absolute True End of Infinities",
+      "hashedName": "dbe2163a3e523a32343fa76f26e9ac2a23b90ffab27b0e01ed73ba8ae27b65524523814e84bca3a7f0a44b026eabfb2afd748e7a707d237fd575dd9db03417b8",
+      "image": "src/numbers/medium/dbe2163a3e523a32343fa76f26e9ac2a23b90ffab27b0e01ed73ba8ae27b65524523814e84bca3a7f0a44b026eabfb2afd748e7a707d237fd575dd9db03417b8.jpg"
     },
     {
-      "name": "Yattisomic",
-      "hashedName": "35b132a44205f27a66a421af63a7a86f7f48ebac6df664de784d5933906f9294d5d4195ac1ad34dd04798c688135d9fdb73ef3a15a9579cc52b9f1a00219c801",
-      "image": "src/numbers/medium/35b132a44205f27a66a421af63a7a86f7f48ebac6df664de784d5933906f9294d5d4195ac1ad34dd04798c688135d9fdb73ef3a15a9579cc52b9f1a00219c801.jpg"
+      "name": "Absolute-Superfinoainty",
+      "hashedName": "272c4d3f91c28990a8fbde3a0b743d965da12677a517bda8b2cf69cc70ec114d51d649bee8019c5c5a46e4fe59b1ce3da965af5e299756d2c84d49d4da5e5b22",
+      "image": "src/numbers/medium/272c4d3f91c28990a8fbde3a0b743d965da12677a517bda8b2cf69cc70ec114d51d649bee8019c5c5a46e4fe59b1ce3da965af5e299756d2c84d49d4da5e5b22.jpg"
+    },
+    {
+      "name": "The Shape Sequence",
+      "hashedName": "3d8cf1db950984315cb4913677bb52f153becd00795fd60e154ef586e8fe6c4d5cbb8841449f2927a7b09e390a5cb770197602f6317352c8c43eb8bac2a4f34e",
+      "image": "src/numbers/medium/3d8cf1db950984315cb4913677bb52f153becd00795fd60e154ef586e8fe6c4d5cbb8841449f2927a7b09e390a5cb770197602f6317352c8c43eb8bac2a4f34e.jpg"
+    },
+    {
+      "name": "Metagoogology",
+      "hashedName": "067a58d5eafde459a0e51c8d5c22b2f9703d9c808025c8ba53f611c1ab20c9516492fc7c8f1b7449b02d4e00b5e6c180ce8cf93ceed8c6e9ac803da4e8c12dd9",
+      "image": "src/numbers/medium/067a58d5eafde459a0e51c8d5c22b2f9703d9c808025c8ba53f611c1ab20c9516492fc7c8f1b7449b02d4e00b5e6c180ce8cf93ceed8c6e9ac803da4e8c12dd9.jpg"
+    },
+    {
+      "name": "The Finity of the Finities",
+      "hashedName": "52a2b7945742d1f07c1a4ede87bfbc49c82074a82dbbe6d0f6265dca860cce42f52b62507a7dd0fec7e94186989d3ad573b8638cdf872581369048a4ef2c53c7",
+      "image": "src/numbers/medium/52a2b7945742d1f07c1a4ede87bfbc49c82074a82dbbe6d0f6265dca860cce42f52b62507a7dd0fec7e94186989d3ad573b8638cdf872581369048a4ef2c53c7.jpg"
+    },
+    {
+      "name": "Super Finitial Stage 11",
+      "hashedName": "a8dd443993f711e67768c86d44fc9e0b2841fad8a6eb4ddd3ec330105067c7b894b08ad58eb5ad9f5cc7a3495bd73217347c4df52f2a053c807f23c82cb553c2",
+      "image": "src/numbers/medium/a8dd443993f711e67768c86d44fc9e0b2841fad8a6eb4ddd3ec330105067c7b894b08ad58eb5ad9f5cc7a3495bd73217347c4df52f2a053c807f23c82cb553c2.jpg"
+    },
+    {
+      "name": "Maxigorgolus",
+      "hashedName": "08551d2fb9f05d6e9286ea5d214c2e09a6bcca939a65d2b92f0bd5e9d128ffd08ea0330aa1b4ee14879e558419d651960edc605475d028bb8909e4ff61143a4b",
+      "image": "src/numbers/medium/08551d2fb9f05d6e9286ea5d214c2e09a6bcca939a65d2b92f0bd5e9d128ffd08ea0330aa1b4ee14879e558419d651960edc605475d028bb8909e4ff61143a4b.jpg"
+    },
+    {
+      "name": "The God Googology",
+      "hashedName": "a5d822cffdee30ee051fadaa93616372aab18e9411ffa415746eedf7ca0e6182d3b4638a95034456b3da50fb2c4a33bfeb198a798d9399367a4dcebb9026d269",
+      "image": "src/numbers/medium/a5d822cffdee30ee051fadaa93616372aab18e9411ffa415746eedf7ca0e6182d3b4638a95034456b3da50fb2c4a33bfeb198a798d9399367a4dcebb9026d269.jpg"
     },
     {
       "name": "Hydronamic Ordinal",
@@ -2644,6 +3114,21 @@
       "image": "src/numbers/medium/0611444fd127b45e3e333e621630976ffd6d52ed748e6e89c86d8985b62d82656c0a5552cf745324ccd3df898f1b62bfd2188441a71378e7bf575b4f2549e0b5.jpg"
     },
     {
+      "name": "Endingfination",
+      "hashedName": "276e09e9ad8dc0d3009bd05933464d60a5ea338231fa0c35f7dd62b609244784326e1ca2d2f1b71670a5c02a331d376e3733c30e41131aea81eb08aa4e74ac42",
+      "image": "src/numbers/medium/276e09e9ad8dc0d3009bd05933464d60a5ea338231fa0c35f7dd62b609244784326e1ca2d2f1b71670a5c02a331d376e3733c30e41131aea81eb08aa4e74ac42.jpg"
+    },
+    {
+      "name": "The Endless Stage",
+      "hashedName": "e688809b0d2d3006e57157ad69d8f29a84654c02867200c2e3ca73a878214090d7cc33d97fc1e43ab29333af2aa2ab38230ae00c174dc82e9d40c4de65bb637d",
+      "image": "src/numbers/medium/e688809b0d2d3006e57157ad69d8f29a84654c02867200c2e3ca73a878214090d7cc33d97fc1e43ab29333af2aa2ab38230ae00c174dc82e9d40c4de65bb637d.jpg"
+    },
+    {
+      "name": "Absolute Fictional Googology",
+      "hashedName": "32e11a437ff397c9f439798ce8568536aa993ab3de44a5faf9e0ea42146344295b8bf976aba4260dff4cd29fbb8768e2707c26a120325cad5268430d550f41e9",
+      "image": "src/numbers/medium/32e11a437ff397c9f439798ce8568536aa993ab3de44a5faf9e0ea42146344295b8bf976aba4260dff4cd29fbb8768e2707c26a120325cad5268430d550f41e9.jpg"
+    },
+    {
       "name": "Megalute Infinity",
       "hashedName": "772b1a11d256478baea9d7b2abb130d781e6f3dc449012dbd1002253bbd1631ae517a30836a2b6e3bdca76e965420e2a66b0cb23ee99fa4d33000c3d7a6cfbb6",
       "image": "src/numbers/medium/772b1a11d256478baea9d7b2abb130d781e6f3dc449012dbd1002253bbd1631ae517a30836a2b6e3bdca76e965420e2a66b0cb23ee99fa4d33000c3d7a6cfbb6.jpg"
@@ -2654,9 +3139,14 @@
       "image": "src/numbers/medium/667a00e129c0da2f7690ca82b51397be659de7775d423c27d2911c92565746eda419695966f902fd5bc703807d9300ec63eb73675e3953c319a93527f72d3877.jpg"
     },
     {
-      "name": "The Interdimensional Monstrosity",
-      "hashedName": "2f8d9bbb7a375b34f47528993b8b2abf140b97f42ad68222090b9e99e768edda73a4f0e805678e6d267d79a2632716f3f31b852307360604240c2a80102dd15c",
-      "image": "src/numbers/medium/2f8d9bbb7a375b34f47528993b8b2abf140b97f42ad68222090b9e99e768edda73a4f0e805678e6d267d79a2632716f3f31b852307360604240c2a80102dd15c.jpg"
+      "name": "THE ABSBREGOOGOLOGY",
+      "hashedName": "cefe37daa13383910693f6ec9f6c2173aecba216b6e567f7abbe62cf6723174ff07b411cb94a2f6e0c406af0a24b20a6e1e778425b5340ea0bfe1385afdf2933",
+      "image": "src/numbers/medium/cefe37daa13383910693f6ec9f6c2173aecba216b6e567f7abbe62cf6723174ff07b411cb94a2f6e0c406af0a24b20a6e1e778425b5340ea0bfe1385afdf2933.jpg"
+    },
+    {
+      "name": "Pre-Hyper Ordinalize",
+      "hashedName": "12513f6f36f9f0c359d25f9841ca7c0671bb613566b914227862ada1aa1be0cc3194fcfe328c908592f8094617a4370328c1da41708dbe63b8df708366af00fd",
+      "image": "src/numbers/medium/12513f6f36f9f0c359d25f9841ca7c0671bb613566b914227862ada1aa1be0cc3194fcfe328c908592f8094617a4370328c1da41708dbe63b8df708366af00fd.jpg"
     },
     {
       "name": "Alphafinity",
@@ -2669,14 +3159,24 @@
       "image": "src/numbers/medium/7c8a4e28fb5d5e50ff08f836303370e8053be06d446bbf9b4e9227771278daaff8f3a7f5cd8d04127cc853aa9464a15b03ef895d2fc1b51ed76fcf1915a5d6bc.jpg"
     },
     {
+      "name": "Transilimizized of Numbers",
+      "hashedName": "0a20239fa97a87c97c4816d859197229555ff77373ce023c577e6f105a6af091f50f16ab60a5f6029f192c3480ea3c0c50d84a8f43843a782087c6665c73831d",
+      "image": "src/numbers/medium/0a20239fa97a87c97c4816d859197229555ff77373ce023c577e6f105a6af091f50f16ab60a5f6029f192c3480ea3c0c50d84a8f43843a782087c6665c73831d.jpg"
+    },
+    {
       "name": "Absolute Left to Right",
       "hashedName": "532e982fd5b6479ed01456c3e96524baf53c00178bd8ca98c041fb49137718535e3b7e13e334c963d9150d5ffe030fa72fcd29348b7de191ecac93c98aec5a23",
       "image": "src/numbers/medium/532e982fd5b6479ed01456c3e96524baf53c00178bd8ca98c041fb49137718535e3b7e13e334c963d9150d5ffe030fa72fcd29348b7de191ecac93c98aec5a23.jpg"
     },
     {
-      "name": "Reversed-Lunate-Sigmafinity",
-      "hashedName": "0287a2097fc2fe581e956830a2a6f87da4d31ab4c92c1312ca5cfec785a4da0ad05ae2f2489b6ebcfb0369858f4389d59d5fedff2386da996d1d91965715eec9",
-      "image": "src/numbers/medium/0287a2097fc2fe581e956830a2a6f87da4d31ab4c92c1312ca5cfec785a4da0ad05ae2f2489b6ebcfb0369858f4389d59d5fedff2386da996d1d91965715eec9.jpg"
+      "name": "Absolute Mega Recycle",
+      "hashedName": "993453e5847969db9346a60c748ee728e1146186329a376e82cdd671b4cb17cb248bbe7e42ed3bce8ec3eab116d1902e7bc5e1d43d9716154e22e8ab03ef2097",
+      "image": "src/numbers/medium/993453e5847969db9346a60c748ee728e1146186329a376e82cdd671b4cb17cb248bbe7e42ed3bce8ec3eab116d1902e7bc5e1d43d9716154e22e8ab03ef2097.jpg"
+    },
+    {
+      "name": "Absolute Supercycle",
+      "hashedName": "e00641dbddc0869a25442418ae636a0dec795d4535e155f067f0e8f116bb7b5190922312d259692059b596310d99d36b1763e2473a9557c4f005ca0a3f45e1e5",
+      "image": "src/numbers/medium/e00641dbddc0869a25442418ae636a0dec795d4535e155f067f0e8f116bb7b5190922312d259692059b596310d99d36b1763e2473a9557c4f005ca0a3f45e1e5.jpg"
     },
     {
       "name": "Lunate-Sigmafinity",
@@ -2694,6 +3194,26 @@
       "image": "src/numbers/medium/6d499bb83b9e5dccee076241070f4d19d5e4544bdd595d5b04c9f1957ad1d8325ba43897c4af0ada4ad3400472fca8589a8113b2788ba8fdcc171910ff2493e9.jpg"
     },
     {
+      "name": "Final-Carta-Final Point",
+      "hashedName": "2d432995a7854e55ea15ce20a6d9c6f0eccdb510f15b151315cb695be35a73079902e77410b07a5eb929617fa93b8d97315e13cd9d33ae91983423783a1d2c8d",
+      "image": "src/numbers/medium/2d432995a7854e55ea15ce20a6d9c6f0eccdb510f15b151315cb695be35a73079902e77410b07a5eb929617fa93b8d97315e13cd9d33ae91983423783a1d2c8d.jpg"
+    },
+    {
+      "name": "Dect Function",
+      "hashedName": "0c3afc984951bac49e272de2101f228627c23d3900e3cfc09f842f76dd35d8979b7f4a628e23b707492e67c2434cd4b0d365ec01a0687696270bddbccd00393f",
+      "image": "src/numbers/medium/0c3afc984951bac49e272de2101f228627c23d3900e3cfc09f842f76dd35d8979b7f4a628e23b707492e67c2434cd4b0d365ec01a0687696270bddbccd00393f.jpg"
+    },
+    {
+      "name": "P.A.R.A.L.L.E.L",
+      "hashedName": "8d9b66111704ce5cf0dda12d57bec526d3c2db94500738f39e5d0933de5ade2fe7462666b3b035e91a490596400c79d0f83932eb36660a433332c24786033a08",
+      "image": "src/numbers/medium/8d9b66111704ce5cf0dda12d57bec526d3c2db94500738f39e5d0933de5ade2fe7462666b3b035e91a490596400c79d0f83932eb36660a433332c24786033a08.jpg"
+    },
+    {
+      "name": "Absolute Multi Recycle",
+      "hashedName": "57e49afa11f19c53ded8417d006389a9d21c2544df00da89afb0490bb444a51f8f8a18c3ad4eea2988b1a698ee3d12089efe5da84ab567f8e6b22fba3ce2cd3f",
+      "image": "src/numbers/medium/57e49afa11f19c53ded8417d006389a9d21c2544df00da89afb0490bb444a51f8f8a18c3ad4eea2988b1a698ee3d12089efe5da84ab567f8e6b22fba3ce2cd3f.jpg"
+    },
+    {
       "name": "Finalistsicbility",
       "hashedName": "91cc5ad8148b026792b5fc0aac8ba8825ff7f4fa5cd64dae2ad9eccab4089a21cbd6674e5243f7b1aff6644faf6f316d621de25683a089a5098c89d5cb673f42",
       "image": "src/numbers/medium/91cc5ad8148b026792b5fc0aac8ba8825ff7f4fa5cd64dae2ad9eccab4089a21cbd6674e5243f7b1aff6644faf6f316d621de25683a089a5098c89d5cb673f42.jpg"
@@ -2704,14 +3224,24 @@
       "image": "src/numbers/medium/956d9f1861a125597fcf1afd94474e6dfa57171490ed35a8e9404bef9c50273e1a569f9cd5a8bfc451634c45a2b43cfba031dbd19529159dd99e08c436b1f2d2.jpg"
     },
     {
-      "name": "The Alpha-Layerium",
-      "hashedName": "ae73882845a1edadbcded6257803e0fcab24c8aa95245464c04e9cab7f39bcf9c530e6c57ad7cd1a31b3ce01acf09ee1a8b6db3dded234b186cdc6a580b046da",
-      "image": "src/numbers/medium/ae73882845a1edadbcded6257803e0fcab24c8aa95245464c04e9cab7f39bcf9c530e6c57ad7cd1a31b3ce01acf09ee1a8b6db3dded234b186cdc6a580b046da.jpg"
+      "name": "Buffed True Finality",
+      "hashedName": "42944a0c51bf5ef35d7f459d76c9846b1cf38dbb4ce364d86b12fd398916bfd9171d64c44298b9664822eb94426259960b831246039ec586aae779349b0d00a4",
+      "image": "src/numbers/medium/42944a0c51bf5ef35d7f459d76c9846b1cf38dbb4ce364d86b12fd398916bfd9171d64c44298b9664822eb94426259960b831246039ec586aae779349b0d00a4.jpg"
     },
     {
       "name": "Hyperfinity - Sulute - All",
       "hashedName": "e27f89def0abb31c2a19b1442888435dc81ff97833ab7479611a36b4745bb757809fa9817d8680305c505b20c561ddc8d4c60f75321f6492c2434b9afa53bd94",
       "image": "src/numbers/medium/e27f89def0abb31c2a19b1442888435dc81ff97833ab7479611a36b4745bb757809fa9817d8680305c505b20c561ddc8d4c60f75321f6492c2434b9afa53bd94.jpg"
+    },
+    {
+      "name": "HALFETIMATION",
+      "hashedName": "9c79eeb7b6634d65c41b58cc8e0e2305a387bda300feaaa77861cb278837004ef7e52ab59a197dbeccd27d2e7da66c12b272ed642e588d2f093755c1e1f21e4d",
+      "image": "src/numbers/medium/9c79eeb7b6634d65c41b58cc8e0e2305a387bda300feaaa77861cb278837004ef7e52ab59a197dbeccd27d2e7da66c12b272ed642e588d2f093755c1e1f21e4d.jpg"
+    },
+    {
+      "name": "The Mighty Corruption",
+      "hashedName": "6af1d6946f09f3632c354e02e041931b133d47a12e6ab13b062e6bfa3f787418df29c6d7d69d35d4604a7afe5f90c5f4361d35cd6f42d97096c8bf59a526fe79",
+      "image": "src/numbers/medium/6af1d6946f09f3632c354e02e041931b133d47a12e6ab13b062e6bfa3f787418df29c6d7d69d35d4604a7afe5f90c5f4361d35cd6f42d97096c8bf59a526fe79.jpg"
     },
     {
       "name": "Quantum Finity Number One",
@@ -2724,9 +3254,14 @@
       "image": "src/numbers/medium/eb99fbb9b1bf5d6b6d6ca460fb327c7e20a9003ebe7df17ce97f0539188b0877679d9b518887cb83d8946038461f2afbac073f292a3eeb34afc401cdebe89934.jpg"
     },
     {
-      "name": "Scorpiofinity",
-      "hashedName": "49e104dc86472cbc896e7486c8a58e4e4ea661a956d4144b7650e90fb0517db62efb4859c2cd3f6987b8079f86e79c419548d41f00b9fcd5976971c09d3c4fdb",
-      "image": "src/numbers/medium/49e104dc86472cbc896e7486c8a58e4e4ea661a956d4144b7650e90fb0517db62efb4859c2cd3f6987b8079f86e79c419548d41f00b9fcd5976971c09d3c4fdb.jpg"
+      "name": "Nevertion",
+      "hashedName": "b34d060fceb483d2f254fc0e08fc2edd5a14a60e851672f25a790ca928900e7b1e61ada2ba916013edfea03879fe03e05e772f7f1ef3319c171eaac16a7814e5",
+      "image": "src/numbers/medium/b34d060fceb483d2f254fc0e08fc2edd5a14a60e851672f25a790ca928900e7b1e61ada2ba916013edfea03879fe03e05e772f7f1ef3319c171eaac16a7814e5.jpg"
+    },
+    {
+      "name": "The Forever",
+      "hashedName": "f4718664fc9043bf613d95f4fba9e6adc6e6a7f7b0e4f686d8696429e003fc6756666db1de19ca79b54b8e929d4528e9b21e2e64a03e9ebed1a0c272768092ef",
+      "image": "src/numbers/medium/f4718664fc9043bf613d95f4fba9e6adc6e6a7f7b0e4f686d8696429e003fc6756666db1de19ca79b54b8e929d4528e9b21e2e64a03e9ebed1a0c272768092ef.jpg"
     },
     {
       "name": "Hydronicfinity",
@@ -2734,14 +3269,19 @@
       "image": "src/numbers/medium/6b92caf172af6017c92530b6111be48e333acc518d72d33f47e9e94ca91f27de838622eb3ed11b9fa779668187281f91c46e3c51bc3e2e1db82629b00a6f827d.jpg"
     },
     {
-      "name": "Yellinistical Grinning Face",
-      "hashedName": "26b6047a65e31dcbafff199ef63af7e5e0303278f59c961cd3d8ec0558f60f3b33c93d13049b0c16aae963c922675fb98f6bdfe217ddc2c62bc92edf5ed60aef",
-      "image": "src/numbers/medium/26b6047a65e31dcbafff199ef63af7e5e0303278f59c961cd3d8ec0558f60f3b33c93d13049b0c16aae963c922675fb98f6bdfe217ddc2c62bc92edf5ed60aef.jpg"
-    },
-    {
       "name": "Exatitimin",
       "hashedName": "b594ec8d1c9206e834df3a40957d973d74e254543a2bd6364cd3b282b4236805018af18b5ef97f516164b0086a304eb0d0cd340245147a35a82137dfcd3dedf2",
       "image": "src/numbers/medium/b594ec8d1c9206e834df3a40957d973d74e254543a2bd6364cd3b282b4236805018af18b5ef97f516164b0086a304eb0d0cd340245147a35a82137dfcd3dedf2.jpg"
+    },
+    {
+      "name": "The Mathdash",
+      "hashedName": "135df962fd487dadc638a8e80e34b0992b9b3a68828a0c42ac24edec8ecb59019483e5d1e3cee6844ddaca28a40c8971bd6ee16ecd0df4c9644014005ca8e7ea",
+      "image": "src/numbers/medium/135df962fd487dadc638a8e80e34b0992b9b3a68828a0c42ac24edec8ecb59019483e5d1e3cee6844ddaca28a40c8971bd6ee16ecd0df4c9644014005ca8e7ea.jpg"
+    },
+    {
+      "name": "Absolute Recycle",
+      "hashedName": "80a48f1999fef2e766eae716934d3ddcf9ac72933f8cef3d6beea3cbd2f45ad6ed91605bbf5d9a216b1e1f97ed1b46864b5736377233f77ee14c016706f75a4b",
+      "image": "src/numbers/medium/80a48f1999fef2e766eae716934d3ddcf9ac72933f8cef3d6beea3cbd2f45ad6ed91605bbf5d9a216b1e1f97ed1b46864b5736377233f77ee14c016706f75a4b.jpg"
     },
     {
       "name": "Clunterfinity",
@@ -2749,9 +3289,64 @@
       "image": "src/numbers/medium/6609a59c31704e69b71b5d303ed4db6f66eb91213bf4a96751d12d9b65d6a4902ff78d07d4332b5df5ed9b7b09c699230648b8678e71069eabd4b351235b65e4.jpg"
     },
     {
-      "name": "Triunix-Circledfinity",
-      "hashedName": "d744538611e70f59430ab6d3ac601e2fae537f76bf1cb01d1dcd3759c1a6a4332a03a61b55ddb1c8a56f70b5b85b7d5dcf5ba2d23b16eaac4b381002bd5ff67f",
-      "image": "src/numbers/medium/d744538611e70f59430ab6d3ac601e2fae537f76bf1cb01d1dcd3759c1a6a4332a03a61b55ddb1c8a56f70b5b85b7d5dcf5ba2d23b16eaac4b381002bd5ff67f.jpg"
+      "name": "The Googology Ending",
+      "hashedName": "cae02bd459df4122f4058448d3c47d8a0de94d2920adeca42378e4aed1a954d8b1d4da3205b9a80f584bffb905fa7d9cf1e9f59df8703c00c64a2cc5e1fca9ef",
+      "image": "src/numbers/medium/cae02bd459df4122f4058448d3c47d8a0de94d2920adeca42378e4aed1a954d8b1d4da3205b9a80f584bffb905fa7d9cf1e9f59df8703c00c64a2cc5e1fca9ef.jpg"
+    },
+    {
+      "name": "The Mathquestion",
+      "hashedName": "64c59e40c46c6b648001cdf75238d4175ceb6669b2ca02e2e489a0b4bc72c93b876d8d55cda202d922b53abaa273fd599480db535a69d347aeac1ac78367e0e3",
+      "image": "src/numbers/medium/64c59e40c46c6b648001cdf75238d4175ceb6669b2ca02e2e489a0b4bc72c93b876d8d55cda202d922b53abaa273fd599480db535a69d347aeac1ac78367e0e3.jpg"
+    },
+    {
+      "name": "The Strange",
+      "hashedName": "af50f59ea9967d000b8de5b1d6d4fedd3f7fad5cae6c2c47b5d32775be9d98cca66f64ff776df19ffa527a006ea9844b09495479385977f6c8fc82a0ddea8f82",
+      "image": "src/numbers/medium/af50f59ea9967d000b8de5b1d6d4fedd3f7fad5cae6c2c47b5d32775be9d98cca66f64ff776df19ffa527a006ea9844b09495479385977f6c8fc82a0ddea8f82.jpg"
+    },
+    {
+      "name": "S.K.A.R.C.A.L.A.N.E",
+      "hashedName": "e1237fd47341e3d32ccc060815487aef64ef02db133309b9b427607f1827672af4f9848725ae7d17b5636b74b1dcd5b3e92d37aad34061c4cdf4bcf0e0b6bcb4",
+      "image": "src/numbers/medium/e1237fd47341e3d32ccc060815487aef64ef02db133309b9b427607f1827672af4f9848725ae7d17b5636b74b1dcd5b3e92d37aad34061c4cdf4bcf0e0b6bcb4.jpg"
+    },
+    {
+      "name": "Truer Breakup",
+      "hashedName": "49c6bb4929a1c446ac128c22c1c403a730921b26e6215936d12db5190322cdffceb9c8ae4d7274b67e63c9a2399fc874f7a09fdcd1363b3d913dc2413fffa493",
+      "image": "src/numbers/medium/49c6bb4929a1c446ac128c22c1c403a730921b26e6215936d12db5190322cdffceb9c8ae4d7274b67e63c9a2399fc874f7a09fdcd1363b3d913dc2413fffa493.jpg"
+    },
+    {
+      "name": "Unbreakablestability Function",
+      "hashedName": "598be9ef97347201b7af62c53db53f1b8a55484a22cff6d0fd9ee1e397430c879c0003cce6772fc5e244293c886644c85bfad2abe002ea8232660497ce29765c",
+      "image": "src/numbers/medium/598be9ef97347201b7af62c53db53f1b8a55484a22cff6d0fd9ee1e397430c879c0003cce6772fc5e244293c886644c85bfad2abe002ea8232660497ce29765c.jpg"
+    },
+    {
+      "name": "Cardinated-Finite-Final",
+      "hashedName": "f5e4c888c17eede7d9919d5a17b40c31d86ecf59ce7b76697ec30109aae1c4cd7acfe70370ac4fee1afac47fcfc3a1c4cdfc4f51c8f10b66d763abaf1ed991d8",
+      "image": "src/numbers/medium/f5e4c888c17eede7d9919d5a17b40c31d86ecf59ce7b76697ec30109aae1c4cd7acfe70370ac4fee1afac47fcfc3a1c4cdfc4f51c8f10b66d763abaf1ed991d8.jpg"
+    },
+    {
+      "name": "Boxie Number",
+      "hashedName": "9f8b552a7b700837e4119412dec8f0c0e8be3a1b3c999d4315bb6d57960046d8416b1b80fe949a8c907cd0218713d017100e9b52b2ca1994c93cfbd910bcac4e",
+      "image": "src/numbers/medium/9f8b552a7b700837e4119412dec8f0c0e8be3a1b3c999d4315bb6d57960046d8416b1b80fe949a8c907cd0218713d017100e9b52b2ca1994c93cfbd910bcac4e.jpg"
+    },
+    {
+      "name": "Instailibility",
+      "hashedName": "e18f33f07c2f1eb34dd1e802158944e2ddbc9b5c5ad16529572a4483b968923c5d6b600f39906ad89d4a923efd030922921d1053a32e7c5ee0e25d6c92396a31",
+      "image": "src/numbers/medium/e18f33f07c2f1eb34dd1e802158944e2ddbc9b5c5ad16529572a4483b968923c5d6b600f39906ad89d4a923efd030922921d1053a32e7c5ee0e25d6c92396a31.jpg"
+    },
+    {
+      "name": "The Side",
+      "hashedName": "26e941a4d3fe043b44dc0b54cf679ffa4076694bab9dbf7dd379624f5889036988e534c7f4720b0ab0ecae59f134319530c833352dcd1588a0c5e26284d30ee5",
+      "image": "src/numbers/medium/26e941a4d3fe043b44dc0b54cf679ffa4076694bab9dbf7dd379624f5889036988e534c7f4720b0ab0ecae59f134319530c833352dcd1588a0c5e26284d30ee5.jpg"
+    },
+    {
+      "name": "Corruptoinfinium",
+      "hashedName": "789f7a43b8f2a04018b4a6f0b8437bcc45bf85e3163c92629a658cbfab03cb4f27cc1f063cc8414a2963e7f64592a6bb066133cdca7f54c8ad4dbda3034c0774",
+      "image": "src/numbers/medium/789f7a43b8f2a04018b4a6f0b8437bcc45bf85e3163c92629a658cbfab03cb4f27cc1f063cc8414a2963e7f64592a6bb066133cdca7f54c8ad4dbda3034c0774.jpg"
+    },
+    {
+      "name": "Absolute Mega Layer",
+      "hashedName": "47f4071b8e5f24bb8916f949624fec6e967b80ff70502d45d6e954bf059fe81b94c106b1a465a1fa62b75be5b58c462fb414a24c427c45691bae477a67b357ca",
+      "image": "src/numbers/medium/47f4071b8e5f24bb8916f949624fec6e967b80ff70502d45d6e954bf059fe81b94c106b1a465a1fa62b75be5b58c462fb414a24c427c45691bae477a67b357ca.jpg"
     },
     {
       "name": "Pointifinity",
@@ -2759,19 +3354,44 @@
       "image": "src/numbers/medium/6ce3a3f2cc0b0768989cc42253c41b40188e303fc5abdccdde2d38354b69c572fb9e8ec4daacd712f6a0382431c8584713b9ab5e5d363f4ec3fe13ed53d4f558.jpg"
     },
     {
-      "name": "The True Kiloend",
-      "hashedName": "7b373c0348b0fdaa61295e898da2f0220bde00100022e9dcd85dce399482241e480df18d9e10a97ba0ba77ed5de291b98cac7c19815e14d0837bc4877a4333ba",
-      "image": "src/numbers/medium/7b373c0348b0fdaa61295e898da2f0220bde00100022e9dcd85dce399482241e480df18d9e10a97ba0ba77ed5de291b98cac7c19815e14d0837bc4877a4333ba.jpg"
-    },
-    {
       "name": "Argonitisic One",
       "hashedName": "6ffa51729f7deb60aae0bac4acddb90d3298cbe1a7e98cfebd897a5811d69a04563334037cebd88120db535067d9df4fcafc4204f7803cfd76853554df8f8133",
       "image": "src/numbers/medium/6ffa51729f7deb60aae0bac4acddb90d3298cbe1a7e98cfebd897a5811d69a04563334037cebd88120db535067d9df4fcafc4204f7803cfd76853554df8f8133.jpg"
     },
     {
+      "name": "The Mathis",
+      "hashedName": "018cf98422856eea6d17eeb1ef35d6b58a56e704c1891517a7049c97147a166d0c836f4ba48a69ed4bab3410a4aad3c0ff388eb42da682064607acc78816a50d",
+      "image": "src/numbers/medium/018cf98422856eea6d17eeb1ef35d6b58a56e704c1891517a7049c97147a166d0c836f4ba48a69ed4bab3410a4aad3c0ff388eb42da682064607acc78816a50d.jpg"
+    },
+    {
+      "name": "The True Sequence",
+      "hashedName": "83304dadfb5644e8311e096f8929746a467813fb31d77465cb4c3c05998afe6de674e53d30ba5f674f89e0f24628702a4fa039192941bbe3c664e57fc19c3f66",
+      "image": "src/numbers/medium/83304dadfb5644e8311e096f8929746a467813fb31d77465cb4c3c05998afe6de674e53d30ba5f674f89e0f24628702a4fa039192941bbe3c664e57fc19c3f66.jpg"
+    },
+    {
       "name": "Googol-M-Infinity",
       "hashedName": "10531a00aaaf177bdaf8f3e574326964333b41643511b9c5b320672a17821daa4256d4517eebe9ac84bc8aa1eaedb59d61ff985bfd09048366005fdaba9f7392",
       "image": "src/numbers/medium/10531a00aaaf177bdaf8f3e574326964333b41643511b9c5b320672a17821daa4256d4517eebe9ac84bc8aa1eaedb59d61ff985bfd09048366005fdaba9f7392.jpg"
+    },
+    {
+      "name": "Chikofinity",
+      "hashedName": "df6a92715d11a80bcfc0658d2aab4d643aee80b35c8611f1aba915b3e16a5cf1c2239efa13a2ae76894831aec651142c9bd0ba923d12c3f42a547a164bf9a4e5",
+      "image": "src/numbers/medium/df6a92715d11a80bcfc0658d2aab4d643aee80b35c8611f1aba915b3e16a5cf1c2239efa13a2ae76894831aec651142c9bd0ba923d12c3f42a547a164bf9a4e5.jpg"
+    },
+    {
+      "name": "New-Alli-Meta-Ind/Finity",
+      "hashedName": "373b06ae1faf2ddd61ef7ec8c448e0a552332accd8219038ae5c8ade770a0b17e855abe39f59fd39239e961a9bfcddf62990fd4bf22fb0abd2ad180110f80bd7",
+      "image": "src/numbers/medium/373b06ae1faf2ddd61ef7ec8c448e0a552332accd8219038ae5c8ade770a0b17e855abe39f59fd39239e961a9bfcddf62990fd4bf22fb0abd2ad180110f80bd7.jpg"
+    },
+    {
+      "name": "Absolute Dufictional Numbers",
+      "hashedName": "0c671409791e27a0fdc50b656c359c51de29e0371c23e28623b4dd03339bec6ca77242f75034cbd5b6946c1e9a1ce1f3e9fcede73d586288909936983d5da29f",
+      "image": "src/numbers/medium/0c671409791e27a0fdc50b656c359c51de29e0371c23e28623b4dd03339bec6ca77242f75034cbd5b6946c1e9a1ce1f3e9fcede73d586288909936983d5da29f.jpg"
+    },
+    {
+      "name": "DEATHROW",
+      "hashedName": "f737d02e1fbb6c363e1649631b4559010ee3f810832d9593856ca9a69d84b49295ce4ade908c26dd079486f631c4df2b56486f3e4091bcaa722328cd8b0c5092",
+      "image": "src/numbers/medium/f737d02e1fbb6c363e1649631b4559010ee3f810832d9593856ca9a69d84b49295ce4ade908c26dd079486f631c4df2b56486f3e4091bcaa722328cd8b0c5092.jpg"
     },
     {
       "name": "Pentiexilitifinity",
@@ -2789,9 +3409,9 @@
       "image": "src/numbers/medium/b054306cbbc53831a1c4a58ccabd94274d16d1b01bc30a0b765019e3e92b3da4af27ad440ee7a27dacae88dc3265bcc5be9a03bf60622eadedde49ad727acaf0.jpg"
     },
     {
-      "name": "Spacefinity",
-      "hashedName": "ca40994b413adabf6384627d609a441a0d8e184b00a4fafbff793a615cc4b67768d1da90d4cbe3346fee74e94e5316cf082e6b337d633ce5e3c48b6f5e56f11e",
-      "image": "src/numbers/medium/ca40994b413adabf6384627d609a441a0d8e184b00a4fafbff793a615cc4b67768d1da90d4cbe3346fee74e94e5316cf082e6b337d633ce5e3c48b6f5e56f11e.jpg"
+      "name": "ABSOLUTE BREAKUP",
+      "hashedName": "8c9c9b5ff02f855abc01113d5eddb7ebc5b27de3eee00b43923f4b406c6740a8c87e77d24f7e3bb4989cab98516ded99145008aa82642f1346b9d7d9859abca6",
+      "image": "src/numbers/medium/8c9c9b5ff02f855abc01113d5eddb7ebc5b27de3eee00b43923f4b406c6740a8c87e77d24f7e3bb4989cab98516ded99145008aa82642f1346b9d7d9859abca6.jpg"
     },
     {
       "name": "Greenifinity",
@@ -2809,6 +3429,11 @@
       "image": "src/numbers/medium/68653532406987a4caa35741beb55ccc6e3070eda301f205c18163c78beb5a9abcce7d6c4c5926e8d18dea6360492a9e988a6ce7a3db7f4f9d9b22fc0d552641.jpg"
     },
     {
+      "name": "Toxicinion",
+      "hashedName": "b3221572080b7a7b924e2e3dcf5e6db36334ac03f5fe5acf3a5422fbfc119bd3798f69422e795c60a37e55b07d95deb4c544f5bfc6a81f91fb5f556aaada0480",
+      "image": "src/numbers/medium/b3221572080b7a7b924e2e3dcf5e6db36334ac03f5fe5acf3a5422fbfc119bd3798f69422e795c60a37e55b07d95deb4c544f5bfc6a81f91fb5f556aaada0480.jpg"
+    },
+    {
       "name": "Godifinity",
       "hashedName": "05481ecabdf4c60222c8869a9c9248d9c832324c063a54e2248714515cd73ea3e0d0e4094c8a64857a66065b2ce5045f5d16564e7b9e22f66bf144a3051b76c8",
       "image": "src/numbers/medium/05481ecabdf4c60222c8869a9c9248d9c832324c063a54e2248714515cd73ea3e0d0e4094c8a64857a66065b2ce5045f5d16564e7b9e22f66bf144a3051b76c8.jpg"
@@ -2817,6 +3442,16 @@
       "name": "Infinity-Complex-Multi One to One to One",
       "hashedName": "a5d8e8e108dd9e2b569a68da93b78c63d4ce7270ce257d2925903101dece78e7f5040b030c66e14179161f361c3f631e6a0d443dbf537321ba8b334412cb6731",
       "image": "src/numbers/medium/a5d8e8e108dd9e2b569a68da93b78c63d4ce7270ce257d2925903101dece78e7f5040b030c66e14179161f361c3f631e6a0d443dbf537321ba8b334412cb6731.jpg"
+    },
+    {
+      "name": "Cardinal Level 20",
+      "hashedName": "22d60dfb4bc4c428713cb3be6b51903367dfd6b08282dd79140bf18f8bd268765371f251d5f00d702a30a022c05218a94359bba572020076857e36198fd81659",
+      "image": "src/numbers/medium/22d60dfb4bc4c428713cb3be6b51903367dfd6b08282dd79140bf18f8bd268765371f251d5f00d702a30a022c05218a94359bba572020076857e36198fd81659.jpg"
+    },
+    {
+      "name": "Absolute Multilayer",
+      "hashedName": "6769ebd53caf8ccca71ea2bdc50ea27512a7a38c153ab25fcc9eeacc65d6d858fac260774f835ddf29bfd6e6b1ab0310420559219842b7208ec5d927418224f9",
+      "image": "src/numbers/medium/6769ebd53caf8ccca71ea2bdc50ea27512a7a38c153ab25fcc9eeacc65d6d858fac260774f835ddf29bfd6e6b1ab0310420559219842b7208ec5d927418224f9.jpg"
     },
     {
       "name": "Clubifinity",
@@ -2839,14 +3474,14 @@
       "image": "src/numbers/medium/ddd298e8a955614185e7c61cf4b374f1b83504215ef415eb9998091dd9f9e248ba0c9c83d96d9e7e31838fe51ca4aafb5719e7a4bac9e66d8b3eb3998bf91408.jpg"
     },
     {
-      "name": "Windinamic",
-      "hashedName": "f5da8db8a56db8e97225df0d9b5bae4346d62a3c78e367025d3cf910f7d83443adc1b4d900b2a782b1c5904956d8c6e455965064f9d7c634f3a0c8be84cc2295",
-      "image": "src/numbers/medium/f5da8db8a56db8e97225df0d9b5bae4346d62a3c78e367025d3cf910f7d83443adc1b4d900b2a782b1c5904956d8c6e455965064f9d7c634f3a0c8be84cc2295.jpg"
+      "name": "The Mathslash",
+      "hashedName": "d940b5f64830cae6e089c57555007b7717bae70a368f36f276118874c09f7dc243a84f68ac209d6c10f823ef51053e70e01ae12905aaf5e0f87cf27cc4764b21",
+      "image": "src/numbers/medium/d940b5f64830cae6e089c57555007b7717bae70a368f36f276118874c09f7dc243a84f68ac209d6c10f823ef51053e70e01ae12905aaf5e0f87cf27cc4764b21.jpg"
     },
     {
-      "name": "The Double Prestige",
-      "hashedName": "3866304844d252b96f17bc733b26b030c6e407dd03a47faed503add879216210a12a76bb9a5b95f2804bb529cfeb2ca7905ddefe0359973e33f8ffd74d4fc375",
-      "image": "src/numbers/medium/3866304844d252b96f17bc733b26b030c6e407dd03a47faed503add879216210a12a76bb9a5b95f2804bb529cfeb2ca7905ddefe0359973e33f8ffd74d4fc375.jpg"
+      "name": "The Googology Limit",
+      "hashedName": "ada3a6aebd5955b7bfcf97fc383272bdc560ba0351c4c7b2f373f444f0d0ad06113ba049cb074823d00ea8b70f2e5d5acf4ab200ceb808e35924a30796452f22",
+      "image": "src/numbers/medium/ada3a6aebd5955b7bfcf97fc383272bdc560ba0351c4c7b2f373f444f0d0ad06113ba049cb074823d00ea8b70f2e5d5acf4ab200ceb808e35924a30796452f22.jpg"
     },
     {
       "name": "Gigaictipint",
@@ -2854,19 +3489,29 @@
       "image": "src/numbers/medium/761834fb50c098551b216b0b2ebe30c32a2433a931f8bccafcf58dc1e3d8fbb7042d635d6bdd1b7ed2c10266aa9de22be709242b969f9c1b91485024b363102f.jpg"
     },
     {
-      "name": "Ultimate Endless",
-      "hashedName": "37d446abf1987d25209ff0ae0a39b4d7be189b4a79bd22b8ad55ed28053f0bcef0b33652844a131f0c2295cf1dc30652a59670e93375b9f900538320221cd754",
-      "image": "src/numbers/medium/37d446abf1987d25209ff0ae0a39b4d7be189b4a79bd22b8ad55ed28053f0bcef0b33652844a131f0c2295cf1dc30652a59670e93375b9f900538320221cd754.jpg"
+      "name": "Colposo Infinity",
+      "hashedName": "82eba74644632add84bb2601226d9c34be03c3a53908a6a5e84775d3de9c01db1fcb904efc84ee59a7a6f057a672104918375ef1668045f9dd57ab1596abc09b",
+      "image": "src/numbers/medium/82eba74644632add84bb2601226d9c34be03c3a53908a6a5e84775d3de9c01db1fcb904efc84ee59a7a6f057a672104918375ef1668045f9dd57ab1596abc09b.jpg"
     },
     {
-      "name": "The Everlasting True Number of Existence",
-      "hashedName": "e9b7bae61e521b0c756989959c0c5b8a3a66f2c62ca34927dc045bd102394a085219e05442ac1b6f42c8549ad90d957156b61aa20cdfeeadd40896bb7d317161",
-      "image": "src/numbers/medium/e9b7bae61e521b0c756989959c0c5b8a3a66f2c62ca34927dc045bd102394a085219e05442ac1b6f42c8549ad90d957156b61aa20cdfeeadd40896bb7d317161.jpg"
+      "name": "CARDINATION",
+      "hashedName": "4e9c39ec9a01457d09a4f7adc5c1ac37ec2200a113f870f438e9439636777571af6e5f0834d8a8b11f11ed9b6993aca885e96bf58030495b628be9605f01aa86",
+      "image": "src/numbers/medium/4e9c39ec9a01457d09a4f7adc5c1ac37ec2200a113f870f438e9439636777571af6e5f0834d8a8b11f11ed9b6993aca885e96bf58030495b628be9605f01aa86.jpg"
     },
     {
-      "name": "Rintesnic",
-      "hashedName": "6835fc425c226fb80ff36796723f87ead47bd2aa9b18061fdc21a38457a9564e4d7c17e350cc1a75aa85924077befa91db18f704c6ff7c71fdb2d475fa0cd3f4",
-      "image": "src/numbers/medium/6835fc425c226fb80ff36796723f87ead47bd2aa9b18061fdc21a38457a9564e4d7c17e350cc1a75aa85924077befa91db18f704c6ff7c71fdb2d475fa0cd3f4.jpg"
+      "name": "ABSOLUTE NOTHING POINT",
+      "hashedName": "5b7c2a329a917393df0d1b5e8ded4a495e511a88ba289110dbbd2eb324b3a8f4a6ad0e8e3eae9cc8169f39686ffc47bc8c2cfa53158c9fdffb7ff93a33b99b49",
+      "image": "src/numbers/medium/5b7c2a329a917393df0d1b5e8ded4a495e511a88ba289110dbbd2eb324b3a8f4a6ad0e8e3eae9cc8169f39686ffc47bc8c2cfa53158c9fdffb7ff93a33b99b49.jpg"
+    },
+    {
+      "name": "The Finaliation",
+      "hashedName": "25578c98f6947944bb5ba76579c555672a5fad09e6912774ed47099bf91c71f985a9960a924106e75a5c29984e7c22d8402edc7f64e9b9cae59fe1a51b7b8c67",
+      "image": "src/numbers/medium/25578c98f6947944bb5ba76579c555672a5fad09e6912774ed47099bf91c71f985a9960a924106e75a5c29984e7c22d8402edc7f64e9b9cae59fe1a51b7b8c67.jpg"
+    },
+    {
+      "name": "T.H.E F.I.N.A.L L.I.M.I.T",
+      "hashedName": "90a300bc172fbab1738044e7fec733ddadffade5e423e4778d68af808a112d348a0663acdd78978fe358044e06326290a11284c4cbc563c273ab8367e0a278cf",
+      "image": "src/numbers/medium/90a300bc172fbab1738044e7fec733ddadffade5e423e4778d68af808a112d348a0663acdd78978fe358044e06326290a11284c4cbc563c273ab8367e0a278cf.jpg"
     },
     {
       "name": "Absolute Classrous",
@@ -2874,9 +3519,24 @@
       "image": "src/numbers/medium/7829b1aa1b0e9950dd0b2063c1561ed89adcd55a422f5477a0c7fdc8041a356ab70c6f1ae0aa04a2b27008d50ef5113f5f0c7ffdd8a7d8dd716c50cb88404d32.jpg"
     },
     {
+      "name": "GAMMATION",
+      "hashedName": "44a13292f32c68a6add0735c65aaad7759fc1c5b92404878d02f6718c7c85b27b99669147659db023b71989013530ac470137aa2f619d5471bb96065ff1524b5",
+      "image": "src/numbers/medium/44a13292f32c68a6add0735c65aaad7759fc1c5b92404878d02f6718c7c85b27b99669147659db023b71989013530ac470137aa2f619d5471bb96065ff1524b5.jpg"
+    },
+    {
       "name": "Omnifinity",
       "hashedName": "97f034d34b9f3f06ef0841f918069f42b9ab61be51e6de5d3323fa799b74956487af7f72987cd0067e7c9479e9a20bc4823b46b855ef017448e3d08ed9b4d02b",
       "image": "src/numbers/medium/97f034d34b9f3f06ef0841f918069f42b9ab61be51e6de5d3323fa799b74956487af7f72987cd0067e7c9479e9a20bc4823b46b855ef017448e3d08ed9b4d02b.jpg"
+    },
+    {
+      "name": "The Infinithing",
+      "hashedName": "7f5baba49fcb1770a0fe3d09e1bf586924d425ce505e227d85efe9289e7c94ec4a63f6e9ab948ba205e22f9e087d3432f00dd30ec98a97d05c1c19c8ae4b391f",
+      "image": "src/numbers/medium/7f5baba49fcb1770a0fe3d09e1bf586924d425ce505e227d85efe9289e7c94ec4a63f6e9ab948ba205e22f9e087d3432f00dd30ec98a97d05c1c19c8ae4b391f.jpg"
+    },
+    {
+      "name": "The True Finity",
+      "hashedName": "c7da8ba106a8c4fdc1e268d82bbf461cce1f7f65e442b21d74f244451dd4b31293f8f2992bdbcbcacf634aa492e9bdff173423c48932eaa9290d0c38160ec9c0",
+      "image": "src/numbers/medium/c7da8ba106a8c4fdc1e268d82bbf461cce1f7f65e442b21d74f244451dd4b31293f8f2992bdbcbcacf634aa492e9bdff173423c48932eaa9290d0c38160ec9c0.jpg"
     },
     {
       "name": "Erasefinity",
@@ -2884,9 +3544,24 @@
       "image": "src/numbers/medium/3f8f75ab68c0ebe68479b73de68d836ebc810bce21aea8b6321ddfbc95c7f3041670e1286cf31f61d23a7f1ec24ba4c98091a3260562c768ee15692ddbe2be98.jpg"
     },
     {
-      "name": "Singularifinity",
-      "hashedName": "c3495de0f979889263597c8c0751c7d562f8761f11bf07405540da8081ea0069347b85bf631aa2f19e219facf47375fa32b4217aee1c8793dc21881ea7d8fe11",
-      "image": "src/numbers/medium/c3495de0f979889263597c8c0751c7d562f8761f11bf07405540da8081ea0069347b85bf631aa2f19e219facf47375fa32b4217aee1c8793dc21881ea7d8fe11.jpg"
+      "name": "Absiolatherium",
+      "hashedName": "6594c64d2596635a0137fadc9b4d99bb9df373bd0fbfed2d0b77fd1afae631c3380d89cb9281d8cbc6156f7c86b67e1e0e5805fedb2e59c51eae76e2894ae405",
+      "image": "src/numbers/medium/6594c64d2596635a0137fadc9b4d99bb9df373bd0fbfed2d0b77fd1afae631c3380d89cb9281d8cbc6156f7c86b67e1e0e5805fedb2e59c51eae76e2894ae405.jpg"
+    },
+    {
+      "name": "TOGO-INFINITY LEVEL FINITE",
+      "hashedName": "a56315cc5582f80ce7db260069b38f19002a113149f1ed807b4cfdd2817fc6f5e3f66adfb356d6737265697610d5276abb88ed85a00bec3ef4caad34b777c1be",
+      "image": "src/numbers/medium/a56315cc5582f80ce7db260069b38f19002a113149f1ed807b4cfdd2817fc6f5e3f66adfb356d6737265697610d5276abb88ed85a00bec3ef4caad34b777c1be.jpg"
+    },
+    {
+      "name": "Absifinity",
+      "hashedName": "62b6b85cd8e7677c8a44ed48a12d667b5b463d42cd70906531c080780bbd8b4487f959827b1821aa7c17b6b4a05dc0a82c59892f30806a2e148bf69bbf2f5da5",
+      "image": "src/numbers/medium/62b6b85cd8e7677c8a44ed48a12d667b5b463d42cd70906531c080780bbd8b4487f959827b1821aa7c17b6b4a05dc0a82c59892f30806a2e148bf69bbf2f5da5.jpg"
+    },
+    {
+      "name": "Absoleterosol Infinity",
+      "hashedName": "9dcba5f7b98b13b8645c88af37058feb48133897ac7a997e3f39a51c3d992708947cad49cdb5f9f190ba675fd34d95f80d64cdc2f4703f8445040e80dd5175d3",
+      "image": "src/numbers/medium/9dcba5f7b98b13b8645c88af37058feb48133897ac7a997e3f39a51c3d992708947cad49cdb5f9f190ba675fd34d95f80d64cdc2f4703f8445040e80dd5175d3.jpg"
     },
     {
       "name": "Border of Finiteility",
@@ -2899,9 +3574,14 @@
       "image": "src/numbers/medium/5dcf50f4571acf67ee3d0cd4dfc1e5a2100aaf4923879da5fca7d0bbf180541886fd0932081653cea196dd1782e6d2de6b6c665beaf653b6bd3d37f389f8772b.jpg"
     },
     {
-      "name": "Sestrmic finite",
-      "hashedName": "effcb2fafd877aeffc0c38bfad28e90e593f9d97794caa9ca6a22e5b66be082fc089861baf451267608c22c8a4b36d70d6576ca4afff899a70923e6d5b392c78",
-      "image": "src/numbers/medium/effcb2fafd877aeffc0c38bfad28e90e593f9d97794caa9ca6a22e5b66be082fc089861baf451267608c22c8a4b36d70d6576ca4afff899a70923e6d5b392c78.jpg"
+      "name": "ORDINATION",
+      "hashedName": "1a3a87e3bc6ba4b4adf69f4a9868562c101b358a29da4f56d25d8ebb422b050dba053456fbb722600f4ac90529cac6b77bcb2a2e50d67bd65469cc08bceadf3e",
+      "image": "src/numbers/medium/1a3a87e3bc6ba4b4adf69f4a9868562c101b358a29da4f56d25d8ebb422b050dba053456fbb722600f4ac90529cac6b77bcb2a2e50d67bd65469cc08bceadf3e.jpg"
+    },
+    {
+      "name": "Hypermassive Absolute",
+      "hashedName": "dc4187aeccd95b56ff246e2bca7d9d8ed008d5fd21e03d92d3c316e9a511b13f9c455301996b6516a881eb896cddf51c97bf1c539bc40e8f15e1fb38527cfd96",
+      "image": "src/numbers/medium/dc4187aeccd95b56ff246e2bca7d9d8ed008d5fd21e03d92d3c316e9a511b13f9c455301996b6516a881eb896cddf51c97bf1c539bc40e8f15e1fb38527cfd96.jpg"
     },
     {
       "name": "Absolute Lightly FINAL Ultimate Limit",
@@ -2914,6 +3594,11 @@
       "image": "src/numbers/medium/637c33bde7b5aa59e547afebc654b6f836f88a60a66bd00cf1a54fcc5099067686549979ce50095fb005a4dac8c8a4bc7de8530d56c8d2606643ed4201cc1c85.jpg"
     },
     {
+      "name": "Traulinity Breaking Finite Number",
+      "hashedName": "079c64ada4f796f633ac27016f7f68522d2f597abe4b613b6252251edb3d05c07fdfd3f8bb2ffdb3a679462960950158a92dec7dc1ea81473827b21946a73df7",
+      "image": "src/numbers/medium/079c64ada4f796f633ac27016f7f68522d2f597abe4b613b6252251edb3d05c07fdfd3f8bb2ffdb3a679462960950158a92dec7dc1ea81473827b21946a73df7.jpg"
+    },
+    {
       "name": "Endless-Quality",
       "hashedName": "ae61be149c4c0ee0a129585234217525a56c2e0fff1787fa4ef3de9c4f359628a76af5f1f5ee22b12dd30bbbafa2b2fbe3a4dc8cd9e30f6a8a18b271165b7958",
       "image": "src/numbers/medium/ae61be149c4c0ee0a129585234217525a56c2e0fff1787fa4ef3de9c4f359628a76af5f1f5ee22b12dd30bbbafa2b2fbe3a4dc8cd9e30f6a8a18b271165b7958.jpg"
@@ -2922,6 +3607,11 @@
       "name": "Christinufinity",
       "hashedName": "05acac7b8df77ab764a968f3fc2e6f17319ff79a129a6731e1e0957424be5eb0d040578425b372ec1ce34a75302162dccbe4ab255e02581dfcbb249352765576",
       "image": "src/numbers/medium/05acac7b8df77ab764a968f3fc2e6f17319ff79a129a6731e1e0957424be5eb0d040578425b372ec1ce34a75302162dccbe4ab255e02581dfcbb249352765576.jpg"
+    },
+    {
+      "name": "Nemomnility",
+      "hashedName": "1484b6b6d88bb4bf85441b56d0a148ba9512399085480f014cad018ab0f9a8823c96c1dd97498b36bbe03874eae26b3b0b0fc91361943e733736ea723a2841e1",
+      "image": "src/numbers/medium/1484b6b6d88bb4bf85441b56d0a148ba9512399085480f014cad018ab0f9a8823c96c1dd97498b36bbe03874eae26b3b0b0fc91361943e733736ea723a2841e1.jpg"
     },
     {
       "name": "Omnipolarisbarrierility",
@@ -2934,24 +3624,24 @@
       "image": "src/numbers/medium/5d265ff495eb4c2e9e3af86bcbb0bb1d5d44f508c9e67ee764b9a5b7bd226a47f40a745f21e827cbdc3d22a9108581a2c537ad42e183abef70449668ee01bdf6.jpg"
     },
     {
-      "name": "Sidiumnifinity",
-      "hashedName": "7539f04d5520cb170906ed42eecacb3412ad89bf838f9eb474fbd26dd48afecc01bb903898ed2517038acd484e9f8e294f178f86e06874fffa56b127a8b342c6",
-      "image": "src/numbers/medium/7539f04d5520cb170906ed42eecacb3412ad89bf838f9eb474fbd26dd48afecc01bb903898ed2517038acd484e9f8e294f178f86e06874fffa56b127a8b342c6.jpg"
-    },
-    {
       "name": "Absolute Astinite",
       "hashedName": "0c471ad5c7be78519bd3c95d6877ccea767bdb1ccc7b5c2b48c29d921c78f9effa3e9272a6d13f7fa70213f9ea3e3c2ad813cdfeec37e6b24709f2835b86adfe",
       "image": "src/numbers/medium/0c471ad5c7be78519bd3c95d6877ccea767bdb1ccc7b5c2b48c29d921c78f9effa3e9272a6d13f7fa70213f9ea3e3c2ad813cdfeec37e6b24709f2835b86adfe.jpg"
     },
     {
-      "name": "Triunixfinity",
-      "hashedName": "3d410e28d7ed133ddcaf6cd52d4fde4353bc72a98d16954ebea0002877a02ba5e7f118734146b006bc1813372e68e281bd1b47dab8a2d62b8d8682a5cff6da65",
-      "image": "src/numbers/medium/3d410e28d7ed133ddcaf6cd52d4fde4353bc72a98d16954ebea0002877a02ba5e7f118734146b006bc1813372e68e281bd1b47dab8a2d62b8d8682a5cff6da65.jpg"
-    },
-    {
       "name": "Masin-finity",
       "hashedName": "0b33884bcf0b40f835f91db17f3efa671caefee5ada366c6e026ef8a965d4ebd03d068058716d8f2470c1fcdc5a83aea6a1d07f6438cd94af65fe9a42171cea8",
       "image": "src/numbers/medium/0b33884bcf0b40f835f91db17f3efa671caefee5ada366c6e026ef8a965d4ebd03d068058716d8f2470c1fcdc5a83aea6a1d07f6438cd94af65fe9a42171cea8.jpg"
+    },
+    {
+      "name": "FINALATION",
+      "hashedName": "a8ca5712af2f6c697250d6324fd94cf88a6520e236762ad32e1cb8139c978836b42e5305cd47ddaf786553d75e730c0fd5753eb3c04dd2a5145b693000df173a",
+      "image": "src/numbers/medium/a8ca5712af2f6c697250d6324fd94cf88a6520e236762ad32e1cb8139c978836b42e5305cd47ddaf786553d75e730c0fd5753eb3c04dd2a5145b693000df173a.jpg"
+    },
+    {
+      "name": "Intergaloinfinitium",
+      "hashedName": "d932091e085bbc7bae5c2bc2a10aff71f219bce6d8f34db2c115d3c4a31f5238009635a0117e0b607f87c127f9b88888ba128dfaef3613925850092fb37face1",
+      "image": "src/numbers/medium/d932091e085bbc7bae5c2bc2a10aff71f219bce6d8f34db2c115d3c4a31f5238009635a0117e0b607f87c127f9b88888ba128dfaef3613925850092fb37face1.jpg"
     },
     {
       "name": "Omegfinity",
@@ -2964,34 +3654,19 @@
       "image": "src/numbers/medium/2b8d10fb1bb6863220f80e053be0f037e9c0a922bd7fad0e936f7090e950623b05a6ed6e9f6863b271b9e22a2df660f8ad7484732e106bf4cde65845c0d7238a.jpg"
     },
     {
+      "name": "Bigfootjinx",
+      "hashedName": "2a539f369f3cba91b3c8fe5e50e87ad84da9c54155f85e88a26929153b1a18b26d9612d5e57f2689a26a9150a017b0d12f3e39ba8c4453b4070631b0089426d7",
+      "image": "src/numbers/medium/2a539f369f3cba91b3c8fe5e50e87ad84da9c54155f85e88a26929153b1a18b26d9612d5e57f2689a26a9150a017b0d12f3e39ba8c4453b4070631b0089426d7.jpg"
+    },
+    {
       "name": "Purplifinity",
       "hashedName": "9ea9703cef8e7bd66a33e0aa4cd64c05d23db4861a2b6f13490000ed2de2a7d71d82743e7442a932ad53a5590a8f6861fb5226cdc0d94b990c4dec23a39d3b04",
       "image": "src/numbers/medium/9ea9703cef8e7bd66a33e0aa4cd64c05d23db4861a2b6f13490000ed2de2a7d71d82743e7442a932ad53a5590a8f6861fb5226cdc0d94b990c4dec23a39d3b04.jpg"
     },
     {
-      "name": "Reversed-Dotted-Lunate-Sigmafinity",
-      "hashedName": "fdc69c4657f24ce1c51f7a5a42b9efabee9281516a6bb0408a0051618fbd20f55f2856ceab5fc58bdbe6aeb024d3d243a59304f4cf5deb82ed766af6e7308fdf",
-      "image": "src/numbers/medium/fdc69c4657f24ce1c51f7a5a42b9efabee9281516a6bb0408a0051618fbd20f55f2856ceab5fc58bdbe6aeb024d3d243a59304f4cf5deb82ed766af6e7308fdf.jpg"
-    },
-    {
-      "name": "Tierrafinity",
-      "hashedName": "7e3c070f9d148987bf2e0514ebc81c8d6df57095c87f442320c0951cbcae5ba572194ca9271c11f451a7a5a15814fb0174bec9862a72ffe19ced09dfb3f85961",
-      "image": "src/numbers/medium/7e3c070f9d148987bf2e0514ebc81c8d6df57095c87f442320c0951cbcae5ba572194ca9271c11f451a7a5a15814fb0174bec9862a72ffe19ced09dfb3f85961.jpg"
-    },
-    {
-      "name": "Starfinity",
-      "hashedName": "d9ca5d6f19890690bba1aa80cf9878d7bd117148fb8e8a5662f1e15450e346e044176c59a3e6f9bf949c69df2c171f91ca1c49193ee0f91225a2fb7a644efcc0",
-      "image": "src/numbers/medium/d9ca5d6f19890690bba1aa80cf9878d7bd117148fb8e8a5662f1e15450e346e044176c59a3e6f9bf949c69df2c171f91ca1c49193ee0f91225a2fb7a644efcc0.jpg"
-    },
-    {
-      "name": "The Endopoint Inc.",
-      "hashedName": "c1bb07a10a542081aeed1a5798a1c0d854e2c5bf2cdc82725d3cbb5896d52fa0a13b75685a18c77de019519e3f067f0264e69aef6c3986920547ebeff3b2a332",
-      "image": "src/numbers/medium/c1bb07a10a542081aeed1a5798a1c0d854e2c5bf2cdc82725d3cbb5896d52fa0a13b75685a18c77de019519e3f067f0264e69aef6c3986920547ebeff3b2a332.jpeg"
-    },
-    {
-      "name": "Ultimate Rebirthfinity",
-      "hashedName": "a770239ac39e5a352edadc15ce8dc857ac1a06e18de0de189acf7d377d2e36d0c78042efd63c852223b1728863c2cc809f220e4f661e6159d21c218fbfbe2e3b",
-      "image": "src/numbers/medium/a770239ac39e5a352edadc15ce8dc857ac1a06e18de0de189acf7d377d2e36d0c78042efd63c852223b1728863c2cc809f220e4f661e6159d21c218fbfbe2e3b.jpg"
+      "name": "Earthifinity2",
+      "hashedName": "3fe2c6d44a68aca52b906aa7be32288942697300f9b9bfa3c4fdec9082582446cdea3ff379f9fa66f163f73a05aa92d8c6aa140a2514eb0e4f5db7e86b911528",
+      "image": "src/numbers/medium/3fe2c6d44a68aca52b906aa7be32288942697300f9b9bfa3c4fdec9082582446cdea3ff379f9fa66f163f73a05aa92d8c6aa140a2514eb0e4f5db7e86b911528.jpg"
     },
     {
       "name": "Coloriziufinity",
@@ -3004,14 +3679,54 @@
       "image": "src/numbers/medium/62cf44687ae7ccc1c02941ebde8af239ef48cf2502ca56d4a4b7a5064d8b35c51b7f6e037e358f971e68e4e25fd1b025ed4b9e0893e88424a734da781cc55740.jpg"
     },
     {
+      "name": "Hexakument Numbers Finity",
+      "hashedName": "4a979c4f75203b216c5e31dce3f62707aa18c638e24b6f7bd91cdc698034dc4c0c3a4c2f580752c91b3bff0b6f8d4901dc13d19c36e1da0a415f0a48f0deed42",
+      "image": "src/numbers/medium/4a979c4f75203b216c5e31dce3f62707aa18c638e24b6f7bd91cdc698034dc4c0c3a4c2f580752c91b3bff0b6f8d4901dc13d19c36e1da0a415f0a48f0deed42.jpg"
+    },
+    {
+      "name": "The Hard Reset",
+      "hashedName": "fcea6b98a70cf424c9c99f95f1bb8c17ba55b0f836c220465829c57a3a1b3b633c3afb24567263fd1e033273f07b13ad49c7388a09f9d729a94c85ec8a5095c4",
+      "image": "src/numbers/medium/fcea6b98a70cf424c9c99f95f1bb8c17ba55b0f836c220465829c57a3a1b3b633c3afb24567263fd1e033273f07b13ad49c7388a09f9d729a94c85ec8a5095c4.jpg"
+    },
+    {
       "name": "Multifinity",
       "hashedName": "bfe1e88c038c9488da49a23051cece172978aa9f6f9c8df6f903a7d41f2118b41a4122a161131c89667114c04800f769ce38c40a9c598317bb9efaf0a2d2b071",
       "image": "src/numbers/medium/bfe1e88c038c9488da49a23051cece172978aa9f6f9c8df6f903a7d41f2118b41a4122a161131c89667114c04800f769ce38c40a9c598317bb9efaf0a2d2b071.jpg"
     },
     {
+      "name": "ETERNALATION",
+      "hashedName": "5b8ef297466d1515aaa8eb1b9c224ae89589f734da4f7b001cc1552534555ea4093dd4fcb67f7256413a72902a684c72c7e4c7a57c6e2370d09363881d45a77d",
+      "image": "src/numbers/medium/5b8ef297466d1515aaa8eb1b9c224ae89589f734da4f7b001cc1552534555ea4093dd4fcb67f7256413a72902a684c72c7e4c7a57c6e2370d09363881d45a77d.jpg"
+    },
+    {
+      "name": "The Weirdness",
+      "hashedName": "7b14919ffa5a0f49f023c843ccf0387702b5e5c366476524686bf40d259c8febb06c74c3cafcd3e28fcbbe699e3abd25e6d284ce4b3a7212e690386464086137",
+      "image": "src/numbers/medium/7b14919ffa5a0f49f023c843ccf0387702b5e5c366476524686bf40d259c8febb06c74c3cafcd3e28fcbbe699e3abd25e6d284ce4b3a7212e690386464086137.jpg"
+    },
+    {
+      "name": "Hypoaoiunity",
+      "hashedName": "7e0c40f403efb91e0333a6cd1364346fcdbaf8676a6764dda502b8c84d95009bcae3b6fa2e73ff5e203eba5838b7d1ca4a995590fbdc9a0dd70f76542c58ad1e",
+      "image": "src/numbers/medium/7e0c40f403efb91e0333a6cd1364346fcdbaf8676a6764dda502b8c84d95009bcae3b6fa2e73ff5e203eba5838b7d1ca4a995590fbdc9a0dd70f76542c58ad1e.jpg"
+    },
+    {
+      "name": "End-Eta Hyper One Cardinal",
+      "hashedName": "2edc59ebe69898c4bf031986a56e74958080f5891f1d09c4b3854c0c960baf8d9b99aa7136faf5049b7efad01bc285c2adba8aa45e218f166f3f3fb6f242615d",
+      "image": "src/numbers/medium/2edc59ebe69898c4bf031986a56e74958080f5891f1d09c4b3854c0c960baf8d9b99aa7136faf5049b7efad01bc285c2adba8aa45e218f166f3f3fb6f242615d.jpg"
+    },
+    {
       "name": "Inmarkifinity",
       "hashedName": "f75e7f5504479adce3e9c19ce1315152a1a141ee8b83b5ba0632cde7faddaba507e0b84c1021b9db6e67dd6d4660a701f03e9936edac290e26d054df2700aa56",
       "image": "src/numbers/medium/f75e7f5504479adce3e9c19ce1315152a1a141ee8b83b5ba0632cde7faddaba507e0b84c1021b9db6e67dd6d4660a701f03e9936edac290e26d054df2700aa56.jpg"
+    },
+    {
+      "name": "T.H.E U.P.E.R E.N.D.I.N.G",
+      "hashedName": "d5472dd276a7f979c4257899f4aa200c34846ed87a23aa45edee7f1f69c9958c98577022f7a830a462f37964fa0a4ef7e6593d09721174ef6dc742070f0a5b48",
+      "image": "src/numbers/medium/d5472dd276a7f979c4257899f4aa200c34846ed87a23aa45edee7f1f69c9958c98577022f7a830a462f37964fa0a4ef7e6593d09721174ef6dc742070f0a5b48.jpg"
+    },
+    {
+      "name": "The Mega Googology",
+      "hashedName": "ef3da2d2c44f83bb297288dc9907af5047b4e8c89bdb74d43c322ab32be69d2254a7ef0a7ec51c48f1163d534f383b879ba3698ceda5cfe8cd5269ddeaecb365",
+      "image": "src/numbers/medium/ef3da2d2c44f83bb297288dc9907af5047b4e8c89bdb74d43c322ab32be69d2254a7ef0a7ec51c48f1163d534f383b879ba3698ceda5cfe8cd5269ddeaecb365.jpg"
     }
   ],
   "hard": [

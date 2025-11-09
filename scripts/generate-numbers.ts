@@ -31,18 +31,20 @@ const numbers: NumberInfo[] = [];
 for (const fileName of files) {
   // replacing _ with . is close enough, the only special case i can think of
   // is Positive_Negative Point which the _ should be replaced with /
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  let number = fileName.split(".")[0]!.replaceAll("_", ".");
-  if (number.toLowerCase() === "positive.negative point") {
-    number = "Positive/Negative Point";
-  }
+  const fileExtension = fileName.slice(fileName.lastIndexOf("."));
+  const number = (() => {
+    const number = fileName.slice(0, fileName.lastIndexOf("."));
+    if (number === "The _(Super) End") return "The ?(Super) End";
+    if (number === "New-Alli-Meta-Ind_Finity") return "New-Alli-Meta-Ind/Finity";
+    return number;
+  })();
   const filePath = `${directoryPath}/${fileName}`;
-  console.log(`\nFound file: ${filePath} (number: ${number})`);
+  console.log(`Found file: ${filePath} (number: ${number})`);
   sha512.update(number.toLowerCase());
   const hash = sha512.digest("hex");
-  const fileExtension = fileName.split(".")[1]!;
-  const newFilePath = `${directoryPath}/${hash}.${fileExtension}`;
+  const newFilePath = `${directoryPath}/${hash}${fileExtension}`;
   await copyFile(filePath, newFilePath);
+  await Bun.file(filePath).delete();
   numbers.push({
     name: number,
     hashedName: hash,
@@ -50,6 +52,7 @@ for (const fileName of files) {
   });
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const originalJson = await Bun.file(`src/numbers/numbers.json`).json();
 originalJson[difficulty] = numbers;
 
