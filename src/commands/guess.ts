@@ -40,6 +40,11 @@ function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: 
 const Guess: ChatInputCommand = {
   async run(client: Client, interaction: ChatInputCommandInteraction): Promise<void> {
     const difficulty = interaction.options.get("difficulty", true).value as Difficulties;
+    if (difficulty !== "easy") {
+      Logger.warn(`User specified the ${difficulty} difficulty but that is currently not implemented!`);
+      await interaction.reply(`sorry uh the ${difficulty} is not implemented yet`);
+      return;
+    }
     const number = findRandomNumber(difficulty);
     await interaction.reply({ content: `Guess the number, you have ${(number.difficulty === "legendary" ? 60 : 40).toString()} seconds.`, files: [number.symbol] });
     Logger.debug("setting up timeout");
