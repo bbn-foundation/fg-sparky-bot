@@ -42,7 +42,7 @@ const Guess: ChatInputCommand = {
     const difficulty = interaction.options.get("difficulty", true).value as Difficulties;
     if (difficulty !== "easy") {
       Logger.warn(`User specified the ${difficulty} difficulty but that is currently not implemented!`);
-      await interaction.reply(`sorry uh the ${difficulty} is not implemented yet`);
+      await interaction.reply(`sorry uh the ${difficulty} difficulty is not implemented yet`);
       return;
     }
     const number = findRandomNumber(difficulty);
