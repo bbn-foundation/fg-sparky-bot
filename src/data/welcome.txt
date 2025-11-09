@@ -1,7 +1,9 @@
 # <:sparky:1073764115924918372> Welcome to FG Sparky Bot!
--# Version 1.6.8
+-# Version 0.0.0
 ## <:Info:870364791624056862> Instructions
 **I give you the symbol of a number in fictional googology, and you have to guess it!**
+NOTE: this does **not** function yet.
+
 ## <:NA:1085309346155610183> Select a Difficulty
 `/start-game difficulty:easy` <:Rate_Easy:1273744631481368638> **Easy** [**not implemented**]
 `/start-game difficulty:medium` <:Hard:1198512568449380392> **Medium** [**not implemented**]

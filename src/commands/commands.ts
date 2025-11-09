@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
+import Guess from "./guess.ts";
 import Hello from "./hello.ts";
-import StartSession from "./start-session.ts";
 import type { Command } from "./types.ts";
 
-export const Commands: readonly Command[] = [Hello, StartSession];
+export const Commands: readonly Command[] = [Hello, Guess];

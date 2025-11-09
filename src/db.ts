@@ -17,14 +17,14 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 import { DataSource } from "typeorm";
-import { SparkySession } from "./entities/sparky-seesion.ts";
+import { UserProfile } from "./entities/user-profile.ts";
 
 export const AppDataSource: DataSource = new DataSource({
   type: "sqlite",
   database: "sparky-bot-db.sqlite",
   synchronize: true,
   logging: false,
-  entities: [SparkySession],
+  entities: [UserProfile],
   migrations: [],
   subscribers: [],
 });

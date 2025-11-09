@@ -16,19 +16,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-import type { Client, CommandInteraction } from "discord.js";
-import { saveSession } from "../utils/session.ts";
+import { ApplicationCommandOptionType, type Client, type CommandInteraction } from "discord.js";
 import type { Command } from "./types.ts";
 
-const StartSession: Command = {
+const Guess: Command = {
   async run(client: Client, interaction: CommandInteraction): Promise<void> {
-    const welcomeText = Bun.file("../data/welcome.txt");
-    await interaction.followUp("Starting a new FG sparky session...");
-    await saveSession(BigInt(interaction.channelId));
-    await interaction.followUp(await welcomeText.text());
+    await interaction.followUp("Not implemented yet!");
   },
-  description: "Starts an FG sparky session",
-  name: "start-session",
+  description: "Say hi to the bot",
+  name: "guess",
+  options: [{
+    name: "difficulty",
+    description: "Select how difficult the guess will be",
+    type: ApplicationCommandOptionType.String,
+    required: true,
+    choices: [
+      { name: "Easy", value: "easy" },
+      { name: "Medium", value: "medium" },
+      { name: "Hard", value: "hard" },
+      { name: "Random", value: "random" },
+    ],
+  }],
 };
 
-export default StartSession;
+export default Guess;

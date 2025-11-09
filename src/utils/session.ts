@@ -17,7 +17,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 import { AppDataSource } from "../db.ts";
-import { SparkySession } from "../entities/sparky-seesion.ts";
+import { SparkySession } from "../entities/user-profile.ts";
 import { formatter } from "./formatter.ts";
 import { Logger } from "./logger.ts";
 
