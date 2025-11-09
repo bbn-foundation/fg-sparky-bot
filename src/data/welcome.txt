@@ -3,25 +3,25 @@
 ## <:Info:870364791624056862> Instructions
 **I give you the symbol of a number in fictional googology, and you have to guess it!**
 ## <:NA:1085309346155610183> Select a Difficulty
-[A] <:Rate_Easy:1273744631481368638> **Easy**
-[B] <:Hard:1198512568449380392> **Medium**
-[C] <:Rate_Insane:1273760602724237394> **Hard**
-[D] <:MPQuestion:705594108676276266> **Random**
+`/start-game difficulty:easy` <:Rate_Easy:1273744631481368638> **Easy** [**not implemented**]
+`/start-game difficulty:medium` <:Hard:1198512568449380392> **Medium** [**not implemented**]
+`/start-game difficulty:hard <:Rate_Insane:1273760602724237394> **Hard** [**not implemented**]
+`/start-game difficulty:random` <:MPQuestion:705594108676276266> **Random** [**not implemented**]
 ### <:GreenPlus:873614990056239104> Extras
-[S] 🛒 **Shop**
-[G] 🎁 **Gift Points**
-[R] 🏁 **Races**
-[L] <:GDLeaderboards:1193036399348305920> **Leaderboards**
-[P] <:UserProfile:1157766817566179378> **Profile**
-[BN] 🎲 **Coming soon…**
-[AC] <:Star:1176190342656172062> **Achievements**
-[CH] <:Guides:1083095322433171506> **Changelog**
-[HTP] <:Info2:1151692177597022279> **How to Play** (extended)
+/shop 🛒 **Shop** [**not implemented**]
+/gift 🎁 **Gift Points** [**not implemented**]
+/race 🏁 **Races** [**not implemented**]
+/leaderboard <:GDLeaderboards:1193036399348305920> **Leaderboards** [**not implemented**]
+/profile <:UserProfile:1157766817566179378> **Profile** [**not implemented**]
+/bn 🎲 **Coming soon…**
+/achievements <:Star:1176190342656172062> **Achievements** [**not implemented**]
+/changelog <:Guides:1083095322433171506> **Changelog** [**not implemented**]
+/how-to-play <:Info2:1151692177597022279> **How to Play** (extended) [**not implemented**]
 ### Commands
-- `s?gift` | Gift a user points.
-- `s?profile` | View your profile. Mention another user to view their profile.
-- `s?achievements` | View your achievements.
-- `s?shop` | View the shop.
-- `s?lb` | View the leaderboard.
+- `/gift` | Gift a user points. [**not implemented**]
+- `/profile` | View your profile. Mention another user to view their profile. [**not implemented**]
+- `/achievements` | View your achievements. [**not implemented**]
+- `/shop` | View the shop. [**not implemented**]
+- `/leaderboard` | View the leaderboard. [**not implemented**]
 
 <@&1393662816623525938>
