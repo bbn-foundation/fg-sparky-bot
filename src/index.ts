@@ -17,7 +17,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 import { Client, type Interaction } from "discord.js";
-import config from "../.config.json";
+import config from "../.config.json" with { type: "json" };
 import { Commands } from "./commands/commands.ts";
 import { handleSlashCommand, registerCommands } from "./commands/listener.ts";
 import { AppDataSource } from "./db.ts";

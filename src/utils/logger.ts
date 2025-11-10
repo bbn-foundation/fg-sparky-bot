@@ -17,7 +17,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 import chalk from "chalk";
-import config from "../../.config.json";
+import config from "../../.config.json" with { type: "json" };
 
 export namespace Logger {
   const formatter = new Intl.DateTimeFormat("en-US", { dateStyle: "short", timeStyle: "medium" });
