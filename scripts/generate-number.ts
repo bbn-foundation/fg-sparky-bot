@@ -27,6 +27,7 @@ const newFileName = `${hash}.${fileExtension}`;
 const newFilePath = `src/numbers/${difficulty}/${newFileName}`;
 
 await copyFile(filePath, newFilePath);
+await Bun.file(filePath).delete();
 
 const output = {
   name: numberName,
