@@ -1,5 +1,8 @@
 # changelog
 
+## 0.5.2 - November 11th, 2025
+- feat(entries): add new medium \[[`4201a57d`](https://github.com/skylafalls/fg-sparky-bot/commit/4201a57d0cd29124036b12834584a1c246f3a347)\]
+
 ## 0.5.1 - November 11th, 2025
 
 ### features
