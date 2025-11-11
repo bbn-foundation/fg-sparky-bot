@@ -1,6 +1,17 @@
 # changelog
 
-## 0.5.0 - November 9th, 2025
+## 0.5.1 - November 11th, 2025
+
+### features
+- feat(entries): add new easy ([`8cde98b181`](https://github.com/skylafalls/fg-sparky-bot/commit/8cde98b181aa82f407550efd757b649d7241612c))
+
+### refactors
+- refactor(scripts): convince linter to shut ([`525c6f1db2`](https://github.com/skylafalls/fg-sparky-bot/commit/525c6f1db23dacd3df219fea2db89d114e874a71))
+
+### fixes
+- fix(release): try fixing commit links ([`246d5ee0dc`](https://github.com/skylafalls/fg-sparky-bot/commit/246d5ee0dc4887cd813a151fa49344ff773cc75a))
+
+## 0.5.0 - November 10th, 2025
 
 ### features
 - feat(entries): add even more mediums [a7ff2c3f69d9edf5dfb875d1ad1a1eb04b5e82dc]
