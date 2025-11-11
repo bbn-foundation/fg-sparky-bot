@@ -76,8 +76,8 @@ await Promise.all(files.map(async (fileName) => {
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const originalJson = await Bun.file(`src/numbers/numbers.json`).json();
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-originalJson[difficulty] = numbers;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment
+originalJson[difficulty] = [...originalJson[difficulty], ...numbers];
 
 await Bun.write(
   `src/numbers/numbers.json`,
