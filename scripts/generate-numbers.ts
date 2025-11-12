@@ -21,7 +21,7 @@ const difficulty: string = options.difficulty as string;
 const files = await readdir(directoryPath);
 
 interface NumberInfo {
-  name: string;
+  name: string | null;
   hashedName: string;
   image: string;
 }
@@ -36,29 +36,6 @@ await Promise.all(files.map(async (fileName) => {
   const number = (() => {
     const number = fileName.slice(0, fileName.lastIndexOf("."));
     switch (number) {
-      // Fix typos
-      case "Hexexitialifinity": {
-        return "Hexexitialfinity";
-      }
-      case "Nendifinity": {
-        return "nednifinity";
-      }
-      // Replace underscores with their intended special characters
-      case "The _(Super) End": {
-        return "The ?(Super) End";
-      }
-      case "New-Alli-Meta-Ind_Finity": {
-        return "New-Alli-Meta-Ind/Finity";
-      }
-      case "Real_Complex Point": {
-        return "Real/Complex Point";
-      }
-      case "Numeric End..._": {
-        return "Numeric End...?";
-      }
-      case "Absolute Numbertomin ___[20]": {
-        return "Absolute Numbertomin ???[20]";
-      }
       default: {
         return number;
       }
@@ -72,7 +49,7 @@ await Promise.all(files.map(async (fileName) => {
   await copyFile(filePath, newFilePath);
   await Bun.file(filePath).delete();
   numbers.push({
-    name: number,
+    name: difficulty === "legendary" ? null : number,
     hashedName: hash,
     image: newFilePath,
   });
