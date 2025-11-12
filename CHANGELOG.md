@@ -1,5 +1,10 @@
 # changelog
 
+## 0.5.4 - November 12th, 2025
+
+### fixes
+- fix(entries): rename some incorrect entries \[[`246d5ee0dc`](https://github.com/skylafalls/fg-sparky-bot/commit/246d5ee0dc4887cd813a151fa49344ff773cc75a)\] ([#3](https://github.com/skylafalls/fg-sparky-bot/pull/3))
+
 ## 0.5.3 - November 11th, 2025
 
 ### features:
