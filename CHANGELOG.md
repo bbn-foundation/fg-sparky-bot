@@ -1,5 +1,9 @@
 # changelog
 
+## 0.6.0 - November 13th, 2025
+### features:
+- feat(entries): add support for randomized and hard difficulties \[[`3fb36bff`](https://github.com/skylafalls/fg-sparky-bot/commit/3fb36bff73a949800477295caace22e2a8adc618)] ([#4](https://github.com/skylafalls/fg-sparky-bot/pull/4))
+
 ## 0.5.4 - November 12th, 2025
 
 ### fixes
