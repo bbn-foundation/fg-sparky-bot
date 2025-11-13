@@ -1,5 +1,9 @@
 # changelog
 
+## 0.6.1 - November 13th, 2025
+### refactors:
+- refactor: add binary build script \[[`ddf536ef`](https://github.com/skylafalls/fg-sparky-bot/commit/ddf536ef7df740fc3b841df3182d65cb99a9dde5)]
+
 ## 0.6.0 - November 13th, 2025
 ### features:
 - feat(entries): add support for randomized and hard difficulties \[[`3fb36bff`](https://github.com/skylafalls/fg-sparky-bot/commit/3fb36bff73a949800477295caace22e2a8adc618)] ([#4](https://github.com/skylafalls/fg-sparky-bot/pull/4))
