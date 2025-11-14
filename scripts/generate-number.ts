@@ -23,7 +23,8 @@ const difficulty: string = options.difficulty as string;
 
 const hash = sha512.update(numberName.toLowerCase()).digest("hex");
 const fileExtension = filePath.split(".").pop();
-const newFileName = `${hash}.${fileExtension}`;
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const newFileName = `${hash}.${fileExtension!}`;
 const newFilePath = `src/numbers/${difficulty}/${newFileName}`;
 
 await copyFile(filePath, newFilePath);

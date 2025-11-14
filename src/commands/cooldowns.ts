@@ -31,17 +31,19 @@ export async function enforceCooldown(command: Command, interaction: CommandInte
   Logger.debug(`Calculating cooldown time...`);
 
   const now = Date.now();
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const timestamps = cooldowns.get(command.name)!;
   const defaultCooldownDuration = 0;
   const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1_000;
 
   if (timestamps.has(interaction.user.id)) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const expirationTime = timestamps.get(interaction.user.id)! + cooldownAmount;
     if (now < expirationTime) {
       Logger.warn(`User tried to run command ${command.name} but they're on cooldown for another ${((expirationTime - now) / 1000).toFixed(3)} seconds`);
       const expiredTimestamp = Math.round(expirationTime / 1_000);
       await interaction.reply({
-        content: `Chill man you can't run /${command.name}, you can try again <t:${expiredTimestamp}:R>.`,
+        content: `Chill man you can't run /${command.name}, you can try again <t:${expiredTimestamp.toString()}:R>.`,
         flags: MessageFlags.Ephemeral,
       });
       return true;

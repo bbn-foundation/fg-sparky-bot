@@ -4,7 +4,7 @@ import { type Config, defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
 const _default: Config[] = defineConfig(
-  globalIgnores(["node_modules"]),
+  globalIgnores(["node_modules", "dist"]),
   tseslint.configs.strictTypeChecked,
   {
     languageOptions: {
