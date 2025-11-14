@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import { Client } from "discord.js";
-import { initClient } from ".";
+import { initClient, initDB } from ".";
+import { AppDataSource } from "./db";
 import { Logger } from "./utils/logger";
 
 const program = new Command()
@@ -22,6 +23,7 @@ const client: Client = new Client({
 
 try {
   Logger.loglevel = loglevel ?? 0;
+  await initDB(AppDataSource);
   await initClient(client, token);
 } catch (error) {
   if (!Error.isError(error)) throw error;
