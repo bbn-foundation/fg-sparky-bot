@@ -1,5 +1,9 @@
 # changelog
 
+## 0.7.0 - November 14th, 2025
+### BREAKING CHANGES:
+- **refactor(bot)!**: convert the bot into a cli app \[[`8ad9bbfd`](https://github.com/skylafalls/fg-sparky-bot/commit/8ad9bbfda83cbac7d32744dcd320870c2adfc583)] ([#5](https://github.com/skylafalls/fg-sparky-bot/pull/5)) by @skylafalls
+
 ## 0.6.2 - November 13th, 2025
 ### bug fixes:
 - fix(guess): Replace unicode characters with their ASCII variants before processing guess \[[`ac43893f`](https://github.com/skylafalls/fg-sparky-bot/commit/ac43893fc66d3f316075be7604f49cd46ad72445)] by @skylafalls
