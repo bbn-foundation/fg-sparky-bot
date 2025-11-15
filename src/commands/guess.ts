@@ -19,6 +19,7 @@
 import { ApplicationCommandOptionType, type Client, type CommandInteraction, type Message, type OmitPartialGroupDMChannel } from "discord.js";
 import { findRandomNumber, type Difficulties, type NumberInfo } from "../numbers/get-random-number.ts";
 import { Logger } from "../utils/logger.ts";
+import { guessCooldowns } from "./cooldowns.ts";
 import type { Command } from "./types.ts";
 
 const hasher = new Bun.CryptoHasher("sha512");
@@ -69,6 +70,7 @@ const Guess: Command = {
         clearTimeout(timeout);
         client.off("messageCreate", handler);
         await message.reply({ content: "hey you guessed correctly, nice job!" });
+        guessCooldowns.set(interaction.channelId, false);
       }
     };
     const timeout = setTimeout(async () => {
@@ -76,6 +78,7 @@ const Guess: Command = {
       Logger.info("user failed to guess in time");
       await interaction.followUp({ content, allowedMentions: { repliedUser: false } });
       client.off("messageCreate", handler);
+      guessCooldowns.set(interaction.channelId, false);
     }, number.difficulty === "legendary" ? 60000 : 40000);
     client.on("messageCreate", handler);
   },

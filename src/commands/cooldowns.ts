@@ -22,7 +22,30 @@ import type { Command } from "./types";
 
 const cooldowns = new Collection<string, Collection<string, number>>();
 
+/**
+ * This is a map of channels that shows whetever the guess is still ongoing
+ * or not. Uses to stop other guesses in the same channel until the previous
+ * one is finished.
+ */
+export const guessCooldowns: Collection<string, boolean> = new Collection<string, boolean>();
+
+export async function enforceGuessingCooldown(command: Command, interaction: CommandInteraction): Promise<boolean> {
+  if (!guessCooldowns.has(interaction.channelId) || !guessCooldowns.get(interaction.channelId)) {
+    Logger.debug(`Channel ${interaction.channelId} cooldown doesn't exist, creating and applying cooldown...`);
+    guessCooldowns.set(interaction.channelId, true);
+    return false;
+  }
+
+  Logger.warn(`Uaer ${interaction.user.displayName} in channel ${interaction.channelId} tried to run /guess but the previous guess hasn't finished yet!`);
+  await interaction.reply({
+    content: `Chill sis, the previous guess hasn't finished yet! Please answer correctly or wait for it to time out first.`,
+    flags: MessageFlags.Ephemeral,
+  });
+  return true;
+}
+
 export async function enforceCooldown(command: Command, interaction: CommandInteraction): Promise<boolean> {
+  if (command.name === "guess") return await enforceGuessingCooldown(command, interaction);
   if (!cooldowns.has(command.name)) {
     Logger.debug(`Command ${command.name} doesn't exist in cooldown collect, creating...`);
     cooldowns.set(command.name, new Collection());
