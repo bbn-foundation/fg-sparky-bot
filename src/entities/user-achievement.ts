@@ -16,9 +16,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-import Guess from "./guess.ts";
-import Hello from "./hello.ts";
-import type { Command } from "./types.ts";
-import User from "./user.ts";
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-export const Commands: readonly Command[] = [Hello, Guess, User];
+/**
+ * This is a person's user profile.
+ */
+@Entity()
+export class UserAchievement extends BaseEntity {
+  /**
+   * Primary id. Not used.
+   */
+  @PrimaryGeneratedColumn()
+  id = 0;
+
+  /**
+   * The id of the user.
+   */
+  @Column()
+  userId = "";
+
+  /**
+   * The id of the achievement.
+   */
+  @Column()
+  achievementId = "";
+}

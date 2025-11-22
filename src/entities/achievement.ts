@@ -16,9 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-import Guess from "./guess.ts";
-import Hello from "./hello.ts";
-import type { Command } from "./types.ts";
-import User from "./user.ts";
+import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 
-export const Commands: readonly Command[] = [Hello, Guess, User];
+/**
+ * This is a person's user profile.
+ */
+@Entity()
+export class UserProfile extends BaseEntity {
+  /**
+   * The id of the achievement.
+   */
+  @PrimaryColumn("string")
+  id = "";
+
+  /**
+   * The current terminus token count for the user.
+   */
+  @Column("integer")
+  tokens = 0;
+}

@@ -16,9 +16,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
-import Guess from "./guess.ts";
-import Hello from "./hello.ts";
-import type { Command } from "./types.ts";
-import User from "./user.ts";
+import { UserProfile } from "../entities/user-profile";
 
-export const Commands: readonly Command[] = [Hello, Guess, User];
+export async function getUser(userId: string): Promise<UserProfile | null> {
+  return await UserProfile.findOneBy({
+    id: BigInt(userId),
+  });
+}
+
+export async function createUser(userId: string): Promise<UserProfile> {
+  const user = new UserProfile();
+  user.id = BigInt(userId);
+  return await user.save();
+}

@@ -7,20 +7,20 @@
   "version": "0.8.1",
   "scripts": {
     "dev": "bun run --watch src/main.ts",
-    "build": "bun build src/main.ts --target=bun --production --outfile=dist/fg-sparky-bot --compile",
+    "build": "bun build src/main.ts --target=bun --production --outfile=dist/fg-sparky-bot --compile --sourcemap=linked",
     "lint": "oxlint . --ignore-path=.gitignore && eslint .",
     "lint:fix": "oxlint --fix --fix-suggestions . --ignore-path=.gitignore && eslint --fix .",
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
     "@discordjs/voice": "^0.19.0",
+    "better-sqlite3": "^12.4.6",
     "bufferutil": "^4.0.9",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.2",
     "discord.js": "^14.25.1",
     "reflect-metadata": "^0.2.2",
-    "sqlite3": "^5.1.7",
-    "typeorm": "^0.3.27",
-    "chalk": "^5.6.2",
-    "commander": "^14.0.2"
+    "typeorm": "^0.3.27"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^5.6.1",
