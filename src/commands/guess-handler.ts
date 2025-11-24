@@ -1,6 +1,7 @@
 import type { ChatInputCommandInteraction, Client, Message, OmitPartialGroupDMChannel } from "discord.js";
 import type { NumberInfo } from "../numbers/get-random-number";
 import { Logger } from "../utils/logger";
+import { createUser, getUser } from "../utils/user";
 import { guessCooldowns } from "./cooldowns";
 
 const hasher = new Bun.CryptoHasher("sha512");
@@ -24,7 +25,27 @@ function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: 
   return false;
 }
 
-export function handleResponse(client: Client, interaction: ChatInputCommandInteraction, number: NumberInfo): void {
+function getGainFromDifficulty(difficulty: "easy" | "medium" | "hard" | "legendary"): 10 | 25 | 50 | 500 {
+  switch (difficulty) {
+    case "easy": {
+      return 10;
+    }
+    case "medium": {
+      return 25;
+    }
+    case "hard": {
+      return 50;
+    }
+    case "legendary": {
+      return 500;
+    }
+  }
+}
+
+export async function handleResponse(client: Client, interaction: ChatInputCommandInteraction, number: NumberInfo): void {
+  const user = await getUser(interaction.user.id);
+  const gain = getGainFromDifficulty(number.difficulty);
+
   const handler = async (message: OmitPartialGroupDMChannel<Message>) => {
     if (message.channelId !== interaction.channelId) return;
     if (handlePlayerGuess(message, number)) {
@@ -32,7 +53,16 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
       clearTimeout(timeout);
       client.off("messageCreate", handler);
       guessCooldowns.set(interaction.channelId, false);
-      await message.reply({ content: "hey you guessed correctly, nice job!" });
+      if (user) {
+        user.tokens += gain;
+        await interaction.reply(`hey you guessed correctly, nice job! you also earned ${gain.toString()} tokens!`);
+        await user.save();
+      } else {
+        const newUser = await createUser(interaction.user.id);
+        newUser.tokens += gain;
+        await interaction.reply(`hey you guessed correctly, nice job! i've also created a profile for you with ${gain.toString()} tokens.`);
+        await newUser.save();
+      }
     }
   };
 
