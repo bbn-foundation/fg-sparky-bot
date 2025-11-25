@@ -21,6 +21,7 @@ const difficulty: string = options.difficulty as string;
 const files = await readdir(directoryPath);
 
 interface NumberInfo {
+  uuid: string;
   name: string | null;
   hashedName: string;
   image: string;
@@ -32,7 +33,7 @@ await Promise.all(files.map(async (fileName) => {
   const fileExtension = fileName.slice(fileName.lastIndexOf("."));
   if (fileExtension.endsWith("DS_Store") || fileExtension.endsWith("txt")) return;
   const number = (() => {
-    const number = fileName.slice(0, fileName.lastIndexOf("."));
+    const number = fileName.slice(0, fileName.lastIndexOf(".")).replaceAll("_", ".");
     switch (number) {
       default: {
         return number;
@@ -43,10 +44,12 @@ await Promise.all(files.map(async (fileName) => {
   console.log(`Found file: ${filePath} (number: ${number})`);
   sha512.update(number.toLowerCase());
   const hash = sha512.digest("hex");
-  const newFilePath = `${directoryPath}/${hash}${fileExtension}`;
+  const uuid = crypto.randomUUID();
+  const newFilePath = `${directoryPath}/${uuid}${fileExtension}`;
   await copyFile(filePath, newFilePath);
   await Bun.file(filePath).delete();
   numbers.push({
+    uuid,
     name: difficulty === "legendary" ? null : number,
     hashedName: hash,
     image: newFilePath,

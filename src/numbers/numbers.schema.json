@@ -7,8 +7,9 @@
       "items": {
         "type": "object",
         "properties": {
+          "uuid": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
           "name": { "type": "string" },
-          "hashedName": { "type": "string" },
+          "hashedName": { "type": "string", "pattern": "^[0-9a-f]{128}$" },
           "image": { "type": "string" }
         }
       }
@@ -18,8 +19,9 @@
       "items": {
         "type": "object",
         "properties": {
+          "uuid": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
           "name": { "type": "string" },
-          "hashedName": { "type": "string" },
+          "hashedName": { "type": "string", "pattern": "^[0-9a-f]{128}$" },
           "image": { "type": "string" }
         }
       }
@@ -29,8 +31,9 @@
       "items": {
         "type": "object",
         "properties": {
+          "uuid": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
           "name": { "type": "string" },
-          "hashedName": { "type": "string" },
+          "hashedName": { "type": "string", "pattern": "^[0-9a-f]{128}$" },
           "image": { "type": "string" }
         }
       }
@@ -40,8 +43,9 @@
      	"items": {
         "type": "object",
         "properties": {
+          "uuid": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
           "name": { "type": "null" },
-          "hashedName": { "type": "string" },
+          "hashedName": { "type": "string", "pattern": "^[0-9a-f]{128}$" },
           "image": { "type": "string" }
         }
       }
