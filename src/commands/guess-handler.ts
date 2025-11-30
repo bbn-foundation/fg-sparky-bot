@@ -53,6 +53,10 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
 
   const handler = async (message: OmitPartialGroupDMChannel<Message>) => {
     if (message.channelId !== interaction.channelId) return;
+    if (number.uuid === "c380c246-8cb9-4d78-8e5c-2de6d0fd9aad" && message.content.match(/omni oridnal/mu)) {
+      await message.reply("omni oridnal");
+      return;
+    }
     if (handlePlayerGuess(message, number)) {
       clearTimeout(timeout);
       client.off("messageCreate", handler);
