@@ -1,4 +1,4 @@
-import numbersJson from "../src/numbers/numbers.json" with { type: "json" };
+import numbersJson from "../numbers/numbers.json" with { type: "json" };
 
 const easiesCount = numbersJson.easy.length;
 const mediumsCount = numbersJson.medium.length;

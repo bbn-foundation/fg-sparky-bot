@@ -38,7 +38,7 @@ const output = {
 
 // jsons are any-typed
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const json = await Bun.file("src/numbers/numbers.json").json();
+const json = await Bun.file("numbers/numbers.json").json();
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
 json[difficulty].push(output);
