@@ -49,7 +49,7 @@ const User: Command = {
         const content = `\
         # User leaderboard: \n \
         ${users.map((user, index) => {
-          if (index > 14) return "no";
+          if (index > (interaction.options.getInteger("amount", false) ?? 9)) return "no";
           const position = ordinalOf(index + 1);
           // Sometimes an IIFE looks better then chaining ternaries
           const header = ((index) => {
@@ -86,6 +86,11 @@ const User: Command = {
     name: "leaderboard",
     description: "Show who has the most terminus tokens",
     type: ApplicationCommandOptionType.Subcommand,
+    options: [{
+      name: "amount",
+      description: "The top amount of people to show (defaults to 10)",
+      type: ApplicationCommandOptionType.Number,
+    }],
   }],
 };
 
