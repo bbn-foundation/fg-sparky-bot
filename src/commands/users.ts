@@ -25,19 +25,23 @@ function ordinalOf(number: number): `${number}${"st" | "nd" | "rd" | "th"}` {
   return `${number}th`;
 }
 
-function filterNumbersByUUID<T extends { uuid: string }>(first: T[], second: string[]): T[] {
-  return first.filter((entry) => {
-    for (const uuid of second) {
+function countEntriesUnique(difficulty: "easy" | "medium" | "hard" | "legendary", entries: string[]): number {
+  const filtered = numbers[difficulty].filter((entry) => {
+    for (const uuid of entries) {
       if (entry.uuid === uuid) return true;
     }
     return false;
   });
+  return filtered.length;
 }
 
-function countEntries(difficulty: "easy" | "medium" | "hard" | "legendary", entries: string[]): number {
-  // @ts-expect-error: SAFETY: the type conflicts for .name prop does
-  // not matter as we do not use it.
-  const filtered = filterNumbersByUUID(numbers[difficulty], entries);
+function countEntriesTotal(difficulty: "easy" | "medium" | "hard" | "legendary", entries: string[]): number {
+  const filtered = entries.filter((uuid) => {
+    for (const entry of numbers[difficulty]) {
+      if (uuid === entry.uuid) return true;
+    }
+    return false;
+  });
   return filtered.length;
 }
 
@@ -55,10 +59,10 @@ const User: Command = {
             `## Profile information for ${discordUser.displayName} (${discordUser.username}`,
             `terminus tokens: ${userInfo.tokens.toString()} <:terminusfinity:1444859277515690075>`,
             `numbers guessed: ${guessedEntries.length.toString()} (total), ${uniqueGuessed.length.toString()} (unique)`,
-            `- easy numbers: ${countEntries("easy", guessedEntries).toString()} (total), ${countEntries("easy", uniqueGuessed).toString()} (unique)`,
-            `- medium numbers: ${countEntries("medium", guessedEntries).toString()} (total), ${countEntries("medium", uniqueGuessed).toString()} (unique)`,
-            `- hard numbers: ${countEntries("hard", guessedEntries).toString()} (total), ${countEntries("hard", uniqueGuessed).toString()} (unique)`,
-            `- legendary numbers: ${countEntries("legendary", guessedEntries).toString()} (total), ${countEntries("legendary", uniqueGuessed).toString()} (unique)`,
+            `- easy numbers: ${countEntriesTotal("easy", guessedEntries).toString()} (total), ${countEntriesUnique("easy", uniqueGuessed).toString()} (unique)`,
+            `- medium numbers: ${countEntriesTotal("medium", guessedEntries).toString()} (total), ${countEntriesUnique("medium", uniqueGuessed).toString()} (unique)`,
+            `- hard numbers: ${countEntriesTotal("hard", guessedEntries).toString()} (total), ${countEntriesUnique("hard", uniqueGuessed).toString()} (unique)`,
+            `- legendary numbers: ${countEntriesTotal("legendary", guessedEntries).toString()} (total), ${countEntriesUnique("legendary", uniqueGuessed).toString()} (unique)`,
           ];
           await interaction.reply({
             content: content.join("\n"),
