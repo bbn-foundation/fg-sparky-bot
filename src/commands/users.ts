@@ -34,6 +34,13 @@ function filterNumbersByUUID<T extends { uuid: string }>(first: T[], second: str
   });
 }
 
+function countEntries(difficulty: "easy" | "medium" | "hard" | "legendary", entries: string[]): number {
+  // @ts-expect-error: SAFETY: the type conflicts for .name prop does
+  // not matter as we do not use it.
+  const filtered = filterNumbersByUUID(numbers[difficulty], entries);
+  return filtered.length;
+}
+
 const User: Command = {
   async run(client: Client, interaction: CommandInteraction): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
@@ -43,14 +50,15 @@ const User: Command = {
         const userInfo = await getUser(userId);
         const discordUser = await client.users.fetch(userId);
         if (userInfo) {
+          const { guessedEntries, uniqueGuessed } = userInfo;
           const content = [
             `## Profile information for ${discordUser.displayName} (${discordUser.username}`,
             `terminus tokens: ${userInfo.tokens.toString()} <:terminusfinity:1444859277515690075>`,
-            `total numbers guessed: ${userInfo.guessedEntries.length.toString()}`,
-            `- easy numbers: ${filterNumbersByUUID(numbers.easy, userInfo.guessedEntries).length.toString()}`,
-            `- medium numbers: ${filterNumbersByUUID(numbers.medium, userInfo.guessedEntries).length.toString()}`,
-            `- hard numbers: ${filterNumbersByUUID(numbers.hard, userInfo.guessedEntries).length.toString()}`,
-            `- legendary numbers: ${filterNumbersByUUID(numbers.legendary, userInfo.guessedEntries).length.toString()}`,
+            `numbers guessed: ${guessedEntries.length.toString()} (total), ${uniqueGuessed.length.toString()} (unique)`,
+            `- easy numbers: ${countEntries("easy", guessedEntries).toString()} (total), ${countEntries("easy", uniqueGuessed).toString()} (unique)`,
+            `- medium numbers: ${countEntries("medium", guessedEntries).toString()} (total), ${countEntries("medium", uniqueGuessed).toString()} (unique)`,
+            `- hard numbers: ${countEntries("hard", guessedEntries).toString()} (total), ${countEntries("hard", uniqueGuessed).toString()} (unique)`,
+            `- legendary numbers: ${countEntries("legendary", guessedEntries).toString()} (total), ${countEntries("legendary", uniqueGuessed).toString()} (unique)`,
           ];
           await interaction.reply({
             content: content.join("\n"),

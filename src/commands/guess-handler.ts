@@ -67,15 +67,22 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
 
       if (user) {
         Logger.info(`user already exists, adding tokens`);
+        // update the player stats first...
         user.tokens += gain;
         user.guessedEntries.push(number.uuid);
+        if (!user.uniqueGuessed.includes(number.uuid)) user.uniqueGuessed.push(number.uuid);
+        // then reply.
         await message.reply(`hey you guessed correctly, nice job! you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`);
+        // and saves.
         await user.save();
       } else {
         Logger.info(`user not found, creating user and adding tokens`);
         const newUser = await createUser(message.author.id);
         newUser.tokens += gain;
         newUser.guessedEntries.push(number.uuid);
+        // this is a fresh new profile which means it is guaranteed to have zero unique guesses.
+        // so we can add it without checking.
+        newUser.uniqueGuessed.push(number.uuid);
         await message.reply(`hey you guessed correctly, nice job! i've also created a profile for you with ${gain.toString()} <:terminusfinity:1444859277515690075> (terminus tokens).`);
         await newUser.save();
       }

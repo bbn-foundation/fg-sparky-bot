@@ -28,7 +28,7 @@ const Guess: Command = {
     const content = number.difficulty === "legendary"
       ? `**DIFFICULTY: LEGENDARY**\nGuess the number, you have **60** seconds.`
       : `Difficulty: ${number.difficulty}\nGuess the number, you have **40** seconds.`;
-    await interaction.reply({ content, files: [number.symbol] });
+    await interaction.reply({ content: content + "\n-# DEV ENVIRONMENT, DON'T EXPECT YOUR STATS TO SAVE.", files: [number.symbol] });
 
     Logger.debug("setting up timeout");
     handleResponse(client, interaction, number);
