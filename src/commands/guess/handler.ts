@@ -60,6 +60,9 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
         user.guessedEntries.push(number.uuid);
         if (!user.uniqueGuessed.includes(number.uuid)) user.uniqueGuessed.push(number.uuid);
         // then reply.
+        if (number.uuid === "dd35acbf-4c92-4710-b4ed-7d6f9d4beca5") {
+          await message.reply(`perhaps, a jet2 holiday may interest you?\nhey you guessed correctly, nice job! you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`);
+        }
         await message.reply(`hey you guessed correctly, nice job! you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`);
         // and saves.
         await user.save();
