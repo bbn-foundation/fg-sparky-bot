@@ -14,6 +14,11 @@ export async function handleSlashCommand(
   interaction: CommandInteraction,
   commands: readonly Command[],
 ): Promise<void> {
+  if (!interaction.inGuild()) {
+    Logger.warn(`user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`);
+    await interaction.reply("sorry, fg sparky currently doesn't support guesses outside of servers");
+    return;
+  }
   Logger.debug(`Finding command ${interaction.commandName}`);
   const slashCommand = commands.find(c => c.name === interaction.commandName);
   if (!slashCommand) {

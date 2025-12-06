@@ -17,7 +17,7 @@ export function registerHandlers(client: Client): void {
   });
 
   client.on("interactionCreate", async (interaction: Interaction) => {
-    if (interaction.isCommand() || interaction.isContextMenuCommand()) {
+    if (interaction.isCommand()) {
       await handleSlashCommand(client, interaction, Commands);
     }
   });
