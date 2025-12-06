@@ -1,11 +1,10 @@
-import type { ChatInputCommandInteraction, Client, User as DiscordUser } from "discord.js";
+import type { Client, User as DiscordUser } from "discord.js";
 import { UserProfile } from "../../entities/user-profile";
-import { assert } from "../../utils/assert";
 import { Logger } from "../../utils/logger";
 import { ordinalOf } from "../../utils/numbers";
+import type { ServerSlashCommandInteraction } from "../types";
 
-export default async function userLeaderboardDisplay(client: Client, interaction: ChatInputCommandInteraction): Promise<void> {
-  assert(interaction.inGuild());
+export default async function userLeaderboardDisplay(client: Client, interaction: ServerSlashCommandInteraction): Promise<void> {
   await interaction.deferReply();
 
   const displayAmount = (interaction.options.getNumber("amount", false) ?? 10);

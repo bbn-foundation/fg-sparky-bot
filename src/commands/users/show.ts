@@ -1,10 +1,9 @@
-import type { ChatInputCommandInteraction, Client } from "discord.js";
-import { assert } from "../../utils/assert";
+import type { Client } from "discord.js";
 import { countEntriesTotal, countEntriesUnique } from "../../utils/numbers";
 import { getUser } from "../../utils/user";
+import type { ServerSlashCommandInteraction } from "../types";
 
-export default async function userShow(client: Client, interaction: ChatInputCommandInteraction): Promise<void> {
-  assert(interaction.inGuild());
+export default async function userShow(client: Client, interaction: ServerSlashCommandInteraction): Promise<void> {
   const userId = interaction.options.get("user", true).value as string;
   const userInfo = await getUser(userId, interaction.guildId);
   const discordUser = await client.users.fetch(userId);

@@ -11,7 +11,7 @@ import userShow from "./users/show.ts";
 import serverStatisticsDisplay from "./users/statistics.ts";
 
 const User: Command = {
-  async run(client: Client, interaction: CommandInteraction): Promise<void> {
+  async run(client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
     switch (interaction.options.getSubcommand()) {
       case "show": {

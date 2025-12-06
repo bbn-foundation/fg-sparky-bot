@@ -1,10 +1,9 @@
-import type { ChatInputCommandInteraction, Client } from "discord.js";
+import type { Client } from "discord.js";
 import { UserProfile } from "../../entities/user-profile";
-import { assert } from "../../utils/assert";
 import { countEntriesTotal, countEntriesUnique } from "../../utils/numbers";
+import type { ServerSlashCommandInteraction } from "../types";
 
-export default async function serverStatisticsDisplay(_: Client, interaction: ChatInputCommandInteraction): Promise<void> {
-  assert(interaction.inGuild());
+export default async function serverStatisticsDisplay(_: Client, interaction: ServerSlashCommandInteraction): Promise<void> {
   const users = await UserProfile.find({
     where: { guildId: interaction.guildId },
   });

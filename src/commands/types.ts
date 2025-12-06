@@ -4,9 +4,17 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import type { ChatInputApplicationCommandData, Client, CommandInteraction } from "discord.js";
+import type { ChatInputApplicationCommandData, ChatInputCommandInteraction, Client, CommandInteraction } from "discord.js";
 
+/**
+ * The object structure that represents a slash command.
+ */
 export interface Command extends ChatInputApplicationCommandData {
-  run: (client: Client, interaction: CommandInteraction) => Promise<void>;
+  run: (client: Client, interaction: CommandInteraction<"raw" | "cached">) => Promise<void>;
   cooldown?: number | undefined;
 }
+
+/**
+ * Utility type to represent slash commands being ran in a server.
+ */
+export type ServerSlashCommandInteraction = ChatInputCommandInteraction<"cached" | "raw">;

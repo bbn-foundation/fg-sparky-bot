@@ -11,7 +11,7 @@ import { handleResponse } from "./guess/handler.ts";
 import type { Command } from "./types.ts";
 
 const Guess: Command = {
-  async run(client: Client, interaction: CommandInteraction): Promise<void> {
+  async run(client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
     if (!interaction.isChatInputCommand()) {
       Logger.error(`Tried invoking command ${this.name} as something other then a slash command`);
       await interaction.reply("This command must be run as a slash command (eg. as /guess)!");
