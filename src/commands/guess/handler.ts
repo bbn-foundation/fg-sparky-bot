@@ -38,7 +38,7 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
   assert(interaction.inGuild());
 
   const handler = async (message: OmitPartialGroupDMChannel<Message>) => {
-    if (message.channelId !== interaction.channelId) return;
+    if (message.channelId !== interaction.channelId || message.author.bot) return;
     assert(message.inGuild());
 
     if (number.uuid === "c380c246-8cb9-4d78-8e5c-2de6d0fd9aad" && message.content.match(/omni oridnal/mu)) {
