@@ -35,7 +35,6 @@ function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: 
 
 export function handleResponse(client: Client, interaction: ChatInputCommandInteraction, number: NumberInfo): void {
   const gain = getGainFromDifficulty(number.difficulty);
-  assert(interaction.inGuild());
 
   const handler = async (message: OmitPartialGroupDMChannel<Message>) => {
     if (message.channelId !== interaction.channelId || message.author.bot) return;
