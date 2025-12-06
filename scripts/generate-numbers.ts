@@ -62,7 +62,7 @@ const originalJson = await Bun.file(`numbers/numbers.json`).json();
 originalJson[difficulty] = [...originalJson[difficulty], ...numbers];
 
 await Bun.write(
-  `src/numbers/numbers.json`,
+  `numbers/numbers.json`,
   JSON.stringify(originalJson, null, 2),
 );
 

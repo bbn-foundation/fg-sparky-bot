@@ -25,7 +25,7 @@ const hash = sha512.update(numberName.toLowerCase()).digest("hex");
 const fileExtension = filePath.split(".").pop();
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const newFileName = `${hash}.${fileExtension!}`;
-const newFilePath = `src/numbers/${difficulty}/${newFileName}`;
+const newFilePath = `numbers/${difficulty}/${newFileName}`;
 
 await copyFile(filePath, newFilePath);
 await Bun.file(filePath).delete();
@@ -44,7 +44,7 @@ const json = await Bun.file("numbers/numbers.json").json();
 json[difficulty].push(output);
 
 await Bun.write(
-  "src/numbers/numbers.json",
+  "numbers/numbers.json",
   JSON.stringify(json, null, 2),
 );
 
