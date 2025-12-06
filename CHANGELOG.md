@@ -1,6 +1,6 @@
 # changelog
 
-## 0.11.0 - December 3rd, 2025
+## 0.11.0 - December 5th, 2025
 ### BREAKING CHANGES:
 - \[[`ca3b0b20`](https://codeberg.org/skylafalls/fg-sparky-bot/commit/ca3b0b201638fedc36c0572ae3488ca22754acc4)] - refactor(users)!: scope profiles information to their servers
   
