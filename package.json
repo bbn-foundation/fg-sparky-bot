@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "bun@1.3.3",
   "license": "GPL-3.0-or-later",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "scripts": {
     "dev": "bun run --watch src/main.ts",
     "build": "bun build src/main.ts --target=bun --production --outfile=dist/fg-sparky-bot --compile --sourcemap=inline",

@@ -1,5 +1,9 @@
 # changelog
 
+## 0.11.3 - December 7th, 2025
+### fixes:
+- \[[`e31bcbd3`](https://codeberg.org/skylafalls/fg-sparky-bot/commit/e31bcbd38c5121faae798df710821fdd557205a9)] - fix(deps): use better-sqlite3 and revert back to bun@1.3.3
+
 ## 0.11.2 - December 7th, 2025
 ### features:
 - \[[`4fab8fef`](https://codeberg.org/skylafalls/fg-sparky-bot/commit/4fab8fef5612b08492b0fe0e42a126c54d248503)] - feat(guess): a jet2 holiday
