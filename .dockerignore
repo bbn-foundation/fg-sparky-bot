@@ -1,0 +1,12 @@
+node_modules
+Dockerfile*
+.git*
+*.md
+LICENSE
+.json
+*.tsbuildinfo
+.env
+.env.*
+dist
+.vscode
+.github
