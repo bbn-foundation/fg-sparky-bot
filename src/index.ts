@@ -5,10 +5,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import type { Client } from "discord.js";
-import { Logger } from "../scripts/logger";
 import { Commands } from "./commands/commands";
 import { registerCommands } from "./commands/listener";
 import { registerHandlers } from "./handlers";
+import { Logger } from "./utils/logger";
 
 export async function initClient(client: Client, token: string): Promise<void> {
   registerHandlers(client);

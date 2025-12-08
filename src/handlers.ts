@@ -5,10 +5,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import type { Client, Interaction } from "discord.js";
-import { Logger } from "../scripts/logger";
 import { Commands } from "./commands/commands";
 import { handleSlashCommand } from "./commands/listener";
 import { loginFormatter } from "./utils/formatter";
+import { Logger } from "./utils/logger";
 
 export function registerHandlers(client: Client): void {
   client.once("clientReady", (client: Client<true>) => {
