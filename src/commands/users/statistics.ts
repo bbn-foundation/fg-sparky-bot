@@ -12,7 +12,8 @@ export default async function serverStatisticsDisplay(_: Client, interaction: Se
 
   const thisServer = interaction.guild?.name ?? "(couldn't get name)";
 
-  const uniqueAcrossUsers = users.flatMap(user => user.uniqueGuessed);
+  const uniqueAcrossUsers = users.flatMap(user => user.uniqueGuessed)
+    .filter((value, index, array) => array.indexOf(value) === index);
   const totalAcrossUsers = users.flatMap(user => user.guessedEntries);
 
   const calculatedStatistics = {
@@ -22,14 +23,8 @@ export default async function serverStatisticsDisplay(_: Client, interaction: Se
       .reduce((prev, curr) => prev + curr)
       .toString(),
     numbersGuessed: {
-      total: users
-        .map(user => user.guessedEntries.length)
-        .reduce((prev, curr) => prev + curr)
-        .toString(),
-      unique: users
-        .map(user => user.uniqueGuessed.length)
-        .reduce((prev, curr) => prev + curr)
-        .toString(),
+      total: totalAcrossUsers.length.toString(),
+      unique: uniqueAcrossUsers.length.toString(),
       easy: {
         total: countEntriesTotal("easy", totalAcrossUsers).toString(),
         unique: countEntriesUnique("easy", uniqueAcrossUsers).toString(),
