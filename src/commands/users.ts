@@ -10,6 +10,12 @@ import userLeaderboardDisplay from "./users/leaderboard.ts";
 import userShow from "./users/show.ts";
 import serverStatisticsDisplay from "./users/statistics.ts";
 
+export enum LeaderboardDisplayType {
+  Tokens = "tokens",
+  TotalEntries = "total-entries",
+  UniqueEntries = "unique-entries",
+}
+
 const User: Command = {
   async run(client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
@@ -46,9 +52,19 @@ const User: Command = {
     }],
   }, {
     name: "leaderboard",
-    description: "Show who has the most terminus tokens",
+    description: "List people in descending order by their stats",
     type: ApplicationCommandOptionType.Subcommand,
     options: [{
+      name: "type",
+      description: "Which stat should this show?",
+      type: ApplicationCommandOptionType.String,
+      required: true,
+      choices: [
+        { name: "tokens", value: LeaderboardDisplayType.Tokens },
+        { name: "total-entries", value: LeaderboardDisplayType.TotalEntries },
+        { name: "unique-entries", value: LeaderboardDisplayType.UniqueEntries },
+      ],
+    }, {
       name: "amount",
       description: "The top amount of people to show (defaults to 10)",
       type: ApplicationCommandOptionType.Number,
