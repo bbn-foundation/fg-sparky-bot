@@ -7,7 +7,7 @@
   "version": "0.11.4",
   "scripts": {
     "dev": "bun run --watch src/main.ts",
-    "build": "bun build src/main.ts --target=bun --production --outfile=dist/fg-sparky-bot --compile --sourcemap=inline",
+    "build": "bun build src/main.ts --target=bun --production --outfile=dist/fg-sparky-bot.js --sourcemap=inline",
     "lint": "oxlint . --ignore-path=.gitignore && eslint .",
     "lint:fix": "oxlint --fix --fix-suggestions . --ignore-path=.gitignore && eslint --fix .",
     "typecheck": "tsc -p tsconfig.json"
