@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
+import type { AchievementID } from "../store/achievements";
 
 /**
  * This is a person's user profile.
@@ -64,4 +65,18 @@ export class UserProfile extends BaseEntity {
    */
   // @OneToMany("NumberhumanData", (numberhuman: NumberhumanData) => numberhuman.caughtBy)
   // numberhumans: NumberhumanData[] | undefined;
+
+  /*
+   * Array of achievements the user has.
+   */
+  @Column("json")
+  achievements: AchievementID[] = [];
+
+  /**
+   * Gives an achievement to the user.
+   */
+  async giveAchievement(id: AchievementID): Promise<void> {
+    this.achievements.push(id);
+    await this.save();
+  }
 }
