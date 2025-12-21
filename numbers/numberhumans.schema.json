@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "rarityArray": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "uuid": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+          "name": { "type": "string" },
+          "hashedName": { "type": "string", "pattern": "^[0-9a-f]{128}$" },
+          "image": { "type": "string" }
+        }
+      }
+    }
+  },
+  "properties": {
+    "common": {
+      "$ref": "#/definitions/rarityArray"
+    },
+    "uncommon": {
+      "$ref": "#/definitions/rarityArray"
+    },
+    "rare": {
+      "$ref": "#/definitions/rarityArray"
+    },
+    "epic": {
+      "$ref": "#/definitions/rarityArray"
+    },
+    "legendary": {
+      "$ref": "#/definitions/rarityArray"
+    },
+    "mythical": {
+      "$ref": "#/definitions/rarityArray"
+    }
+  },
+  "required": ["common", "uncommon", "rare", "epic", "legendary", "mythical"]
+}

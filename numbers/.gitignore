@@ -2,6 +2,7 @@ easy/*
 medium/*
 hard/*
 legendary/*
-numbers.json
-numberdex-cron-jobs.json
-humans/*
+humans/*/*
+!humans/*
+*.json
+!*.schema.json
