@@ -12,7 +12,7 @@ import { baker, setupCronJobs } from "./numberdex";
 import { Logger } from "./utils/logger";
 
 const program = new Command()
-  .version("0.12.0")
+  .version("0.12.1")
   .description("FG sparky bot as a cli")
   .option("-t, --token <token>", "The discord bot token to login with (env variable: DISCORD_TOKEN)")
   .option("-l, --loglevel [loglevel]", "Logging level as a number (env variable: LOG_LEVEL)");

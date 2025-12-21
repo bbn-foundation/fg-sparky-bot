@@ -1,5 +1,16 @@
 # changelog
 
+## 0.12.1 - December 21st, 2025
+### refactors:
+- \[[`9bdf33eb`](https://github.com/skylafalls/fg-sparky-bot/commit/9bdf33eb12d5cb607ce325fec3069b4698f0d2a4)] - refactor(numberdex): delay spawning numberhumans for a random amount of time
+- \[[`d9b9bdcc`](https://github.com/skylafalls/fg-sparky-bot/commit/d9b9bdccd35a0f4417244ddda9713da9d64e2b09)] - refactor(numberdex): move setting up the callback to utils
+- \[[`0f62f832`](https://github.com/skylafalls/fg-sparky-bot/commit/0f62f8323928769d2061395da4df31d7e33f979c)] - refactor(numberdex): spawn disappears after a random time now
+
+### fixes:
+- \[[`51d4132b`](https://github.com/skylafalls/fg-sparky-bot/commit/51d4132bba1e124d81963165e11e7f201602e237)] - fix(numberdex/add): use same handler
+- \[[`4d219d7f`](https://github.com/skylafalls/fg-sparky-bot/commit/4d219d7ffebf03c6b2502f9ca5e60718e7801e05)] - fix(release): update changelog links
+- \[[`a6bba682`](https://github.com/skylafalls/fg-sparky-bot/commit/a6bba6826bf38d41ac69e990f568dc7d9ba8b921)] - fix(numberdex): change spawn clock to 20 minutes
+
 ## 0.12.0 - December 20th, 2025
 ### features:
 - \[[`707866e3`](https://github.com/skylafalls/fg-sparky-bot/commit/707866e36d7d70c692539ee05c6004dd3953e2ed)] - feat: numberdex game
