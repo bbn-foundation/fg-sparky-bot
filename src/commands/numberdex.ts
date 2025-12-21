@@ -21,7 +21,7 @@ const Numberdex: Command = {
         const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
         baker.add({
           name: `numberdex-channel-${channel.id}`,
-          cron: "@every_3_hours",
+          cron: "@every_20_minutes",
           async callback(): Promise<void> {
             Logger.info(`spawning numberhuman in channel ${channel.id}`);
             await channel.send("test");
