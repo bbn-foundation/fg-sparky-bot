@@ -11,6 +11,11 @@ export default class StreakCollection extends Collection<string, number> {
     return this.set(`${id}.${guildId}`, 1);
   }
 
+  resetStreak(id: string, guildId: string): this {
+    this.delete(`${id}.${guildId}`);
+    return this;
+  }
+
   getTokenGain(userId: string, guildId: string, difficulty: "easy" | "medium" | "hard" | "legendary"): number {
     const streakGain = this.get(`${userId}.${guildId}`) ?? 0;
     return getGainFromDifficulty(difficulty) + streakGain;

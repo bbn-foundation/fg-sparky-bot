@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /**
  * @license
  * fg-sparky-bot - Guess the FG number based on its symbol
@@ -15,6 +16,7 @@ import StreakCollection from "./streaks";
 
 const hasher = new Bun.CryptoHasher("sha512");
 const streakCollectionCollection = new Collection<string, StreakCollection>();
+const streakTracker = new Collection<string, string>();
 
 function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: NumberInfo): boolean | undefined {
   if (message.author.bot) return;
@@ -38,7 +40,7 @@ function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: 
 export function handleResponse(client: Client, interaction: ChatInputCommandInteraction, number: NumberInfo): void {
   const streakCollection = (() => {
     if (streakCollectionCollection.get(interaction.channelId)) {
-      return streakCollectionCollection.get(interaction.channelId);
+      return streakCollectionCollection.get(interaction.channelId)!;
     }
     streakCollectionCollection.set(interaction.channelId, new StreakCollection());
     return streakCollectionCollection.get(interaction.channelId)!;
@@ -55,7 +57,12 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
       client.off("messageCreate", handler);
       guessCooldowns.set(interaction.channelId, false);
 
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const previousPerson = streakTracker.get(interaction.channelId);
+      if (previousPerson !== `${message.author.id}.${message.guildId!}`) {
+        streakCollection.resetStreak(message.author.id, message.guildId!);
+        streakTracker.set(interaction.channelId, `${message.author.id}.${message.guildId!}`);
+      }
+
       const gain = streakCollection.getTokenGain(message.author.id, message.guildId!, number.difficulty);
 
       // @ts-expect-error: assertion fails for some reason even though the bot can only
