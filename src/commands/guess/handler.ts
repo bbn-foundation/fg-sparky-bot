@@ -6,14 +6,15 @@
  */
 import type { ChatInputCommandInteraction, Client, Message, OmitPartialGroupDMChannel } from "discord.js";
 import { Logger } from "../../utils/logger";
-import { getGainFromDifficulty } from "../../utils/numbers";
 import { joinStringArray } from "../../utils/string";
 import { createUser, getUser } from "../../utils/user";
 import { guessCooldowns } from "../cooldowns";
 import type { NumberInfo } from "./get-random-number";
 import handleSpecialGuess from "./special-handler";
+import StreakCollection from "./streaks";
 
 const hasher = new Bun.CryptoHasher("sha512");
+const streakCollection = new StreakCollection();
 
 function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: NumberInfo): boolean | undefined {
   if (message.author.bot) return;
@@ -35,8 +36,6 @@ function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: 
 }
 
 export function handleResponse(client: Client, interaction: ChatInputCommandInteraction, number: NumberInfo): void {
-  const gain = getGainFromDifficulty(number.difficulty);
-
   const handler = async (message: OmitPartialGroupDMChannel<Message>) => {
     if (message.channelId !== interaction.channelId || message.author.bot) return;
 
@@ -47,6 +46,9 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
       clearTimeout(timeout);
       client.off("messageCreate", handler);
       guessCooldowns.set(interaction.channelId, false);
+
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const gain = streakCollection.getTokenGain(message.author.id, message.guildId!, number.difficulty);
 
       // @ts-expect-error: assertion fails for some reason even though the bot can only
       // be installed in a guild
@@ -68,11 +70,13 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
             "perhaps, a jet2 holiday may interest you?",
             "hey you guessed correctly, nice job!",
             `you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`,
+            `-# current streak count: ${streakCollection.get(`${message.author.id}.${message.guildId!}`)?.toString() ?? (0).toString()}`,
           ]));
         }
         await message.reply(joinStringArray([
           "hey you guessed correctly, nice job!",
           `you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`,
+          `-# current streak count: ${streakCollection.get(`${message.author.id}.${message.guildId!}`)?.toString() ?? (0).toString()}`,
         ]));
         // and saves.
         await user.save();
@@ -92,6 +96,9 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
         ]));
         await newUser.save();
       }
+      Logger.debug(`appending streak for user ${message.author.displayName}`);
+      streakCollection.appendStreak(message.author.id, message.guildId!);
+
       if (await handleSpecialGuess(message, number, "post-update")) {
         return;
       }
@@ -102,6 +109,7 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
     Logger.info("user failed to guess in time");
     client.off("messageCreate", handler);
     guessCooldowns.set(interaction.channelId, false);
+    await streakCollection.clear();
 
     const content = `no one guessed in time${number.number ? `, the correct answer was ${number.number}.` : "."}`;
     await interaction.followUp({ content, allowedMentions: { repliedUser: false } });

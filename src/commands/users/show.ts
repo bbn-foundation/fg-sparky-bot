@@ -22,6 +22,7 @@ export default async function userShow(client: Client, interaction: ServerSlashC
       `# Profile information for ${discordUser.displayName} (${discordUser.username})`,
       "## fg sparky:",
       `terminus tokens: ${userInfo.tokens.toString()} <:terminusfinity:1444859277515690075>`,
+      `highest guessing streak: ${Math.max(userInfo.bestStreak - 1, 0).toString()}`,
       `numbers guessed: ${guessedEntries.length.toString()} (total), ${uniqueGuessed.length.toString()} (unique) [${formatPercent(percentage.all)}]`,
       `- easy numbers: ${countEntriesTotal("easy", guessedEntries).toString()} (total), ${countEntriesUnique("easy", uniqueGuessed).toString()} (unique) [${formatPercent(percentage.easy)}]`,
       `- medium numbers: ${countEntriesTotal("medium", guessedEntries).toString()} (total), ${countEntriesUnique("medium", uniqueGuessed).toString()} (unique) [${formatPercent(percentage.medium)}]`,

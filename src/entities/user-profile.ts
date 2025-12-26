@@ -52,4 +52,10 @@ export class UserProfile extends BaseEntity {
    */
   @Column("json", { name: "numberhumans_unique_guessed" })
   numberhumansGuessedUnique: string[] = [];
+
+  /**
+   * The highest streak the user has achieved.
+   */
+  @Column("integer", { name: "best_streak" })
+  bestStreak = 0;
 }
