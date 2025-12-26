@@ -1,5 +1,17 @@
 # changelog
 
+## 0.12.2 - December 21st, 2025
+### features:
+- \[[`b0911f56`](https://github.com/skylafalls/fg-sparky-bot/commit/b0911f56fd30feb79070f37326dfd85fa98d93e2)] - feat(fg-sparky): add guessing streaks
+- \[[`060d5e7f`](https://github.com/skylafalls/fg-sparky-bot/commit/060d5e7f58c8deee2ccd687cc2be3d2f1a108ea4)] - feat(users/show): show numberdex information
+
+### fixes:
+- \[[`e1a5ed03`](https://github.com/skylafalls/fg-sparky-bot/commit/e1a5ed036399692ed9c6aea67a8a699e27073c04)] - fix(user/show): misc fixes
+- \[[`58d82607`](https://github.com/skylafalls/fg-sparky-bot/commit/58d82607649d3677224cc4c9a2416f9824d52ff1)] - fix(numberdex): switch back to async sleep
+- \[[`65f7aee6`](https://github.com/skylafalls/fg-sparky-bot/commit/65f7aee68cdd3faa51f388a13041f3749c6415ed)] - fix(numberdex): use sleepSync instead of sleep
+- \[[`96e0a0f7`](https://github.com/skylafalls/fg-sparky-bot/commit/96e0a0f7f882eaf40203bffc575dc0096120da15)] - fix(numberdex): increase delay by 1000x
+- \[[`4312ed4b`](https://github.com/skylafalls/fg-sparky-bot/commit/4312ed4bd672fdf86e67b409b0493eb2ca988ff0)] - fix(cmds): only show /numberdex command to people with manage channel perms
+
 ## 0.12.1 - December 21st, 2025
 ### refactors:
 - \[[`9bdf33eb`](https://github.com/skylafalls/fg-sparky-bot/commit/9bdf33eb12d5cb607ce325fec3069b4698f0d2a4)] - refactor(numberdex): delay spawning numberhumans for a random amount of time
