@@ -7,7 +7,7 @@
 import { Baker, FilePersistenceProvider } from "cronbake";
 import type { Client } from "discord.js";
 import { Logger } from "../utils/logger";
-import { setupCallback } from "./utils";
+import { setupCallback } from "./handler";
 
 export const baker: Baker = Baker.create({
   logger: Logger,
