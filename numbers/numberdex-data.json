@@ -1,4 +1,5 @@
 {
+  "$schema": "./numberdex-data.schema.json",
   "responses": [
     "numberdex,.,.,.,.,,.,,",
     "This is so draining.",
@@ -606,5 +607,6 @@
     "I don’t khow I don’t have think",
     "THIS IS A VERY LONG PHRASE THAT HOPEFULLY IS NOT IN ANY NUMBERDEX SPAWN",
     "MRL 🍇 M THO mmm 🕊️ yep yep yep !!\" yippee ilove grapes 🧵 🧵"
-  ]
+  ],
+  "numberhumans": []
 }

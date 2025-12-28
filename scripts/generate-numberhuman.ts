@@ -56,8 +56,11 @@ const numberhumanData: NumberhumanData = {
   },
 };
 
-const json = await Bun.file("numbers/numberhumans.json").json() as NumberhumanData[];
-json.push(numberhumanData);
+const json = await Bun.file("numbers/numberhumans.json").json() as {
+  numberhumans: NumberhumanData[];
+  responses: string[];
+};
+json.numberhumans.push(numberhumanData);
 
 await Bun.write("numbers/numberhumans.json", JSON.stringify(json, null, 2));
 
