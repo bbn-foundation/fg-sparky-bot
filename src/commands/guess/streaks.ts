@@ -17,8 +17,9 @@ export default class StreakCollection extends Collection<string, number> {
   }
 
   getTokenGain(userId: string, guildId: string, difficulty: "easy" | "medium" | "hard" | "legendary"): number {
-    const streakGain = this.get(`${userId}.${guildId}`) ?? 0;
-    return getGainFromDifficulty(difficulty) + streakGain;
+    let streakGain = 1 + (this.get(`${userId}.${guildId}`) ?? 0) / 10;
+    if (streakGain > 1.5) streakGain = Math.min(Math.sqrt(streakGain / 1.5) * 1.5, 3);
+    return Math.round(getGainFromDifficulty(difficulty) * streakGain);
   }
 
   override async clear(): Promise<void> {
