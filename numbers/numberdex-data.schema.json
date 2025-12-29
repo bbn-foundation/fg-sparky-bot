@@ -3,7 +3,7 @@
   "type": "object",
   "definitions": {
     "numberhumanAbility": {
-      "type": ["object", "null"],
+      "type": "object",
       "properties": {
         "id": { "type": "string" },
         "name": { "type": "string" },
@@ -24,7 +24,7 @@
         "baseHP": { "type": "integer" },
         "baseATK": { "type": "integer" },
         "ability": {
-          "$ref": "#/definitions/numberhumanAbility"
+          "type": "string"
         }
       }
     }
@@ -41,7 +41,13 @@
       "items": {
         "type": "string"
       }
+    },
+    "abilities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/numberhumanAbility"
+      }
     }
   },
-  "required": ["numberhumans", "responses"]
+  "required": ["numberhumans", "responses", "abilities"]
 }

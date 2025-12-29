@@ -731,5 +731,211 @@
         "description": "Absolute Fictional Numbers can use the command panel to modify the entity however they wish. They cannot deal more than 30% damage per turn."
       }
     }
+  ],
+  "abilities": [
+    {
+      "id": "unlucky-charm",
+      "name": "Unlucky Charm",
+      "description": "When any finite number is in battle with {numberhuman}, all of their attacks have a 50% chance to be less effective, with 20% of attacks not doing anything at all."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "celestial-beams",
+      "name": "Celestial Beams",
+      "description": "{numberhuman} has different attacks depending on the time of day. They both work like rapid fire beams she can shoot out of their hand, and deal 10 HP of damage per hit."
+    },
+    {
+      "id": "dragon-mayhem",
+      "name": "Dragon Mayhem",
+      "description": "{numberhuman} shoots fire out of their mouth. (Determine damage once i figure out health)"
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "healthy-salad",
+      "name": "Healthy Salad",
+      "description": "{numberhuman} can provide numbers with healthy salad that can heal between 30% to 60% of HP depending on how big or small the number is."
+    },
+    {
+      "id": "spear",
+      "name": "Spear",
+      "description": "{numberhuman}'s spear can either stun an opponent for 2 turns or deal damage (determine before release)"
+    },
+    {
+      "id": "repeated-function",
+      "name": "Repeated Function",
+      "description": "{numberhuman} heals 10% of all team members' HP every turn. There cannot be more than one {numberhuman} in a team."
+    },
+    {
+      "id": "universe-teleporter",
+      "name": "Universe Teleporter",
+      "description": "{numberhuman} can teleport objects from any universe. They can only teleport objects that are smaller than or as big as themself."
+    },
+    {
+      "id": "limiting",
+      "name": "Limiting",
+      "description": "For numbers below {numberhuman}, their attacks are limited to only work for 1 second."
+    },
+    {
+      "id": "delete-health",
+      "name": "Delete Health",
+      "description": "{numberhuman} can use the command panel to modify the entity however they wish. They cannot deal more than 30% damage per turn."
+    },
+    {
+      "id": "steel-tray",
+      "name": "Steel Tray",
+      "description": "{numberhuman} can smack opponents in the head with their steel tray. This will stun them, so they cannot attack next turn."
+    },
+    {
+      "id": "jumpscare",
+      "name": "Jumpscare",
+      "description": "{numberhuman} can jumpscare the opponent, stunning them for 2 turns."
+    },
+    {
+      "id": "omni-combat",
+      "name": "Omni Ordinal",
+      "description": "{numberhuman} is a master of combat. Their sword deals anywhere between 30 and 50 HP of damage per hit."
+    },
+    {
+      "id": "dont-hurt-me",
+      "name": "Don't Hurt Me",
+      "description": "{numberhuman} cannot take damage, but cannot attack. Instead, there is a 40% chance for {numberhuman} to rebound 25% of damage (to other team members) towards the opposing team."
+    },
+    {
+      "id": "full-circle",
+      "name": "Full Circle",
+      "description": "Stella didn't give a description for this ability so I have no idea what it does."
+    },
+    {
+      "id": "full-circle-2",
+      "name": "Full Circle again",
+      "description": "Stella didn't give a description for this ability so I have no idea what it does."
+    },
+    {
+      "id": "knowledge-is-power",
+      "name": "Knowledge is Power",
+      "description": "{numberhuman} will distract opponents by telling them about something fascinating. This makes them lower their defenses, making attacks on them stronger."
+    },
+    {
+      "id": "tech-support",
+      "name": "Tech Support",
+      "description": "If a team member is below 40% max HP, {numberhuman} will slowly increase their health to 50% HP and make their attacks 20% stronger. This only works once per team member."
+    },
+    {
+      "id": "special-ingredient",
+      "name": "Special Ingredient",
+      "description": "{numberhuman} will feed an opposing team member their soup. It is secretly poisonous, and that team member will lose 2 HP per second."
+    },
+    {
+      "id": "streamer-power",
+      "name": "Streamer Power",
+      "description": "{numberhuman} receives fanmail. In it is a random weapon that they can use."
+    },
+    {
+      "id": "reprogramming",
+      "name": "Reprogramming",
+      "description": "{numberhuman} will reprogram the game, giving their team a 20% chance to have two turns in a row."
+    },
+    {
+      "id": "forgetting",
+      "name": "Forgetting",
+      "description": "{numberhuman} can make any number forget how to do their special ability. This works half of the time."
+    },
+    {
+      "id": "dumb-stupid",
+      "name": "dumb stupid",
+      "description": "{numberhuman} is dumb and stupid. They'll fail to attack half the time."
+    },
+    {
+      "id": "power-of-god",
+      "name": "Power of God",
+      "description": "{numberhuman} solos any finite number, and can stun numbers between Omega and Absolute Infinity for 3 turns."
+    },
+    {
+      "id": "double-trouble",
+      "name": "Double Trouble",
+      "description": "There are two of them. Both have the same HP and ATK."
+    },
+    {
+      "id": "nullify",
+      "name": "Nullify",
+      "description": "When the opposing team attacks, {numberhuman} has a 10% chance to make the attack deal 0 damage."
+    },
+    {
+      "id": "up-arrow",
+      "name": "Up Arrow",
+      "description": "There is a 2% chance for {numberhuman} to raise an attack's damage to the third power."
+    },
+    {
+      "id": "set-of-all-numbers",
+      "name": "Set of all Numbers",
+      "description": "{numberhuman} deals 1.5x as much damage towards finite numbers."
+    },
+    {
+      "id": "lucky-charm",
+      "name": "Lucky Charm",
+      "description": "All attacks against finite numbers are 10% more powerful when {numberhuman} is in the team."
+    },
+    {
+      "id": "collision-course",
+      "name": "Collision Course",
+      "description": "{numberhuman} throws asteroids at opponents, dealing anywhere from 10% to 20% damage."
+    },
+    {
+      "id": "imagination",
+      "name": "Imagination",
+      "description": "{numberhuman} can imagine any method of healing the opponent, and translate it into an attack in reality by squaring themself. This deals up to 100 HP of damage."
+    },
+    {
+      "id": "floral-fury",
+      "name": "Floral Fury",
+      "description": "{numberhuman} will attack the enemy team with poisonous plants. The damage this deals is 5% per second of the weakest team member (in terms of HP)."
+    },
+    {
+      "id": "iterum",
+      "name": "ITERUM!",
+      "description": "{numberhuman} will retrigger your weakest Numberhuman (that can still do damage) and make it do double damage."
+    },
+    {
+      "id": "high-five",
+      "name": "High Five",
+      "description": "{numberhuman} can give one team member a high five, making their next attack 1.5x as powerful."
+    },
+    {
+      "id": "six-feet-under",
+      "name": "Six Feet Under",
+      "description": "Stella didn't give a description for this ability so I have no idea what it does."
+    },
+    {
+      "id": "magic-ball",
+      "name": "Magic Ball",
+      "description": "Every attack from the opposing team has to go through {numberhuman}. If the magic 8-ball returns a negative response, the attack is nullified."
+    },
+    {
+      "id": "nine-lives",
+      "name": "Nine Lives",
+      "description": "{numberhuman} has 80% less max HP, but can revive themself nine times."
+    },
+    {
+      "id": "dekatria",
+      "name": "DEKATRIA!",
+      "description": "If the same Numberhuman attacks twice, {numberhuman} will gain a percentage of its attack power on top of {numberhuman}'s base. (That Numberhuman will not lose attack power."
+    },
+    {
+      "id": "disguise",
+      "name": "Disguise",
+      "description": "{numberhuman} will disguise as a number on the enemy team, allowing it to weaken defenses, but every turn, the chances of it getting caught increase by x1.2 compounding per turn, starting at 20%. If caught, {numberhuman} loses."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "infinite-power-glitch",
+      "name": "Infinite Power Glitch",
+      "description": "Theoretcally, since SFP > SFP, he is genuinely more powerful than himself. As such, he can essentially accumulate power from nothing, growing more and more powerful with seemingly no arbitrary endpoint. Every use of this ability rises his attack by 20%."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "none",
+      "name": "None",
+      "description": "General has no ability. To compensate, they have much higher statistics."
+    }
   ]
 }
