@@ -6,7 +6,7 @@
  */
 import type { Message, OmitPartialGroupDMChannel } from "discord.js";
 import { joinStringArray } from "../../utils/string" with { type: "comptime" };
-import type { NumberInfo } from "./get-random-number";
+import type { NumberInfo } from "./handler.ts";
 
 /**
  * Handle special guesses such as omni oridnal or when they follow the instructions literally.

@@ -18,3 +18,14 @@ export interface Command extends ChatInputApplicationCommandData {
  * Utility type to represent slash commands being ran in a server.
  */
 export type ServerSlashCommandInteraction = ChatInputCommandInteraction<"cached" | "raw">;
+
+export interface StoredNumberInfo {
+  number: string;
+  hashedNumber: string;
+  image: string;
+  uuid: string;
+  difficulty: Difficulties;
+}
+
+export type Difficulties = "easy" | "medium" | "hard" | "legendary";
+export type Rarities = "common" | "rare" | "epic";

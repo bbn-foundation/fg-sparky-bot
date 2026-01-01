@@ -4,9 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { Collection, type CommandInteraction, MessageFlags } from "discord.js";
-import { Logger } from "../utils/logger";
-import type { Command } from "./types";
+import { Logger, type Command } from "@fg-sparky/utils";
+import { Collection, MessageFlags, type CommandInteraction } from "discord.js";
 
 const cooldowns = new Collection<string, Collection<string, number>>();
 

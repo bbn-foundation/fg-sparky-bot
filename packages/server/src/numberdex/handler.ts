@@ -1,10 +1,10 @@
 import { Logger, NUMBERDEX_FLEE_DELAY, getRandomRange, joinStringArray, type ICron } from "@fg-sparky/utils";
 import type { Message, OmitPartialGroupDMChannel, SendableChannels } from "discord.js";
-import { createGuessHandler } from "../handler";
-import { createUser, getUser } from "../utils/user";
+import { createGuessHandler, type GuessObject, type HandlerFunction } from "../handler.ts";
+import { createUser, getUser } from "../helpers.ts";
 import { spawnNumberhuman } from "./utils.ts";
 
-const handlePlayerGuess = createGuessHandler("blake2b512");
+export const handlePlayerGuess: HandlerFunction<GuessObject> = createGuessHandler("blake2b512");
 
 export function setupCallback(job: ICron, channel: SendableChannels): ICron {
   if (/numberdex-channel-[0-9]+/.test(job.name)) {

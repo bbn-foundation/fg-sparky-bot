@@ -108,6 +108,9 @@ importers:
       bufferutil:
         specifier: catalog:discord
         version: 4.1.0
+      commander:
+        specifier: catalog:utils
+        version: 14.0.2
       discord.js:
         specifier: catalog:discord
         version: 14.25.1(bufferutil@4.1.0)
@@ -135,15 +138,15 @@ importers:
       chalk:
         specifier: catalog:utils
         version: 5.6.2
-      commander:
-        specifier: catalog:utils
-        version: 14.0.2
       comptime.ts:
         specifier: catalog:utils
         version: 0.8.0
       cronbake:
         specifier: catalog:utils
         version: 0.4.0
+      discord.js:
+        specifier: catalog:discord
+        version: 14.25.1(bufferutil@4.1.0)
       rust-optionals:
         specifier: catalog:utils
         version: 3.0.0

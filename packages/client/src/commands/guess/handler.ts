@@ -5,37 +5,16 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import { createGuessHandler, createUser, getUser, type StoredNumberInfo as NumberInfo } from "@fg-sparky/server";
+import { Logger, joinStringArray } from "@fg-sparky/utils";
 import { Collection, type ChatInputCommandInteraction, type Client, type Message, type OmitPartialGroupDMChannel } from "discord.js";
-import { Logger } from "../../utils/logger";
-import { joinStringArray } from "../../utils/string";
-import { createUser, getUser } from "../../utils/user";
-import { guessCooldowns } from "../cooldowns";
-import type { NumberInfo } from "./get-random-number";
-import handleSpecialGuess from "./special-handler";
-import StreakCollection from "./streaks";
+import { guessCooldowns } from "../cooldowns.ts";
+import handleSpecialGuess from "./special-handler.ts";
+import StreakCollection from "./streaks.ts";
 
-const hasher = new Bun.CryptoHasher("sha512");
 const streakCollectionCollection = new Collection<string, StreakCollection>();
 const streakTracker = new Collection<string, string>();
-
-function handlePlayerGuess(message: OmitPartialGroupDMChannel<Message>, number: NumberInfo): boolean | undefined {
-  if (message.author.bot) return;
-  // Normalize the player's guess to a standard form to avoid weird os issues
-  // like macos replacing "..." with "…" (elipis) or replacing ' with ’
-  const guess = message.content.toLowerCase()
-    .replaceAll(/’|‘/gu, "'") // Variants of single quotation marks
-    .replaceAll(/“|”/gu, "'") // Variants of double quotation marks
-    .replaceAll("…", "..."); // Ellipsis
-  const hashedGuess = hasher.update(guess, "utf-8").digest("hex");
-  Logger.debug(`User guessed: ${guess} (hashed: ${hashedGuess})`);
-  Logger.debug(`Number: ${number.number ?? "<hidden>"} (hashed: ${number.hashedNumber})`);
-  if (hashedGuess === number.hashedNumber) {
-    Logger.info("user guessed correctly");
-    return true;
-  }
-  Logger.info("user guessed incorrectly");
-  return false;
-}
+const handlePlayerGuess = createGuessHandler("sha512");
 
 export function handleResponse(client: Client, interaction: ChatInputCommandInteraction, number: NumberInfo): void {
   const streakCollection = (() => {

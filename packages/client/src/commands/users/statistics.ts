@@ -1,9 +1,6 @@
+import { UserProfile } from "@fg-sparky/server";
+import { countEntriesTotal, countEntriesUnique, formatPercent, type ServerSlashCommandInteraction } from "@fg-sparky/utils";
 import type { Client } from "discord.js";
-import { UserProfile } from "../../entities/user-profile";
-import { UNIQUE_EASY_ENTRIES, UNIQUE_ENTRIES, UNIQUE_HARD_ENTRIES, UNIQUE_LEGENDARY_ENTRIES, UNIQUE_MEDIUM_ENTRIES } from "../../utils/constants";
-import { formatPercent } from "../../utils/formatter";
-import { countEntriesTotal, countEntriesUnique } from "../../utils/numbers";
-import type { ServerSlashCommandInteraction } from "../types";
 
 export default async function serverStatisticsDisplay(_: Client, interaction: ServerSlashCommandInteraction): Promise<void> {
   const users = await UserProfile.find({

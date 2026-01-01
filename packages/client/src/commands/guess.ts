@@ -4,12 +4,11 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { comptime } from "comptime.ts" with { type: "comptime" };
+import type { Difficulties } from "@fg-sparky/server";
+import { comptime } from "@fg-sparky/utils" with { type: "comptime" };
+import { Logger, type Command } from "@fg-sparky/utils";
 import { ApplicationCommandOptionType, AttachmentBuilder, type Client, type CommandInteraction } from "discord.js";
-import { Logger } from "../utils/logger.ts";
-import { findRandomNumber, type Difficulties } from "./guess/get-random-number.ts";
 import { handleResponse } from "./guess/handler.ts";
-import type { Command } from "./types.ts";
 
 const Guess: Command = {
   async run(client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
@@ -19,8 +18,8 @@ const Guess: Command = {
       return;
     }
 
-    const difficulty = interaction.options.get("difficulty", true).value as Difficulties;
-    const number = findRandomNumber(difficulty);
+    const difficulty = interaction.options.get("difficulty", true).value as Exclude<Difficulties, "legendary"> | "random";
+    const number = difficulty === "random" ? NumberStore.getRandom() : NumberStore.getRandomByDifficulty(difficulty);
     Logger.info(`Player requested for number of difficulty ${difficulty}, which has an id of ${number.uuid}`);
 
     // The message that will be sent to the player, specifiying the difficulty,
@@ -29,8 +28,8 @@ const Guess: Command = {
     const content = number.difficulty === "legendary"
       ? `**DIFFICULTY: LEGENDARY**\nGuess the number, you have **60** seconds.`
       : `Difficulty: ${number.difficulty}\nGuess the number, you have **40** seconds.`;
-    const image = new AttachmentBuilder(Buffer.from(await Bun.file(number.symbol).bytes()))
-      .setName(number.symbol.slice(number.symbol.lastIndexOf("/") + 1))
+    const image = new AttachmentBuilder(Buffer.from(await Bun.file(number.image).bytes()))
+      .setName(number.image.slice(number.image.lastIndexOf("/") + 1))
       .setSpoiler(number.uuid === "d828f344-b134-47a1-93c9-56e25d5c9e61");
 
     await interaction.reply({ content: content + comptime(

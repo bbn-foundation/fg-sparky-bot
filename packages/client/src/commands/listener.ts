@@ -4,10 +4,9 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import { Logger, type Command } from "@fg-sparky/utils";
 import type { Client, CommandInteraction } from "discord.js";
-import { Logger } from "../utils/logger";
-import { enforceCooldown } from "./cooldowns";
-import type { Command } from "./types";
+import { enforceCooldown } from "./cooldowns.ts";
 
 export async function handleSlashCommand(
   client: Client,

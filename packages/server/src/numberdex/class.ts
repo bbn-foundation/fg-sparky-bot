@@ -8,8 +8,6 @@ import { None, Some, type Option } from "@fg-sparky/utils";
 import { randomRarity } from "../helpers.ts";
 import { Numberhumans as NumbersJsonSchema, type NumberhumanInfo } from "./schema.ts";
 
-export type Rarities = "common" | "rare" | "epic";
-
 export class NumberhumanStore {
   /**
    * Constructs the {@link NumberhumanStore} class. Because constructors cannot be asynchronous,

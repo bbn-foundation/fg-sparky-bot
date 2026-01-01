@@ -7,6 +7,7 @@
   "dependencies": {
     "bufferutil": "catalog:discord",
     "discord.js": "catalog:discord",
+    "commander": "catalog:utils",
     "@fg-sparky/server": "workspace:*",
     "@fg-sparky/utils": "workspace:*"
   }

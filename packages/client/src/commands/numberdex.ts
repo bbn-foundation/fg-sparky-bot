@@ -4,16 +4,9 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import { createUser, getUser, handlePlayerGuess, NumberdexBaker, spawnNumberhuman } from "@fg-sparky/server";
+import { getRandomRange, joinStringArray, Logger, NUMBERDEX_FLEE_DELAY, type Command } from "@fg-sparky/utils";
 import { ApplicationCommandOptionType, ChannelType, PermissionFlagsBits, type Client, type CommandInteraction, type Message, type OmitPartialGroupDMChannel } from "discord.js";
-import { handlePlayerGuess } from "../numberdex/handler.ts";
-import { baker } from "../numberdex/index.ts";
-import { spawnNumberhuman } from "../numberdex/utils.ts";
-import { NUMBERDEX_FLEE_DELAY } from "../utils/constants.ts";
-import { Logger } from "../utils/logger.ts";
-import { getRandomRange } from "../utils/numbers.ts";
-import { joinStringArray } from "../utils/string.ts";
-import { createUser, getUser } from "../utils/user.ts";
-import type { Command } from "./types.ts";
 
 const Numberdex: Command = {
   async run(client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
@@ -25,7 +18,7 @@ const Numberdex: Command = {
     switch (interaction.options.getSubcommand(true)) {
       case "add": {
         const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
-        baker.add({
+        NumberdexBaker.add({
           name: `numberdex-channel-${channel.id}`,
           cron: "@every_20_minutes",
           async callback(): Promise<void> {

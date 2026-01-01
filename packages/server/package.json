@@ -15,5 +15,10 @@
     "typeorm": "catalog:db",
     "discord.js": "catalog:discord",
     "@fg-sparky/utils": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
   }
 }

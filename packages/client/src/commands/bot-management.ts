@@ -4,8 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import type { Command } from "@fg-sparky/utils";
 import { ApplicationCommandOptionType, type Client, type CommandInteraction } from "discord.js";
-import type { Command } from "./types.ts";
 
 export const Poweroff: Command = {
   async run(client: Client, interaction: CommandInteraction): Promise<void> {

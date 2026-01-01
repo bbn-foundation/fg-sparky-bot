@@ -4,12 +4,11 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import { NumberdexBaker, NumberStore, setupCronJobs, UsersDB } from "@fg-sparky/server";
+import { Logger } from "@fg-sparky/utils";
 import { Command } from "commander";
 import { Client } from "discord.js";
-import { initClient } from ".";
-import { AppDataSource } from "./db";
-import { baker, setupCronJobs } from "./numberdex";
-import { Logger } from "./utils/logger";
+import { initClient } from "./index.ts";
 
 const program = new Command()
   .version("0.12.3")
@@ -36,6 +35,7 @@ const client: Client = new Client({
 declare global {
   namespace globalThis {
     var client: Client;
+    var NumberStore: NumberStore;
   }
 }
 
@@ -43,12 +43,14 @@ globalThis.client = client;
 
 try {
   Logger.loglevel = loglevel;
+  Logger.notice("Loading entries from numbers.json");
+  globalThis.NumberStore = await NumberStore.loadFile("numbers/numbers.json");
   Logger.notice("Initializing database");
-  await AppDataSource.initialize();
+  await UsersDB.initialize();
   await initClient(client, token);
-  await setupCronJobs(client, baker);
+  await setupCronJobs(client, NumberdexBaker);
   process.on("beforeExit", async () => {
-    await baker.saveState();
+    await NumberdexBaker.saveState();
   });
 } catch (error) {
   if (!Error.isError(error)) throw error;

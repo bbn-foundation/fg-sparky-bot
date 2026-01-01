@@ -4,9 +4,7 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import numberhumans from "../../numbers/numberhumans.json" with { type: "json" };
-import numbers from "../../numbers/numbers.json" with { type: "json" };
-import type { Rarity } from "../numberdex/utils";
+import type { Rarity } from "./types.ts";
 
 type Difficulties = "easy" | "medium" | "hard" | "legendary";
 
@@ -60,7 +58,7 @@ export function countEntriesUnique<T extends Record<Difficulties, { uuid: string
   return filtered.length;
 }
 
-export function countEntriesTotal(difficulty: Difficulties, entries: string[]): number {
+export function countEntriesTotal<T extends Record<Difficulties, { uuid: string }[]>>(numbers: T, difficulty: Difficulties, entries: string[]): number {
   const filtered = entries.filter((uuid) => {
     for (const entry of numbers[difficulty]) {
       if (uuid === entry.uuid) return true;

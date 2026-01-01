@@ -4,8 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import type { Command } from "@fg-sparky/utils";
 import { ApplicationCommandOptionType, type Client, type CommandInteraction } from "discord.js";
-import type { Command } from "./types.ts";
 import userLeaderboardDisplay from "./users/leaderboard.ts";
 import userShow from "./users/show.ts";
 import serverStatisticsDisplay from "./users/statistics.ts";
@@ -34,7 +34,6 @@ const User: Command = {
       }
       default: {
         await interaction.reply("not implemented yet sorry");
-        return;
       }
     }
   },

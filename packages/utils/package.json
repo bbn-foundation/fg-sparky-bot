@@ -6,11 +6,11 @@
   "version": "0.13.0",
   "dependencies": {
     "chalk": "catalog:utils",
-    "commander": "catalog:utils",
     "comptime.ts": "catalog:utils",
     "cronbake": "catalog:utils",
     "rust-optionals": "catalog:utils",
-    "zod": "catalog:types"
+    "zod": "catalog:types",
+    "discord.js": "catalog:discord"
   },
   "exports": {
     ".": {

@@ -4,8 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import type { Command } from "@fg-sparky/utils";
 import type { Client, CommandInteraction } from "discord.js";
-import type { Command } from "./types.ts";
 
 const Hello: Command = {
   async run(client: Client, interaction: CommandInteraction): Promise<void> {

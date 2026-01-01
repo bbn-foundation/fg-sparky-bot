@@ -1,12 +1,12 @@
 import { Logger } from "@fg-sparky/utils";
 import type { Message, OmitPartialGroupDMChannel } from "discord.js";
 
-interface GuessObject {
+export interface GuessObject {
   number: string;
   hashedNumber: string;
 }
 
-type HandlerFunction<T extends object> = (message: OmitPartialGroupDMChannel<Message>, number: T) => boolean | undefined;
+export type HandlerFunction<T extends object> = (message: OmitPartialGroupDMChannel<Message>, number: T) => boolean | undefined;
 
 export function createGuessHandler<T extends GuessObject>(hashAlgo: Bun.SupportedCryptoAlgorithms): HandlerFunction<T> {
   const hasher = new Bun.CryptoHasher(hashAlgo);
