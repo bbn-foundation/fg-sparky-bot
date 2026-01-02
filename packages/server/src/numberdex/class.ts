@@ -4,7 +4,7 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { None, Some, type Option } from "@fg-sparky/utils";
+import { Option, type Rarities } from "@fg-sparky/utils";
 import { randomRarity } from "../helpers.ts";
 import { Numberhumans as NumbersJsonSchema, type NumberhumanInfo } from "./schema.ts";
 
@@ -62,8 +62,7 @@ export class NumberhumanStore {
    */
   getByID(id: string): Option<NumberhumanInfo> {
     const data = [...this.data.common, ...this.data.rare, ...this.data.epic];
-    const number = data.find(value => value.uuid === id);
-    if (number) return Some(number);
-    return None();
+    const number = Option.from(data.find(value => value.uuid === id));
+    return number;
   }
 }

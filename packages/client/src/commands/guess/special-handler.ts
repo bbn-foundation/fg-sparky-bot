@@ -12,14 +12,18 @@ import type { Message, OmitPartialGroupDMChannel } from "discord.js";
  * Handle special guesses such as omni oridnal or when they follow the instructions literally.
  * @returns {Promise<boolean>} Returns whether the rest of the handler should be skipped or not.
  */
-export default async function handleSpecialGuess(message: OmitPartialGroupDMChannel<Message>, number: NumberInfo, when: "pre-parse" | "post-parse" | "post-update"): Promise<boolean> {
+export default async function handleSpecialGuess(
+  message: OmitPartialGroupDMChannel<Message>,
+  number: NumberInfo,
+  when: "pre-parse" | "post-parse" | "post-update",
+): Promise<boolean> {
   if (when === "pre-parse") {
-    if (number.uuid === "c380c246-8cb9-4d78-8e5c-2de6d0fd9aad" && message.content.match(/omni oridnal/miu)) {
+    if (number.uuid === "c380c246-8cb9-4d78-8e5c-2de6d0fd9aad" && /^omni oridnal/miu.test(message.content)) {
       await message.reply("omni oridnal");
       return true;
     }
 
-    if (number.uuid === "e74c5b46-6517-4c1f-844f-0368120babae" && message.content.match(/universifinity/miu)) {
+    if (number.uuid === "e74c5b46-6517-4c1f-844f-0368120babae" && /^universifinity/miu.test(message.content)) {
       await message.reply("i thought it was spelled like that too. it wasn't.");
       return true;
     }

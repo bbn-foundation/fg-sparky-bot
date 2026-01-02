@@ -4,9 +4,11 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { Logger, type Command } from "@fg-sparky/utils";
-import type { Client, CommandInteraction } from "discord.js";
-import { enforceCooldown } from "./cooldowns.ts";
+import { CooldownCollection, GuessCooldownCollection, Logger, type Command } from "@fg-sparky/utils";
+import { MessageFlags, type Client, type CommandInteraction } from "discord.js";
+
+const commandCooldowns = new CooldownCollection();
+const guessCooldowns = new GuessCooldownCollection();
 
 export async function handleSlashCommand(
   client: Client,
@@ -28,7 +30,22 @@ export async function handleSlashCommand(
   }
 
   Logger.info(`Making sure the command ${interaction.commandName} isn't on cooldown...`);
-  if (await enforceCooldown(slashCommand, interaction)) return;
+  if (slashCommand.name === "guess" && guessCooldowns.check(slashCommand, interaction.channelId)) {
+    await interaction.reply({
+      content: `Chill sis, the previous guess hasn't finished yet! Please answer correctly or wait for it to time out first.`,
+      flags: MessageFlags.Ephemeral,
+    });
+    return;
+  }
+
+  for (const timestamp of commandCooldowns.check(slashCommand, interaction.user.id)) {
+    // oxlint-disable-next-line no-await-in-loop: not a loop (using iterators to unwrap the option)
+    await interaction.reply({
+      content: `Chill man you can't run /${slashCommand.name}, you can try again <t:${timestamp.toString()}:R>.`,
+      flags: MessageFlags.Ephemeral,
+    });
+  }
+
   Logger.info(`Running command ${interaction.commandName}`);
   await slashCommand.run(client, interaction);
 };

@@ -4,9 +4,9 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { None, Some, type Difficulties, type Option, type StoredNumberInfo } from "@fg-sparky/utils";
+import { type Difficulties, Option, type StoredNumberInfo } from "@fg-sparky/utils";
 import { randomDifficulty } from "../helpers.ts";
-import { Numbers as NumbersJsonSchema, type NumberInfo } from "./schema.ts";
+import { type NumberInfo, Numbers as NumbersJsonSchema } from "./schema.ts";
 
 export class NumberStore {
   readonly UNIQUE_ENTRIES: number;
@@ -81,7 +81,6 @@ export class NumberStore {
   getByID(id: string): Option<NumberInfo> {
     const data = [...this.data.easy, ...this.data.medium, ...this.data.hard, ...this.data.legendary];
     const number = data.find(value => value.uuid === id);
-    if (number) return Some(number);
-    return None();
+    return Option.from(number);
   }
 }

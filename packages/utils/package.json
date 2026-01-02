@@ -5,12 +5,12 @@
   "license": "GPL-3.0-or-later",
   "version": "0.13.0",
   "dependencies": {
+    "@sapphire/result": "catalog:utils",
     "chalk": "catalog:utils",
     "comptime.ts": "catalog:utils",
     "cronbake": "catalog:utils",
-    "rust-optionals": "catalog:utils",
-    "zod": "catalog:types",
-    "discord.js": "catalog:discord"
+    "discord.js": "catalog:discord",
+    "zod": "catalog:types"
   },
   "exports": {
     ".": {
