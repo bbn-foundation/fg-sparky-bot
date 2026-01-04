@@ -6,11 +6,7 @@
  */
 import { Option, type Rarities } from "@fg-sparky/utils";
 import { randomRarity } from "../helpers.ts";
-import { Numberhumans as NumbersJsonSchema, type NumberhumanInfo } from "./schema.ts";
-
-interface StoredNumberhumanInfo extends NumberhumanInfo {
-  rarity: Rarities;
-}
+import { NumberhumanInfo } from "./schema.ts";
 
 export class NumberhumanStore {
   /**
@@ -18,39 +14,35 @@ export class NumberhumanStore {
    * this is private and one of the static `load*` methods is used to construct the class.
    * @param data The numbers to load.
    */
-  private constructor(private data: Record<Rarities, NumberhumanInfo[]>) {}
+  private constructor(private data: NumberhumanInfo[]) {}
 
   /**
      * Creates an instance of {@link NumberhumanStore} without populating it with data.
      * @returns An empty instance.
      */
   static create(): NumberhumanStore {
-    return new NumberhumanStore({
-      common: [],
-      epic: [],
-      rare: [],
-    });
+    return new NumberhumanStore([]);
   }
 
   /**
-     * Reads the data from the file path specified and initializes the class.
-     * @param filePath The path to the numberhumans.json data.
-     * @returns The fully initialized class.
-     */
+    * Reads the data from the file path specified and initializes the class.
+    * @param filePath The path to the numberhumans.json data.
+    * @returns The fully initialized class.
+    */
   async loadFile(filePath: string): Promise<this> {
     const file = Bun.file(filePath);
-    const validatedData = NumbersJsonSchema.parse(await file.json());
+    const validatedData = NumberhumanInfo.parse(await file.json());
     this.data = validatedData;
     return this;
   }
 
   /**
-     * Validates and parses the JSON data and initalizes the class.
-     * @param filePath The raw JSON data.
-     * @returns The fully initialized class.
-     */
+    * Validates and parses the JSON data and initalizes the class.
+    * @param filePath The raw JSON data.
+    * @returns The fully initialized class.
+    */
   loadJSON(fileData: unknown): this {
-    const validatedData = NumbersJsonSchema.parse(fileData);
+    const validatedData = NumberhumanInfo.parse(fileData);
     this.data = validatedData;
     return this;
   }
@@ -59,7 +51,7 @@ export class NumberhumanStore {
    * Returns a random entry from the collection of entries.
    * @returns The entry.
    */
-  getRandom(): NumberhumanInfo {
+  getRandom(): Option<NumberhumanInfo> {
     const rarityPool = randomRarity();
     return this.getRandomByRarity(rarityPool);
   }
@@ -68,13 +60,9 @@ export class NumberhumanStore {
    * Returns a random entry from the specified difficulty pool.
    * @returns The entry.
    */
-  getRandomByRarity(rarity: Rarities): StoredNumberhumanInfo {
-    const numbers = this.data[rarity];
-    return {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      ...numbers[Math.floor(Math.random() * numbers.length)]!,
-      rarity,
-    };
+  getRandomByRarity(rarity: Rarities): Option<NumberhumanInfo> {
+    return Option.from(this.data.filter(value => value.rarity === rarity)
+      .at(Math.floor(Math.random() * this.data.length)));
   }
 
   /**
@@ -82,8 +70,7 @@ export class NumberhumanStore {
    * @returns The entry or None.
    */
   getByID(id: string): Option<NumberhumanInfo> {
-    const data = [...this.data.common, ...this.data.rare, ...this.data.epic];
-    const number = Option.from(data.find(value => value.uuid === id));
+    const number = Option.from(this.data.find(value => value.uuid === id));
     return number;
   }
 
@@ -92,10 +79,10 @@ export class NumberhumanStore {
      * specific rarity in comparison to the numberhumans stored.
      * @returns The unique count of entries.
      */
-  countEntriesUnique(difficulty: Rarities, entries: string[]): number {
-    const filtered = this.data[difficulty].filter((entry) => {
+  countEntriesUnique(rarity: Rarities, entries: string[]): number {
+    const filtered = this.data.filter((entry) => {
       for (const uuid of entries) {
-        if (entry.uuid === uuid) return true;
+        if (entry.uuid === uuid && entry.rarity === rarity) return true;
       }
       return false;
     });
@@ -107,10 +94,10 @@ export class NumberhumanStore {
      * specific rarity in comparison to the numberhumans stored.
      * @returns The unique count of entries.
      */
-  countEntriesTotal(difficulty: Rarities, entries: string[]): number {
+  countEntriesTotal(rarity: Rarities, entries: string[]): number {
     const filtered = entries.filter((uuid) => {
-      for (const entry of this.data[difficulty]) {
-        if (uuid === entry.uuid) return true;
+      for (const entry of this.data) {
+        if (uuid === entry.uuid && entry.rarity === rarity) return true;
       }
       return false;
     });

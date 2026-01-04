@@ -4,30 +4,26 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { z, type ZodType } from "@fg-sparky/utils";
+import { z, type Rarities, type ZodType } from "@fg-sparky/utils";
 
 export interface NumberhumanInfo {
-  number: string;
-  hashedNumber: string;
-  image: string;
   uuid: string;
+  name: string;
+  rarity: Rarities;
+  hashedName: string;
+  image: string;
+  baseHP: number;
+  baseATK: number;
+  ability: string;
 }
 
-export interface Numberhumans {
-  common: NumberhumanInfo[];
-  rare: NumberhumanInfo[];
-  epic: NumberhumanInfo[];
-}
-
-export const NumberhumanInfo: ZodType<NumberhumanInfo> = z.strictObject({
+export const NumberhumanInfo: ZodType<NumberhumanInfo[]> = z.strictObject({
   uuid: z.uuid(),
+  name: z.string(),
+  rarity: z.enum(["common", "rare", "epic"]),
+  hashedName: z.hash("sha512"),
   image: z.string(),
-  hashedNumber: z.hash("sha512"),
-  number: z.string(),
-});
-
-export const Numberhumans: ZodType<Numberhumans> = z.object({
-  common: NumberhumanInfo.array(),
-  rare: NumberhumanInfo.array(),
-  epic: NumberhumanInfo.array(),
-});
+  baseHP: z.int(),
+  baseATK: z.int(),
+  ability: z.string(),
+}).array();
