@@ -1,5 +1,10 @@
 # changelog
 
+## 0.13.0 - January 3rd, 2026
+first release of the new year!!!!!!!!!
+### BREAKING CHANGES:
+- \[[`cae6f954`](https://github.com/skylafalls/fg-sparky-bot/commit/cae6f954b3a6a3a0b964799e46c16aecdc934d9f)] - refactor!: split code into multiple packages
+
 ## 0.12.3 - December 25th, 2025
 ### fixes:
 - \[[`c1c0f4f2`](https://github.com/skylafalls/fg-sparky-bot/commit/c1c0f4f2258b1186d662457b4bc344e43b46b268)] - fix(streaks): uhhhh
