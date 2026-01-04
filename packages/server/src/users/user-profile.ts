@@ -65,5 +65,5 @@ export class UserProfile extends BaseEntity {
    */
   @ManyToMany(() => NumberhumanData)
   @JoinTable()
-  numberhumans: NumberhumanData[] = [];
+  numberhumans: NumberhumanData[];
 }

@@ -4,9 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { BaseEntity, Column, Entity, ManyToMany, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 import type { NumberhumanStore } from "../numberdex/class.ts";
-import { UserProfile } from "./user-profile.ts";
 
 /**
  * This entity represents a numberhuman the player has caught.
@@ -18,12 +17,6 @@ export class NumberhumanData extends BaseEntity {
    */
   @PrimaryColumn("text")
   id = "";
-
-  /**
-   * Users who have caught this specific numberhuman instance.
-   */
-  @ManyToMany(() => UserProfile)
-  users: UserProfile[] = [];
 
   /**
    * The specific ability it has, pointed by its id.
@@ -53,8 +46,8 @@ export class NumberhumanData extends BaseEntity {
    * The evolution of the numberhuman, please ask Stella what it does,
    * cause I have no idea.
    */
-  @Column()
-  evolution: never;
+  @Column("integer")
+  evolution = 0;
 
   /**
    * Catch ID, incremented on a new catch.

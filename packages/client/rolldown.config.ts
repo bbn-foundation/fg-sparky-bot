@@ -15,7 +15,7 @@ const config: RolldownOptions = defineConfig({
 `,
     format: "esm",
     minify: true,
-    sourcemap: "inline",
+    sourcemap: true,
   },
   tsconfig: "../../tsconfig.json",
   platform: "node",

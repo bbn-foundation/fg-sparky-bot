@@ -7,6 +7,6 @@
 export { NumberhumanStore } from "./class.ts";
 export { baker as NumberdexBaker, setupCronJobs } from "./cron.ts";
 export { handlePlayerGuess } from "./handler.ts";
-export { NumberhumanInfo, Numberhumans } from "./schema.ts";
+export { NumberhumanInfo } from "./schema.ts";
 export * from "./utils.ts";
 
