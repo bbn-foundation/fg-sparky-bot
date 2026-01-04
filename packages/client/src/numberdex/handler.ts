@@ -1,6 +1,6 @@
 import { createGuessHandler, createUser, getUser, type NumberhumanStore } from "@fg-sparky/server";
 import { joinStringArray, Logger, NUMBERDEX_FLEE_DELAY, type ICron } from "@fg-sparky/utils";
-import { ComponentType, TextInputStyle, type Interaction, type ModalComponentData, type SendableChannels } from "discord.js";
+import { bold, ComponentType, TextInputStyle, userMention, type Interaction, type ModalComponentData, type SendableChannels } from "discord.js";
 import { createButtonRow, spawnNumberhuman } from "./utils.ts";
 
 const guessModal: ModalComponentData = {
@@ -60,12 +60,12 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
                 user.numberhumansGuessed.push(okNumber.uuid);
                 if (user.numberhumansGuessedUnique.includes(okNumber.uuid)) {
                   await interaction.followUp(joinStringArray([
-                    `hey, you managed to ~~kidnap~~ catch **${okNumber.name}**!`,
+                    `hey, you managed to ~~kidnap~~ catch ${bold(okNumber.name)} ${userMention(interaction.user.id)}!`,
                   ]));
                 } else {
                   user.numberhumansGuessedUnique.push(okNumber.uuid);
                   await interaction.followUp(joinStringArray([
-                    `hey, you managed to ~~kidnap~~ catch **${okNumber.name}**!`,
+                    `hey, you managed to ~~kidnap~~ catch ${bold(okNumber.name)} ${userMention(interaction.user.id)}!`,
                     "woah is that a new numberhuman you caught??",
                   ]));
                 }
@@ -79,7 +79,7 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
                 // so we can add it without checking.
                 newUser.numberhumansGuessedUnique.push(okNumber.uuid);
                 await interaction.followUp(joinStringArray([
-                  `hey, you managed to ~~kidnap~~ catch **${okNumber.name}**!`,
+                  `hey, you managed to ~~kidnap~~ catch ${bold(okNumber.name)} ${userMention(interaction.user.id)}!`,
                   `i've also created a profile for you with that numberhuman.`,
                 ]));
                 await newUser.save();
