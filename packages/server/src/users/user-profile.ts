@@ -4,7 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, JoinTable, ManyToMany, PrimaryColumn } from "typeorm";
+import { NumberhumanData } from "./numberhuman.ts";
 
 /**
  * This is a person's user profile.
@@ -58,4 +59,11 @@ export class UserProfile extends BaseEntity {
    */
   @Column("integer", { name: "best_streak" })
   bestStreak = 0;
+
+  /**
+   * Array of numberhumans the player has caught.
+   */
+  @ManyToMany(() => NumberhumanData)
+  @JoinTable()
+  numberhumans: NumberhumanData[] = [];
 }
