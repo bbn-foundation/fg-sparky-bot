@@ -1,4 +1,4 @@
-import { Logger, NUMBERDEX_FLEE_DELAY, type ICron } from "@fg-sparky/utils";
+import { getRandomRange, Logger, NUMBERDEX_FLEE_DELAY, type ICron } from "@fg-sparky/utils";
 import { ComponentType, TextInputStyle, type Interaction, type ModalComponentData, type SendableChannels } from "discord.js";
 import { createGuessHandler } from "../handler.ts";
 import type { NumberhumanStore } from "./class.ts";
@@ -26,8 +26,7 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
   if (/numberdex-channel-[0-9]+/.test(job.name)) {
     Logger.debug(`setting up callback for cron job ${job.name}`);
     job.callback = async () => {
-      // const timeoutDuration = getRandomRange(0, 1200);
-      const timeoutDuration = 0;
+      const timeoutDuration = process.env.NODE_ENV === "development" ? 0 : getRandomRange(0, 1200);
       Logger.info(`spawning numberhuman in channel ${channel.id} after ${timeoutDuration.toFixed(0)} seconds`);
       await Bun.sleep(timeoutDuration * 1000);
       const number = await spawnNumberhuman(store, channel);
