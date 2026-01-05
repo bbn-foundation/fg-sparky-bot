@@ -58,7 +58,7 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
               });
               await updateUserStats(interaction, okNumber);
             } else {
-              await interaction.followUp(`yeah, i wish it was ${bold(guess)}, ${userMention(interaction.user.id)}.`);
+              await interaction.reply(`yeah, i wish it was ${bold(guess)}, ${userMention(interaction.user.id)}.`);
             }
           }
         };
