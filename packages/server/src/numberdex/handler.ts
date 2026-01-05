@@ -1,5 +1,5 @@
 import { getRandomRange, Logger, NUMBERDEX_FLEE_DELAY, type ICron } from "@fg-sparky/utils";
-import { ComponentType, TextInputStyle, type Interaction, type ModalComponentData, type SendableChannels } from "discord.js";
+import { bold, ComponentType, TextInputStyle, userMention, type Interaction, type ModalComponentData, type SendableChannels } from "discord.js";
 import { createGuessHandler } from "../handler.ts";
 import type { NumberhumanStore } from "./class.ts";
 import { createButtonRow, spawnNumberhuman, updateUserStats } from "./utils.ts";
@@ -49,14 +49,16 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
           } else if (interaction.inGuild() && interaction.isModalSubmit() && interaction.isFromMessage()
             && interaction.customId === `numberhuman-guess-modal-${interaction.channelId}`) {
             Logger.debug(`User ${interaction.user.displayName} submitted the numberhuman, verifying it's correct...`);
-            await interaction.update({
-              components: [createButtonRow(true)],
-            });
             const guess = interaction.fields.getTextInputValue(`numberhuman-guess-input-${interaction.channelId}`);
             if (handlePlayerGuess(guess, { number: okNumber.name, hashedNumber: okNumber.hashedName })) {
               client.off("interactionCreate", handler);
               clearTimeout(timeout);
+              await interaction.update({
+                components: [createButtonRow(true)],
+              });
               await updateUserStats(interaction, okNumber);
+            } else {
+              await interaction.followUp(`yeah, i wish it was ${bold(guess)}, ${userMention(interaction.user.id)}.`);
             }
           }
         };
