@@ -20,17 +20,22 @@ const Guess: Command = {
 
     const difficulty = interaction.options.get("difficulty", true).value as Exclude<Difficulties, "legendary"> | "random";
     const number = difficulty === "random" ? Numbers.getRandom() : Numbers.getRandomByDifficulty(difficulty);
-    Logger.info(`Player requested for number of difficulty ${difficulty}, which has an id of ${number.uuid}`);
+    if (number.isNone()) {
+      await interaction.reply("couldn't find a random number for you, sorry.");
+      return;
+    }
+    const unwrappedEntry = number.expect("should always return a valid entry");
+    Logger.info(`Player requested for number of difficulty ${difficulty}, which has an id of ${unwrappedEntry.uuid}`);
 
     // The message that will be sent to the player, specifiying the difficulty,
     // and the amount of time they get to guess it.
     // THere's some special flair for legendary difficulties.
-    const content = number.difficulty === "legendary"
+    const content = unwrappedEntry.difficulty === "legendary"
       ? `**DIFFICULTY: LEGENDARY**\nGuess the number, you have **60** seconds.`
-      : `Difficulty: ${number.difficulty}\nGuess the number, you have **40** seconds.`;
-    const image = new AttachmentBuilder(Buffer.from(await Bun.file(number.image).bytes()))
-      .setName(number.image.slice(number.image.lastIndexOf("/") + 1))
-      .setSpoiler(number.uuid === "d828f344-b134-47a1-93c9-56e25d5c9e61");
+      : `Difficulty: ${unwrappedEntry.difficulty}\nGuess the number, you have **40** seconds.`;
+    const image = new AttachmentBuilder(Buffer.from(await Bun.file(unwrappedEntry.image).bytes()))
+      .setName(unwrappedEntry.image.slice(unwrappedEntry.image.lastIndexOf("/") + 1))
+      .setSpoiler(unwrappedEntry.uuid === "d828f344-b134-47a1-93c9-56e25d5c9e61");
 
     await interaction.reply({ content: content + comptime(
       process.env.NODE_ENV === "development"
@@ -38,7 +43,7 @@ const Guess: Command = {
         : ""), files: [image] });
 
     Logger.debug("setting up timeout");
-    handleResponse(client, interaction, number);
+    handleResponse(client, interaction, unwrappedEntry);
   },
   description: "Generates a number that you have to guess.",
   name: "guess",
