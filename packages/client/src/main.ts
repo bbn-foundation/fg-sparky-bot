@@ -46,13 +46,15 @@ try {
   Logger.notice("Loading entries from numbers.json");
   await Numbers.load();
   Logger.notice("Loading entries from numberdex-data.json");
-  Numberhumans.loadJSON((await Bun.file("numbers/numberdex-data.json").json()).numberhumans);
+  await Numberhumans.load();
 
   Logger.notice("Initializing database");
   await UsersDB.initialize();
   await initClient(client, token);
   await setupCronJobs(client, Numberhumans, NumberdexBaker);
   process.on("beforeExit", async () => {
+    await Numbers.save();
+    await Numberhumans.save();
     await NumberdexBaker.saveState();
   });
 } catch (error) {

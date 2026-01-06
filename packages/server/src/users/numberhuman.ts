@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
-import type { NumberhumanStore } from "../numberdex/class.ts";
+import type { NumberhumanStore } from "../numberdex/store.ts";
 
 /**
  * This entity represents a numberhuman the player has caught.
@@ -59,7 +59,7 @@ export class NumberhumanData extends BaseEntity {
    * The total HP of the numberhuman (total HP * bonus HP)
    */
   totalHP(store: NumberhumanStore): number {
-    const baseData = store.getByID(this.id).expect("the numberhuman should exist");
+    const baseData = store.get(this.id).expect("the numberhuman should exist");
     return baseData.baseHP * this.bonusHP;
   }
 
@@ -67,7 +67,7 @@ export class NumberhumanData extends BaseEntity {
    * The total attack of the numberhuman (total ATK * bonus ATK)
    */
   totalAtk(store: NumberhumanStore): number {
-    const baseData = store.getByID(this.id).expect("the numberhuman should exist");
+    const baseData = store.get(this.id).expect("the numberhuman should exist");
     return baseData.baseATK * this.bonusAtk;
   }
 }

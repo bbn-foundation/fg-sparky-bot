@@ -7,4 +7,4 @@
 import { NumberhumanStore, NumberStore } from "@fg-sparky/server";
 
 export const Numbers: NumberStore = NumberStore.create("numbers/numbers.json");
-export const Numberhumans: NumberhumanStore = NumberhumanStore.create();
+export const Numberhumans: NumberhumanStore = new NumberhumanStore("numbers/numberhumans.json");
