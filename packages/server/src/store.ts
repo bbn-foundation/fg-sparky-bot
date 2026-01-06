@@ -22,6 +22,24 @@ export class DataStore<T extends DataStoreEntry = DataStoreEntry> {
   constructor(private readonly file: string, protected schema: ZodType<T>, protected data: T[] = []) {}
 
   /**
+   * Reloads the data stored within, merging it with the data stored in memory.
+   * @param [merge=false] Whetever or not to merge the data.
+   * @returns The fully initialized class.
+   */
+  async reload(merge = false): Promise<this> {
+    if (merge) {
+      const oldData = structuredClone(this.data);
+      const newData = await this.schema.array().parseAsync(await Bun.file(this.file).json() as unknown);
+      const mergedData = Object.assign(oldData, newData);
+      this.data = mergedData;
+      await this.save();
+      return this;
+    }
+
+    await this.load();
+  }
+
+  /**
    * Validates and parses the data from the file passed in.
    * @returns The fully initialized class.
    */
