@@ -14,7 +14,7 @@ export class NumberStore {
    * this is private and one of the static `load*` methods is used to construct the class.
    * @param data The numbers to load.
    */
-  constructor(private data: Record<Difficulties, NumberInfo[]>) {}
+  constructor(private readonly file: string, private data: Record<Difficulties, NumberInfo[]>) {}
 
   get UNIQUE_ENTRIES(): number {
     return this.UNIQUE_EASY_ENTRIES + this.UNIQUE_MEDIUM_ENTRIES + this.UNIQUE_HARD_ENTRIES + this.UNIQUE_LEGENDARY_ENTRIES;
@@ -37,11 +37,11 @@ export class NumberStore {
   }
 
   /**
-   * Creates an instance of {@link NumberStore} without populating it with data.
+   * Creates an instance of {@link NumberStore}.
    * @returns An empty instance.
    */
-  static create(): NumberStore {
-    return new NumberStore({
+  static create(file: string): NumberStore {
+    return new NumberStore(file, {
       easy: [],
       medium: [],
       hard: [],
@@ -50,26 +50,22 @@ export class NumberStore {
   }
 
   /**
-    * Reads the data from the file path specified and initializes the class.
-    * @param filePath The path to the numbers.json data.
+    * Validates and parses the data from the file passed in.
     * @returns The fully initialized class.
     */
-  async loadFile(filePath: string): Promise<this> {
-    const file = Bun.file(filePath);
-    const validatedData = NumbersJsonSchema.parse(await file.json());
+  async load(): Promise<this> {
+    const fileJSON = await Bun.file(this.file).json() as unknown;
+    const validatedData = NumbersJsonSchema.parse(fileJSON);
     this.data = validatedData;
     return this;
   }
 
   /**
-    * Validates and parses the JSON data and initalizes the class.
-    * @param filePath The raw JSON data.
-    * @returns The fully initialized class.
+    * Saves the file data to local disk.
     */
-  loadJSON(fileData: unknown): this {
-    const validatedData = NumbersJsonSchema.parse(fileData);
-    this.data = validatedData;
-    return this;
+  async save(): Promise<void> {
+    const data = JSON.stringify(this.data, undefined, 2);
+    await Bun.write(this.file, data);
   }
 
   /**
