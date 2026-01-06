@@ -6,5 +6,5 @@
 */
 import { NumberhumanStore, NumberStore } from "@fg-sparky/server";
 
-export const Numbers: NumberStore = new NumberStore("numbers/new-numbers.json");
+export const Numbers: NumberStore = new NumberStore("numbers/numbers.json");
 export const Numberhumans: NumberhumanStore = new NumberhumanStore("numbers/numberhumans.json");
