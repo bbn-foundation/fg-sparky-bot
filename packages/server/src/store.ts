@@ -10,6 +10,10 @@ interface DataStoreEntry {
   uuid: string;
 }
 
+/**
+ * A map-equivalent data class that is used for anything in sparky that has an id,
+ * to facilitate hot-reloading and updating on the fly.
+ */
 export class DataStore<T extends DataStoreEntry = DataStoreEntry> {
   /**
    * Creates an instance of the data store, validated with a specific schema.
