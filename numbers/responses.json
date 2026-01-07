@@ -653,7 +653,8 @@
     "{mention} Erm, ackshually, according to my calculations… YOU'RE WRONG.",
     "{mention} i shat myself because of how wrong your guess was",
     "The genius known as {mention} thought it was someone DIFFERENT than **{correct}**.",
-    "That's not how you spell **{correct}**.",
-    "Fine. It's **{correct}**. Please stop wasting my time."
+    "That's not how you spell **{correct}**, {mention}",
+    "Fine. It's **{correct}**. Please stop wasting my time {mention}.",
+    "yeah, i wish it was {guess}, {mention}."
   ]
 }
