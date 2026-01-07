@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /**
  * @license
  * fg-sparky-bot - Guess the FG number based on its symbol

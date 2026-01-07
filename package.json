@@ -11,7 +11,7 @@
     "build": "bun run scripts/bundle.ts",
     "lint": "oxlint . --type-check --type-aware --ignore-path=.gitignore && eslint .",
     "lint:fix": "oxlint --type-check --type-aware --fix --fix-suggestions . --ignore-path=.gitignore && eslint --fix .",
-    "typecheck": "tsc -p tsconfig.json"
+    "typecheck": "tsgo -p tsconfig.json"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "catalog:linting",
@@ -21,7 +21,8 @@
     "eslint-plugin-oxlint": "catalog:linting",
     "jiti": "catalog:linting",
     "oxlint": "catalog:linting",
+    "oxlint-tsgolint": "catalog:linting",
     "rolldown": "catalog:build",
-    "oxlint-tsgolint": "catalog:linting"
+    "@typescript/native-preview": "catalog:types"
   }
 }

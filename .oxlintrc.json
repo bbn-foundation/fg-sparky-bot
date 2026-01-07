@@ -167,6 +167,7 @@
     "typescript/related-getter-setter-pairs": "error",
     "typescript/unbound-method": "error",
     "typescript/use-unknown-in-catch-callback-variable": "error",
+    "typescript/no-miused-promise": ["error", { "checksVoidReturn": false }],
     /// Warnings
     "typescript/await-thenable": "warn",
     "typescript/no-base-to-string": "warn",
@@ -182,6 +183,7 @@
     "typescript/require-await": "warn",
     "typescript/switch-exhaustiveness-check": "warn",
     // Disables
-    "import/no-dependencies": "off"
+    "import/no-dependencies": "off",
+    "typescript/return-await": "off"
   }
 }

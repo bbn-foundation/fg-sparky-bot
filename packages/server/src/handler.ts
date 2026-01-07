@@ -9,7 +9,7 @@ export type HandlerFunction<T extends object> = (message: string, number: T) => 
 
 export function createGuessHandler<T extends GuessObject>(hashAlgo: Bun.SupportedCryptoAlgorithms): HandlerFunction<T> {
   const hasher = new Bun.CryptoHasher(hashAlgo);
-  return function (message: string, number: GuessObject): boolean | undefined {
+  return function (message: string, number: GuessObject): boolean {
     // Normalize the player's guess to a standard form to avoid weird os issues
     // like macos replacing "..." with "…" (elipis) or replacing ' with ’
     const guess = message.toLowerCase()
