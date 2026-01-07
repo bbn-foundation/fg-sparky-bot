@@ -1,5 +1,6 @@
 import { Command } from "commander";
 import { copyFile } from "node:fs/promises";
+import type { NumberInfo } from "@fg-sparky/server";
 
 const program = new Command("generate-number");
 const sha512 = new Bun.CryptoHasher("sha512");
@@ -17,23 +18,26 @@ program.parse(process.argv);
 
 const options = program.opts();
 
-const filePath: string = options.file as string;
-const numberName: string = options.number as string;
-const difficulty: string = options.difficulty as string;
+const filePath = String(options.file);
+const numberName = String(options.number);
+const difficulty = String(options.difficulty);
 
 const hash = sha512.update(numberName.toLowerCase()).digest("hex");
 const fileExtension = filePath.split(".").pop();
+const uuid = crypto.randomUUID();
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const newFileName = `${hash}.${fileExtension!}`;
+const newFileName = `${uuid}.${fileExtension!}`;
 const newFilePath = `numbers/${difficulty}/${newFileName}`;
 
 await copyFile(filePath, newFilePath);
 await Bun.file(filePath).delete();
 
-const output = {
+const output: NumberInfo = {
+  uuid: uuid,
   name: numberName,
   hashedName: hash,
   image: newFilePath,
+  difficulty,
 };
 
 // jsons are any-typed
@@ -41,7 +45,7 @@ const output = {
 const json = await Bun.file("numbers/numbers.json").json();
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-json[difficulty].push(output);
+json.push(output);
 
 await Bun.write(
   "numbers/numbers.json",
