@@ -23,13 +23,11 @@ export class CooldownCollection extends Collection<string, Collection<string, nu
     Logger.debug(`Calculating cooldown time...`);
 
     const now = Date.now();
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const timestamps = this.get(command.name)!;
     const defaultCooldownDuration = 0;
     const cooldownAmount = (command.cooldown ?? defaultCooldownDuration) * 1_000;
 
     if (timestamps.has(userId)) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const expirationTime = timestamps.get(userId)! + cooldownAmount;
       if (now < expirationTime) {
         Logger.warn(`User tried to run command ${command.name} but they're on cooldown for another ${((expirationTime - now) / 1000).toFixed(3)} seconds`);
@@ -43,6 +41,7 @@ export class CooldownCollection extends Collection<string, Collection<string, nu
       timestamps.set(userId, now);
       setTimeout(() => timestamps.delete(userId), cooldownAmount);
     }
+    // oxlint-disable-next-line no-unsafe-type-assertion: only way to construct a None value
     return Option.none as Option<number>;
   }
 }

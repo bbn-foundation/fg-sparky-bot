@@ -8,7 +8,7 @@ import type { Command } from "@fg-sparky/utils";
 import { ApplicationCommandOptionType, type Client, type CommandInteraction } from "discord.js";
 
 export const Poweroff: Command = {
-  async run(client: Client, interaction: CommandInteraction): Promise<void> {
+  async run(_client: Client, interaction: CommandInteraction): Promise<void> {
     if (interaction.user.id !== "1051147056481308744") {
       await interaction.reply("hey don't shut off the bot you're not <@1051147056481308744>");
       return;
@@ -23,13 +23,14 @@ export const Poweroff: Command = {
 };
 
 export const Restart: Command = {
-  async run(client: Client, interaction: CommandInteraction): Promise<void> {
+  async run(_client: Client, interaction: CommandInteraction): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
     if (interaction.user.id !== "1051147056481308744") {
       await interaction.reply("hey don't restart the bot you're not <@1051147056481308744>");
       return;
     }
     await interaction.reply("Restarting...");
+    // oxlint-disable-next-line strict-boolean-expressions
     if (interaction.options.getBoolean("rebuild", false)) await Bun.$`/home/linuxbrew/.linuxbrew/bin/bun run build`;
     process.exit(0);
   },

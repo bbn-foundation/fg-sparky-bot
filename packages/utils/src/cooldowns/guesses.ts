@@ -7,7 +7,7 @@ export class GuessCooldownCollection extends Collection<string, boolean> {
    * Checks whetever a player guess is already running for that channel.
    * @returns A boolean that says whetever it's already running.
    */
-  check(command: Command, channelId: string): boolean {
+  check(_c: Command, channelId: string): boolean {
     if (!this.has(channelId) || !this.get(channelId)) {
       Logger.debug(`Channel ${channelId} cooldown doesn't exist, creating and applying cooldown...`);
       this.set(channelId, true);

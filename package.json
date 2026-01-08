@@ -9,19 +9,27 @@
   "scripts": {
     "dev": "bun run build && bun run --watch dist/main.js",
     "build": "bun run scripts/bundle.ts",
-    "lint": "oxlint . --ignore-path=.gitignore && eslint .",
-    "lint:fix": "oxlint --fix --fix-suggestions . --ignore-path=.gitignore && eslint --fix .",
-    "typecheck": "tsc -p tsconfig.json"
+    "lint": "oxlint . --type-check --type-aware --ignore-path=.gitignore && eslint .",
+    "lint:fix": "oxlint --type-check --type-aware --fix --fix-suggestions . --ignore-path=.gitignore && eslint --fix .",
+    "typecheck": "tsgo -p tsconfig.json"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "catalog:linting",
     "@types/bun": "catalog:types",
     "@types/node": "catalog:types",
+    "@typescript/native-preview": "catalog:types",
     "eslint": "catalog:linting",
     "eslint-plugin-oxlint": "catalog:linting",
     "jiti": "catalog:linting",
     "oxlint": "catalog:linting",
-    "rolldown": "catalog:build",
+    "oxlint-tsgolint": "catalog:linting",
+    "rolldown": "catalog:build"
+  },
+  "dependencies": {
+    "@fg-sparky/client": "workspace:*",
+    "@fg-sparky/server": "workspace:*",
+    "@fg-sparky/utils": "workspace:*",
+    "commander": "catalog:utils",
     "typescript-eslint": "catalog:linting"
   }
 }

@@ -4,8 +4,7 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import type { StoredNumberInfo as NumberInfo } from "@fg-sparky/server";
-import { joinStringArray } from "@fg-sparky/utils" with { type: "comptime" };
+import { joinStringArray, type StoredNumberInfo } from "@fg-sparky/utils" with { type: "comptime" };
 import type { Message, OmitPartialGroupDMChannel } from "discord.js";
 
 /**
@@ -14,7 +13,7 @@ import type { Message, OmitPartialGroupDMChannel } from "discord.js";
  */
 export default async function handleSpecialGuess(
   message: OmitPartialGroupDMChannel<Message>,
-  number: NumberInfo,
+  number: StoredNumberInfo,
   when: "pre-parse" | "post-parse" | "post-update",
 ): Promise<boolean> {
   if (when === "pre-parse") {

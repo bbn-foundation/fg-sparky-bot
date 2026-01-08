@@ -8,4 +8,3 @@ export { baker as NumberdexBaker, setupCronJobs } from "./cron.ts";
 export { setupCallback } from "./handler.ts";
 export { NumberhumanInfo } from "./schema.ts";
 export { NumberhumanStore } from "./store.ts";
-

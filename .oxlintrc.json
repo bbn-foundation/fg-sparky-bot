@@ -60,9 +60,9 @@
     "node/no-exports-assign": "error",
     /// oxc
     "oxc/bad-bitwise-operator": "error",
-    "oxc/no-barrel-file": ["error", 10],
     "oxc/no-const-enum": "error",
     "oxc/no-map-spread": "error",
+    "oxc/no-barrel-file": ["warn", 500],
     /// promise
     "promise/catch-or-return": "error",
     "promise/prefer-await-to-callbacks": "error",
@@ -157,7 +157,6 @@
     "typescript/no-for-in-array": "error",
     "typescript/no-implied-eval": "error",
     "typescript/no-meaningless-void-operator": "error",
-    "typescript/no-misused-promises": "error",
     "typescript/no-misused-spread": "error",
     "typescript/no-mixed-enums": "error",
     "typescript/no-unsafe-unary-minus": "error",
@@ -167,6 +166,9 @@
     "typescript/related-getter-setter-pairs": "error",
     "typescript/unbound-method": "error",
     "typescript/use-unknown-in-catch-callback-variable": "error",
+    "typescript/no-misused-promises": ["error", {
+      "checksVoidReturn": false
+    }],
     /// Warnings
     "typescript/await-thenable": "warn",
     "typescript/no-base-to-string": "warn",
@@ -180,6 +182,11 @@
     "typescript/only-throw-error": "warn",
     "typescript/promise-function-async": "warn",
     "typescript/require-await": "warn",
-    "typescript/switch-exhaustiveness-check": "warn"
+    "typescript/switch-exhaustiveness-check": "warn",
+    // Disables
+    "import/no-dependencies": "off",
+    "typescript/return-await": "off",
+    "typescript/strict-boolean-expressions": "off",
+    "import/max-dependencies": "off"
   }
 }

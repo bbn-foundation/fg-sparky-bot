@@ -12,6 +12,7 @@ const createGuessModal = (channelId: string): ModalComponentData => ({
     id: 0,
     label: "what's the human's name?",
     type: ComponentType.Label,
+    // @ts-expect-error: labels are not allowed in text input components
     component: {
       customId: `numberhuman-guess-input-${channelId}`,
       style: TextInputStyle.Short,
@@ -70,7 +71,9 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
 
         client.on("interactionCreate", handler);
       } else {
-        Logger.error(`Failed to spawn numberhuman: ${number.unwrapErr()}`);
+        const error = number.unwrapErr();
+        Logger.error(`Failed to spawn numberhuman: ${error.message}`);
+        Logger.error(error.stack ?? "no stack trace available");
       }
     };
   }

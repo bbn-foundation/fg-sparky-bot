@@ -1,3 +1,5 @@
+import { NumberInfo as NumberInfoSchema } from "@fg-sparky/server";
+import type { Difficulties } from "@fg-sparky/utils";
 import { Command } from "commander";
 import { copyFile, readdir } from "node:fs/promises";
 
@@ -14,22 +16,14 @@ program
 
 program.parse(process.argv);
 
-const options = program.opts();
-const directoryPath: string = options.directory as string;
-const difficulty: string = options.difficulty as string;
+const { directory, difficulty } = program.opts<{
+  directory: string;
+  difficulty: string;
+}>();
 
-const files = await readdir(directoryPath);
+const entries = await readdir(directory);
 
-interface NumberInfo {
-  uuid: string;
-  name: string | null;
-  hashedName: string;
-  image: string;
-}
-
-const numbers: NumberInfo[] = [];
-
-await Promise.all(files.map(async (fileName) => {
+const numbers = (await Promise.all(entries.map(async (fileName) => {
   const fileExtension = fileName.slice(fileName.lastIndexOf("."));
   if (fileExtension.endsWith("DS_Store") || fileExtension.endsWith("txt")) return;
   const number = (() => {
@@ -40,26 +34,26 @@ await Promise.all(files.map(async (fileName) => {
       }
     }
   })();
-  const filePath = `${directoryPath}/${fileName}`;
+  const filePath = `${directory}/${fileName}`;
   console.log(`Found file: ${filePath} (number: ${number})`);
   sha512.update(number.toLowerCase());
   const hash = sha512.digest("hex");
   const uuid = crypto.randomUUID();
-  const newFilePath = `${directoryPath}/${uuid}${fileExtension}`;
+  const newFilePath = `${directory}/${uuid}${fileExtension}`;
   await copyFile(filePath, newFilePath);
   await Bun.file(filePath).delete();
-  numbers.push({
+  return {
     uuid,
     name: difficulty === "legendary" ? null : number,
     hashedName: hash,
     image: newFilePath,
-  });
-}));
+    // oxlint-disable-next-line no-unsafe-type-assertion
+    difficulty: difficulty as Difficulties,
+  };
+}))).filter(value => value !== undefined);
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const originalJson = await Bun.file(`numbers/numbers.json`).json();
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment
-originalJson[difficulty] = [...originalJson[difficulty], ...numbers];
+const originalJson = NumberInfoSchema.array().parse(await Bun.file(`numbers/numbers.json`).json());
+originalJson.push(...numbers);
 
 await Bun.write(
   `numbers/numbers.json`,

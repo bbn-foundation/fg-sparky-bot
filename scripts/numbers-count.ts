@@ -1,14 +1,11 @@
 import numbersJson from "../numbers/numbers.json" with { type: "json" };
+import { NumberInfo } from "@fg-sparky/server";
 
-const easiesCount = numbersJson.easy.length;
-const mediumsCount = numbersJson.medium.length;
-const hardCount = numbersJson.hard.length;
-const legendaryCount = numbersJson.legendary.length;
-const totalCount = easiesCount + mediumsCount + hardCount + legendaryCount;
+const parsedEntries = numbersJson.map(entry => NumberInfo.parse(entry));
 
 console.log("Amount of entries:");
-console.log(`easy: ${easiesCount.toString()}`);
-console.log(`medium: ${mediumsCount.toString()}`);
-console.log(`hard: ${hardCount.toString()}`);
-console.log(`legendary: ${legendaryCount.toString()}`);
-console.log(`\nTOTAL: ${totalCount.toString()}`);
+console.log(`easy: ${parsedEntries.filter(entry => entry.difficulty === "easy").length}`);
+console.log(`medium: ${parsedEntries.filter(entry => entry.difficulty === "medium").length}`);
+console.log(`hard: ${parsedEntries.filter(entry => entry.difficulty === "hard").length}`);
+console.log(`legendary: ${parsedEntries.filter(entry => entry.difficulty === "legendary").length}`);
+console.log(`\nTOTAL: ${parsedEntries.length}`);

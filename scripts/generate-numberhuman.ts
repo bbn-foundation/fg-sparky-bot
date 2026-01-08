@@ -1,3 +1,5 @@
+import { NumberhumanInfo } from "@fg-sparky/server";
+import type { Rarities } from "@fg-sparky/utils";
 import { Command } from "commander";
 import { copyFile } from "node:fs/promises";
 
@@ -5,8 +7,7 @@ const command = new Command()
   .requiredOption("-r, --rarity <rarity>")
   .requiredOption("-h, --hp <hp>")
   .requiredOption("-a, --attack <atk>")
-  .option("--ability-name <name>")
-  .option("--ability-description <description>")
+  .requiredOption("-A, --ability <ability>")
   .argument("<file>");
 
 command.parse(process.argv);
@@ -16,26 +17,10 @@ const args = command.opts<{
   artist: string;
   hp: string;
   attack: string;
-  abilityName?: string;
-  abilityDescription?: string;
+  ability: string;
 }>();
 
-interface NumberhumanData {
-  uuid: string;
-  name: string;
-  rarity: "common" | "rare" | "epic";
-  hashedName: string;
-  image: string;
-  baseHP: number;
-  baseATK: number;
-  ability: {
-    id: string;
-    name: string;
-    description: string;
-  } | null;
-}
-
-const file = command.processedArgs[0] as string;
+const file = String(command.processedArgs[0]);
 
 const fileExtension = file.slice(file.lastIndexOf("."));
 const directoryPath = file.slice(0, file.lastIndexOf("/"));
@@ -49,30 +34,20 @@ const numberhumanName = file.slice(file.lastIndexOf("/") + 1).slice(0, -5);
 const hasher = new Bun.CryptoHasher("blake2b512");
 hasher.update(numberhumanName.toLowerCase());
 
-const ability = (args.abilityName && args.abilityDescription
-  ? {
-      id: crypto.randomUUID(),
-      name: args.abilityName,
-      description: args.abilityDescription,
-    }
-  : null);
-
-const numberhumanData: NumberhumanData = {
+const numberhumanData: NumberhumanInfo = {
   uuid: numberUUID,
   name: numberhumanName,
-  rarity: args.rarity,
+  // oxlint-disable-next-line no-unsafe-type-assertion
+  rarity: args.rarity as Rarities,
   hashedName: hasher.digest("hex"),
   image: newFilePath,
   baseHP: Number.parseInt(args.hp, 10),
   baseATK: Number.parseInt(args.attack, 10),
-  ability,
+  ability: args.ability,
 };
 
-const json = await Bun.file("numbers/numberdex-data.json").json() as {
-  numberhumans: NumberhumanData[];
-  responses: string[];
-};
-json.numberhumans.push(numberhumanData);
+const json = NumberhumanInfo.array().parse(await Bun.file("numbers/numberhumans.json").json());
+json.push(numberhumanData);
 
 await Bun.write("numbers/numberdex-data.json", JSON.stringify(json, null, 2));
 

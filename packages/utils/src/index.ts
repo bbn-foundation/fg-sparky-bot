@@ -13,4 +13,3 @@ export * from "./types.ts";
 /* Cooldowns */
 export * from "./cooldowns/guesses.ts";
 export * from "./cooldowns/normal.ts";
-

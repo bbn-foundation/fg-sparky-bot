@@ -4,7 +4,7 @@ packages:
 catalogs:
   build:
     comptime.ts: ^0.8.0
-    rolldown: ^1.0.0-beta.54
+    rolldown: 1.0.0-beta.59
     vite: ^8.0.0-beta.2
   db:
     better-sqlite3: ^12.5.0
@@ -17,14 +17,16 @@ catalogs:
   linting:
     '@stylistic/eslint-plugin': ^5.6.1
     eslint: ^9.39.2
-    eslint-plugin-oxlint: ^1.34.0
+    eslint-plugin-oxlint: ^1.38.0
     jiti: ^2.6.1
-    oxlint: ^1.34.0
-    typescript-eslint: ^8.50.0
+    oxlint: ^1.38.0
+    oxlint-tsgolint: ^0.10.1
+    typescript-eslint: ^8.52.0
   types:
     '@types/better-sqlite3': ^7.6.13
     '@types/bun': ^1.3.5
     '@types/node': ^25.0.3
+    '@typescript/native-preview': 7.0.0-dev.20260108.1
     zod: ^4.2.1
   utils:
     '@sapphire/result': ^2.8.0
@@ -33,12 +35,10 @@ catalogs:
     comptime.ts: ^0.8.0
     cronbake: ^0.4.0
 
-minimumReleaseAge: 7280
+minimumReleaseAge: 720
 
 onlyBuiltDependencies:
   - better-sqlite3
   - bufferutil
   - esbuild
   - sqlite3
-
-shamefullyHoist: true

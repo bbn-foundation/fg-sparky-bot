@@ -21,10 +21,10 @@ export function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuil
     disabled,
   });
 
-  return new ActionRowBuilder().addComponents(button);
+  return new ActionRowBuilder<ButtonBuilder>().addComponents(button);
 }
 
-export async function spawnNumberhuman(store: NumberhumanStore, channel: SendableChannels): Promise<Result<[NumberhumanInfo, Message], unknown>> {
+export async function spawnNumberhuman(store: NumberhumanStore, channel: SendableChannels): Promise<Result<[NumberhumanInfo, Message], Error | ReferenceError>> {
   const numberhuman = store.getRandom();
   const randomSpawnMessage = NUMBERDEX_SPAWN_MESSAGES[Math.floor(Math.random() * NUMBERDEX_SPAWN_MESSAGES.length)];
   try {
@@ -41,6 +41,7 @@ export async function spawnNumberhuman(store: NumberhumanStore, channel: Sendabl
     }
     return Result.err(new ReferenceError("no numberhuman was found"));
   } catch (err) {
+    if (!Error.isError(err)) throw err;
     return Result.err(err);
   }
 }

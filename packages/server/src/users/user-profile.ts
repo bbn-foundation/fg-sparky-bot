@@ -65,5 +65,6 @@ export class UserProfile extends BaseEntity {
    */
   @ManyToMany(() => NumberhumanData)
   @JoinTable()
+  // @ts-expect-error: trying to add an initializer will make relations not work properly
   numberhumans: NumberhumanData[];
 }

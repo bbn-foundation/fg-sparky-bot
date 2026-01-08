@@ -8,7 +8,7 @@ import type { Command } from "@fg-sparky/utils";
 import type { Client, CommandInteraction } from "discord.js";
 
 const Hello: Command = {
-  async run(client: Client, interaction: CommandInteraction): Promise<void> {
+  async run(_client: Client, interaction: CommandInteraction): Promise<void> {
     await interaction.reply("Hi chat");
   },
   description: "Say hi to the bot",

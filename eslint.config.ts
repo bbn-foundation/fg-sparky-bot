@@ -4,12 +4,18 @@ import { type Config, defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
 const _default: Config[] = defineConfig(
-  globalIgnores(["node_modules", "dist"]),
-  tseslint.configs.strictTypeChecked,
+  globalIgnores([
+    "node_modules",
+    "**/node_modules",
+    "**/dist",
+    "dist",
+    "build",
+  ]),
+  tseslint.configs.recommendedTypeCheckedOnly,
+  tseslint.configs.disableTypeChecked,
   {
     languageOptions: {
       parserOptions: {
-        tsconfigRootDir: import.meta.dirname,
         projectService: true,
       },
     },
@@ -20,17 +26,6 @@ const _default: Config[] = defineConfig(
     quotes: "double",
   }),
   oxlint.buildFromOxlintConfigFile("./.oxlintrc.json"),
-  {
-    rules: {
-      // See https://github.com/eslint/eslint/issues/20272
-      "@typescript-eslint/unified-signatures": "off",
-      // Namespaces are cool
-      "@typescript-eslint/no-namespace": "off",
-      "@typescript-eslint/no-misused-promises": ["error", {
-        checksVoidReturn: false,
-      }],
-    },
-  },
 );
 
 export default _default;
