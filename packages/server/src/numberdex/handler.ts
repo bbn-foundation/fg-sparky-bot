@@ -71,7 +71,9 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
 
         client.on("interactionCreate", handler);
       } else {
-        Logger.error(`Failed to spawn numberhuman: ${number.unwrapErr()}`);
+        const error = number.unwrapErr();
+        Logger.error(`Failed to spawn numberhuman: ${error.message}`);
+        Logger.error(error.stack ?? "no stack trace available");
       }
     };
   }

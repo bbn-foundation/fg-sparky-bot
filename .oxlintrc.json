@@ -157,7 +157,6 @@
     "typescript/no-for-in-array": "error",
     "typescript/no-implied-eval": "error",
     "typescript/no-meaningless-void-operator": "error",
-    "typescript/no-misused-promises": "error",
     "typescript/no-misused-spread": "error",
     "typescript/no-mixed-enums": "error",
     "typescript/no-unsafe-unary-minus": "error",
@@ -167,7 +166,9 @@
     "typescript/related-getter-setter-pairs": "error",
     "typescript/unbound-method": "error",
     "typescript/use-unknown-in-catch-callback-variable": "error",
-    "typescript/no-miused-promise": ["error", { "checksVoidReturn": false }],
+    "typescript/no-misused-promises": ["error", {
+      "checksVoidReturn": false
+    }],
     /// Warnings
     "typescript/await-thenable": "warn",
     "typescript/no-base-to-string": "warn",
@@ -184,6 +185,6 @@
     "typescript/switch-exhaustiveness-check": "warn",
     // Disables
     "import/no-dependencies": "off",
-    "typescript/return-await": "off"
+    "typescript/return-await": "off",
   }
 }
