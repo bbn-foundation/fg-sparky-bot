@@ -5,7 +5,7 @@ export interface GuessObject {
   hashedNumber: string;
 }
 
-export type HandlerFunction<T extends object> = (message: string, number: T) => boolean | undefined;
+export type HandlerFunction<T extends object> = (message: string, number: T) => boolean;
 
 export function createGuessHandler<T extends GuessObject>(hashAlgo: Bun.SupportedCryptoAlgorithms): HandlerFunction<T> {
   const hasher = new Bun.CryptoHasher(hashAlgo);

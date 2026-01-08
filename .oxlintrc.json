@@ -60,9 +60,9 @@
     "node/no-exports-assign": "error",
     /// oxc
     "oxc/bad-bitwise-operator": "error",
-    "oxc/no-barrel-file": ["error", 10],
     "oxc/no-const-enum": "error",
     "oxc/no-map-spread": "error",
+    "oxc/no-barrel-file": ["warn", 500],
     /// promise
     "promise/catch-or-return": "error",
     "promise/prefer-await-to-callbacks": "error",
@@ -186,5 +186,7 @@
     // Disables
     "import/no-dependencies": "off",
     "typescript/return-await": "off",
+    "typescript/strict-boolean-expressions": "off",
+    "import/max-dependencies": "off"
   }
 }

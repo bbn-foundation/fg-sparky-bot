@@ -22,6 +22,7 @@ const Numberdex: Command = {
         const cron = NumberdexBaker.add({
           name: `numberdex-channel-${channel.id}`,
           cron: "@every_20_minutes",
+          // oxlint-disable-next-line eslint/no-empty-function: will be immediately replaced
           async callback(): Promise<void> {},
         });
         setupCallback(Numberhumans, cron, channel);

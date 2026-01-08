@@ -1,4 +1,4 @@
-import type { NumberInfo } from "@fg-sparky/server";
+import { NumberInfo } from "@fg-sparky/server";
 import type { Difficulties } from "@fg-sparky/utils";
 import { Command } from "commander";
 import { copyFile } from "node:fs/promises";
@@ -30,7 +30,7 @@ const difficulty = String(options.difficulty);
 const hash = sha512.update(numberName.toLowerCase()).digest("hex");
 const fileExtension = filePath.split(".").pop();
 const uuid = crypto.randomUUID();
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
 const newFileName = `${uuid}.${fileExtension!}`;
 const newFilePath = `numbers/${difficulty}/${newFileName}`;
 
@@ -42,14 +42,14 @@ const output: NumberInfo = {
   name: numberName,
   hashedName: hash,
   image: newFilePath,
+  // @ts-expect-error: i run this script, i trust myself
   difficulty,
 };
 
 // jsons are any-typed
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-const json = await Bun.file("numbers/numbers.json").json();
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+const json = NumberInfo.array().parse(await Bun.file("numbers/numbers.json").json());
+
 json.push(output);
 
 await Bun.write(

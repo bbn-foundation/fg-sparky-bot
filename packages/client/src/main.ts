@@ -25,6 +25,7 @@ const { token = process.env.DISCORD_TOKEN, loglevel = Number(process.env.LOG_LEV
   loglevel?: number;
 }>();
 
+// oxlint-disable-next-line strict-boolean-expressions: need to check if its there
 if (!token) {
   Logger.error(`The bot token must be passed in via the --token / -t flag or the DISCORD_TOKEN environment variable.`);
   process.exit(1);

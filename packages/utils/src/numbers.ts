@@ -16,6 +16,7 @@ interface DifficultyTokenMap {
 }
 
 // please don't mind the `as never` cast, that's just typescript being stupid
+// oxlint-disable no-unsafe-type-assertion
 export function getGainFromDifficulty<T extends keyof DifficultyTokenMap>(difficulty: T): DifficultyTokenMap[T] {
   switch (difficulty) {
     case "easy": {
@@ -32,6 +33,7 @@ export function getGainFromDifficulty<T extends keyof DifficultyTokenMap>(diffic
     }
   }
 }
+// oxlint-enable no-unsafe-type-assertion
 
 export function ordinalOf(number: number): `${number}${"st" | "nd" | "rd" | "th"}` {
   const j = number % 10,

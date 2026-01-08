@@ -18,6 +18,7 @@ const Guess: Command = {
       return;
     }
 
+    // oxlint-disable-next-line no-unsafe-type-assertion: guaranteed to not be anything else by the discord api
     const difficulty = interaction.options.get("difficulty", true).value as Exclude<Difficulties, "legendary"> | "random";
     const number = difficulty === "random" ? Numbers.getRandom() : Numbers.getRandomByDifficulty(difficulty);
     if (number.isNone()) {

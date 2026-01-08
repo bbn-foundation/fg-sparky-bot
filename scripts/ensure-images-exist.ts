@@ -10,7 +10,7 @@ const entries = await Promise.allSettled(numbers
     } catch {
       return Object.assign(value, { missingImage: true });
     }
-}));
+  }));
 
 console.log("========== NUMBERS WITHOUT IMAGES ==========");
 console.log(entries.filter(value => value.status === "fulfilled").filter(value => value.value.missingImage).map(value => value.value));

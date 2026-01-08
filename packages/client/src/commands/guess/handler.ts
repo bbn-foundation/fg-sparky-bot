@@ -93,9 +93,7 @@ export function handleResponse(client: Client, interaction: ChatInputCommandInte
       Logger.debug(`appending streak for user ${message.author.displayName}`);
       streakCollection.appendStreak(message.author.id, message.guildId!);
 
-      if (await handleSpecialGuess(message, number, "post-update")) {
-        return;
-      }
+      await handleSpecialGuess(message, number, "post-update");
     }
   };
 

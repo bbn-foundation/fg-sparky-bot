@@ -4,7 +4,7 @@ import { getUser } from "./helpers.ts";
 export class StreakCollection extends Collection<string, number> {
   appendStreak(id: string, guildId: string): this {
     // just checked if the key exists
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+
     if (this.has(`${id}.${guildId}`)) return this.set(`${id}.${guildId}`, this.get(`${id}.${guildId}`)! + 1);
     return this.set(`${id}.${guildId}`, 1);
   }
@@ -23,7 +23,6 @@ export class StreakCollection extends Collection<string, number> {
   override async clear(): Promise<void> {
     Logger.info("saving player's best streaks into database");
     await Promise.all(this.map(async (streak, id) => {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const user = await getUser(id.split(".")[0]!, id.split(".")[1]!);
       if (!user) return;
 

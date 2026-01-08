@@ -3,10 +3,9 @@ import { formatPercent, joinStringArray, type ServerSlashCommandInteraction } fr
 import type { Client } from "discord.js";
 import { Numbers } from "../../stores.ts";
 
-export default async function userShow(client: Client, interaction: ServerSlashCommandInteraction): Promise<void> {
-  const userId = interaction.options.get("user", true).value as string;
-  const userInfo = await getUser(userId, interaction.guildId);
-  const discordUser = await client.users.fetch(userId);
+export default async function userShow(_: Client, interaction: ServerSlashCommandInteraction): Promise<void> {
+  const discordUser = interaction.options.getUser("user", true);
+  const userInfo = await getUser(discordUser.id, interaction.guildId);
   if (userInfo) {
     const { guessedEntries, uniqueGuessed, numberhumansGuessed, numberhumansGuessedUnique } = userInfo;
     const percentage = {

@@ -6,9 +6,9 @@
  */
 import { Logger } from "@fg-sparky/utils";
 import type { Client } from "discord.js";
-import { Commands } from "./commands/commands";
-import { registerCommands } from "./commands/listener";
-import { registerHandlers } from "./handlers";
+import { Commands } from "./commands/commands.ts";
+import { registerCommands } from "./commands/listener.ts";
+import { registerHandlers } from "./handlers.ts";
 
 export async function initClient(client: Client, token: string): Promise<void> {
   registerHandlers(client);

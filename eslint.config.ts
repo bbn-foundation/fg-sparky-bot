@@ -9,7 +9,7 @@ const _default: Config[] = defineConfig(
     "**/node_modules",
     "**/dist",
     "dist",
-    "build"
+    "build",
   ]),
   tseslint.configs.recommendedTypeCheckedOnly,
   tseslint.configs.disableTypeChecked,
