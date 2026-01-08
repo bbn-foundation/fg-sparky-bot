@@ -21,7 +21,7 @@ catalogs:
     jiti: ^2.6.1
     oxlint: ^1.34.0
     oxlint-tsgolint: ^0.10.1
-    typescript-eslint: ^8.50.0
+    typescript-eslint: ^8.52.0
   types:
     '@types/better-sqlite3': ^7.6.13
     '@types/bun': ^1.3.5
