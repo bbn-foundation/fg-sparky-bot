@@ -9,6 +9,7 @@ import { Poweroff, Restart } from "./bot-management.ts";
 import Guess from "./guess.ts";
 import Hello from "./hello.ts";
 import Numberdex from "./numberdex.ts";
+import Reload from "./reload.ts";
 import User from "./users.ts";
 
-export const Commands: readonly Command[] = [Hello, Guess, User, Poweroff, Restart, Numberdex];
+export const Commands: readonly Command[] = [Hello, Guess, User, Poweroff, Restart, Numberdex, Reload];
