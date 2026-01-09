@@ -1,10 +1,27 @@
 # changelog
 
+## 1.2.0 - January 6th, 2026
+nevermind again (bruh)
+
+### features:
+- \[[`3c118018`](https://github.com/skylafalls/fg-sparky-bot/commit/3c11801829dee0e8930e558fc011a0b4866bcba2)] - feat(numberdex): new responses for success/fail ([#21](https://github.com/skylafalls/fg-sparky-bot/pull/17))
+- \[[`d71bcb3c`](https://github.com/skylafalls/fg-sparky-bot/commit/d71bcb3c38d8809a21318760f85836cce48cbe91)] - feat(numberdex): extra response types
+- \[[`ef317155`](https://github.com/skylafalls/fg-sparky-bot/commit/ef3171559f3f276f93e73eb9738cc020580817ef)] - feat(bot): add a reload command to reload number stores
+
+### fixes:
+- \[[`f253c2e3`](https://github.com/skylafalls/fg-sparky-bot/commit/f253c2e3dd4210ebff462a9b91fb745c117183ad)] - fix(entries): move paths
+- \[[`0a1d7233`](https://github.com/skylafalls/fg-sparky-bot/commit/0a1d7233ba8001f15192c99a66cacc14c8686c9b)] - fix(entries): fixed a couple numbers ([#22](https://github.com/skylafalls/fg-sparky-bot/pull/22)) by @StrongLeon
+- \[[`da81a801`](https://github.com/skylafalls/fg-sparky-bot/commit/da81a8018ba934a7445e388e9cfa3b19f8c28f92)] - fix(cli): do not save the data state before exiting
+
+### chores:
+- \[[`9d29322e`](https://github.com/skylafalls/fg-sparky-bot/commit/9d29322ed8789d4dd673f902c9ce87dfe770812e)] - chore(entries): a fix and some new
+- \[[`18802f0b`](https://github.com/skylafalls/fg-sparky-bot/commit/18802f0ba9a7c1d87fc646236f047fe1213579ed)] - chore: shut up oxlint ([#23](https://github.com/skylafalls/fg-sparky-bot/pull/23))
+
 ## 1.1.0 - January 6th, 2026
 next release will have the uhhhhhh yeah
 
 ### features:
-- \[[`3c118018`](https://github.com/skylafalls/fg-sparky-bot/commit/3c11801829dee0e8930e558fc011a0b4866bcba2)] - feat(numberdex): new responses for success/fail ([#21](https://github.com/skylafalls/fg-sparky-bot/pull/17))
+- \[[`3c118018`](https://github.com/skylafalls/fg-sparky-bot/commit/3c11801829dee0e8930e558fc011a0b4866bcba2)] - feat(numberdex): new responses for success/fail ([#21](https://github.com/skylafalls/fg-sparky-bot/pull/21))
 
 ### refactors:
 - \[[`06ef043c`](https://github.com/skylafalls/fg-sparky-bot/commit/06ef043c86b6a439ea331d556aac3aa817dd5286)] - refactor(sparky): change data layout for numberstore ([#19](https://github.com/skylafalls/fg-sparky-bot/pull/19))
