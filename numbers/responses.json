@@ -3380,6 +3380,26 @@
     "type": "fail"
   },
   {
+    "uuid": "4ef80b99-81fc-433c-b285-9362f3f73c00",
+    "value": "Let's catch this numberhuman before you can use chat",
+    "type": "spawn"
+  },
+  {
+    "uuid": "e9b917ed-cba9-4707-bbed-21f887a258be",
+    "value": "NumberDex Battle Advanced",
+    "type": "spawn"
+  },
+  {
+    "uuid": "ab3ef87f-8cf9-4c60-9d31-b5969f716dad",
+    "value": "{mention} has been grinded trinded with the power of {guess}",
+    "type": "fail"
+  },
+  {
+    "uuid": "a37a4c34-8d43-4bc5-85b1-2ac30ebe7adb",
+    "value": "No one managed to ~~kidnap~~ catch the numberhuman.",
+    "type": "flee"
+  },
+  {
     "uuid": "47453560-b798-4df2-ab6c-936b96c1804c",
     "value": "Okay fine, it's {correct}. Just to be clear, I only did this so you could stop pestering me, {mention}.",
     "type": "fail"

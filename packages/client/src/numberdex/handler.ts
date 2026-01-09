@@ -37,7 +37,9 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
           Logger.info("user failed to catch in time");
           client.off("interactionCreate", handler);
 
-          const content = `the numberhuman fled.`;
+          const content = Responses.getRandom({
+				type: "flee",
+			}).unwrapOr(`the numberhuman fled.`);
           await sentMessage.edit({ components: [createButtonRow(true)] });
           await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
         }, NUMBERDEX_FLEE_DELAY);
