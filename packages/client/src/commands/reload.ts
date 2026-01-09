@@ -6,7 +6,7 @@
  */
 import type { Command } from "@fg-sparky/utils";
 import { ApplicationCommandOptionType, PermissionFlagsBits, type Client, type CommandInteraction } from "discord.js";
-import { Numberhumans, Numbers, Responses } from "../stores";
+import { Numberhumans, Numbers, Responses } from "../stores.ts";
 
 enum ReloadType {
   SparkyEntries = "sparky-entries",
@@ -21,7 +21,8 @@ const Reload: Command = {
       await interaction.reply("you do not have permisison to reload commands.");
       return;
     }
-    switch (interaction.options.getString("store, true")) {
+    // oxlint-disable-next-line no-unsafe-type-assertion: see the options below
+    switch (interaction.options.getString("store", true) as ReloadType) {
       case ReloadType.Numberhumans: {
         await Numberhumans.reload();
         break;
@@ -46,6 +47,7 @@ const Reload: Command = {
     name: "store",
     description: "The store type to reload.",
     type: ApplicationCommandOptionType.String,
+    required: true,
     choices: [{
       name: "FG Sparky Entries",
       value: ReloadType.SparkyEntries,
