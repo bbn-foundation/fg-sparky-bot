@@ -3403,5 +3403,15 @@
     "uuid": "47453560-b798-4df2-ab6c-936b96c1804c",
     "value": "Okay fine, it's {correct}. Just to be clear, I only did this so you could stop pestering me, {mention}.",
     "type": "fail"
+  },
+  {
+    "uuid": "e9385f72-3d2d-4461-be4d-e0e0b099cb4f",
+    "value": "Did {mention} seriously think that it was {correct}? Oh, it *is* {correct}. Oops.",
+    "type": "success"
+  },
+  {
+    "uuid": "bcb802f5-78bf-4c41-900f-40aca6a58788",
+    "value": "This Numberhuman is very- wait, where'd it go?",
+    "type": "flee"
   }
 ]
