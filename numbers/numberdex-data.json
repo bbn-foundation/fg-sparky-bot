@@ -204,6 +204,41 @@
       "id": "none",
       "name": "None",
       "description": "General has no ability. To compensate, they have much higher statistics."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "finalize",
+      "name": "Finalize",
+      "description": "{numberhuman} can finalize targets. There is a 5% chance for the target after their turn to instantly die."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "cube-pelting",
+      "name": "Cube Pelting",
+      "description": "{numberhuman} can barrage the target with lots of small cubes. This can damage up to 25 - 50% of the numberhuman's max health as damage, depending on health."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "compression",
+      "name": "Compression",
+      "description": "{numberhuman} can compress targets, reducing their health and attack by 33%."
+    },
+    {
+      "id": "nerfing",
+      "name": "Nerfing",
+      "description": "If the target's attack value is greater than {numberhuman}'s, it will temporarily nerf the target's attack value to {numberhuman}'s."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "shell-trapping",
+      "name": "Shell Trapping",
+      "description": "{numberhuman} can trap targets in a shell, rendering them vunerable and unable to attack. It breaks after 2 turns or if enough damage was dealt to it."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "corruption",
+      "name": "Corruption",
+      "description": "{numberhuman} can corrupt other numberhumans out of anger. This will constantly hurt them and deplete 2 HP per second."
     }
   ]
 }
