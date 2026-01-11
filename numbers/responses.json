@@ -3186,7 +3186,7 @@
   },
   {
     "uuid": "1f5dc227-cbf0-492e-8549-ec28ccf8aa50",
-    "value": "That {correct} doesn't have a permit to be silly, just so you know. You can DM me if you want a permit, {mention}.",
+    "value": "That {correct} doesn't have a permit to be silly, just so {mention} knows. You can make a pull request if you want the permit.",
     "type": "success"
   },
   {
@@ -3211,7 +3211,7 @@
   },
   {
     "uuid": "1380172d-2bf4-4dea-8b3b-ee8d843d3844",
-    "value": "That {correct} looks really good in your collection! You should start collecting them {mention}, okay?",
+    "value": "That {correct} looks really good in your collection! You should start collecting them, {mention}.",
     "type": "success"
   },
   {
@@ -3241,12 +3241,12 @@
   },
   {
     "uuid": "faf12304-2866-4d18-8cf2-055b34ae2344",
-    "value": "You captured {correct} to make entries to power Realituum.",
+    "value": "{mention} captured {correct} to make entries to power Realituum.",
     "type": "success"
   },
   {
     "uuid": "4f448aeb-c902-4940-8507-70ef9e943047",
-    "value": "Hey, you caught {correct}! Good job! Now get one, {mention}.",
+    "value": "Hey, {mention} caught {correct}! Good job! Now get one.",
     "type": "success"
   },
   {
@@ -3406,7 +3406,7 @@
   },
   {
     "uuid": "e9385f72-3d2d-4461-be4d-e0e0b099cb4f",
-    "value": "Did {mention} seriously think that it was {correct}? Oh, it *is* {correct}. Oops.",
+    "value": "Did {mention} seriously think that it was {guess}? Oh, it *is* {correct}. Oops.",
     "type": "success"
   },
   {
