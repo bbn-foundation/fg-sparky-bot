@@ -88,5 +88,75 @@
     "baseHP": 833,
     "baseATK": 1000,
     "ability": "delete-helath"
+  },
+  {
+    "uuid": "bfa08112-8503-44d8-8ca0-5b8ce58d4dcd",
+    "name": "Ultifinal",
+    "rarity": "common",
+    "hashedName": "332aa73c2280fbd5e52a0c039bd882abbb5ab9ea00c09f5e93a02b10251bb264d31c87d81f79ef4082f716c5c5d229807b0875a3e25288efdd901fda40a6802e",
+    "image": "numbers/humans/common/bfa08112-8503-44d8-8ca0-5b8ce58d4dcd.webp",
+    "baseHP": 120,
+    "baseATK": 40,
+    "ability": "finalize"
+  },
+  {
+    "uuid": "725fc168-8874-4902-81b3-3e976f37d134",
+    "name": "Nomi",
+    "rarity": "epic",
+    "hashedName": "ce1c410fee14f017006b5c40b4302debc594f165ded46250651eb38757f98a11db2072e2bf0e3332657fb36845031bb798ea69fce841f10a8c8e9b72b0c954ab",
+    "image": "numbers/humans/epic/725fc168-8874-4902-81b3-3e976f37d134.webp",
+    "baseHP": 700,
+    "baseATK": 600,
+    "ability": "cube-generation"
+  },
+  {
+    "uuid": "55083b3a-3b99-4e2a-a2d1-775ab152d1b1",
+    "name": "Chloe",
+    "rarity": "common",
+    "hashedName": "a5a7b3fdbc0a23a5c15f1314b3f5b7dacd91ac51ac972ff29368540423783d535866a7b8331d8c0a0f419e770eb2890da228f271d2cd3476357e230273ee2322",
+    "image": "numbers/humans/rare/55083b3a-3b99-4e2a-a2d1-775ab152d1b1.webp",
+    "baseHP": 100,
+    "baseATK": 50,
+    "ability": "compression"
+  },
+  {
+    "uuid": "8001a393-7e32-456d-99dc-7f5e111bc9e4",
+    "name": "Compari",
+    "rarity": "rare",
+    "hashedName": "a9b9f32d90556b21a13426715642296169a0f8b95cc891f9e3a524b98dc22187b3d0d8687d19e3b14276c95b7aa6d6c9cae12eb273138ee6d884ecb5e598987c",
+    "image": "numbers/humans/rare/8001a393-7e32-456d-99dc-7f5e111bc9e4.webp",
+    "baseHP": 150,
+    "baseATK": 200,
+    "ability": "nerfing"
+  },
+  {
+    "uuid": "88e9c8cc-5d0b-465f-a1ff-5356490af977",
+    "name": "Peniltima",
+    "rarity": "epic",
+    "hashedName": "727baf3d555572cd95225fa4268628deaa32067c5ed11724df9387fbd346406a737527d8b548ce20c05ea198afd2d9ffd35081935e7fdfecbcccaca8769b0574",
+    "image": "numbers/humans/epic/88e9c8cc-5d0b-465f-a1ff-5356490af977.webp",
+    "baseHP": 900,
+    "baseATK": 500,
+    "ability": null
+  },
+  {
+    "uuid": "17f4a235-a0f7-4a0c-b0e4-08a491a500ee",
+    "name": "Enucy",
+    "rarity": "common",
+    "hashedName": "d5f04e6afca714086741c7af522f6793394d9207454ce9608cf2aafbc75e3edd7de626faa456c62e1ad812cc2f9be1e44b15bf8157879a6555b68171cdf8e4ac",
+    "image": "numbers/humans/common/17f4a235-a0f7-4a0c-b0e4-08a491a500ee.webp",
+    "baseHP": 130,
+    "baseATK": 40,
+    "ability": "shell-trapping"
+  },
+  {
+    "uuid": "5861f635-6df7-4176-9180-cb58ba147812",
+    "name": "Corrupi",
+    "rarity": "rare",
+    "hashedName": "c87e98e5d62986b2f869b0ec87d1caaeca42a5fb7bc442fe9470813cfa56b687103d6bc7a66e2a1b1c8e8ce5a6deecdcfcb11adfbdb592740ad89f14fad736a2",
+    "image": "numbers/humans/rare/5861f635-6df7-4176-9180-cb58ba147812.webp",
+    "baseHP": 50,
+    "baseATK": 300,
+    "ability": "corruption"
   }
 ]
