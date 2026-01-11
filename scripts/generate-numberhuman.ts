@@ -7,7 +7,7 @@ const command = new Command()
   .requiredOption("-r, --rarity <rarity>")
   .requiredOption("-h, --hp <hp>")
   .requiredOption("-a, --attack <atk>")
-  .requiredOption("-A, --ability <ability>")
+  .option("-A, --ability <ability>")
   .argument("<file>");
 
 command.parse(process.argv);
@@ -43,12 +43,12 @@ const numberhumanData: NumberhumanInfo = {
   image: newFilePath,
   baseHP: Number.parseInt(args.hp, 10),
   baseATK: Number.parseInt(args.attack, 10),
-  ability: args.ability,
+  ability: args.ability ?? null,
 };
 
 const json = NumberhumanInfo.array().parse(await Bun.file("numbers/numberhumans.json").json());
 json.push(numberhumanData);
 
-await Bun.write("numbers/numberdex-data.json", JSON.stringify(json, null, 2));
+await Bun.write("numbers/numberhumans.json", JSON.stringify(json, null, 2));
 
-console.log(`Added numberhuman ${numberhumanData.name} into numberdex-data.json`);
+console.log(`Added numberhuman ${numberhumanData.name} into numberhumans.json`);
