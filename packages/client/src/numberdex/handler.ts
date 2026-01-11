@@ -38,15 +38,15 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
           client.off("interactionCreate", handler);
 
           const content = Responses.getRandom({
-				type: "flee",
-			}).unwrapOr(`the numberhuman fled.`);
+            type: "flee",
+          }).unwrapOr(`the numberhuman fled.`);
           await sentMessage.edit({ components: [createButtonRow(true)] });
           await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
         }, NUMBERDEX_FLEE_DELAY);
 
         const handler = async (interaction: Interaction) => {
           if (interaction.channelId !== channel.id) return;
-          if (interaction.isButton()) {
+          if (interaction.isButton() && interaction.message.id === sentMessage.id) {
             Logger.debug(`User ${interaction.user.displayName} clicked the button`);
             await interaction.showModal(createGuessModal(interaction.channelId));
           } else if (interaction.inGuild() && interaction.isModalSubmit() && interaction.isFromMessage()

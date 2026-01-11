@@ -40,7 +40,6 @@ export class ResponseStore extends DataStore<ResponseInfo> {
    */
   getRandom(args: RandomReponseArgs): Option<string> {
     const responsePool = this.data.filter(value => value.type === args.type);
-    console.log(responsePool.length);
     const response = responsePool[Math.floor(Math.random() * responsePool.length)];
     // oxlint-disable-next-line no-unsafe-type-assertion
     if (!response) return Option.none as Option<string>;
