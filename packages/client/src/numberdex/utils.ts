@@ -49,6 +49,7 @@ export async function spawnNumberhuman(store: NumberhumanStore, channel: Sendabl
 export async function updateUserStats(
   interaction: ModalMessageModalSubmitInteraction<"cached" | "raw">,
   number: NumberhumanInfo,
+  guessed: string,
 ): Promise<void> {
   const numberhuman = await createNumberhuman({
     base: number,
@@ -59,6 +60,7 @@ export async function updateUserStats(
     .getRandom({
       type: "success",
       correctHuman: number.name,
+      guessedHuman: guessed,
       mentionId: interaction.user.id,
     })
     .unwrapOr(`hey, you managed to ~~kidnap~~ catch **${number.name}** ${userMention(interaction.user.id)}!`);

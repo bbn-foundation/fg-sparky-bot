@@ -60,7 +60,7 @@ export function setupCallback(store: NumberhumanStore, job: ICron, channel: Send
               await interaction.update({
                 components: [createButtonRow(true)],
               });
-              await updateUserStats(interaction, okNumber);
+              await updateUserStats(interaction, okNumber, guess);
             } else {
               const failMessage = Responses.getRandom({
                 type: "fail",

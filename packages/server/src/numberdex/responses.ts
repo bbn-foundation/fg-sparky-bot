@@ -5,10 +5,16 @@ import { ResponseInfo } from "./schema.ts";
 
 interface SpawnReponseArgs {
   type: "spawn";
+  correctHuman?: string;
+  guessedHuman?: string;
+  mentionId?: string;
 }
 
 interface FleeReponseArgs {
   type: "flee";
+  correctHuman?: string;
+  guessedHuman?: string;
+  mentionId?: string;
 }
 
 interface FailReponseArgs {
@@ -21,6 +27,7 @@ interface FailReponseArgs {
 interface CorrectReponseArgs {
   type: "success";
   correctHuman: string;
+  guessedHuman: string;
   mentionId: string;
 }
 
