@@ -7,4 +7,3 @@
 export { ResponseStore } from "./responses.ts";
 export { NumberhumanInfo, ResponseInfo } from "./schema.ts";
 export { NumberhumanStore } from "./store.ts";
-

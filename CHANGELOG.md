@@ -1,5 +1,17 @@
 # changelog
 
+## 1.2.4 - January 11th, 2026
+### fixes:
+- \[[`ece8b70d`](https://github.com/skylafalls/fg-sparky-bot/commit/ece8b70d33bec9ea8f2e96784a996ab61bc93838)] - fix(reload): respond after reloading the stores
+- \[[`b6881673`](https://github.com/skylafalls/fg-sparky-bot/commit/b688167383fc3f964983d1e4216e9c7cb6dc622b)] - fix(scripts): allow not specifying the ability
+- \[[`08bc735e`](https://github.com/skylafalls/fg-sparky-bot/commit/08bc735edcecdfa9f45f696da7ac43f182e6c394)] - fix(numberdex): fix hashes for flowi numberhumans ([#27](https://github.com/skylafalls/fg-sparky-bot/pull/27)) by @FlowismG
+- \[[`b21ed197`](https://github.com/skylafalls/fg-sparky-bot/commit/b21ed197cb5b243785c6e6a8ce0080eeecaa2f19)] - fix(numberdex): improve some responses
+- \[[`bb137323`](https://github.com/skylafalls/fg-sparky-bot/commit/bb137323d6f11fba92f3606dc02b074a06a43904)] - fix(numberdex): Make guess pipe correctly ([#28](https://github.com/skylafalls/fg-sparky-bot/pull/28)) by @FlowismG & @skylafalls
+
+### chores:
+- \[[`7eb39c9d`](https://github.com/skylafalls/fg-sparky-bot/commit/7eb39c9def77feb260e9ebaed21fe90631dd37b5)] - chore(entries): add some entries
+- \[[`1171d74d`](https://github.com/skylafalls/fg-sparky-bot/commit/1171d74d85f936c2339dcc875172fc1b864c6932)] - chore(numberdex): Add Flowi numberhumans ([#26](https://github.com/skylafalls/fg-sparky-bot/pull/26)) by @FlowismG
+
 ## 1.2.3 - January 11th, 2026
 some fixes
 
