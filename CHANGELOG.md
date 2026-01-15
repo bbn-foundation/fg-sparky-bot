@@ -1,5 +1,35 @@
 # changelog
 
+## 1.3.0-beta.1 - January 11th, 2026
+
+first prerelease for v1.3.0
+
+### notable changes:
+
+- [#31](https://github.com/skylafalls/fg-sparky-bot/pull/31) - when catching a numberhuman, there is a small chance for it to also gain an "evolution",
+  which provides a significant buff to the numberhuman's stats.
+- [#30](https://github.com/skylafalls/fg-sparky-bot/pull/30) - you can now gift other players your terminus tokens. this doesn't work for cross-server gifting.
+
+### features:
+
+- \[[`9a7e7e0e`](https://github.com/skylafalls/fg-sparky-bot/commit/9a7e7e0ecfe2bac0a83c0610528aab8ac8281462)] - feat(numberdex): add numberhuman evolutions ([#31](https://github.com/skylafalls/fg-sparky-bot/pull/31))
+- \[[`a891f38f`](https://github.com/skylafalls/fg-sparky-bot/commit/a891f38f6daab09a166ad186db439761b2ae7211)] - feat(users): allow users to gift tokens ([#30](https://github.com/skylafalls/fg-sparky-bot/pull/30))
+
+### fixes:
+
+- \[[`dfb28a57`](https://github.com/skylafalls/fg-sparky-bot/commit/dfb28a576404cd86ef0bb581a4b1df6e75ecf87d)] - fix(utils): allow nullish strings in joinStringArray
+- \[[`ef9c59ed`](https://github.com/skylafalls/fg-sparky-bot/commit/ef9c59ed3e746e8de70c875cfa0a058388d4eb4e)] - fix(numberdex): actually spoiler
+- \[[`1dc1cf67`](https://github.com/skylafalls/fg-sparky-bot/commit/1dc1cf675ef8af1d0bcae084dbbd1a8137486a06)] - fix(lint): check on type not save
+- \[[`811ebd6d`](https://github.com/skylafalls/fg-sparky-bot/commit/811ebd6dceb0f21f313b52b2eabd965854b63a73)] - fix(numberdex): spoiler some sensitive numbers
+- \[[`2fccb5e1`](https://github.com/skylafalls/fg-sparky-bot/commit/2fccb5e1275f61f47954ec8017f59f789c7098e5)] - fix(numberdex): fix all numberhuman hashes
+
+### chores:
+
+- \[[`35359593`](https://github.com/skylafalls/fg-sparky-bot/commit/35359593416f0fa85eeb2bb0c30576e9feaebc42)] - chore(deps): update recently added deps
+- \[[`44b3b1b0`](https://github.com/skylafalls/fg-sparky-bot/commit/44b3b1b0254e91c1256e3ec80dce9b4d833e4095)] - chore(fmt): use dprint instead
+- \[[`56d7b84d`](https://github.com/skylafalls/fg-sparky-bot/commit/56d7b84dee7d2a9bf5bf548d6d9f1630b693adb0)] - chore(fmt): replace stylistic eslint with biome ([#29](https://github.com/skylafalls/fg-sparky-bot/pull/29))
+- \[[`3f51f803`](https://github.com/skylafalls/fg-sparky-bot/commit/3f51f80336a1861ecb303b24543edd586d82606d)] - chore(numberdex): add more numberhumans
+
 ## 1.2.4 - January 11th, 2026
 
 ### fixes:
