@@ -4,8 +4,21 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { createUser, getUser, NumberhumanData, type NumberhumanInfo, type NumberhumanStore } from "@fg-sparky/server";
-import { formatPercent, getRandomRange, joinStringArray, Logger, Result } from "@fg-sparky/utils";
+
+import {
+  createUser,
+  getUser,
+  NumberhumanData,
+  type NumberhumanInfo,
+  type NumberhumanStore,
+} from "@fg-sparky/server";
+import {
+  formatPercent,
+  getRandomRange,
+  joinStringArray,
+  Logger,
+  Result,
+} from "@fg-sparky/utils";
 import {
   ActionRowBuilder,
   AttachmentBuilder,
@@ -17,10 +30,11 @@ import {
   type SendableChannels,
   userMention,
 } from "discord.js";
-import { readFileSync } from "node:fs";
 import { Responses } from "../stores.ts";
 
-export function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuilder> {
+export function createButtonRow(
+  disabled?: boolean
+): ActionRowBuilder<ButtonBuilder> {
   const button = ButtonBuilder.from({
     // @ts-expect-error THERE SHALL BE NO URL
     customId: "numberhuman-catch-button",
@@ -35,7 +49,7 @@ export function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuil
 
 export async function spawnNumberhuman(
   store: NumberhumanStore,
-  channel: SendableChannels,
+  channel: SendableChannels
 ): Promise<Result<[NumberhumanInfo, Message], Error | ReferenceError>> {
   const numberhuman = store.getRandom();
   const randomSpawnMessage = Responses.getRandom({
@@ -43,12 +57,12 @@ export async function spawnNumberhuman(
   }).unwrapOr("hello");
   try {
     for (const okHuman of numberhuman) {
-      const image = new AttachmentBuilder(readFileSync(okHuman.image))
+      const image = new AttachmentBuilder(okHuman.image)
         .setName(okHuman.image.slice(okHuman.image.lastIndexOf("/") + 1))
         .setDescription("The numberhuman you have to guess")
         .setSpoiler(
-          okHuman.uuid === "c6e6c334-16cd-479c-bd75-d82d23af50cb"
-            || okHuman.uuid === "c9c69c3c-3637-49a1-b667-29efd687a518",
+          okHuman.uuid === "c6e6c334-16cd-479c-bd75-d82d23af50cb" ||
+            okHuman.uuid === "c9c69c3c-3637-49a1-b667-29efd687a518"
         );
       return Result.ok([
         okHuman,
@@ -70,7 +84,7 @@ export async function spawnNumberhuman(
 export async function updateUserStats(
   interaction: ModalMessageModalSubmitInteraction<"cached" | "raw">,
   number: NumberhumanInfo,
-  guessed: string,
+  guessed: string
 ): Promise<void> {
   const numberhuman = await createNumberhuman({
     base: number,
@@ -83,13 +97,21 @@ export async function updateUserStats(
     guessedHuman: guessed,
     mentionId: interaction.user.id,
   }).unwrapOr(
-    `hey, you managed to ~~kidnap~~ catch **${number.name}** ${userMention(interaction.user.id)}!`,
+    `hey, you managed to ~~kidnap~~ catch **${number.name}** ${userMention(
+      interaction.user.id
+    )}!`
   );
   const user = await getUser(interaction.user.id, interaction.guildId);
-  Logger.debug(`tried looking up user ${interaction.user.id} (found: ${user ? "true" : "false"})`);
+  Logger.debug(
+    `tried looking up user ${interaction.user.id} (found: ${
+      user ? "true" : "false"
+    })`
+  );
 
   if (user) {
-    Logger.info(`user already exists, adding the numberhuman to their collection`);
+    Logger.info(
+      `user already exists, adding the numberhuman to their collection`
+    );
     // update the player stats first...
     user.numberhumansGuessed.push(number.uuid);
     user.numberhumans ??= [];
@@ -98,21 +120,21 @@ export async function updateUserStats(
       await interaction.followUp(
         joinStringArray([
           responseMessage,
-          `-# bonus attack: ${formatPercent(numberhuman.bonusAtk - 1)}, bonus hp: ${
-            formatPercent(numberhuman.bonusHP - 1)
-          }`,
-        ]),
+          `-# bonus attack: ${formatPercent(
+            numberhuman.bonusAtk - 1
+          )}, bonus hp: ${formatPercent(numberhuman.bonusHP - 1)}`,
+        ])
       );
     } else {
       user.numberhumansGuessedUnique.push(number.uuid);
       await interaction.followUp(
         joinStringArray([
           responseMessage,
-          `-# bonus attack: ${formatPercent(numberhuman.bonusAtk - 1)}, bonus hp: ${
-            formatPercent(numberhuman.bonusHP - 1)
-          }`,
+          `-# bonus attack: ${formatPercent(
+            numberhuman.bonusAtk - 1
+          )}, bonus hp: ${formatPercent(numberhuman.bonusHP - 1)}`,
           "woah is that a new numberhuman you caught??",
-        ]),
+        ])
       );
     }
     // and saves.
@@ -130,8 +152,10 @@ export async function updateUserStats(
       joinStringArray([
         responseMessage,
         `i've also created a profile for you with that numberhuman.`,
-        `-# bonus attack: ${formatPercent(numberhuman.bonusAtk)}, bonus hp: ${formatPercent(numberhuman.bonusHP)}`,
-      ]),
+        `-# bonus attack: ${formatPercent(
+          numberhuman.bonusAtk
+        )}, bonus hp: ${formatPercent(numberhuman.bonusHP)}`,
+      ])
     );
     await newUser.save();
   }
@@ -143,7 +167,9 @@ interface NumberhumanCreationOptions {
   bonusATK: number;
 }
 
-async function createNumberhuman(options: NumberhumanCreationOptions): Promise<NumberhumanData> {
+async function createNumberhuman(
+  options: NumberhumanCreationOptions
+): Promise<NumberhumanData> {
   const newHuman = new NumberhumanData();
   newHuman.bonusAtk = options.bonusATK;
   newHuman.bonusHP = options.bonusHP;
