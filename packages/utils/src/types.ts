@@ -15,14 +15,19 @@ import type {
  * The object structure that represents a slash command.
  */
 export interface Command extends ChatInputApplicationCommandData {
-  run: (client: Client, interaction: CommandInteraction<"raw" | "cached">) => void | Promise<void>;
+  run: (
+    client: Client,
+    interaction: CommandInteraction<"raw" | "cached">,
+  ) => void | Promise<void>;
   cooldown?: number | undefined;
 }
 
 /**
  * Utility type to represent slash commands being ran in a server.
  */
-export type ServerSlashCommandInteraction = ChatInputCommandInteraction<"cached" | "raw">;
+export type ServerSlashCommandInteraction = ChatInputCommandInteraction<
+  "cached" | "raw"
+>;
 
 export interface StoredNumberInfo {
   number: string | null;

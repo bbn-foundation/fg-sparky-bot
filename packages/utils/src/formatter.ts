@@ -9,14 +9,14 @@ export const loginFormatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(
   {
     dateStyle: "long",
     timeStyle: "short",
-  }
+  },
 );
 export const loggerFormatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(
   "en-US",
   {
     dateStyle: "short",
     timeStyle: "medium",
-  }
+  },
 );
 
 /**
@@ -35,7 +35,7 @@ export function formatPercent(number: number, precision = 1): string {
  */
 export function joinStringArray(
   array: (string | undefined | null)[],
-  joiner = "\n"
+  joiner = "\n",
 ): string {
   return array.filter(Boolean).join(joiner);
 }

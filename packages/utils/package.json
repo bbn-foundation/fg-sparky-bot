@@ -6,6 +6,7 @@
   "license": "GPL-3.0-or-later",
   "version": "1.2.4",
   "dependencies": {
+    "@sapphire/discord.js-utilities": "catalog:discord",
     "@sapphire/result": "catalog:utils",
     "chalk": "catalog:utils",
     "comptime.ts": "catalog:build",

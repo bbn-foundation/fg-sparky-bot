@@ -4,6 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+
+import { EvolutionType, getEvolutionBuff } from "@fg-sparky/utils";
 import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
 import type { NumberhumanStore } from "../numberdex/store.ts";
 
@@ -43,11 +45,10 @@ export class NumberhumanData extends BaseEntity {
   level = 0;
 
   /**
-   * The evolution of the numberhuman, please ask Stella what it does,
-   * cause I have no idea.
+   * The numberhuman's evolution, which applies a strong buff.
    */
-  @Column("integer")
-  evolution = 0;
+  @Column("text")
+  evolution: EvolutionType = EvolutionType.None;
 
   /**
    * Catch ID, incremented on a new catch.
@@ -60,7 +61,9 @@ export class NumberhumanData extends BaseEntity {
    */
   totalHP(store: NumberhumanStore): number {
     const baseData = store.get(this.id).expect("the numberhuman should exist");
-    return baseData.baseHP * this.bonusHP;
+    return (
+      baseData.baseHP * this.bonusHP * getEvolutionBuff(this.evolution, "hp")
+    );
   }
 
   /**
@@ -68,6 +71,8 @@ export class NumberhumanData extends BaseEntity {
    */
   totalAtk(store: NumberhumanStore): number {
     const baseData = store.get(this.id).expect("the numberhuman should exist");
-    return baseData.baseATK * this.bonusAtk;
+    return (
+      baseData.baseATK * this.bonusAtk * getEvolutionBuff(this.evolution, "atk")
+    );
   }
 }

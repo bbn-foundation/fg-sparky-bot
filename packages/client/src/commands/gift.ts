@@ -19,7 +19,7 @@ import { createButtonRow } from "./gift/buttons.ts";
 const Gift: Command = {
   async run(
     _client: Client,
-    interaction: CommandInteraction<"raw" | "cached">
+    interaction: CommandInteraction<"raw" | "cached">,
   ): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
     const amount = interaction.options.getNumber("amount", true);
@@ -29,7 +29,7 @@ const Gift: Command = {
 
     if (!giftingUser) {
       Logger.warn(
-        `user ${interaction.user.displayName} tried gifting but they dont have a profile`
+        `user ${interaction.user.displayName} tried gifting but they dont have a profile`,
       );
       await interaction.reply({
         content: `You don't even have a profile, go play FG sparky first!`,
@@ -40,7 +40,7 @@ const Gift: Command = {
 
     if (giftingUser.tokens < amount) {
       Logger.warn(
-        `user ${interaction.user.displayName} tried gifting but they dont have enough tokens`
+        `user ${interaction.user.displayName} tried gifting but they dont have enough tokens`,
       );
       await interaction.reply({
         content: `You don't have enough tokens to gift. You currently have ${giftingUser.tokens}.`,
@@ -51,26 +51,30 @@ const Gift: Command = {
 
     if (!userInDB) {
       Logger.warn(
-        `user ${interaction.user.displayName} tried gifting to a person that doesnt have a profile`
+        `user ${interaction.user.displayName} tried gifting to a person that doesnt have a profile`,
       );
       await interaction.reply({
-        content: `User ${userMention(
-          user.id
-        )} doesn't have a profile with FG sparky.`,
+        content: `User ${
+          userMention(
+            user.id,
+          )
+        } doesn't have a profile with FG sparky.`,
         flags: MessageFlags.Ephemeral,
       });
       return;
     }
 
     const content = [
-      `User ${userMention(interaction.user.id)} wants to gift ${userMention(
-        user.id
-      )} ${amount} <:terminusfinity:1444859277515690075>.`,
+      `User ${userMention(interaction.user.id)} wants to gift ${
+        userMention(
+          user.id,
+        )
+      } ${amount} <:terminusfinity:1444859277515690075>.`,
       "A tax of 5% will be applied. Do you accept?",
     ].join("\n");
 
     Logger.info(
-      `user ${interaction.user.displayName} wants to gift ${amount} tokens to ${user.displayName}`
+      `user ${interaction.user.displayName} wants to gift ${amount} tokens to ${user.displayName}`,
     );
     await interaction.reply({
       content,
@@ -79,9 +83,9 @@ const Gift: Command = {
 
     const handler = async (interact: Interaction) => {
       if (
-        interact.isButton() &&
-        (interact.customId === "gift-accept-button" ||
-          interact.customId === "gift-reject-button")
+        interact.isButton()
+        && (interact.customId === "gift-accept-button"
+          || interact.customId === "gift-reject-button")
       ) {
         clearTimeout(timeout);
         if (interact.customId === "gift-accept-button") {
@@ -96,7 +100,7 @@ const Gift: Command = {
             // dprint-ignore
             `${userMention(
               user.id
-            )} has accepted your gift. I wish you two a happy life together.`
+            )} has accepted your gift. I wish you two a happy life together.`,
           );
         } else {
           Logger.info(`user ${user.displayName} declined the gift`);
@@ -104,7 +108,7 @@ const Gift: Command = {
             components: [createButtonRow(false)],
           });
           await interaction.followUp(
-            `${userMention(user.id)} has dumped your tokens. Sorry about that.`
+            `${userMention(user.id)} has dumped your tokens. Sorry about that.`,
           );
         }
         client.off("interactionCreate", handler);
@@ -118,7 +122,7 @@ const Gift: Command = {
         components: [createButtonRow(false)],
       });
       await interaction.followUp(
-        `Sorry ${userMention(interaction.user.id)}, they ghosted you.`
+        `Sorry ${userMention(interaction.user.id)}, they ghosted you.`,
       );
     }, 5 * 60 * 1000);
 
