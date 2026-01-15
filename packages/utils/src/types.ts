@@ -17,7 +17,7 @@ import type {
 export interface Command extends ChatInputApplicationCommandData {
   run: (
     client: Client,
-    interaction: CommandInteraction<"raw" | "cached">
+    interaction: CommandInteraction<"raw" | "cached">,
   ) => void | Promise<void>;
   cooldown?: number | undefined;
 }

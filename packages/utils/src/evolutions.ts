@@ -34,7 +34,7 @@ export const EvolutionMap: Record<EvolutionType, [number, number]> = {
 
 export function getEvolutionBuff(
   evolution: EvolutionType,
-  type: "hp" | "atk"
+  type: "hp" | "atk",
 ): number {
   return EvolutionMap[evolution][type === "hp" ? 0 : 1];
 }

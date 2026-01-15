@@ -18,7 +18,7 @@ interface DifficultyTokenMap {
 // please don't mind the `as never` cast, that's just typescript being stupid
 // oxlint-disable no-unsafe-type-assertion
 export function getGainFromDifficulty<T extends keyof DifficultyTokenMap>(
-  difficulty: T
+  difficulty: T,
 ): DifficultyTokenMap[T] {
   switch (difficulty) {
     case "easy": {
@@ -38,7 +38,7 @@ export function getGainFromDifficulty<T extends keyof DifficultyTokenMap>(
 // oxlint-enable no-unsafe-type-assertion
 
 export function ordinalOf(
-  number: number
+  number: number,
 ): `${number}${"st" | "nd" | "rd" | "th"}` {
   const j = number % 10,
     k = number % 100;
@@ -55,7 +55,7 @@ export function ordinalOf(
 }
 
 export function countEntriesUnique<
-  T extends Record<Difficulties, { uuid: string }[]>
+  T extends Record<Difficulties, { uuid: string }[]>,
 >(numbers: T, difficulty: Difficulties, entries: string[]): number {
   const filtered = numbers[difficulty].filter((entry) => {
     for (const uuid of entries) {
@@ -67,7 +67,7 @@ export function countEntriesUnique<
 }
 
 export function countEntriesTotal<
-  T extends Record<Difficulties, { uuid: string }[]>
+  T extends Record<Difficulties, { uuid: string }[]>,
 >(numbers: T, difficulty: Difficulties, entries: string[]): number {
   const filtered = entries.filter((uuid) => {
     for (const entry of numbers[difficulty]) {
@@ -79,7 +79,7 @@ export function countEntriesTotal<
 }
 
 export function countHumansUnique<
-  T extends Record<Rarities, { uuid: string }[]>
+  T extends Record<Rarities, { uuid: string }[]>,
 >(numberhumans: T, rarity: Rarities, entries: string[]): number {
   const filtered = numberhumans[rarity].filter((entry) => {
     for (const uuid of entries) {
@@ -91,7 +91,7 @@ export function countHumansUnique<
 }
 
 export function countHumansTotal<
-  T extends Record<Rarities, { uuid: string }[]>
+  T extends Record<Rarities, { uuid: string }[]>,
 >(numberhumans: T, rarity: Rarities, entries: string[]): number {
   const filtered = entries.filter((uuid) => {
     for (const entry of numberhumans[rarity]) {
