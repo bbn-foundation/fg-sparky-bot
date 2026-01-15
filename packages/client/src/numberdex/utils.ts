@@ -109,17 +109,9 @@ export async function updateUserStats(
         bold(
           numberhuman.evolution,
         )
-      }! this gives them a ${
-        getEvolutionBuff(
-          numberhuman.evolution,
-          "hp",
-        )
-      } boost to HP and a ${
-        getEvolutionBuff(
-          numberhuman.evolution,
-          "atk",
-        )
-      } boost to their ATK!`,
+      }! this gives them a ${getEvolutionBuff(numberhuman.evolution, "hp")}x boost to HP and a ${
+        getEvolutionBuff(numberhuman.evolution, "atk")
+      }x boost to their ATK!`,
     );
   const user = await getUser(interaction.user.id, interaction.guildId);
   Logger.debug(
