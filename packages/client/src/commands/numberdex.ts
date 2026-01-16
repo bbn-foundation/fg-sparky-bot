@@ -19,7 +19,7 @@ import { Numberhumans } from "../stores.ts";
 const Numberdex: Command = {
   async run(_client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
-    if (!interaction.memberPermissions.has("ManageChannels")) {
+    if (!interaction.memberPermissions.has(["ManageChannels", "ManageRoles"])) {
       await interaction.reply(
         "you do not have permisison to set which channel fg sparky bot can spawn numberhumans in.",
       );
@@ -28,8 +28,9 @@ const Numberdex: Command = {
     switch (interaction.options.getSubcommand(true)) {
       case "add": {
         const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
+        const pingRole = interaction.options.getRole("ping-role");
         const cron = NumberdexBaker.add({
-          name: `numberdex-channel-${channel.id}`,
+          name: `numberdex-channel-${channel.id}${pingRole ? `-${pingRole.id}` : ""}`,
           cron: "@every_20_minutes",
           // oxlint-disable-next-line eslint/no-empty-function: will be immediately replaced
           async callback(): Promise<void> {},
@@ -57,10 +58,15 @@ const Numberdex: Command = {
           type: ApplicationCommandOptionType.Channel,
           required: true,
         },
+        {
+          name: "ping-role",
+          description: "A role to ping on every spawn.",
+          type: ApplicationCommandOptionType.Role,
+        },
       ],
     },
   ],
-  defaultMemberPermissions: PermissionFlagsBits.ManageChannels,
+  defaultMemberPermissions: PermissionFlagsBits.ManageChannels | PermissionFlagsBits.ManageRoles,
 };
 
 export default Numberdex;
