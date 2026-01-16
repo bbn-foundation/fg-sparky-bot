@@ -5,7 +5,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { Logger, loginFormatter } from "@fg-sparky/utils";
-import type { Client, Interaction } from "discord.js";
+import { ActivityType, type Client, type Interaction } from "discord.js";
+import packageJson from "../package.json" with { type: "json" };
 import { Commands } from "./commands/commands.ts";
 import { handleSlashCommand } from "./commands/listener.ts";
 import { NumberdexBaker } from "./numberdex/cron.ts";
@@ -16,6 +17,12 @@ export function registerHandlers(client: Client): void {
     Logger.notice(`Bot running as ${client.user.username} (started at ${formattedDate})`);
     Logger.notice(`Starting cron jobs...`);
     NumberdexBaker.bakeAll();
+    Logger.info(`Setting status`);
+    client.user.setActivity({
+      name: "custom-status",
+      state: `currently running on v${packageJson.version}`,
+      type: ActivityType.Custom,
+    })
   });
 
   client.on("interactionCreate", async (interaction: Interaction) => {
