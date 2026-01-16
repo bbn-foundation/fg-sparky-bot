@@ -131,11 +131,7 @@ export async function updateUserStats(
       await interaction.followUp(
         joinStringArray([
           responseMessage,
-          `-# bonus attack: ${
-            formatPercent(
-              numberhuman.bonusAtk - 1,
-            )
-          }, bonus hp: ${formatPercent(numberhuman.bonusHP - 1)}`,
+          `(ATK: ${formatPercent(numberhuman.bonusAtk - 1)}, HP: ${formatPercent(numberhuman.bonusHP - 1)})`,
           evolutionMessage,
         ]),
       );

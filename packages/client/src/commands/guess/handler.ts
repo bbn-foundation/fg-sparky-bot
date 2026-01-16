@@ -81,7 +81,7 @@ export function handleResponse(
               "perhaps, a jet2 holiday may interest you?",
               "hey you guessed correctly, nice job!",
               `you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`,
-              currentStreak > 0 ? `-# current streak count: ${currentStreak.toString()}` : "",
+              currentStreak > 0 ? `You currently have a streak of ${currentStreak.toString()}, keep it up!` : "",
             ]),
           );
         }
@@ -89,7 +89,7 @@ export function handleResponse(
           joinStringArray([
             "hey you guessed correctly, nice job!",
             `you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`,
-            currentStreak > 0 ? `-# current streak count: ${currentStreak.toString()}` : "",
+            currentStreak > 0 ? `You currently have a streak of ${currentStreak.toString()}, keep it up!` : "",
           ]),
         );
         // and saves.

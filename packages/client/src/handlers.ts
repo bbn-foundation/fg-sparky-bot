@@ -22,7 +22,7 @@ export function registerHandlers(client: Client): void {
       name: "custom-status",
       state: `currently running on v${packageJson.version}`,
       type: ActivityType.Custom,
-    })
+    });
   });
 
   client.on("interactionCreate", async (interaction: Interaction) => {
