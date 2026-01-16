@@ -9,7 +9,8 @@ import {
   userMention,
 } from "discord.js";
 import { Responses } from "../stores.ts";
-import { createButtonRow, spawnNumberhuman, updateUserStats } from "./utils.ts";
+import { updateUserStats } from "./users.ts";
+import { createButtonRow, spawnNumberhuman } from "./utils.ts";
 
 const createGuessModal = (channelId: string): ModalComponentData => ({
   title: "yeah",
