@@ -19,7 +19,7 @@ export class NumberhumanData extends BaseEntity {
    * Catch ID, incremented on a new catch.
    */
   @PrimaryGeneratedColumn("increment")
-  catchId = 0;
+  catchId: number | undefined;
 
   /**
    * The UUID of the numberhuman type.

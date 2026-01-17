@@ -48,6 +48,6 @@ export default async function numberdexShowHumans(
   if (dbUser === null) return;
 
   await interaction.reply({
-    content: createCollectionMessage(user, pageNumber, dbUser.numberhumans),
+    content: createCollectionMessage(user, pageNumber, dbUser.numberhumans!),
   });
 }

@@ -8,7 +8,7 @@ import {
   joinStringArray,
   Logger,
 } from "@fg-sparky/utils";
-import { bold, italic, type ModalMessageModalSubmitInteraction, userMention } from "discord.js";
+import { bold, italic, userMention, type ModalMessageModalSubmitInteraction } from "discord.js";
 import { Responses } from "../stores.ts";
 
 export async function updateUserStats(
