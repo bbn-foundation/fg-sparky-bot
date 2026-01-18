@@ -61,6 +61,10 @@ const User: Command = {
             { name: "tokens", value: LeaderboardDisplayType.Tokens },
             { name: "total-entries", value: LeaderboardDisplayType.TotalEntries },
             { name: "unique-entries", value: LeaderboardDisplayType.UniqueEntries },
+            { name: "total-numberhumans", value: LeaderboardDisplayType.TotalNumberhumans },
+            { name: "unique-numberhumans", value: LeaderboardDisplayType.UniqueNumberhumans },
+            { name: "best-numberhuman", value: LeaderboardDisplayType.BestNumberhuman },
+            { name: "highest-streaks", value: LeaderboardDisplayType.HighestStreak },
           ],
         },
         {
