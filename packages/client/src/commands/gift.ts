@@ -11,10 +11,13 @@ import {
   type Client,
   type CommandInteraction,
   type Interaction,
+  type InteractionResponse,
   MessageFlags,
   userMention,
 } from "discord.js";
 import { createButtonRow } from "./gift/buttons.ts";
+
+const giftCollection = new WeakMap<InteractionResponse, string>();
 
 const Gift: Command = {
   async run(
@@ -22,7 +25,7 @@ const Gift: Command = {
     interaction: CommandInteraction<"raw" | "cached">,
   ): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
-    const amount = interaction.options.getNumber("amount", true);
+    const amount = interaction.options.getInteger("amount", true);
     const user = interaction.options.getUser("user", true);
     const userInDB = await getUser(user.id, interaction.guildId);
     const giftingUser = await getUser(interaction.user.id, interaction.guildId);
@@ -44,6 +47,19 @@ const Gift: Command = {
       );
       await interaction.reply({
         content: `You don't have enough tokens to gift. You currently have ${giftingUser.tokens}.`,
+        flags: MessageFlags.Ephemeral,
+      });
+      return;
+    }
+
+    if (amount <= 0) {
+      Logger.warn(`user ${interaction.user.displayName} tried gifting an invalid amount of ${amount}`);
+      await interaction.reply({
+        content: `You can't gift ${
+          amount < 0
+            ? "negative tokens silly. Are you trying to rob them?"
+            : "nothing silly, don't even call it a gift."
+        }`,
         flags: MessageFlags.Ephemeral,
       });
       return;
@@ -76,10 +92,11 @@ const Gift: Command = {
     Logger.info(
       `user ${interaction.user.displayName} wants to gift ${amount} tokens to ${user.displayName}`,
     );
-    await interaction.reply({
+    const reply = await interaction.reply({
       content,
       components: [createButtonRow()],
     });
+    giftCollection.set(reply, user.id);
 
     const handler = async (interact: Interaction) => {
       if (
@@ -89,9 +106,18 @@ const Gift: Command = {
       ) {
         clearTimeout(timeout);
         if (interact.customId === "gift-accept-button") {
+          if (giftCollection.get(reply) !== interact.user.id) {
+            Logger.warn(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
+            await interact.reply({
+              content: "You are not the person being gifted, greedy!",
+              flags: MessageFlags.Ephemeral,
+            });
+            return;
+          }
           Logger.info(`user ${user.displayName} accepted the gift`);
           userInDB.tokens += Math.floor(amount * 0.95);
           giftingUser.tokens -= amount;
+          giftCollection.delete(reply);
           await userInDB.save();
           await interaction.editReply({
             components: [createButtonRow(false)],
@@ -103,7 +129,16 @@ const Gift: Command = {
             )} has accepted your gift. I wish you two a happy life together.`,
           );
         } else {
+          if (giftCollection.get(reply) !== interact.user.id) {
+            Logger.warn(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
+            await interact.reply({
+              content: "You are not the person being gifted, greedy!",
+              flags: MessageFlags.Ephemeral,
+            });
+            return;
+          }
           Logger.info(`user ${user.displayName} declined the gift`);
+          giftCollection.delete(reply);
           await interaction.editReply({
             components: [createButtonRow(false)],
           });
@@ -118,6 +153,7 @@ const Gift: Command = {
     const timeout = setTimeout(async () => {
       client.off("interactionCreate", handler);
       Logger.info(`user ${user.displayName} took too long to accept`);
+      giftCollection.delete(reply);
       await interaction.editReply({
         components: [createButtonRow(false)],
       });
@@ -132,15 +168,15 @@ const Gift: Command = {
   name: "gift",
   options: [
     {
-      name: "amount",
-      description: "How much to send the person",
-      type: ApplicationCommandOptionType.Number,
-      required: true,
-    },
-    {
       name: "user",
       description: "The person to send the gift to",
       type: ApplicationCommandOptionType.User,
+      required: true,
+    },
+    {
+      name: "amount",
+      description: "How much to send the person",
+      type: ApplicationCommandOptionType.Integer,
       required: true,
     },
   ],
