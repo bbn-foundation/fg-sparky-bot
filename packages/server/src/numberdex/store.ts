@@ -18,6 +18,13 @@ export class NumberhumanStore extends DataStore<NumberhumanInfo> {
   }
 
   /**
+   * Gets the total amount of entries that has been added to FG sparky.
+   */
+  get UNIQUE_ENTRIES(): number {
+    return this.data.length;
+  }
+
+  /**
    * Returns a random entry from the collection of entries.
    * @returns The entry.
    */

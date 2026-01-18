@@ -1,7 +1,9 @@
-import { getUser } from "@fg-sparky/server";
-import { formatPercent, joinStringArray, type ServerSlashCommandInteraction } from "@fg-sparky/utils";
-import type { Client } from "discord.js";
-import { Numbers } from "../../stores.ts";
+import { getUser, NumberhumanData } from "@fg-sparky/server";
+import { EvolutionType, formatPercent, joinStringArray, type ServerSlashCommandInteraction } from "@fg-sparky/utils";
+import { bold, chatInputApplicationCommandMention, type Client } from "discord.js";
+import { Numberhumans, Numbers } from "../../stores.ts";
+
+const slashCommandMention = chatInputApplicationCommandMention("numberdex show-humans", process.env.NODE_ENV === "development" ? "1454578425414291613" : "1452067362458308820");
 
 export default async function userShow(
   _: Client,
@@ -17,30 +19,49 @@ export default async function userShow(
       medium: Numbers.countEntriesUnique("medium", uniqueGuessed) / Numbers.UNIQUE_MEDIUM_ENTRIES,
       hard: Numbers.countEntriesUnique("hard", uniqueGuessed) / Numbers.UNIQUE_HARD_ENTRIES,
       legendary: Numbers.countEntriesUnique("legendary", uniqueGuessed) / Numbers.UNIQUE_LEGENDARY_ENTRIES,
+      numberdex: numberhumansGuessedUnique.length / Numberhumans.UNIQUE_ENTRIES,
     };
+    const numberhumans = await NumberhumanData.find({
+      where: {
+        caughtBy: {
+          id: userInfo.id,
+          guildId: userInfo.guildId,
+        },
+      },
+      relations: {
+        caughtBy: true,
+      }
+    });
+
     const content = joinStringArray([
       `# Profile information for ${discordUser.displayName} (${discordUser.username})`,
-      "## fg sparky:",
-      `terminus tokens: ${userInfo.tokens.toString()} <:terminusfinity:1444859277515690075>`,
-      `highest guessing streak: ${Math.max(userInfo.bestStreak - 1, 0).toString()}`,
-      `numbers guessed: ${guessedEntries.length.toString()} (total), ${uniqueGuessed.length.toString()} (unique) [${
+      "## FG Sparky:",
+      `Your highest guessing streak before failing waas ${
+        bold(Math.max(userInfo.bestStreak - 1, 0).toString())}.`,
+      `Terminus Tokens earned: ${userInfo.tokens.toString()} <:terminusfinity:1444859277515690075>`,
+      `In total, you have guessed ${bold(guessedEntries.length.toString())} entries correctly. Out of those, ${uniqueGuessed.length.toString()} were a unique entry within the number store, meaning you are ${
         formatPercent(percentage.all)
-      }]`,
-      `- easy numbers: ${Numbers.countEntriesTotal("easy", guessedEntries).toString()} (total), ${
+      } of the way to completing FG sparky.`,
+      `### Numbers guessed by difficulty:`,
+      `- Easy numbers: ${Numbers.countEntriesTotal("easy", guessedEntries).toString()} (total), ${
         Numbers.countEntriesUnique("easy", uniqueGuessed).toString()
       } (unique) [${formatPercent(percentage.easy)}]`,
-      `- medium numbers: ${Numbers.countEntriesTotal("medium", guessedEntries).toString()} (total), ${
+      `- Medium numbers: ${Numbers.countEntriesTotal("medium", guessedEntries).toString()} (total), ${
         Numbers.countEntriesUnique("medium", uniqueGuessed).toString()
       } (unique) [${formatPercent(percentage.medium)}]`,
-      `- hard numbers: ${Numbers.countEntriesTotal("hard", guessedEntries).toString()} (total), ${
+      `- Hard numbers: ${Numbers.countEntriesTotal("hard", guessedEntries).toString()} (total), ${
         Numbers.countEntriesUnique("hard", uniqueGuessed).toString()
       } (unique) [${formatPercent(percentage.hard)}]`,
-      `- legendary numbers: ${Numbers.countEntriesTotal("legendary", guessedEntries).toString()} (total), ${
+      `- Legendary numbers: ${Numbers.countEntriesTotal("legendary", guessedEntries).toString()} (total), ${
         Numbers.countEntriesUnique("legendary", uniqueGuessed).toString()
       } (unique) [${formatPercent(percentage.legendary)}]`,
       "",
-      "## numberdex:",
-      `numberhumans caught: ${numberhumansGuessed.length.toString()} (total), ${numberhumansGuessedUnique.length.toString()} (unique)`,
+      "## Numberdex stats:",
+      `You have caught ${numberhumansGuessed.length.toString()} in total, ${numberhumansGuessedUnique.length.toString()} of which were unique catches, meaning you are ${formatPercent(percentage.numberdex)} of the way there to completing the Numberdex set.`,
+      `Out of the ${numberhumansGuessed.length.toString()} numberhumans catched:`,
+      `- ${numberhumansGuessed.length - numberhumans.length} of them were caught before v0.14.0, the update that added stats to numberhumans.`,
+      `- ${numberhumans.filter(value => value.evolution !== EvolutionType.None).length} had an evolution.`,
+      `View more numberhuman information by running ${slashCommandMention}.`
     ]);
     await interaction.reply({
       content,
