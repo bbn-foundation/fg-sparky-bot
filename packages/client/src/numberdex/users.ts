@@ -66,11 +66,7 @@ export async function updateUserStats(
       await interaction.followUp(
         joinStringArray([
           responseMessage,
-          `-# bonus attack: ${
-            formatPercent(
-              numberhuman.bonusAtk - 1,
-            )
-          }, bonus hp: ${formatPercent(numberhuman.bonusHP - 1)}`,
+          `(ATK: ${formatPercent(numberhuman.bonusAtk - 1)}, HP: ${formatPercent(numberhuman.bonusHP - 1)})`,
           "woah is that a new numberhuman you caught??",
           evolutionMessage,
         ]),
@@ -91,11 +87,7 @@ export async function updateUserStats(
       joinStringArray([
         responseMessage,
         `i've also created a profile for you with that numberhuman.`,
-        `-# bonus attack: ${
-          formatPercent(
-            numberhuman.bonusAtk,
-          )
-        }, bonus hp: ${formatPercent(numberhuman.bonusHP)}`,
+        `(ATK: ${formatPercent(numberhuman.bonusAtk - 1)}, HP: ${formatPercent(numberhuman.bonusHP - 1)})`,
         evolutionMessage,
       ]),
     );
