@@ -1,5 +1,56 @@
 # changelog
 
+## 2.0.0-beta.1 - January 18th, 2026
+
+no v1.3.0 i guess
+
+### notable changes:
+
+- [#34](https://github.com/skylafalls/fg-sparky-bot/pull/34) - the internal structure for numberhumans has been fixed,
+  but this comes at the cost of losing your existing numberhumans that had stats.
+  it wasn't fully fuctional anyways but, sorry.
+- [#33](https://github.com/skylafalls/fg-sparky-bot/pull/33) - because of the above changes, you can now view your
+  collection of numberhumans that you have caught. you cannot view numberhumans that do not have an ATK/HP
+  bonus since those had no proper internal data structure before v0.14.0.
+  - run /numberdex show-humans to see the numberhumans you have caught.
+- [#37](https://github.com/skylafalls/fg-sparky-bot/pull/37) - several bugs that existed in /gift was fixed. mainly:
+  - you can no longer gift decimal, negative, or zero tokens
+  - you cannot accept/reject gifts if you aren't the one receiving them.
+- \[[`e4b9db52`](https://github.com/skylafalls/fg-sparky-bot/commit/e4b9db521d223fde1cf7f36d374690bb91972c9f)] - the `/user show` subcommand now displays information in a prettier way.
+  it also shows more useful information related to numberdex/fg sparky.
+- \[[`cf8b3d4b`](https://github.com/skylafalls/fg-sparky-bot/commit/cf8b3d4b357ec8050e36590e0e8a4b7181b8782a)] - there is additional leaderboard types related to numberdex.
+  you can now see who has the best numberhuman and the highest guessing streaks.
+
+### BREAKING CHANGES:
+
+- \[[`a6d61849`](https://github.com/skylafalls/fg-sparky-bot/commit/a6d6184939c6180310cdbce54ac1396baeef458f)] - fix(users)!: fix internal schema for user profiles/numberhumans ([#34](https://github.com/skylafalls/fg-sparky-bot/pull/34))
+
+### features:
+
+- \[[`b5590534`](https://github.com/skylafalls/fg-sparky-bot/commit/b5590534218e4c7dd1d40eef524de1ef42bed9f4)] - feat(bot): show the version running in the status
+- \[[`7430150c`](https://github.com/skylafalls/fg-sparky-bot/commit/7430150c8d66bdb44ee8f25bb429bd35944a65c1)] - feat(bot): improve some responses
+- \[[`4988dab8`](https://github.com/skylafalls/fg-sparky-bot/commit/4988dab8d11409578dd3844e2e256bf21f67c261)] - feat(users): let people view their numberhuman collections
+- \[[`e4b9db52`](https://github.com/skylafalls/fg-sparky-bot/commit/e4b9db521d223fde1cf7f36d374690bb91972c9f)] - feat(user/show): prettify the informations shown
+- \[[`cf8b3d4b`](https://github.com/skylafalls/fg-sparky-bot/commit/cf8b3d4b357ec8050e36590e0e8a4b7181b8782a)] - feat(user/lb): add additional leaaderboard types
+
+### refactors:
+
+- \[[`39fe839b`](https://github.com/skylafalls/fg-sparky-bot/commit/39fe839bb17c9bedf275d451a04dcd303d75c113)] - refactor(numberdex): separate catch responder to separate file
+
+### fixes:
+
+- \[[`bc858617`](https://github.com/skylafalls/fg-sparky-bot/commit/bc8586170ec4c4524cce4141b1c87a0a14922750)] - fix(build): improve build scripts
+- \[[`3df7780b`](https://github.com/skylafalls/fg-sparky-bot/commit/3df7780bcdffd1c474a03e93e9f76655007b051c)] - fix(numberdex): remove the one-to-many relationship side
+- \[[`653915f4`](https://github.com/skylafalls/fg-sparky-bot/commit/653915f42c6334f488710a9e46eef98fb9273d3f)] - fix(gifts): various fixes to gifting ([#37](https://github.com/skylafalls/fg-sparky-bot/pull/37))
+- \[[`e72b3a5c`](https://github.com/skylafalls/fg-sparky-bot/commit/e72b3a5c9714b98a7d9495cf723c02d60bd2bc43)] - fix(numberdex/reply): fix inconsistent replies
+- \[[`52030e73`](https://github.com/skylafalls/fg-sparky-bot/commit/52030e73d56c53c5cbb21c08e2aa3f8487cc718b)] - fix(misc): fix some typos
+
+### chores:
+
+- \[[`2f5d4da6`](https://github.com/skylafalls/fg-sparky-bot/commit/2f5d4da60297cd721b3b4173bdb1cc1856123458)] - chore(numberdex/responses): add a lot more responses
+- \[[`1180e9a1`](https://github.com/skylafalls/fg-sparky-bot/commit/1180e9a1e0719b56184b8f75b2bb714ec8c2f260)] - chore(deps): update type-related deps
+- \[[`bac257fa`](https://github.com/skylafalls/fg-sparky-bot/commit/bac257fad64af0dbfa2cf907cfc1311d95d726c0)] - chore(fmt): format stuff
+
 ## 1.3.0-beta.1 - January 11th, 2026
 
 first prerelease for v1.3.0
