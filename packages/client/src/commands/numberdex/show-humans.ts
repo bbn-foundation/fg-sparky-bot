@@ -1,6 +1,6 @@
 import { NumberhumanData, UserProfile } from "@fg-sparky/server";
 import type { ServerSlashCommandInteraction } from "@fg-sparky/utils";
-import { chatInputApplicationCommandMention, italic, type Client, type User } from "discord.js";
+import { chatInputApplicationCommandMention, type Client, italic, type User } from "discord.js";
 import { Numberhumans } from "../../stores.ts";
 
 function capitalize<T extends string>(val: T): Capitalize<T> {
@@ -8,7 +8,10 @@ function capitalize<T extends string>(val: T): Capitalize<T> {
   return `${val.charAt(0).toUpperCase()}${val.slice(1)}` as Capitalize<T>;
 }
 
-const slashCommandMention = chatInputApplicationCommandMention("numberdex show-humans", process.env.NODE_ENV === "development" ? "1454578425414291613" : "1452067362458308820");
+const slashCommandMention = chatInputApplicationCommandMention(
+  "numberdex show-humans",
+  process.env.NODE_ENV === "development" ? "1454578425414291613" : "1452067362458308820",
+);
 
 function createCollectionMessage(user: User, page: number, numberhumans: NumberhumanData[]): string {
   const header = [

@@ -3,7 +3,10 @@ import { EvolutionType, formatPercent, joinStringArray, type ServerSlashCommandI
 import { bold, chatInputApplicationCommandMention, type Client } from "discord.js";
 import { Numberhumans, Numbers } from "../../stores.ts";
 
-const slashCommandMention = chatInputApplicationCommandMention("numberdex show-humans", process.env.NODE_ENV === "development" ? "1454578425414291613" : "1452067362458308820");
+const slashCommandMention = chatInputApplicationCommandMention(
+  "numberdex show-humans",
+  process.env.NODE_ENV === "development" ? "1454578425414291613" : "1452067362458308820",
+);
 
 export default async function userShow(
   _: Client,
@@ -30,16 +33,17 @@ export default async function userShow(
       },
       relations: {
         caughtBy: true,
-      }
+      },
     });
 
     const content = joinStringArray([
       `# Profile information for ${discordUser.displayName} (${discordUser.username})`,
       "## FG Sparky:",
-      `Your highest guessing streak before failing waas ${
-        bold(Math.max(userInfo.bestStreak - 1, 0).toString())}.`,
+      `Your highest guessing streak before failing waas ${bold(Math.max(userInfo.bestStreak - 1, 0).toString())}.`,
       `Terminus Tokens earned: ${userInfo.tokens.toString()} <:terminusfinity:1444859277515690075>`,
-      `In total, you have guessed ${bold(guessedEntries.length.toString())} entries correctly. Out of those, ${uniqueGuessed.length.toString()} were a unique entry within the number store, meaning you are ${
+      `In total, you have guessed ${
+        bold(guessedEntries.length.toString())
+      } entries correctly. Out of those, ${uniqueGuessed.length.toString()} were a unique entry within the number store, meaning you are ${
         formatPercent(percentage.all)
       } of the way to completing FG sparky.`,
       `### Numbers guessed by difficulty:`,
@@ -57,11 +61,15 @@ export default async function userShow(
       } (unique) [${formatPercent(percentage.legendary)}]`,
       "",
       "## Numberdex stats:",
-      `You have caught ${numberhumansGuessed.length.toString()} in total, ${numberhumansGuessedUnique.length.toString()} of which were unique catches, meaning you are ${formatPercent(percentage.numberdex)} of the way there to completing the Numberdex set.`,
+      `You have caught ${numberhumansGuessed.length.toString()} in total, ${numberhumansGuessedUnique.length.toString()} of which were unique catches, meaning you are ${
+        formatPercent(percentage.numberdex)
+      } of the way there to completing the Numberdex set.`,
       `Out of the ${numberhumansGuessed.length.toString()} numberhumans catched:`,
-      `- ${numberhumansGuessed.length - numberhumans.length} of them were caught before v0.14.0, the update that added stats to numberhumans.`,
+      `- ${
+        numberhumansGuessed.length - numberhumans.length
+      } of them were caught before v0.14.0, the update that added stats to numberhumans.`,
       `- ${numberhumans.filter(value => value.evolution !== EvolutionType.None).length} had an evolution.`,
-      `View more numberhuman information by running ${slashCommandMention}.`
+      `View more numberhuman information by running ${slashCommandMention}.`,
     ]);
     await interaction.reply({
       content,
