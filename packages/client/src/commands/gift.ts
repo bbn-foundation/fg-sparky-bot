@@ -52,6 +52,19 @@ const Gift: Command = {
       return;
     }
 
+    if (amount <= 0) {
+      Logger.warn(`user ${interaction.user.displayName} tried gifting an invalid amount of ${amount}`);
+      await interaction.reply({
+        content: `You can't gift ${
+          amount < 0
+            ? "negative tokens silly. Are you trying to rob them?"
+            : "nothing silly, don't even call it a gift."
+          }`,
+        flags: MessageFlags.Ephemeral,
+      });
+      return;
+    }
+
     if (!userInDB) {
       Logger.warn(
         `user ${interaction.user.displayName} tried gifting to a person that doesnt have a profile`,
