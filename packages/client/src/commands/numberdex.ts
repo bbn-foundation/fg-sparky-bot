@@ -21,14 +21,14 @@ import numberdexShowHumans from "./numberdex/show-humans.ts";
 const Numberdex: Command = {
   async run(_client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
-    if (!interaction.memberPermissions.has("ManageChannels")) {
-      await interaction.reply(
-        "you do not have permissison to set which channel fg sparky bot can spawn numberhumans in.",
-      );
-      return;
-    }
     switch (interaction.options.getSubcommand(true)) {
       case "add": {
+        if (!interaction.memberPermissions.has("ManageChannels")) {
+          await interaction.reply(
+            "you do not have permissison to set which channel fg sparky bot can spawn numberhumans in.",
+          );
+          return;
+        }
         const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
         const cron = NumberdexBaker.add({
           name: `numberdex-channel-${channel.id}`,
