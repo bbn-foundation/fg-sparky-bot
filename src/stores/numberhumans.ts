@@ -4,10 +4,11 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { Option, type Rarities } from "@fg-sparky/utils";
-import { randomRarity } from "../helpers.ts";
-import { DataStore } from "../store.ts";
+import { randomRarity } from "#utils/randoms.ts";
+import type { Rarities } from "#utils/types.ts";
+import { Option } from "@sapphire/result";
 import { NumberhumanInfo } from "./schema.ts";
+import { DataStore } from "./store.ts";
 
 export class NumberhumanStore extends DataStore<NumberhumanInfo> {
   /**

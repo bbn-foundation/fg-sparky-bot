@@ -4,7 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { type Rarities, type Responses, z, type ZodType } from "@fg-sparky/utils";
+import type { Difficulties, Rarities, Responses } from "#utils";
+import { z, type ZodType } from "zod";
 
 export interface NumberhumanInfo {
   uuid: string;
@@ -38,4 +39,24 @@ export const ResponseInfo: ZodType<ResponseInfo> = z.strictObject({
   uuid: z.uuid(),
   value: z.string(),
   type: z.enum(["fail", "success", "flee", "spawn"]),
+});
+
+
+export interface NumberInfo {
+  uuid: string;
+  image: string;
+  hashedName: string;
+  /**
+   * possibly null because of legendaries
+   */
+  name: string | null;
+  difficulty: Difficulties;
+}
+
+export const NumberInfo: ZodType<NumberInfo> = z.strictObject({
+  uuid: z.uuid(),
+  image: z.string(),
+  hashedName: z.hash("sha512"),
+  name: z.string().nullable(),
+  difficulty: z.enum(["easy", "medium", "hard", "legendary"]),
 });

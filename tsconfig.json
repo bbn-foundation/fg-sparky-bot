@@ -29,7 +29,10 @@
     "types": ["bun", "node"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "#utils/*.ts": ["./src/utils/*.ts"]
+    }
   },
   "include": ["**/*.ts"]
 }

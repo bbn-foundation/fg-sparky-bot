@@ -1,7 +1,7 @@
-import { Option } from "@fg-sparky/utils";
+import { Option } from "@sapphire/result";
 import { bold, userMention } from "discord.js";
-import { DataStore } from "../store.ts";
 import { ResponseInfo } from "./schema.ts";
+import { DataStore } from "./store.ts";
 
 interface SpawnResponseArgs {
   type: "spawn";

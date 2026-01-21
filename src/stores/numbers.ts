@@ -4,10 +4,11 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import { type Difficulties, type None, Option, type StoredNumberInfo } from "@fg-sparky/utils";
-import { randomDifficulty } from "../helpers.ts";
-import { DataStore } from "../store.ts";
+import { randomDifficulty } from "#utils/randoms.ts";
+import type { Difficulties, StoredNumberInfo } from "#utils/types.ts";
+import { Option, type None } from "@sapphire/result";
 import { NumberInfo } from "./schema.ts";
+import { DataStore } from "./store.ts";
 
 export class NumberStore extends DataStore<NumberInfo> {
   /**
