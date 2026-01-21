@@ -3413,5 +3413,415 @@
     "uuid": "bcb802f5-78bf-4c41-900f-40aca6a58788",
     "value": "This Numberhuman is very- wait, where'd it go?",
     "type": "flee"
+  },
+  {
+    "uuid": "e8887f5f-dbc1-45dc-b691-f11ce51804d5",
+    "value": "NumberDex: You stupid.\n{mention}: Nah nah.\nNumberDex: What's this Numberhuman?\n{mention}: {guess}\nNumberDex: You stupid!",
+    "type": "fail"
+  },
+  {
+    "uuid": "a9dc42e9-73f1-4527-8096-5f068a07a0e6",
+    "value": "Fun Fictional Googology Facts",
+    "type": "spawn"
+  },
+  {
+    "uuid": "21d40b2c-fd14-4b48-8756-3181eda17672",
+    "value": "This Numberhuman is so grinded trinded.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "2d81e3aa-ec96-4038-9cac-493af38581ca",
+    "value": "Perennial Smeling of the Feet Eternal.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "85deeb05-fe20-4ce0-bc7c-d9f237481265",
+    "value": "NumberDexham",
+    "type": "spawn"
+  },
+  {
+    "uuid": "e07aa1ce-11b8-4b49-b329-c1db6628833e",
+    "value": "😏",
+    "type": "spawn"
+  },
+  {
+    "uuid": "a6b79e47-dc36-4bb4-8f1f-0db0a4ccb1ff",
+    "value": "NumberDex Spambox",
+    "type": "spawn"
+  },
+  {
+    "uuid": "945abd24-ad40-48f1-a85a-cd5645e629e1",
+    "value": "trumboan 🎺",
+    "type": "spawn"
+  },
+  {
+    "uuid": "fda95d7a-5dda-4d46-90ef-e3490c335fa6",
+    "value": "This Numberhuman got the Double Rainbow Card on Behavior Card Day.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "6882d752-888b-4f36-928d-84efffcb4145",
+    "value": "This Numberhuman got the Black Hole Card on Behavior Card Day.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "dfa713fe-1c9a-4ec2-83db-bc012a5be0f0",
+    "value": "I fear no man… but that thing… it scares me.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "691073a5-a640-4413-978e-873d24535e96",
+    "value": "Hyperium Infinitism Mukbang Video.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "a676cd22-c763-4d51-b418-565b98ca584d",
+    "value": "It does’t fit to quantom",
+    "type": "spawn"
+  },
+  {
+    "uuid": "17b825c0-9127-48c3-8306-eb12cd41b344",
+    "value": "LetterDex when",
+    "type": "spawn"
+  },
+  {
+    "uuid": "b5e07f62-d6a1-453c-8d1a-8853421bf47c",
+    "value": "On January 14, 2026, the biggest stroke of luck happened to Stella while corrupting Super Mario Bros 3.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "9ed12659-293e-4e37-b609-63b30cb098ae",
+    "value": "It’s not just about catching Numberhumans—it’s also about being the first to catch them.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "5b127ea6-7498-4288-9393-8dd626df7fbf",
+    "value": "Three, three, everybody sing with me…",
+    "type": "spawn"
+  },
+  {
+    "uuid": "a8496089-4515-432a-8fae-3d34c4963aa6",
+    "value": "It would be so noxious if you could catch this Numberhuman, dude",
+    "type": "spawn"
+  },
+  {
+    "uuid": "eaf5c018-d5b6-4191-ad96-979e0f9b43b4",
+    "value": "adkv sal rtyA baolite aleph nl",
+    "type": "spawn"
+  },
+  {
+    "uuid": "91b3775b-4828-4c60-b0d3-6e79625c22f7",
+    "value": "who invited this dumbass to numberdex 🥀 broyond loe is NOT part of the team",
+    "type": "spawn"
+  },
+  {
+    "uuid": "de2f7750-ba21-411b-a8b7-7c288d799748",
+    "value": "the numberhuman fled.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "155f7767-6ccf-4e84-ad0e-6177bb80e4bd",
+    "value": "Time to play! No? Well, time to die!",
+    "type": "spawn"
+  },
+  {
+    "uuid": "94a3b308-441f-4215-a425-750a2b4034dc",
+    "value": "You like catching Numberhumans, do you?",
+    "type": "spawn"
+  },
+  {
+    "uuid": "81986a90-175f-4eb3-aa62-75faecf9ce48",
+    "value": "I NOW ABOMINATE NUMBERDEX! WHY? BECAUSE I FOUND THIS GAME TO BE DEMONIC!",
+    "type": "spawn"
+  },
+  {
+    "uuid": "8adb10be-88e8-43c9-9242-42c0491303d8",
+    "value": "Numberthrex",
+    "type": "spawn"
+  },
+  {
+    "uuid": "796950f9-4250-4de0-81a4-8bb6db97afea",
+    "value": "here’s a numberhuman for archivo numberhuman black",
+    "type": "spawn"
+  },
+  {
+    "uuid": "2a2f6f66-0e9d-45c5-ab45-3e20eb9f8ae3",
+    "value": "NumberDex BIOS Corruptions",
+    "type": "spawn"
+  },
+  {
+    "uuid": "0c493ad1-2e9c-420e-ae24-033a091f2bcd",
+    "value": "Polling the stock market",
+    "type": "spawn"
+  },
+  {
+    "uuid": "0330ab11-b10f-449d-898d-25c17618d814",
+    "value": "Everyone knows NumberDex is cool as fuck, but who knows what the Numberhumans are thinking? And why do we think of Numberhumans as fondly as the mythical (nonexistent?) Dr. Pepper? Perchance.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "c7bb08ba-1460-45a8-958a-4c905181fcf3",
+    "value": "Tttttttttttt",
+    "type": "spawn"
+  },
+  {
+    "uuid": "c2758b59-ac70-460c-a3aa-d2af171dc535",
+    "value": "Do you even lift bro",
+    "type": "spawn"
+  },
+  {
+    "uuid": "22fe8fe7-0a93-486a-8a5e-ff2e4cb39750",
+    "value": "Do the ice cream and cake!",
+    "type": "spawn"
+  },
+  {
+    "uuid": "e313350b-00cb-4475-80e7-dbeed5becc12",
+    "value": "I just wanna be part of your SYMPHONYYYYY 🐬🐬🐬🐬🐬",
+    "type": "spawn"
+  },
+  {
+    "uuid": "4149f0af-50d0-4104-bc63-125000d31c8c",
+    "value": "Creeper? Aw man.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "9c9cefb5-bb87-4793-8b6b-38d5319df8ee",
+    "value": "I’m no etymology nerd.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "43a10695-22a2-4006-a098-85274a12d11a",
+    "value": "human1011 is the goat in my opinion.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "e337b838-a7cd-40a2-a509-8aaaff9e4438",
+    "value": "This spawn was brought to you by Sky’s Funny Doings……… International.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "f63a2453-d442-46da-b9bc-d1c2b22d302a",
+    "value": "Another Numberhuman slop again? That’s it. What if I throw the PC out of the window?",
+    "type": "spawn"
+  },
+  {
+    "uuid": "67548681-5b80-4893-957c-d2c3a9f9c88d",
+    "value": "Why u bully me?",
+    "type": "spawn"
+  },
+  {
+    "uuid": "7f70b650-cc46-4fc5-8e63-cf579f27e8ec",
+    "value": "For today’s Cake at Stake, if you’re safe, you get a Numberhuman.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "9aaf7e7c-cbb7-4909-bd56-d1f5ed22b8d8",
+    "value": "NumberDex en Español",
+    "type": "spawn"
+  },
+  {
+    "uuid": "997fe458-aad6-4c0c-be95-fd19aab6594e",
+    "value": "I mean where the fuck do i really even start",
+    "type": "spawn"
+  },
+  {
+    "uuid": "b8ed12e6-3538-4749-aab7-6e123789c5e7",
+    "value": "???? what",
+    "type": "spawn"
+  },
+  {
+    "uuid": "1a341435-4e80-47cf-9748-d401370a6a9d",
+    "value": "I’m so hungry, I could eat a Numberhuman.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "8bdf0749-99fa-48cd-a8b1-a352f6a056ac",
+    "value": "This Numberhuman loves Baumkuchen End Credits.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "9e212d44-00f7-4b1e-b6cb-ecd06d7ba98e",
+    "value": "What is a Numberhuman? I think it can best be understood by separating the words Number and Human.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "070040ec-2dc9-46e0-93e9-545927a7ee96",
+    "value": "Googology Sex.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "e35d7e01-9632-46fa-9582-37caa3da41a6",
+    "value": "Farter The True.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "d3982989-0b67-4c3f-9f6f-7f1d7fbb0909",
+    "value": "NO MORE NUMBERS!",
+    "type": "spawn"
+  },
+  {
+    "uuid": "34376a2f-be34-49d8-923f-d3e4ba891126",
+    "value": "The sacred nmnbruwebqjwelkjbbfsdbfibiubwfub",
+    "type": "spawn"
+  },
+  {
+    "uuid": "f8775157-1b2f-45c8-9ee8-a7d7a430f746",
+    "value": "ᮎ is the symbol of HUGGEST.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "c9043652-f9bf-41a5-9ed6-c7bff5cce93e",
+    "value": "xyl",
+    "type": "spawn"
+  },
+  {
+    "uuid": "d320d5e0-c93a-40cf-838c-9b30844da381",
+    "value": "Ethereal ZerŐŌÕØŒǑÖÔÓÒ",
+    "type": "spawn"
+  },
+  {
+    "uuid": "deb21c52-56a5-4e5d-aa2a-63fb893614a4",
+    "value": "opera thick",
+    "type": "spawn"
+  },
+  {
+    "uuid": "8ee352e1-fce8-4429-9878-2f3427954f6b",
+    "value": "Live, laugh, THE END OF KPOP DEMON HUNTER.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "def71623-b25d-4f7e-be54-994c8b8f35f7",
+    "value": "I WOKE UP TO 1 NUMBERDEX SPAWNS",
+    "type": "spawn"
+  },
+  {
+    "uuid": "0c244865-5ee5-4079-80ab-6572eaca30ea",
+    "value": "All I wanted was to see babass nubmer one more time…",
+    "type": "spawn"
+  },
+  {
+    "uuid": "f85c71b0-4fe7-4c85-a54c-e9fd65cc8a42",
+    "value": "owie my bum hurts",
+    "type": "spawn"
+  },
+  {
+    "uuid": "b400a344-8afe-451e-8dd2-ea7d7c21a60a",
+    "value": "£ 10.09",
+    "type": "spawn"
+  },
+  {
+    "uuid": "71b3bc0c-5d75-4c55-a87b-06c3dccccbbd",
+    "value": "html\\_html\\_html",
+    "type": "spawn"
+  },
+  {
+    "uuid": "98b60b35-bd02-496c-8619-bc3f8ea87855",
+    "value": "This is a dance of light and conflict… NumberDex.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "924fd4f4-a00a-4e58-a1a8-046425841fa0",
+    "value": "negative goofy ahh spawn.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "80d437be-207f-4320-bd71-11d0b600f064",
+    "value": "What a glorious day it is for this Numberhuman to spawn!",
+    "type": "spawn"
+  },
+  {
+    "uuid": "b27bd661-7ffa-46d4-a9ed-ae53fd1688a5",
+    "value": "All my homies love NumberDex.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "67988383-50d4-4091-95c3-d3c8e099dc31",
+    "value": "AbsoluteCycleDex.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "4f087ca4-87ed-4a37-8156-746e380397b4",
+    "value": "what y’all know about catching numberhumans",
+    "type": "spawn"
+  },
+  {
+    "uuid": "c6c06ac1-332b-4423-b957-2c21771a9bc3",
+    "value": "I choose you!",
+    "type": "spawn"
+  },
+  {
+    "uuid": "514f1da8-191e-41e8-8797-4bdc2543c051",
+    "value": "It’s dangerous to go alone… take this.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "0197cf7e-6fcd-4201-a2ce-2a7bd2994617",
+    "value": "# wtf is entrinal on bru 🥀",
+    "type": "spawn"
+  },
+  {
+    "uuid": "fc9c96a1-0455-4b34-b73a-ddd53c6b3141",
+    "value": "Ground a trounder",
+    "type": "spawn"
+  },
+  {
+    "uuid": "30b8e62e-c1b9-4e21-85a9-2f489c3257b4",
+    "value": "screenshot-1739813272845.png",
+    "type": "spawn"
+  },
+  {
+    "uuid": "e098b002-ce51-44f1-b7c5-15332d84adc9",
+    "value": "Another spawn message slop? Are you kidding me?! MY GOD! Nope. We’re done here.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "4ac22209-a9ed-44fb-8e3f-6f590a97f20d",
+    "value": "Soluab Intefi",
+    "type": "spawn"
+  },
+  {
+    "uuid": "3917c619-bca2-49e4-a5cf-43a0b03086bc",
+    "value": "This spawn sucks, not enough breakology spam.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "d3ae41e4-910d-4749-b8e4-6a97111cf453",
+    "value": "This Numberhuman was cracktabroken by Kathtum-Omni One Cardinal.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "739cc71f-b67d-4b05-a8c6-b22ad5327156",
+    "value": "Why is NumberDex filled with so many corny spawn messages and inside jokes and dead memes?",
+    "type": "spawn"
+  },
+  {
+    "uuid": "9da6063d-b564-4266-8ba6-99d1cbf9f924",
+    "value": "What’s inside a Numberhuman?",
+    "type": "spawn"
+  },
+  {
+    "uuid": "5bb40a27-b07f-44f6-89e7-ebe960c535cd",
+    "value": "The below Numberhuman is Lilith. I’m probably wrong, but it’s worth a shot.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "578e4f28-3a8b-4e9e-a51f-c822b80b8c76",
+    "value": "FakeNumberhumansBlock",
+    "type": "spawn"
+  },
+  {
+    "uuid": "c1ad125b-96ac-4a5f-8a07-2737ec4d9159",
+    "value": "And with that, my automatic Numberhuman generator is complete! *comedically evil laugh* With just the pull of a lever, I can get a ton of Numberhumans… if only I remembered which lever did it.",
+    "type": "spawn"
+  },
+  {
+    "uuid": "a74cdd82-408f-4347-90bf-75a573b86284",
+    "value": "'The coffee spilled on me, but I don’t have any clothes to wear!' - SuperWindows78",
+    "type": "spawn"
+  },
+  {
+    "uuid": "2d4788aa-00d7-498d-a48a-6470e2486d26",
+    "value": "## NUMBERHUMAN IN SE IPSAM COMPLICARE ~THE SECOND FOLD~ - ⫑❋⤐ℰ {⧔▞⪐2⪐}\n### SPEEDING UP NUMBERDEX LIKE NEVER BEFORE.",
+    "type": "spawn"
   }
 ]

@@ -245,6 +245,203 @@
       "id": "corruption",
       "name": "Corruption",
       "description": "{numberhuman} can corrupt other numberhumans out of anger. This will constantly hurt them and deplete 2 HP per second."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "fashion-dance",
+      "description": "Pararinounhuman uses her beatiful and attractive dancing skills, which distracts all enemies for 2 Turns.",
+      "name": "Fashion Dance"
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "sl4-confusions",
+      "description": "edA+'s nature is... kinda fucked. As such, descibing him can end up being kind of a hastle. This ability embodies that fact. -20% to the opponent's defense whenever used in combat. (Ability by GMDM)",
+      "name": "SL4 Confusions"
+    },
+    {
+      "id": "high-limit",
+      "description": "Higher attack than usual. After he attacks, he may not be used to attack for the next turn & he may not be retriggered. Every third attack, he will instakill a numberhuman on the spot. He can't attack for the next turn after instakill, and he can't attack before/during the third turn after instakill.",
+      "name": "High Limit"
+    },
+    {
+      "id": "a-single-hitpoint",
+      "description": "{numberhuman} can nullify one attack throughout the whole battle. (This number can be increased with rare evolutions)",
+      "name": "A Single Hitpoint"
+    },
+    {
+      "id": "definition-transcendentalism",
+      "description": "Every time they uses this ability, they makes it so that all of his stats are 1% (compounding) higher than his opponent's for no reason besides the fact that they can.",
+      "name": "Definition-Transcendentalism"
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "q-apotheosis",
+      "description": "Upon using this ability, they nullify any attack given by any opponent, no matter what, for the next five turns.",
+      "name": "qApotheosis"
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "absolute-aperdinal",
+      "description": "nanannannanbahjegsbujghnjnmdhgjnghghrfhg real shit this is the most powerful numberhuman ever exists you suck if you say no you die lol idiot",
+      "name": "absolute aperdinal"
+    },
+    {
+      "id": "unconstructibility",
+      "description": "{numberhuman} is too big to be a constructible collection, so their exact elements are hard to determine. Because of this, opponents may be confused upon seeing them. As such, they have time to attack three times in a row at the start of the battle before her opponent feels prepared to make their move.",
+      "name": "Unconstructibility"
+    },
+    {
+      "id": "el-pepe",
+      "description": "99% of the time, this ability does nothing. 1% of the time, this ability instantly kills an opponent, and it can never be used in any battle ever again.",
+      "name": "El Pepe"
+    },
+    {
+      "id": "unknown",
+      "description": "Ignores every attack whose attack power is in range of half their (maximum) HP ~ their (maximum) HP",
+      "name": "Unknown"
+    },
+    {
+      "id": "all-mine",
+      "description": "Every round, {numberhuman} gains 1% of the strongest opposing Numberhuman's attack power. This Numberhuman does not lose stats.",
+      "name": "All Mine!"
+    },
+    {
+      "id": "deceitful-decay",
+      "description": "{numberhuman} has much higher attack than usual, attacking takes away a lot of health remaining. too bad you can't choose the target you desire",
+      "name": "Deceitful Decay"
+    },
+    {
+      "id": "regeneration",
+      "description": "{numberhuman} has lower health than usual, but can regenerate over time.",
+      "name": "Regeneration"
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "studious",
+      "description": "Dictionarie Myasthie will always do critical hits, or make one other team member have a guaranteed critical hit, because she knows the flaws of her opponents.",
+      "name": "Studious"
+    },
+    {
+      "id": "apex-of-def-strength",
+      "description": "This ability starts off fairly weak, but every turn, it grows more and more powerful. Eventually, if you let it build up, you can use it to create a powerful blast! However, using this ability will cause it to reset back to its original strength.",
+      "name": "Apex of def-strength"
+    },
+    {
+      "id": "healing-hardcap",
+      "description": "heals all numberhumans by a percentage of the canceled damage, increased by number of initial limits in your lineup.",
+      "name": "Healing Hardcap"
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "critical-precision",
+      "name": "Critical Precision",
+      "description": "Gradient Unit is a robot, and much more precise than other Numberhumans. If Gradient Unit is on the team, 25% of all attacks are critical. There can only be one Gradient Unit on a team."
+    },
+    {
+      "numberhumanSpecific": true,
+      "id": "thought-transcendence",
+      "name": "Thought-Transcendence",
+      "description": "PIL+ can use this ability to overpower the opponent's mind so much that it stuns them. This makes it so that they cannot attack or dodge for one turn."
+    },
+    {
+      "id": "take-the-shot",
+      "name": "Take the Shot",
+      "description": "Using this ability allows {numberhuman} to shoot their rifle at the opponent, depleting a quarter of their current HP immediately."
+    },
+    {
+      "id": "anything-it-takes",
+      "name": "Anything it Takes",
+      "description": "Any number with a rarity of common takes double damage from {numberhuman}."
+    },
+    {
+      "id": "look-at-me",
+      "name": "Look at Me!",
+      "description": "On use, prevent all enemies from attacking unless it is towards {numberhuman} and grant a 25% damage reduction and HP boost for 3 turns"
+    },
+    {
+      "id": "break-all-plexes",
+      "name": "BREAK ALL PLEXES",
+      "description": "Grants a permanent 50% damage boost while ability is inactive. If activated, grant a 5% chance to instakill, however it can only be used once in battle and you lose the 50% boost if failed."
+    },
+    {
+      "id": "resolve",
+      "name": "Resolve",
+      "description": "SBAHP works out some conflicts with an opponent. Their attacks are reduced by 50% for the entire battle. This can only be used once."
+    },
+    {
+      "id": "uniq-post-math",
+      "name": "UNIQ--postMath",
+      "description": "She will always perform the mathematically best move while playing fair. Grants a random damage boost between 1-50%."
+    },
+    {
+      "id": "flip-a-coin",
+      "name": "Flip a coin",
+      "description": "He has a 50% chance of taking 10% damage to opponents, otherwise heals team members by 10% HP."
+    },
+    {
+      "id": "something-called-lifesteal",
+      "name": "something called lifesteal",
+      "description": "At the end of every other turn, BEAF Limit will recover half of the HP they lost in the past two turns."
+    },
+    {
+      "id": "magic",
+      "name": "Magic",
+      "description": "The Magixystal casts a spell on the other team. The whole team will now lose 5% of the weakest team member's HP every turn for the rest of the battle."
+    },
+    {
+      "id": "what-does-attack-power-do",
+      "name": "What does attack power do?",
+      "description": "Reduces damage taken by AP^0.7 upon getting attacked. (Cancelled damage)^0.8 is reflected back to the attacker. Once he is defeated, he uses the last bit of his energy to instakill any opponent that has less HP than him. To balance this, he loses 1% HP every turn."
+    },
+    {
+      "id": "idk-what-to-call-the-ability",
+      "name": "idk what to call the ability",
+      "description": "Everyone on TUoG's team does 1.6x as much damage towards standard googology numbers."
+    },
+    {
+      "id": "chest-hole",
+      "name": "Chest Hole",
+      "description": "By reaching inside her chest hole, she can give herself a slightly less powerful version of any ability that a member of the opposing team has."
+    },
+    {
+      "id": "mind-control",
+      "name": "Mind Control",
+      "description": "Each turn, Opera Convulsions can pick one opponent to control, and make them attack some of the other members in their team. She loses 250 HP when she does this, and this multiplies for every additional person she tries to control."
+    },
+    {
+      "id": "179-uncentillion",
+      "name": "179 Uncentillion",
+      "description": "Gains +10% base attack every 3 turns. Scaling increases by +2% additively every 6 turns."
+    },
+    {
+      "id": "omegascaled-magic",
+      "name": "Omegascaled Magic",
+      "description": "Chrona Beyonum casts a spell on the other team. The whole team will now lose 9% of the weakest team member's HP every turn for the rest of the battle."
+    },
+    {
+      "id": "this-is-fine",
+      "name": "This is Fine",
+      "description": "Archaea Volcanis will burn the opponent. The opponent is stunned for the next turn, and their attack on the turn after that is reduced by 40%."
+    },
+    {
+      "id": "dollhouse",
+      "name": "Dollhouse",
+      "description": "Every 5 turns, Absolute Nothing of Numbers can turn a team member into a doll. For the next two turns, she can use their ability, before it gets reverted back to normal."
+    },
+    {
+      "id": "untitled-ability",
+      "name": "Untitled Ability",
+      "description": "Truncated Limitation is very protective. All attacks against other team members are 5% less effective."
+    },
+    {
+      "id": "firin-my-lazors",
+      "name": "FIRIN MY LAZORS",
+      "description": "<< MINDCAP >> can shoot lasers from her back. Any opponent hit will have their attacks become 2% less effective (compounding), for the rest of the battle."
+    },
+    {
+      "id": "glass",
+      "name": "Glass",
+      "description": "Entropy Undefined-INF will attack the opponent with glass. This will deal anywhere from 5% to 10% max HP of damage, with higher damages being exponentially harder to get."
     }
   ]
 }

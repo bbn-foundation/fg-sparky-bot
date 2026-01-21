@@ -3,274 +3,275 @@ List to add:
 
 ## Total unique guesses
 
-* `You gotta start somewhere` - Guess your first number.
-* `Yeah I play FG sparky` - Guess 25 unique numbers.
-* `Fictional Googologist` - Guess 50 unique numbers.
-* `funny` - Guess 69 unique numbers.
-* `Am pro` - Guess 100 unique numbers.
-* `Yellow tile` - Guess 128 unique numbers.
-* `The Seam of Totality watches over` - Guess 150 unique numbers.
-* `No match for me!` - Guess 200 unique numbers.
-* `Stella said funny achievement names, not boring ones` - Guess 250 unique numbers.
-* `Bring me their heads!` - Guess 300 unique numbers.
-* `This achievement name referenced a dead meme so I changed it` - Guess 350 unique numbers.
-* `I'm running out of achievement names.` - Guess 400 unique numbers.
-* `Addicted` - Guess 450 unique numbers.
-* `Tonight, we dine in Sparky numbers!` - Guess 500 unique numbers.
-* `Achievement #97104` - Guess 600 unique numbers.
-* `Scrap Collector` - Guess 684 unique numbers.
-* `You're still doing this?` - Guess 700 unique numbers.
-* `When you see it` - Guess 727 unique numbers.
-* `I rate your activity excellent` - Guess 750 unique numbers.
-* `This guy has been saying "Correct!" for literal months` - Guess 800 unique numbers.
-* `Guessing numbers to power Realituum` - Guess 900 unique numbers.
-* `No title!` - Guess 1000 unique numbers.
-* `Oneirophobe's Nightmare` - Guess 1111 unique numbers.
-* `Yet another googology reference` - Guess 1250 unique numbers.
-* `There's still so much more to explore` - Guess 1400 unique numbers.
-* `What do I need to do to get rid of you?` - Guess 1500 unique numbers.
-* `Average dumb achievement name that has no relation to the achievement whatsoever but also is just a meta joke` - Guess 1750 unique numbers.
-* `Big sister is watching (your awesome progress)` - Guess 1984 unique numbers.
-* `Have you tried touching grass yet` - Guess 2000 unique numbers.
-* `One for every year` - Guess 2025 unique numbers. This will increase every year.
-* `If you keep this up you're gonna turn into a fictional number` - Guess 2250 unique numbers.
-* `Yummy delicious` - Guess 2400 unique numbers.
-* `I was crazy once` - Guess 2500 unique numbers.
-* `13 more until the next reference` - Guess 2750 unique numbers.
-* `Don't you wanna battle to win a prize?` - Guess 2763 unique numbers.
-* `Greatest of all time` - Guess 3000 unique numbers.
-* `Must... get... MORE...` - Guess 3125 unique numbers.
-* `Impossible achievement` - Guess 3250 unique numbers.
-* `Quadruple Baka` - Guess 3333 unique numbers.
-* `This is probably as hard as beating Slaughterhouse` - Guess 3500 unique numbers.
-* `Decuple noscope` - Guess 3600 unique numbers.
-* `No one will achieve this so I can safely say that I live at 130-` - Guess 3750 unique numbers.
-* `Wait someone actually achieved it wtf` - Guess 3751 unique numbers
-* `Sorry I ran out of batches` - Guess 3827 unique numbers.
-* `This is what I have to do to get rid of you.` - Guess every number. **(disabled)**
+- `You gotta start somewhere` - Guess your first number.
+- `Yeah I play FG sparky` - Guess 25 unique numbers.
+- `Fictional Googologist` - Guess 50 unique numbers.
+- `funny` - Guess 69 unique numbers.
+- `Am pro` - Guess 100 unique numbers.
+- `Yellow tile` - Guess 128 unique numbers.
+- `The Seam of Totality watches over` - Guess 150 unique numbers.
+- `No match for me!` - Guess 200 unique numbers.
+- `Stella said funny achievement names, not boring ones` - Guess 250 unique numbers.
+- `Bring me their heads!` - Guess 300 unique numbers.
+- `This achievement name referenced a dead meme so I changed it` - Guess 350 unique numbers.
+- `I'm running out of achievement names.` - Guess 400 unique numbers.
+- `Addicted` - Guess 450 unique numbers.
+- `Tonight, we dine in Sparky numbers!` - Guess 500 unique numbers.
+- `Achievement #97104` - Guess 600 unique numbers.
+- `Scrap Collector` - Guess 684 unique numbers.
+- `You're still doing this?` - Guess 700 unique numbers.
+- `When you see it` - Guess 727 unique numbers.
+- `I rate your activity excellent` - Guess 750 unique numbers.
+- `This guy has been saying "Correct!" for literal months` - Guess 800 unique numbers.
+- `Guessing numbers to power Realituum` - Guess 900 unique numbers.
+- `No title!` - Guess 1000 unique numbers.
+- `Oneirophobe's Nightmare` - Guess 1111 unique numbers.
+- `Yet another googology reference` - Guess 1250 unique numbers.
+- `There's still so much more to explore` - Guess 1400 unique numbers.
+- `What do I need to do to get rid of you?` - Guess 1500 unique numbers.
+- `Average dumb achievement name that has no relation to the achievement whatsoever but also is just a meta joke` - Guess 1750 unique numbers.
+- `Big sister is watching (your awesome progress)` - Guess 1984 unique numbers.
+- `Have you tried touching grass yet` - Guess 2000 unique numbers.
+- `One for every year` - Guess 2025 unique numbers. This will increase every year.
+- `If you keep this up you're gonna turn into a fictional number` - Guess 2250 unique numbers.
+- `Yummy delicious` - Guess 2400 unique numbers.
+- `I was crazy once` - Guess 2500 unique numbers.
+- `13 more until the next reference` - Guess 2750 unique numbers.
+- `Don't you wanna battle to win a prize?` - Guess 2763 unique numbers.
+- `Greatest of all time` - Guess 3000 unique numbers.
+- `Must... get... MORE...` - Guess 3125 unique numbers.
+- `Impossible achievement` - Guess 3250 unique numbers.
+- `Quadruple Baka` - Guess 3333 unique numbers.
+- `This is probably as hard as beating Slaughterhouse` - Guess 3500 unique numbers.
+- `Decuple noscope` - Guess 3600 unique numbers.
+- `No one will achieve this so I can safely say that I live at 130-` - Guess 3750 unique numbers.
+- `Wait someone actually achieved it wtf` - Guess 3751 unique numbers
+- `Sorry I ran out of batches` - Guess 3827 unique numbers.
+- `This is what I have to do to get rid of you.` - Guess every number. **(disabled)**
 
 ## Terminus points
 
-* `Oh, Great!!` - Earn 100 terminus points.
-* `More points!` - Earn 200 terminus points.
-* `Point Maniac` - Earn 300 terminus points.
-* `Master Collector` - Earn 400 terminus points.
-* `Epic Collector` - Earn 500 terminus points.
-* `Epic Master Collector` - Earn 600 terminus points.
-* `Terminus Factory` - Earn 700 terminus points.
-* `Cloudy` - Earn 800 terminus points.
-* `All mine!!` - Earn 900 terminus points.
-* `Symbolfinity, but not really` - Earn 1000 terminus points.
-* `sup nerd give me all your terminus points and lunch money` - Earn 1250 terminus points.
-* `Was that all of them?` - Earn 1500 terminus points.
-* `Knock knock. Who's there? Terminus points!` - Earn 2000 terminus points.
-* `can't react or else i will cough so much` - Earn 2500 terminus points.
-* `Did you beefy die?` - Earn 2763 terminus points.
-* `Triskomillonpointeus` - Earn 3000 terminus points.
-* `We need to go deeper` - Earn 3333 terminus points.
-* `Inpredictafinity` - Earn 3500 terminus points.
-* `Not impressive I got that many points in like 2 seconds` - Earn 3750 terminus points.
-* `RAAAAAHHH!` - Earn 4000 terminus points.
-* `The price is wrong` - Earn 4250 terminus points.
-* `More point achievements?` - Earn 4500 terminus points.
-* `Dude get a job` - Earn 4750 terminus points.
-* `You want me to collect 5000?!` - Earn 5000 terminus points.
-* `The amazement of the interletually spherical` - Earn 5250 terminus points.
-* `I should sell these` - Earn 5500 terminus points.
-* `Falling up the stairs` - Earn 5750 terminus points.
-* `Why so many?` - Earn 6000 terminus points.
-* `Are you going to donate these to the poor?` - Earn 6500 terminus points.
-* `All points are my points` - Earn 7000 terminus points.
-* `This is the last points achievement` - Earn 7500 terminus points.
-* `Did you really think I was serious? Of course there are more!` - Earn 7777 terminus points.
-* `He lost his permissions - The achievement` - Earn 8000 terminus points.
-* `The JERN8322 in Achievement` - Earn 8322 terminus points.
-* `That's the biggest ever! *poses as an up arrow* OH YEAH!!!` - Earn 9000 terminus points.
-* `IT'S OVER 9000` - Earn 9100 terminus points.
-* `Daniel "IM GONNA PISS ON MY IPAD" Rodriguez` - Earn 9500 terminus points.
-* `Nope, found more over here` - Earn 10000 terminus points.
-* `Tue finality seled` - Earn 10500 terminus points.
-* `Robox` - Earn 10648 terminus points.
-* `yummy terminus points` - Earn 11000 terminus points.
-* `The Redi?` - Earn 11111 terminus points.
-* `I sawed this ach` - Earn 11500 terminus points.
-* `ievement in half` - Earn 12000 terminus points.
-* `Straight` - Earn 12345 terminus points.
-* `WHAT by Spu7nix` - Earn 13000 terminus points.
-* `(1) missed call from Stella` - Earn 14000 terminus points.
-* `Welcome folks! Ready for some terminus points?` - Earn 15000 terminus points.
-* `Just Say There Isn't More! [ Fanmade Numbers ]` - Earn 16500 terminus points.
-* `Terminus tokens (Finite Version)` - Earn 17500 terminus points.
-* `Sparky Deity` - Earn 19000 terminus points.
-* `i got 5 Dollars of sleep on me,` - Earn 20000 terminus points.
-* `There's always more, my friend` - Earn 22000 terminus points.
-* `Not impressive i did that in like 2 seconds` - Earn 25000 terminus points.
-* `RESOLUTE, ULTIMATE ERADICATION` - Earn 26666 terminus points.
-* `yo ggole were abthroom now? alexa: yeah` - Earn 30000 terminus points.
-* `Football` - Earn 35000 terminus points.
-* `E_0 gets ANNIHILATED by the overman 😂😂😂` - Earn 40000 terminus points.
-* `1st. Grassy` - Earn 50000 terminus points.
-* `Too Much Massive Terminusfinity` - Earn 75000 terminus points.
-* `You should contribute to the bot if you're playing this much` - Earn 100000 terminus points.
-* `I'll add another game to FG sparky bot later` - Earn 150000 terminus points.
+- `Oh, Great!!` - Earn 100 terminus points.
+- `More points!` - Earn 200 terminus points.
+- `Point Maniac` - Earn 300 terminus points.
+- `Master Collector` - Earn 400 terminus points.
+- `Epic Collector` - Earn 500 terminus points.
+- `Epic Master Collector` - Earn 600 terminus points.
+- `Terminus Factory` - Earn 700 terminus points.
+- `Cloudy` - Earn 800 terminus points.
+- `All mine!!` - Earn 900 terminus points.
+- `Symbolfinity, but not really` - Earn 1000 terminus points.
+- `sup nerd give me all your terminus points and lunch money` - Earn 1250 terminus points.
+- `Was that all of them?` - Earn 1500 terminus points.
+- `Knock knock. Who's there? Terminus points!` - Earn 2000 terminus points.
+- `can't react or else i will cough so much` - Earn 2500 terminus points.
+- `Did you beefy die?` - Earn 2763 terminus points.
+- `Triskomillonpointeus` - Earn 3000 terminus points.
+- `We need to go deeper` - Earn 3333 terminus points.
+- `Inpredictafinity` - Earn 3500 terminus points.
+- `Not impressive I got that many points in like 2 seconds` - Earn 3750 terminus points.
+- `RAAAAAHHH!` - Earn 4000 terminus points.
+- `The price is wrong` - Earn 4250 terminus points.
+- `More point achievements?` - Earn 4500 terminus points.
+- `Dude get a job` - Earn 4750 terminus points.
+- `You want me to collect 5000?!` - Earn 5000 terminus points.
+- `The amazement of the interletually spherical` - Earn 5250 terminus points.
+- `I should sell these` - Earn 5500 terminus points.
+- `Falling up the stairs` - Earn 5750 terminus points.
+- `Why so many?` - Earn 6000 terminus points.
+- `Are you going to donate these to the poor?` - Earn 6500 terminus points.
+- `All points are my points` - Earn 7000 terminus points.
+- `This is the last points achievement` - Earn 7500 terminus points.
+- `Did you really think I was serious? Of course there are more!` - Earn 7777 terminus points.
+- `He lost his permissions - The achievement` - Earn 8000 terminus points.
+- `The JERN8322 in Achievement` - Earn 8322 terminus points.
+- `That's the biggest ever! *poses as an up arrow* OH YEAH!!!` - Earn 9000 terminus points.
+- `IT'S OVER 9000` - Earn 9100 terminus points.
+- `Daniel "IM GONNA PISS ON MY IPAD" Rodriguez` - Earn 9500 terminus points.
+- `Nope, found more over here` - Earn 10000 terminus points.
+- `Tue finality seled` - Earn 10500 terminus points.
+- `Robox` - Earn 10648 terminus points.
+- `yummy terminus points` - Earn 11000 terminus points.
+- `The Redi?` - Earn 11111 terminus points.
+- `I sawed this ach` - Earn 11500 terminus points.
+- `ievement in half` - Earn 12000 terminus points.
+- `Straight` - Earn 12345 terminus points.
+- `WHAT by Spu7nix` - Earn 13000 terminus points.
+- `(1) missed call from Stella` - Earn 14000 terminus points.
+- `Welcome folks! Ready for some terminus points?` - Earn 15000 terminus points.
+- `Just Say There Isn't More! [ Fanmade Numbers ]` - Earn 16500 terminus points.
+- `Terminus tokens (Finite Version)` - Earn 17500 terminus points.
+- `Sparky Deity` - Earn 19000 terminus points.
+- `i got 5 Dollars of sleep on me,` - Earn 20000 terminus points.
+- `There's always more, my friend` - Earn 22000 terminus points.
+- `Not impressive i did that in like 2 seconds` - Earn 25000 terminus points.
+- `RESOLUTE, ULTIMATE ERADICATION` - Earn 26666 terminus points.
+- `yo ggole were abthroom now? alexa: yeah` - Earn 30000 terminus points.
+- `Football` - Earn 35000 terminus points.
+- `E_0 gets ANNIHILATED by the overman 😂😂😂` - Earn 40000 terminus points.
+- `1st. Grassy` - Earn 50000 terminus points.
+- `Too Much Massive Terminusfinity` - Earn 75000 terminus points.
+- `You should contribute to the bot if you're playing this much` - Earn 100000 terminus points.
+- `I'll add another game to FG sparky bot later` - Earn 150000 terminus points.
 
 ## Unique easy number guesses
 
-* `10 Number Sparky Punch` - Guess 10 easy numbers
-* `Extra credit for killing a fly?` - Guess 20 easy numbers.
-* `Just got another easy number lol` - Guess 30 easy numbers.
-* `Old food gaming` - Guess 40 easy numbers.
-* `GD sparky :x: FG sparky :white_check_mark:` - Guess 50 easy numbers.
-* `The Easy Numeric` - Guess 60 easy numbers.
-* `ok` - Guess 70 easy numbers.
-* `This is too easy` - Guess 80 easy numbers.
-* `Part 98 when?` - Guess 98 easy numbers.
-* `Hectaeasynumiachievementium` - Guess 100 easy numbers.
-* `Let we chukote all the way` - Guess 125 easy numbers.
-* `Our princess is in another castle!` - Guess 150 easy numbers.
-* `Only took me 5 hours` - Guess 160 easy numbers.
-* `Can we just get back to the Metacycle now?` - Guess 200 easy numbers.
-* `When will we break achievements?` - Guess 222 easy numbers.
-* `New Food Gaming` - Guess 240 easy numbers.
-* `Head of the Transcendental Internal Center` - Guess 250 easy numbers.
-* `That's a lot of easies` - Guess 280 easy numbers.
-* `ts pmo` - Guess 300 easy numbers.
-* `There's no point in grinding this...` - Guess 320 easy numbers.
-* `Triple Baka` - Guess 333 easy numbers.
-* `Can you send me more numbers` - Guess 360 easy numbers.
-* `Definitely not worth it` - Guess every easy numbers.
+- `10 Number Sparky Punch` - Guess 10 easy numbers
+- `Extra credit for killing a fly?` - Guess 20 easy numbers.
+- `Just got another easy number lol` - Guess 30 easy numbers.
+- `Old food gaming` - Guess 40 easy numbers.
+- `GD sparky :x: FG sparky :white_check_mark:` - Guess 50 easy numbers.
+- `The Easy Numeric` - Guess 60 easy numbers.
+- `ok` - Guess 70 easy numbers.
+- `This is too easy` - Guess 80 easy numbers.
+- `Part 98 when?` - Guess 98 easy numbers.
+- `Hectaeasynumiachievementium` - Guess 100 easy numbers.
+- `Let we chukote all the way` - Guess 125 easy numbers.
+- `Our princess is in another castle!` - Guess 150 easy numbers.
+- `Only took me 5 hours` - Guess 160 easy numbers.
+- `Can we just get back to the Metacycle now?` - Guess 200 easy numbers.
+- `When will we break achievements?` - Guess 222 easy numbers.
+- `New Food Gaming` - Guess 240 easy numbers.
+- `Head of the Transcendental Internal Center` - Guess 250 easy numbers.
+- `That's a lot of easies` - Guess 280 easy numbers.
+- `ts pmo` - Guess 300 easy numbers.
+- `There's no point in grinding this...` - Guess 320 easy numbers.
+- `Triple Baka` - Guess 333 easy numbers.
+- `Can you send me more numbers` - Guess 360 easy numbers.
+- `Definitely not worth it` - Guess every easy numbers.
 
 ## Unique medium guesses
 
-* `Jumping for the beef` - Guess 10 medium numbers.
-* `Gamer Gaming:tm:` - Guess 20 medium numbers.
-* `"I'm not like other girls" ~ other girls` - Guess 30 medium numbers.
-* `"Sink you" ~ sky` - Guess 40 medium numbers.
-* `Do you want a cookie or something?` - Guess 50 medium numbers.
-* `Yeah yeah whatever` - Guess 60 medium numbers.
-* `A lot of these achievement names are stupid, they're just (meta)jokes and references` - Guess 70 medium numbers.
-* `HAHA DISREGARD THAT LAST ACHIEVEMENT I SUCK CO-` - Guess 71 medium numbers.
-* `Sparky is my passion` - Guess 80 medium numbers.
-* `Masteritraium` - Guess 90 medium numbers.
-* `Light work, no reaction` - Guess 100 medium numbers.
-* `An insignificant achievement` - Guess 111 medium numbers.
-* `/guess difficulty:Medium` - Guess 125 medium numbers.
-* `rizzboob` - Guess 150 medium numbers.
-* `I never liked this easy stuff anyway` - Guess 160 medium numbers.
-* `Slow down i don't have that many entries` - Guess 200 medium numbers.
-* `Overlibbydeathication` - Guess 225 medium numbers.
-* `The swarm` - Guess 240 medium numbers.
-* `Michael is so majestic` - Guess 250 medium numbers.
-* `This achievement is on row 139, no it isn't nvm` - Guess 275 medium numbers.
-* `mcdonalds big map` - Guess 300 medium numbers.
-* `You did this just for the achievement, right?` - Guess 325 medium numbers.
-* `Ping someone and if they don't respond in 10 seconds they lose 200 terminus points but you cannot do this to an offline person` - Guess 350 medium numbers.
-* `MLG NOSCOPE` - Guess 360 medium numbers.
-* `Yo dawg, I heard you like mediums...` - Guess 400 medium numbers.
-* `Smoke ~~weed~~ sparky everyday` - Guess 420 medium numbers.
-* `Medium demon` - Guess 450 medium numbers.
-* `Costco is selling Medium numbers now!` - Guess 480 medium numbers.
-* `You go ascendency bound land` - Guess 500 medium numbers.
-* `Never Again...` - Guess 550 medium numbers.
-* `Damn is 🤣🎉` - Guess 600 medium numbers.
-* `There's no special name for this.` - Guess 666 medium numbers.
-* `Yes amount of mediums` - Guess 700 medium numbers.
-* `Ain't nobody got time for that` - Guess 750 medium numbers.
-* `Okay maybe i guess you got time for that` - Guess every Medium number.
+- `Jumping for the beef` - Guess 10 medium numbers.
+- `Gamer Gaming:tm:` - Guess 20 medium numbers.
+- `"I'm not like other girls" ~ other girls` - Guess 30 medium numbers.
+- `"Sink you" ~ sky` - Guess 40 medium numbers.
+- `Do you want a cookie or something?` - Guess 50 medium numbers.
+- `Yeah yeah whatever` - Guess 60 medium numbers.
+- `A lot of these achievement names are stupid, they're just (meta)jokes and references` - Guess 70 medium numbers.
+- `HAHA DISREGARD THAT LAST ACHIEVEMENT I SUCK CO-` - Guess 71 medium numbers.
+- `Sparky is my passion` - Guess 80 medium numbers.
+- `Masteritraium` - Guess 90 medium numbers.
+- `Light work, no reaction` - Guess 100 medium numbers.
+- `An insignificant achievement` - Guess 111 medium numbers.
+- `/guess difficulty:Medium` - Guess 125 medium numbers.
+- `rizzboob` - Guess 150 medium numbers.
+- `I never liked this easy stuff anyway` - Guess 160 medium numbers.
+- `Slow down i don't have that many entries` - Guess 200 medium numbers.
+- `Overlibbydeathication` - Guess 225 medium numbers.
+- `The swarm` - Guess 240 medium numbers.
+- `Michael is so majestic` - Guess 250 medium numbers.
+- `This achievement is on row 139, no it isn't nvm` - Guess 275 medium numbers.
+- `mcdonalds big map` - Guess 300 medium numbers.
+- `You did this just for the achievement, right?` - Guess 325 medium numbers.
+- `Ping someone and if they don't respond in 10 seconds they lose 200 terminus points but you cannot do this to an offline person` - Guess 350 medium numbers.
+- `MLG NOSCOPE` - Guess 360 medium numbers.
+- `Yo dawg, I heard you like mediums...` - Guess 400 medium numbers.
+- `Smoke ~~weed~~ sparky everyday` - Guess 420 medium numbers.
+- `Medium demon` - Guess 450 medium numbers.
+- `Costco is selling Medium numbers now!` - Guess 480 medium numbers.
+- `You go ascendency bound land` - Guess 500 medium numbers.
+- `Never Again...` - Guess 550 medium numbers.
+- `Damn is 🤣🎉` - Guess 600 medium numbers.
+- `There's no special name for this.` - Guess 666 medium numbers.
+- `Yes amount of mediums` - Guess 700 medium numbers.
+- `Ain't nobody got time for that` - Guess 750 medium numbers.
+- `Okay maybe i guess you got time for that` - Guess every Medium number.
 
 ## Unique hard guesses
 
-* `No turning back` - Guess 5 hard numbers.
-* `Resolve` - Guess 10 hard numbers.
-* `Burger king foot lettuce` - Guess 15 hard numbers.
-* `You should bubble… NOW!!!` - Guess 20 hard numbers.
-* `Edge of Numbers` - Guess 25 hard numbers.
-* `10 for every spike` - Guess 30 hard numbers.
-* `IS THAT THE GRIM REAPER?` - Guess 40 hard numbers.
-* `This will be powerful to reach THE END` - Guess 50 hard numbers.
-* `Ah hell nah yo ass tweaking jigsaw` - Guess 60 hard numbers.
-* `SIX SEVEN 😂` - Earn 67 terminus points.
-* `This achievement is inside ???? [0]` - Guess 70 hard numbers.
-* `I hear voices` - Guess 75 hard numbers.
-* `You have more hair but i have more numbers` - Guess 80 hard numbers.
-* `On the verge of a coma` - Guess 90 hard numbers.
-* `Now I'm hard` - Guess 100 hard numbers. What does this mean?
-* `J iiiiiisland` - Guess 111 hard numbers.
-* `Q island` - Guess 112 hard numbers.
-* `You played so much that you forgor to do your a gain taxes` - Guess 125 hard numbers. File your taxes with the IRS.
-* `Click here for 9999 trusted levels.` - Guess 135 hard numbers. No, you won't gain any trusted levels.
-* `You are insane` - Guess 150 hard numbers. Not really.
-* `Splitting my laptop in half after this` - Guess 160 hard numbers.
-* `Job application jumpscare` - Guess 175 hard numbers. <https://eforms.com/images/2018/03/Employment-Job-Application.png>
-* `Beyond insane` - Guess 200 hard numbers.
-* `You do know there's, like, 3000 hard numbers, right?` - Guess 222 hard numbers.
-* `Not so hard after all` - Guess 250 hard numbers.
-* `All this guessing is making me hard` - Guess 275 hard numbers.
-* `A man has fallen into the river in LEGO city` - Guess 300 hard numbers.
-* `Like jumping on a lego` - Guess 400 hard numbers.
-* `Inex haha lele` - Guess 500 hard numbers.
-* `Why would you do this` - Guess 700 hard numbers
-* `Oh, hey... You're still here?` - Guess 800 hard numbers.
-* `I think you play too much. This ends your FG sparky run entirely, and you wouldn't reach Aperdinal.` - Guess 900 hard numbers.
-* `THIS ACHIEVEMENT DOESN'T EXIST` - Guess 999 hard numbers
-* `Elite Ball Knowledge` - Guess 1000 hard numbers.
-* `There's still more to go.` - Guess 1111 hard numbers.
-* `hhhhhhhhhhhhhhhhhhhh` - Guess 1200 hard numbers.
-* `The only numbers I guess are those that make me hard` - Guess 1250 hard numbers.
-* `YEAH BABY THAT'S WHAT I'VE BEEN WAITING FOR!` - Guess 1337 hard numbers.
-* `I thought I already got rid of you.` - Guess 1400 hard numbers.
-* `I guess you wonder where I've been` - Guess 1500 hard numbers.
-* `You're an all-star` - Guess 1600 hard numbers.
-* `Playing sparky 26/9` - Guess 1750 hard numbers.
-* `Achievement of FREEDOM` - Guess 1776 hard numbers.
-* `I'm the biggest bard` - Guess 1800 hard numbers.
-* `Who up FGing they Sparky` - Guess 1900 hard numbers.
-* `Literally- oh wait i already made the joke` - Guess 1984 hard numbers.
-* `Sparky Prodigy` - Guess 2000 hard numbers.
-* `This achievement is sponsored by Raid Shadow Legends` - Guess 2025 hard numbers.
-* `I'm sparking it.` - Guess 2125 hard numbers.
-* `Bot contributions please?` - Guess 2222 hard numbers.
-* `Are you happy now?` - Guess 2400 hard numbers.
-* `When will it ever be enough...` - Guess 2500 hard numbers.
-* `Actually impossible achievement` - Guess 2750 hard numbers.
-* `I think Leafy deserves the death penalty!` - Guess 2763 hard numbers.
-* `WHAT THE ACTUAL FUCK` - Guess every hard number.
+- `No turning back` - Guess 5 hard numbers.
+- `Resolve` - Guess 10 hard numbers.
+- `Burger king foot lettuce` - Guess 15 hard numbers.
+- `You should bubble… NOW!!!` - Guess 20 hard numbers.
+- `Edge of Numbers` - Guess 25 hard numbers.
+- `10 for every spike` - Guess 30 hard numbers.
+- `IS THAT THE GRIM REAPER?` - Guess 40 hard numbers.
+- `This will be powerful to reach THE END` - Guess 50 hard numbers.
+- `Ah hell nah yo ass tweaking jigsaw` - Guess 60 hard numbers.
+- `SIX SEVEN 😂` - Earn 67 terminus points.
+- `This achievement is inside ???? [0]` - Guess 70 hard numbers.
+- `I hear voices` - Guess 75 hard numbers.
+- `You have more hair but i have more numbers` - Guess 80 hard numbers.
+- `On the verge of a coma` - Guess 90 hard numbers.
+- `Now I'm hard` - Guess 100 hard numbers. What does this mean?
+- `J iiiiiisland` - Guess 111 hard numbers.
+- `Q island` - Guess 112 hard numbers.
+- `You played so much that you forgor to do your a gain taxes` - Guess 125 hard numbers. File your taxes with the IRS.
+- `Click here for 9999 trusted levels.` - Guess 135 hard numbers. No, you won't gain any trusted levels.
+- `You are insane` - Guess 150 hard numbers. Not really.
+- `Splitting my laptop in half after this` - Guess 160 hard numbers.
+- `Job application jumpscare` - Guess 175 hard numbers. <https://eforms.com/images/2018/03/Employment-Job-Application.png>
+- `Beyond insane` - Guess 200 hard numbers.
+- `You do know there's, like, 3000 hard numbers, right?` - Guess 222 hard numbers.
+- `Not so hard after all` - Guess 250 hard numbers.
+- `All this guessing is making me hard` - Guess 275 hard numbers.
+- `A man has fallen into the river in LEGO city` - Guess 300 hard numbers.
+- `Like jumping on a lego` - Guess 400 hard numbers.
+- `Inex haha lele` - Guess 500 hard numbers.
+- `Why would you do this` - Guess 700 hard numbers
+- `Oh, hey... You're still here?` - Guess 800 hard numbers.
+- `I think you play too much. This ends your FG sparky run entirely, and you wouldn't reach Aperdinal.` - Guess 900 hard numbers.
+- `THIS ACHIEVEMENT DOESN'T EXIST` - Guess 999 hard numbers
+- `Elite Ball Knowledge` - Guess 1000 hard numbers.
+- `There's still more to go.` - Guess 1111 hard numbers.
+- `hhhhhhhhhhhhhhhhhhhh` - Guess 1200 hard numbers.
+- `The only numbers I guess are those that make me hard` - Guess 1250 hard numbers.
+- `YEAH BABY THAT'S WHAT I'VE BEEN WAITING FOR!` - Guess 1337 hard numbers.
+- `I thought I already got rid of you.` - Guess 1400 hard numbers.
+- `I guess you wonder where I've been` - Guess 1500 hard numbers.
+- `You're an all-star` - Guess 1600 hard numbers.
+- `Playing sparky 26/9` - Guess 1750 hard numbers.
+- `Achievement of FREEDOM` - Guess 1776 hard numbers.
+- `I'm the biggest bard` - Guess 1800 hard numbers.
+- `Who up FGing they Sparky` - Guess 1900 hard numbers.
+- `Literally- oh wait i already made the joke` - Guess 1984 hard numbers.
+- `Sparky Prodigy` - Guess 2000 hard numbers.
+- `This achievement is sponsored by Raid Shadow Legends` - Guess 2025 hard numbers.
+- `I'm sparking it.` - Guess 2125 hard numbers.
+- `Bot contributions please?` - Guess 2222 hard numbers.
+- `Are you happy now?` - Guess 2400 hard numbers.
+- `When will it ever be enough...` - Guess 2500 hard numbers.
+- `Actually impossible achievement` - Guess 2750 hard numbers.
+- `I think Leafy deserves the death penalty!` - Guess 2763 hard numbers.
+- `WHAT THE ACTUAL FUCK` - Guess every hard number.
 
 ## Unique legendary guesses
 
-* `After a mental breakdown...` - Guess a legendary number.
-* `Legendary Chaser` - Guess 2 legendary numbers.
-* `I assume you searched the web for this` - Guess 3 legendary numbers.
-* `Legendary Master` - Guess 4 legendary numbers.
-* `Legendary Guardian` - Guess 5 legendary numbers.
-* `One for each day of the week` - Guess 7 legendary numbers.
-* `Legendary Overmind` - Guess 10 legendary numbers.
-* `One for every month` - Guess 12 legendary numbers.
-* `Master of Memory` - Guess 15 legendary numbers.
-* `Unstoppable!` - Guess 20 legendary numbers.
-* `adkv` - Guess 25 legendary numbers.
-* `Give me a challenge!` - Guess 30 legendary numbers.
-* `You fear nothing` - Guess 40 legendary numbers.
-* `Is it over yet?` - Guess 50 legendary numbers.
-* `[60 Minutes](https://www.youtube.com/@60minutes)` - Guess 60 legendary numbers.
-* `Why are you still here...` - Guess 70 legendary numbers.
-* `The Legendary Number Au Revoir` - Guess 75 legendary numbers.
-* `(improper)` - Guess 76 legendary numbers.
-* `I wanna be the guy` - Guess 80 legendary numbers.
-* `Eat, Sleep, Sparky, Repeat` - Guess 90 legendary numbers.
-* `No life` - Guess 100 legendary numbers.
-* `After an absolute breakdown...` - Guess 120 legendary numbers.
-* `After an endfimidian breakdown...` - Guess 140 legendary numbers.
-* `After a truer breakdown...` - Guess 150 legendary numbers.
-* `Oh yeah i forgot to demote that legendary` - Guess 160 legendary numbers.
-* `If you got this far you should send me some entries` - Guess 180 legendary numbers.
-* `how the fuck did you manage this` - Guess 200 legendary numbers.
-* `If you achieved this no you didn't` - Guess 250 legendary numbers.
-* `Either you worked on the bot, or you're Stella.` - Guess 300 legendary numbers.
-* `Stop it. Get some help. McDonald's wa-` - Guess 350 legendary numbers.
-* `I already got rid of you...` - Guess every legendary number. Please stop searching.
+- `After a mental breakdown...` - Guess a legendary number.
+- `Legendary Chaser` - Guess 2 legendary numbers.
+- `I assume you searched the web for this` - Guess 3 legendary numbers.
+- `Legendary Master` - Guess 4 legendary numbers.
+- `Legendary Guardian` - Guess 5 legendary numbers.
+- `One for each day of the week` - Guess 7 legendary numbers.
+- `Legendary Overmind` - Guess 10 legendary numbers.
+- `One for every month` - Guess 12 legendary numbers.
+- `Master of Memory` - Guess 15 legendary numbers.
+- `Unstoppable!` - Guess 20 legendary numbers.
+- `adkv` - Guess 25 legendary numbers.
+- `Give me a challenge!` - Guess 30 legendary numbers.
+- `You fear nothing` - Guess 40 legendary numbers.
+- `Is it over yet?` - Guess 50 legendary numbers.
+- `[60 Minutes](https://www.youtube.com/@60minutes)` - Guess 60 legendary numbers.
+- `Why are you still here...` - Guess 70 legendary numbers.
+- `The Legendary Number Au Revoir` - Guess 75 legendary numbers.
+- `(improper)` - Guess 76 legendary numbers.
+- `I wanna be the guy` - Guess 80 legendary numbers.
+- `Eat, Sleep, Sparky, Repeat` - Guess 90 legendary numbers.
+- `No life` - Guess 100 legendary numbers.
+- `After an absolute breakdown...` - Guess 120 legendary numbers.
+- `After an endfimidian breakdown...` - Guess 140 legendary numbers.
+- `After a truer breakdown...` - Guess 150 legendary numbers.
+- `Oh yeah i forgot to demote that legendary` - Guess 160 legendary numbers.
+- `If you got this far you should send me some entries` - Guess 180 legendary numbers.
+- `how the fuck did you manage this` - Guess 200 legendary numbers.
+- `If you achieved this no you didn't` - Guess 250 legendary numbers.
+- `Either you worked on the bot, or you're Stella.` - Guess 300 legendary numbers.
+- `Stop it. Get some help. McDonald's wa-` - Guess 350 legendary numbers.
+- `I already got rid of you...` - Guess every legendary number. Please stop searching.
 
 ## Unique achievements
-* `Did you look it up?` - Correctly guess the number with less than 5 seconds before the timeout window expires.
-* `I made that mistake too.` - Guess Eternity instead of Existensfinity (and vice versa).
-* `How the antitables have antiturned...` - Guess more unique hard entries then unique medium entries then unique easy entries.
+
+- `Did you look it up?` - Correctly guess the number with less than 5 seconds before the timeout window expires.
+- `I made that mistake too.` - Guess Eternity instead of Existensfinity (and vice versa).
+- `How the antitables have antiturned...` - Guess more unique hard entries then unique medium entries then unique easy entries.

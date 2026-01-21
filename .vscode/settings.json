@@ -5,5 +5,5 @@
   },
   "oxc.fixKind": "safe_fix_or_suggestion",
   "oxc.typeAware": true,
-  "oxc.lint.run": "onSave"
+  "editor.defaultFormatter": "dprint.dprint"
 }

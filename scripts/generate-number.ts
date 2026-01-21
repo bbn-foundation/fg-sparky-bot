@@ -1,18 +1,19 @@
-import { NumberInfo } from "@fg-sparky/server";
-import type { Difficulties } from "@fg-sparky/utils";
+import { NumberInfo } from "#stores-types";
+import type { Difficulties } from "#utils/types.ts";
 import { Command } from "commander";
 import { copyFile } from "node:fs/promises";
 
 const program = new Command("generate-number");
 const sha512 = new Bun.CryptoHasher("sha512");
 
-program
-  .version("0.1.0")
-  .description("Generates boilerplate to add the number to fg sparky.");
+program.version("0.1.0").description("Generates boilerplate to add the number to fg sparky.");
 
 program
   .requiredOption("-f, --file <file>", "The picture of the number's symbol")
-  .requiredOption("-d, --difficulty <difficulty>", "Difficulty of the number (easy, medium, hard, or legendary)")
+  .requiredOption(
+    "-d, --difficulty <difficulty>",
+    "Difficulty of the number (easy, medium, hard, or legendary)",
+  )
   .requiredOption("-n, --number <number>", "Name of the number to add");
 
 program.parse(process.argv);
@@ -52,10 +53,7 @@ const json = NumberInfo.array().parse(await Bun.file("numbers/numbers.json").jso
 
 json.push(output);
 
-await Bun.write(
-  "numbers/numbers.json",
-  JSON.stringify(json, null, 2),
-);
+await Bun.write("numbers/numbers.json", JSON.stringify(json, null, 2));
 
 console.log("Generated number:");
 console.log(JSON.stringify(output, null, 2));

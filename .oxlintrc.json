@@ -103,10 +103,13 @@
     /// eslint
     "eslint/no-empty-function": "warn",
     "eslint/grouped-accessor-pairs": "warn",
-    "eslint/max-params": ["warn", {
-      "max": 4,
-      "countVoidThis": false
-    }],
+    "eslint/max-params": [
+      "warn",
+      {
+        "max": 4,
+        "countVoidThis": false
+      }
+    ],
     "eslint/max-depth": ["warn", 4],
     "eslint/max-lines-per-function": ["warn", 250],
     "eslint/max-nested-callbacks": ["warn", 3],
@@ -145,9 +148,12 @@
     "unicorn/prefer-string-trim-start-end": "warn",
     "unicorn/prefer-structured-clone": "warn",
     "unicorn/prefer-spread": "warn",
-    "unicorn/filename-case": ["warn", {
-      "case": "kebab-case"
-    }],
+    "unicorn/filename-case": [
+      "warn",
+      {
+        "case": "kebab-case"
+      }
+    ],
     // Type aware rules
     /// Errors
     "typescript/no-confusing-void-expression": "error",
@@ -166,9 +172,12 @@
     "typescript/related-getter-setter-pairs": "error",
     "typescript/unbound-method": "error",
     "typescript/use-unknown-in-catch-callback-variable": "error",
-    "typescript/no-misused-promises": ["error", {
-      "checksVoidReturn": false
-    }],
+    "typescript/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
     /// Warnings
     "typescript/await-thenable": "warn",
     "typescript/no-base-to-string": "warn",

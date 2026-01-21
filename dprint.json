@@ -1,0 +1,9 @@
+{
+  "indentWidth": 2,
+  "excludes": ["**/*-lock.json", "**/dist", "**/build", "**/node_modules"],
+  "plugins": [
+    "https://github.com/dprint/dprint-plugin-typescript/releases/download/0.95.13/plugin.wasm",
+    "https://github.com/dprint/dprint-plugin-markdown/releases/download/0.20.0/plugin.wasm",
+    "https://github.com/dprint/dprint-plugin-json/releases/download/0.21.1/plugin.wasm"
+  ]
+}

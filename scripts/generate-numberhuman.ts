@@ -1,5 +1,5 @@
-import { NumberhumanInfo } from "@fg-sparky/server";
-import type { Rarities } from "@fg-sparky/utils";
+import { NumberhumanInfo } from "#stores-types";
+import type { Rarities } from "#utils/types";
 import { Command } from "commander";
 import { copyFile } from "node:fs/promises";
 

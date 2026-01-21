@@ -29,7 +29,15 @@
     "types": ["bun", "node"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "#stores": ["./src/stores.ts"],
+      "#stores-types": ["./src/stores/index.ts"],
+      "#db": ["./src/db/index.ts"],
+      "#utils/*": ["./src/utils/*"],
+      "#numberdex/*": ["./src/numberdex/*"],
+      "#fg-sparky/*": ["./src/sparky/*"]
+    }
   },
   "include": ["**/*.ts"]
 }
