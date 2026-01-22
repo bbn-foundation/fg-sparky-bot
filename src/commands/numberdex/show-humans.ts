@@ -1,7 +1,8 @@
-import { NumberhumanData, UserProfile } from "#db";
+import { type NumberhumanData, UserProfile } from "#db";
 import { Numberhumans } from "#stores";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { chatInputApplicationCommandMention, italic, type User } from "discord.js";
+import { getNumberhumansBy } from "./numberhumans.ts";
 import type { NumberhumanSortingOrder } from "./sorting";
 
 function capitalize<T extends string>(val: T): Capitalize<T> {
@@ -47,18 +48,12 @@ export default async function numberdexShowHumans(
       guildId: interaction.guildId,
     },
   });
-  const realNumbers = await NumberhumanData.find({
-    relations: {
-      caughtBy: true,
-    },
-    where: {
-      caughtBy: {
-        guildId: interaction.guildId,
-        id: user.id,
-      },
-    },
-  });
   if (dbUser === null) return;
+  const realNumbers = await getNumberhumansBy(
+    sortingOrder,
+    dbUser,
+    Numberhumans,
+  );
 
   await interaction.reply({
     content: createCollectionMessage(user, pageNumber, realNumbers),
