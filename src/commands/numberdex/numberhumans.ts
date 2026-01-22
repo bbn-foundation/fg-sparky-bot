@@ -27,7 +27,7 @@ export async function getNumberhumansBy(
       return numberhumans.toSorted((a, b) => a.totalHP(store) - b.totalHP(store));
     }
     case NumberhumanSortingOrder.ByAttack: {
-      return numberhumans.toSorted((a, b) => a.totalAtk() - b.totalAtk());
+      return numberhumans.toSorted((a, b) => a.totalAtk(store) - b.totalAtk(store));
     }
     case NumberhumanSortingOrder.ByCatchId: {
       // already sorted
