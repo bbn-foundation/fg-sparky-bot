@@ -8,6 +8,7 @@ import { getUser } from "#db";
 import type { Command } from "#utils/types.ts";
 import {
   ApplicationCommandOptionType,
+  channelMention,
   ChannelType,
   type Client,
   type CommandInteraction,
@@ -40,6 +41,24 @@ const Numberdex: Command = {
         await interaction.reply(`added channel <#${channel.id}>.`);
         return;
       }
+      case "remove": {
+        if (!interaction.memberPermissions.has("ManageChannels")) {
+          await interaction.reply(
+            "you do not have permissison to set which channel fg sparky bot can spawn numberhumans in.",
+          );
+          return;
+        }
+        const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
+        if (NumberdexBaker.getJobNames().includes(`numberdex-channel-${channel.id}`)) {
+          await interaction.reply(
+            `numberhumans aren't spawning in ${channelMention(channel.id)} in the first place!`,
+          );
+        } else {
+          NumberdexBaker.destroy(`numberdex-channel-${channel.id}`);
+          await interaction.reply(`removed channel ${channelMention(channel.id)}`);
+        }
+        return;
+      }
       case "show-humans": {
         const user = interaction.options.getUser("user", true);
         const pageNumber = interaction.options.getInteger("page", true);
@@ -70,6 +89,19 @@ const Numberdex: Command = {
         {
           name: "channel",
           description: "The channel.",
+          type: ApplicationCommandOptionType.Channel,
+          required: true,
+        },
+      ],
+    },
+    {
+      name: "remove",
+      description: "Removes (or disable) a numberdex channel.",
+      type: ApplicationCommandOptionType.Subcommand,
+      options: [
+        {
+          name: "channel",
+          description: "The channel that has numberdex spawns.",
           type: ApplicationCommandOptionType.Channel,
           required: true,
         },
