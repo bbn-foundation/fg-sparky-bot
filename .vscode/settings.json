@@ -5,5 +5,8 @@
   },
   "oxc.fixKind": "safe_fix_or_suggestion",
   "oxc.typeAware": true,
-  "editor.defaultFormatter": "dprint.dprint"
+  "editor.defaultFormatter": "dprint.dprint",
+  "[typescript]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  }
 }
