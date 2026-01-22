@@ -1,5 +1,24 @@
 # changelog
 
+## 1.3.1 - January 22nd, 2026
+
+### Features
+
+- \[[`fb0f16c3`](https://github.com/skylafalls/fg-sparky-bot/commit/fb0f16c3f19b1bae8d6a0e12fab088da5abcf7c4)\] - stats: add sorting options for /numberdex show-humans by @skylafalls ([#41](https://github.com/skylafalls/fg-sparky-bot/pull/41))
+- \[[`fffee266`](https://github.com/skylafalls/fg-sparky-bot/commit/fffee266a0363df599d65356837fe80afc7b59e6)\] - numberdex: add subcommand to remove numberdex channels by @skylafalls
+
+### Fixes
+
+- \[[`6ebff543`](https://github.com/skylafalls/fg-sparky-bot/commit/6ebff5433262c520b59d528124038ce91c3330a6)\] - cmds: invert the conditional for /numberdex remove by @skylafalls
+- \[[`a7b889ae`](https://github.com/skylafalls/fg-sparky-bot/commit/a7b889ae1f7bc3968253ce338aa56637774d0d60)\] - meta: make dprint default formatter for ts by @skylafalls
+- \[[`9d9e66a8`](https://github.com/skylafalls/fg-sparky-bot/commit/9d9e66a845eaf9ab357bb9a26bcb9d0a714fdc00)\] - numberdex: Change pixelium to novacandy ([#40](https://github.com/skylafalls/fg-sparky-bot/pull/40))
+
+### Refactors
+
+- \[[`30fe713e`](https://github.com/skylafalls/fg-sparky-bot/commit/30fe713e3af7c718121fb2f293b3492e9c30cf33)\] - numberdex: turn evolutions into a proper enum by @skylafalls
+- \[[`1ee89bb3`](https://github.com/skylafalls/fg-sparky-bot/commit/1ee89bb322b8c070d388370e91998177c276a702)\] - build: use tsdown by @skylafalls
+- \[[`7309ca70`](https://github.com/skylafalls/fg-sparky-bot/commit/7309ca70be311f5a285ccc1734f639e60c4da59f)\] - and merge everything back by @skylafalls ([#38](https://github.com/skylafalls/fg-sparky-bot/pull/38))
+
 ## 1.3.0 - January 21st, 2026
 
 jk here's v1.3 (previous release should be considered v1.3.0-beta.2, i fucked up the releases)
