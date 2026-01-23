@@ -8,25 +8,14 @@ this is (presumably) inspired by the gd sparky bot, a game where you have to gue
 
 ## how to run
 
-you'll need [bun](https://bun.sh/) (to run the bot itself) and [node](https://nodejs.org/).
-
-first, make sure you have [pnpm](https://pnpm.io):
-
-```bash
-which pnpm
-```
-
-if you don't, install it first:
-
-```bash
-npm install -g pnpm
-```
+you'll need [bun](https://bun.sh/) to run the bot and install dependencies.\
+if you don't have it, install it first.
 
 now install dependencies and build the bot:
 
 ```bash
-pnpm i
-pnpm run build
+bun install --frozen-lockfile
+bun run build
 ```
 
 and run the bot:
