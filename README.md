@@ -26,7 +26,7 @@ now install dependencies and build the bot:
 
 ```bash
 pnpm i
-pnpm run --filter @fg-sparky/client build
+pnpm run build
 ```
 
 and run the bot:
