@@ -189,7 +189,6 @@
     "typescript/prefer-promise-reject-errors": "warn",
     "typescript/prefer-reduce-type-parameter": "warn",
     "typescript/only-throw-error": "warn",
-    "typescript/promise-function-async": "warn",
     "typescript/require-await": "warn",
     "typescript/switch-exhaustiveness-check": "warn",
     // Disables
