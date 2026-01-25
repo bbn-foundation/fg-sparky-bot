@@ -33,10 +33,6 @@ body:
         1. setup numberdex in a server
         2. wait for the bot to spawn a numberhuman
         3. catch a numberhuman, inputting the correct name
-      value: |
-        1. step 1
-        2. step 3
-        3. step 2
     validations:
       required: true
   - type: textarea
@@ -46,7 +42,6 @@ body:
       description: What did you expect it to do? What should have the bot done?
       placeholder: |
         The bot was supposed to create a profile only once and save the numberhuman I've caught.
-      value: It should've ...
     validations:
       required: true
   - type: textarea
@@ -57,7 +52,6 @@ body:
       placeholder: |
         The bot kept repeatadly re-creating my user profile and never saved the numberhuman.
         Further more, it wouldn't load my profile, thinking it never existed.
-      value: It actually...
     validations:
       required: true
   - type: textarea
@@ -69,9 +63,6 @@ body:
         image 1
         image 2
         description of image
-      value: |
-        image
-        description of image
     validations:
       required: false
   - type: textarea
@@ -81,7 +72,5 @@ body:
       description: What other relevant information do you have that could help?
       placeholder: |
         It seems to only occur within this person's server and not mines.
-      value: |
-        put it here
     validations:
       required: false
