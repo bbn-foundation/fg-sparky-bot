@@ -42,7 +42,3 @@ export interface StoredNumberInfo {
 export type Difficulties = "easy" | "medium" | "hard" | "legendary";
 export type Rarities = "common" | "rare" | "epic";
 export type Responses = "spawn" | "fail" | "success" | "flee";
-
-export type ReadonlyDeep<T> = {
-  readonly [K in keyof T]: T[K] extends object ? ReadonlyDeep<T[K]> : T[K];
-};

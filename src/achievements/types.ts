@@ -1,12 +1,4 @@
-/**
- * @license
- * fg-sparky-bot - Guess the FG number based on its symbol
- * Copyright (C) 2025 Skylafalls
- * SPDX-License-Identifier: GPL-3.0-or-later
- */
-
 import type { NumberhumanData, UserProfile } from "#db";
-import type { ReadonlyDeep } from "#utils/types.ts";
 
 /**
  * Format of the achievement ID.
@@ -23,21 +15,21 @@ export enum AchievementTrigger {
   /**
    * Guessing an FG sparky entry.
    */
-  SparkyGuess = 1,
+  SparkyGuess = "SparkyGuess",
   /**
    * Guessing a Numberdex entry.
    */
-  NumberdexGuess = 2,
+  NumberdexGuess = "NumberdexGuess",
   /**
    * Invoking a command.
    */
-  CommandInvocation = 4,
+  CommandInvocation = "CommandInvocation",
 }
 
 /**
  * The context of an achievement when calling the .requirement() function.
  */
-interface AchievementContext {
+export interface AchievementContext {
   /**
    * The person's user profile.
    */
@@ -65,7 +57,11 @@ interface AchievementContext {
  * that takes in the current context and returns whetever the player met the
  * reqirements.
  */
-interface Achievement {
+export interface Achievement {
+  /**
+   * The achievement's ID.
+   */
+  id: AchievementID;
   /**
    * Name of the achievement that will be shown to the user
    */
@@ -90,18 +86,3 @@ interface Achievement {
    */
   requirement(ctx: AchievementContext): boolean;
 }
-
-/**
- * Object of achivements that the player can earn.
- */
-export const Achievements: ReadonlyDeep<Record<AchievementID, Achievement>> = {
-  s1: {
-    name: "omni oridnal",
-    description: "omni oridnal",
-    triggerEvent: AchievementTrigger.SparkyGuess | AchievementTrigger.NumberdexGuess,
-    requirement(ctx: AchievementContext): boolean {
-      if (/omni oridnal/gimu.test(ctx.userGuess)) return true;
-      return false;
-    },
-  },
-};

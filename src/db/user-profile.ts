@@ -4,8 +4,8 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import type { AchievementID } from "#fg-sparky/achievements.ts";
 import { BaseEntity, Column, Entity, PrimaryColumn } from "typeorm";
+import type { AchievementID } from "../achievements/achievements";
 
 /**
  * This is a person's user profile.
