@@ -17,6 +17,16 @@ You should know how to use [git](https://git-scm.com/) and work with the command
 you will be using that a lot.\
 You will also need [Bun](https://bun.sh/) to run and build the bot, as well as to check your code.
 
+Make sure to setup Git so it knows you:
+
+```bash
+git config --global user.name "your username here"
+git config --global user.email "your email here"
+```
+
+You can use any username/email you prefer. We just need it so we can figure out who we should give
+credits to in the changelogs.
+
 ## General help/guidance
 
 If you only need help with using or setting up the bot, you can use GitHub's
@@ -59,6 +69,15 @@ but since you interact with the bot differently (via Discord commands and intera
 should switch to different methods for diagnosing, mainly:
 
 - Use a brand new/fresh server to run the bot, this can filter out a lot of the other member's noise
+
+### Submitting pull requests
+
+There's only one person maintaining this bot (@skylafalls), so please do value her time. Mainly,
+
+1. Please first [search if someone else](https://github.com/bbn-foundation/fg-sparky-bot/pulls)
+   has already made, merged, or closed the pull request to avoid duplicating existing work.
+1. [Make sure to allow us to edit your pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork),
+   since it makes trivial fixes a lot easier.
 
 ### New entries
 
