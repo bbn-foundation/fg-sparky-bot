@@ -34,7 +34,7 @@ we'd like to keep those only for issues with the bot itself.
 
 I assume if you reached this point, that means there's a definite issue with the bot itself. Great!
 
-You can [submit an issue](#) to the repository
+You can [submit an issue](#submitting-issues) to the repository
 and fill in the appropriate details. If you know how to fix it, that's even better!
 You can [submit a pull request](#submiting-issuespull-requests) with the fix and help improve the bot.
 
@@ -42,8 +42,23 @@ You can [submit a pull request](#submiting-issuespull-requests) with the fix and
 
 ### Submitting issues
 
-Before you do submit an issue, please check [the existing issues](https://github.com/bbn-foundation/fg-sparky-bot/issues)
-to make sure someone didn't
+Before you do submit an issue, please check [the issue tracker](https://github.com/bbn-foundation/fg-sparky-bot/issues)
+for related issues. Someone could have already figured out a fix for your problems.
+If not, you can help provide more details about the problem, and we can probably fix it.
+
+If no one made an issue for your problem, you can then make an issue with the `Bug Report` template,
+which you should fill out to the best of your ability. You don't need every single detail, just
+fill it with information related to the problem.
+
+If you will be filing an issue, please make sure you have a minimal reproduction. We cannot easily
+fix issues if we cannot reproduce the problem. It allows us to easily figure out the exact bug without
+having to continually pester you back and forth with your scenario.
+
+See [this stackoverflow guide](https://stackoverflow.com/help/minimal-reproducible-example) for guidance,
+but since you interact with the bot differently (via Discord commands and interactions, not code), you
+should switch to different methods for diagnosing, mainly:
+
+- Use a brand new/fresh server to run the bot, this can filter out a lot of the other member's noise
 
 ### New entries
 
