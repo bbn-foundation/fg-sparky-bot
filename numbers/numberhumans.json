@@ -1208,5 +1208,15 @@
     "baseHP": 250,
     "baseATK": 250,
     "ability": "glass"
+  },
+  {
+    "uuid": "37f592d5-fb8c-4e42-be40-672bb9a71305",
+    "name": "Waterifinity",
+    "rarity": "common",
+    "hashedName": "6e974be24f7222653692c4e031f4281362e8d944e51b835fd18735febeddf642b0a9884636782594fcba61869d8fa8cec39c2e3ce0c1af8bbcc451b35a27e613",
+    "image": "numbers/humans/common/37f592d5-fb8c-4e42-be40-672bb9a71305.jpg",
+    "baseHP": 160,
+    "baseATK": 160,
+    "ability": null
   }
 ]
