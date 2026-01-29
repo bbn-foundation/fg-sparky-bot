@@ -17,6 +17,7 @@ import {
   type Message,
   type OmitPartialGroupDMChannel,
 } from "discord.js";
+import { Achievements, AchievementTrigger } from "../../achievements/achievements.ts";
 import { guessCooldowns } from "../listener.ts";
 import handleSpecialGuess from "./special-handler.ts";
 
@@ -75,6 +76,12 @@ export function handleResponse(
         user.tokens += gain;
         user.guessedEntries.push(number.uuid);
         if (!user.uniqueGuessed.includes(number.uuid)) user.uniqueGuessed.push(number.uuid);
+        Achievements.check({
+          profile: user,
+          userGuess: message.content,
+          correctGuess: number.number ?? "",
+          trigger: AchievementTrigger.SparkyGuess,
+        });
         // then reply.
         if (await handleSpecialGuess(message, number, "pre-parse")) {
           return;

@@ -32,7 +32,8 @@
     "@typescript/native-preview": "catalog:types",
     "dprint": "catalog:linting",
     "oxlint": "catalog:linting",
-    "oxlint-tsgolint": "catalog:linting"
+    "oxlint-tsgolint": "catalog:linting",
+    "type-fest": "^5.4.1"
   },
   "workspaces": {
     "catalogs": {
