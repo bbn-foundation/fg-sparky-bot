@@ -3888,5 +3888,10 @@
     "uuid": "60848c4a-cb1d-4db4-af3c-ecbdca7fb5f5",
     "value": "I have no limbs, and I must touch.",
     "type": "spawn"
+  },
+  {
+    "uuid": "000a69eb-7689-4f1d-be74-093d47b5ad13",
+    "value": "thread 'main' (2083909) panicked at file.rs:2:5:\nWhat is this supposed to be\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+    "type": "spawn"
   }
 ]
