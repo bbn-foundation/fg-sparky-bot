@@ -28422,8 +28422,8 @@
   {
     "uuid": "cc9a3ab2-60a1-4048-a95e-bed196e9386d",
     "image": "numbers/hard/cc9a3ab2-60a1-4048-a95e-bed196e9386d.webp",
-    "hashedName": "9a3b3c8c6b09918908605fbed16aa5d20740409528d39911ff1a1dc12243b0d1a5a4ca7515ae593e2c309de452bd35ea68b41c091f67c793767a2a528e970447",
-    "name": " Lambda Rule",
+    "hashedName": "3c08066974225fca1c9814099d453295c1200cf90e04317f13da4014e4709cf89e2445a699ff4306a5eedc2658d179cb6cd701c1899f051131f824443dd419a8",
+    "name": "Lambda Rule",
     "difficulty": "hard"
   },
   {
@@ -43765,9 +43765,23 @@
   },
   {
     "uuid": "2ea811a4-47bb-419d-96db-f3c09b010900",
-    "name": "The Golden Temple of Math",
-    "hashedName": "62baac73bc6bf51ed43ba4066c4c3103908cca68e4121085415b353b85c75f3d10b4769ecd44dd02cb7d5275722b1b6136cb75b65d02d11ab916667a6d9f3714",
     "image": "numbers/medium/2ea811a4-47bb-419d-96db-f3c09b010900.webp",
+    "hashedName": "62baac73bc6bf51ed43ba4066c4c3103908cca68e4121085415b353b85c75f3d10b4769ecd44dd02cb7d5275722b1b6136cb75b65d02d11ab916667a6d9f3714",
+    "name": "The Golden Temple of Math",
     "difficulty": "medium"
+  },
+  {
+    "uuid": "4ac57ad8-8dfa-4157-9ecc-6e56156969d0",
+    "image": "numbers/hard/4ac57ad8-8dfa-4157-9ecc-6e56156969d0.png",
+    "hashedName": "47795bc860c6b978bbb19626888e302b38abefef1444c0a6e5992c2274edd1af06e97ad61d49232e9acf78694baa0af191dc2359f9b581f1e84605cbf74808ed",
+    "name": "Sapperi Oisesting Oooooowwwwwst'sting",
+    "difficulty": "hard"
+  },
+  {
+    "uuid": "adbcc443-8aa3-4f59-8216-38faeef3e0d7",
+    "name": null,
+    "hashedName": "4302a3406db244ca539521760d12e2d987f627b24a90d02e72bf5e1a3292eb68646f3baa73d5ba64eb78f49a9b11745bd4077bb10ebcaf82488183d517a57546",
+    "image": "numbers/legendary/adbcc443-8aa3-4f59-8216-38faeef3e0d7.png",
+    "difficulty": "legendary"
   }
 ]
