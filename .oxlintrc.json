@@ -62,7 +62,6 @@
     "oxc/bad-bitwise-operator": "error",
     "oxc/no-const-enum": "error",
     "oxc/no-map-spread": "error",
-    "oxc/no-barrel-file": ["warn", 500],
     /// promise
     "promise/catch-or-return": "error",
     "promise/prefer-await-to-callbacks": "error",
