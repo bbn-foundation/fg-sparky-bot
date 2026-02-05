@@ -1,5 +1,41 @@
 # changelog
 
+## 1.3.2 - Feburary 4th, 2026
+
+turns out i could've just,,, reversed the save order,,,, and it would have fixed it........
+
+### Features
+
+- \[[`f5e24749`](https://github.com/skylafalls/fg-sparky-bot/commit/f5e24749df01abb7b262136a798dde294ed4f85c)\] - responses: add script to easily generate a bunch of responses by @skylafalls
+- \[[`f96cc019`](https://github.com/skylafalls/fg-sparky-bot/commit/f96cc019bbcabe7c9111bb807477905dfd979499)\] - meta: add issue templates by @skylafalls
+- \[[`43b3cddb`](https://github.com/skylafalls/fg-sparky-bot/commit/43b3cddba10f7e3755af725f307158dbd750a7a1)\] - meta: add issue templates by @skylafalls
+
+### Fixes
+
+- \[[`16638ea6`](https://github.com/skylafalls/fg-sparky-bot/commit/16638ea67114398257ca81a1a111fea44e711b3f)\] - numberdex: save user profile before saving numberhuman catch by @skylafalls
+- \[[`2f3525a4`](https://github.com/skylafalls/fg-sparky-bot/commit/2f3525a48b24156d52517a2181954a3b44d891bc)\] - misc: remove no-barrel-file rule by @skylafalls
+- \[[`53309455`](https://github.com/skylafalls/fg-sparky-bot/commit/533094557894dcc72c382b8f162dfdb95f88ba3b)\] - misc: some fixups by @skylafalls
+- \[[`629d3b39`](https://github.com/skylafalls/fg-sparky-bot/commit/629d3b3956933c34df64f85d58c34c63810ca754)\] - db: stop annoying me oxlint by @skylafalls
+
+### Refactors
+
+- \[[`7b53d5da`](https://github.com/skylafalls/fg-sparky-bot/commit/7b53d5da5ecfcc9776a74eec92ef155c16835bbe)\] - numbers: shuffle the whole json by @skylafalls
+- \[[`cd68804a`](https://github.com/skylafalls/fg-sparky-bot/commit/cd68804a347cdca131c41694a3dfb5a2bfa7da2c)\] - meta: use bun by @skylafalls
+
+### Chores
+
+- \[[`1583668c`](https://github.com/skylafalls/fg-sparky-bot/commit/1583668cb7b59bc41939590f1885711bb81c25a9)\] - deps: update deps by @skylafalls
+- \[[`31a23976`](https://github.com/skylafalls/fg-sparky-bot/commit/31a239764c2647792f45851d295f8aa1d5f74514)\] - responses: add new one by @skylafalls
+- \[[`b6180c82`](https://github.com/skylafalls/fg-sparky-bot/commit/b6180c82b985ac5c35e34145d7b15991b91abcb2)\] - deps: update deps by @skylafalls
+- \[[`a95cde15`](https://github.com/skylafalls/fg-sparky-bot/commit/a95cde15cc7060ce436360432b9f54217167daa5)\] - entries: update with new entries by @skylafalls
+- \[[`57d37976`](https://github.com/skylafalls/fg-sparky-bot/commit/57d37976c7aae6603f6342e2c2d66ed5efbf5a99)\] - responses: add rust panic by @skylafalls
+- \[[`814d4548`](https://github.com/skylafalls/fg-sparky-bot/commit/814d454883073e60a201fe1a08b79b2ec15d4cdc)\] - entries: add entries i forgot to add by @skylafalls
+- \[[`e77bb2ac`](https://github.com/skylafalls/fg-sparky-bot/commit/e77bb2ace4ab8fb5a1eabf7a0d02b68dd428ce1d)\] - entries: demote an entry by @skylafalls
+- \[[`194382e1`](https://github.com/skylafalls/fg-sparky-bot/commit/194382e17fd03746ded7186b7a8068fbcea16859)\] - deps: update linters and typescript by @skylafalls
+- \[[`46cc0eee`](https://github.com/skylafalls/fg-sparky-bot/commit/46cc0eeec584abecf075de07d9228d6bc599a9be)\] - meta: add code of conduct by @skylafalls
+- \[[`4156e721`](https://github.com/skylafalls/fg-sparky-bot/commit/4156e721dbbb657d44062983336bdc9730b54b7f)\] - deps: update deps by @skylafalls
+- \[[`9e3ee635`](https://github.com/skylafalls/fg-sparky-bot/commit/9e3ee635da09b2358daf426c73276ea3df97ecdf)\] - meta: update readme run instructions by @skylafalls
+
 ## 1.3.1 - January 22nd, 2026
 
 ### Features
