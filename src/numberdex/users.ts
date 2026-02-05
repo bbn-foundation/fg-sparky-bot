@@ -69,8 +69,8 @@ export async function updateUserStats(
       );
     }
     // and saves.
-    await numberhuman.save();
     await user.save();
+    await numberhuman.save();
   } else {
     Logger.info(`user not found, creating user and adding the numberhuman`);
     const newUser = createUser(interaction.user.id, interaction.guildId);
@@ -87,7 +87,7 @@ export async function updateUserStats(
         evolutionMessage,
       ]),
     );
-    await numberhuman.save();
     await newUser.save();
+    await numberhuman.save();
   }
 }
