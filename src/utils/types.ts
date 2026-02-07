@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import type {
+  AutocompleteInteraction,
   ChatInputApplicationCommandData,
   ChatInputCommandInteraction,
   Client,
@@ -19,6 +20,7 @@ export interface Command extends ChatInputApplicationCommandData {
     client: Client,
     interaction: CommandInteraction<"raw" | "cached">,
   ) => void | Promise<void>;
+  autocomplete?(client: Client, interaction: AutocompleteInteraction<"raw" | "cached">): void | Promise<void>;
   cooldown?: number | undefined;
 }
 

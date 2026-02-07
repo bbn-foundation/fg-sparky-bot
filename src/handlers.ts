@@ -9,7 +9,7 @@ import { Logger } from "#utils/logger.ts";
 import { ActivityType, type Client, type Interaction } from "discord.js";
 import { execSync } from "node:child_process";
 import packageJson from "../package.json" with { type: "json" };
-import { handleSlashCommand } from "./commands/listener.ts";
+import { handleAutocomplete, handleSlashCommand } from "./commands/listener.ts";
 import { NumberdexBaker } from "./numberdex/cron.ts";
 
 const currentHash = () => execSync("git rev-parse --short HEAD").toString().trim();
@@ -31,6 +31,8 @@ export function registerHandlers(client: Client): void {
   client.on("interactionCreate", async (interaction: Interaction) => {
     if (interaction.isCommand()) {
       await handleSlashCommand(client, interaction, Commands);
+    } else if (interaction.isAutocomplete()) {
+      await handleAutocomplete(client, interaction, Commands);
     }
   });
 }

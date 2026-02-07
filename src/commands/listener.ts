@@ -6,6 +6,7 @@
  */
 import { Logger } from "#utils/logger";
 import type { Command } from "#utils/types.ts";
+import type { AutocompleteInteraction } from "discord.js";
 import { type Client, type CommandInteraction, MessageFlags } from "discord.js";
 import { GuessCooldownCollection } from "./cooldowns/guesses.ts";
 import { CooldownCollection } from "./cooldowns/normal.ts";
@@ -58,6 +59,29 @@ export async function handleSlashCommand(
 
   Logger.info(`Running command ${interaction.commandName}`);
   await slashCommand.run(client, interaction);
+}
+
+export async function handleAutocomplete(
+  client: Client,
+  interaction: AutocompleteInteraction,
+  commands: readonly Command[],
+): Promise<void> {
+  if (!interaction.inGuild()) {
+    Logger.warn(
+      `user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,
+    );
+    return;
+  }
+  Logger.debug(`Finding command ${interaction.commandName}`);
+  const slashCommand = commands.find((c) => c.name === interaction.commandName);
+  if (!slashCommand) {
+    Logger.error(`User ${interaction.user.username} (${interaction.user.displayName})
+      attempted to invoke a nonexistent command (/${interaction.commandName})`);
+    return;
+  }
+
+  Logger.info(`Autocompleting options for command ${interaction.commandName}`);
+  await slashCommand.autocomplete?.(client, interaction);
 }
 
 export function registerCommands(client: Client, commands: readonly Command[]): void {
