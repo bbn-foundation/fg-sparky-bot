@@ -8,6 +8,7 @@ import { UsersDB } from "#db";
 import { NumberdexBaker, setupCronJobs } from "#numberdex/cron.ts";
 import { Numberhumans, Numbers, Responses } from "#stores";
 import { Logger } from "#utils/logger.ts";
+import type { Command as ApplicationCommand } from "#utils/types.ts";
 import { Command } from "commander";
 import { Client } from "discord.js";
 import packageJson from "../package.json" with { type: "json" };
@@ -19,15 +20,19 @@ const program = new Command()
   .option(
     "-t, --token <token>",
     "The discord bot token to login with (env variable: DISCORD_TOKEN)",
+  )
+  .option(
+    "-c, --commands-folder <directory>",
+    "Folder that has all of the bot's commands (default: $CWD/data/commands)",
   );
 
 program.parse(process.argv);
 
-const { token = process.env.DISCORD_TOKEN } = program.opts<{
+const { token = process.env.DISCORD_TOKEN, commandsFolder = `${process.cwd()}/data/commands` } = program.opts<{
   token?: string;
+  commandsFolder?: string;
 }>();
 
-//
 if (!token) {
   Logger.error(
     `The bot token must be passed in via the --token / -t flag or the DISCORD_TOKEN environment variable.`,
@@ -42,10 +47,13 @@ const client: Client = new Client({
 declare global {
   namespace globalThis {
     var client: Client;
+    var Commands: readonly ApplicationCommand[];
+    var commandFolder: string;
   }
 }
 
 globalThis.client = client;
+globalThis.commandFolder = commandsFolder;
 
 try {
   Logger.notice("Loading entries from numbers.json");
@@ -57,6 +65,7 @@ try {
 
   Logger.notice("Initializing database");
   await UsersDB.initialize();
+
   await initClient(client, token);
   await setupCronJobs(client, Numberhumans, NumberdexBaker);
   process.on("beforeExit", async () => {

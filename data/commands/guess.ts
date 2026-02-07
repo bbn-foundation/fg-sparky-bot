@@ -7,7 +7,7 @@
 import { Logger } from "#utils/logger.ts";
 import type { Command, Difficulties } from "#utils/types.ts";
 import { ApplicationCommandOptionType, AttachmentBuilder, type Client, type CommandInteraction } from "discord.js";
-import { Numbers } from "../stores.ts";
+import { Numbers } from "../../src/stores.ts";
 import { handleResponse } from "./guess/handler.ts";
 
 const devMessage = process.env.NODE_ENV === "development"
@@ -63,7 +63,7 @@ const Guess: Command = {
       type: ApplicationCommandOptionType.String,
       required: true,
       choices: [
-        { name: "Easy", value: "easy" },
+        { name: "Easyyyyyyyy", value: "easy" },
         { name: "Medium", value: "medium" },
         { name: "Hard", value: "hard" },
         { name: "Random", value: "random" },

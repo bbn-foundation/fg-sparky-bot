@@ -6,13 +6,12 @@
  */
 import { Logger } from "#utils/logger.ts";
 import type { Client } from "discord.js";
-import { Commands } from "./commands/commands.ts";
 import { registerCommands } from "./commands/listener.ts";
 import { registerHandlers } from "./handlers.ts";
 
 export async function initClient(client: Client, token: string): Promise<void> {
   registerHandlers(client);
-  registerCommands(client, Commands);
+  registerCommands(client);
 
   Logger.info("Logging in");
   await client.login(token);

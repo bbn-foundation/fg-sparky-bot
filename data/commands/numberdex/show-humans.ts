@@ -3,7 +3,7 @@ import { Numberhumans } from "#stores";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { chatInputApplicationCommandMention, italic, type User } from "discord.js";
 import { getNumberhumansBy } from "./numberhumans.ts";
-import type { NumberhumanSortingOrder } from "./sorting";
+import type { NumberhumanSortingOrder } from "./sorting.ts";
 
 function capitalize<T extends string>(val: T): Capitalize<T> {
   // oxlint-disable-next-line typescript/no-unsafe-type-assertion
