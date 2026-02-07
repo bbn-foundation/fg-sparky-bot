@@ -4,83 +4,85 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import { Logger } from "#utils/logger.ts";
 import type { Command } from "#utils/types.ts";
-import {
-  ApplicationCommandOptionType,
-  type Client,
-  type CommandInteraction,
-  MessageFlags,
-  PermissionFlagsBits,
-} from "discord.js";
-import { Numberhumans, Numbers, Responses } from "../../src/stores.ts";
-
-enum ReloadType {
-  SparkyEntries = "sparky-entries",
-  Numberhumans = "numberhumans",
-  Responses = "responses",
-}
+import { ApplicationCommandOptionType, type Client, type CommandInteraction, PermissionFlagsBits } from "discord.js";
+import { ReloadStoreType } from "./reload/common.ts";
+import reloadStoreCommand from "./reload/reload-store.ts";
 
 const Reload: Command = {
   async run(_client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
-    if (!interaction.memberPermissions.has("ManageChannels")) {
+    if (interaction.user.id !== "1051147056481308744") {
       await interaction.reply("you do not have permissison to reload commands.");
       return;
     }
-    // oxlint-disable-next-line no-unsafe-type-assertion: see the options below
-    switch (interaction.options.getString("store", true) as ReloadType) {
-      case ReloadType.Numberhumans: {
-        await Numberhumans.reload();
-        await interaction.reply({
-          content: "reloaded numberhuman store.",
-          flags: MessageFlags.Ephemeral,
-        });
+    switch (interaction.options.getSubcommand(true)) {
+      case "command": {
         break;
       }
-      case ReloadType.SparkyEntries: {
-        await Numbers.reload();
-        await interaction.reply({
-          content: "reloaded numbers store.",
-          flags: MessageFlags.Ephemeral,
-        });
-        break;
-      }
-      case ReloadType.Responses: {
-        await Responses.reload();
-        await interaction.reply({
-          content: "reloaded responses store.",
-          flags: MessageFlags.Ephemeral,
-        });
+      case "store": {
+        await reloadStoreCommand(client, interaction);
         break;
       }
       default: {
-        await interaction.reply("sorry idk what store that is");
-        break;
+        Logger.error(`user tried invoking nonexistent subcommand: /reload ${interaction.options.getSubcommand(true)}`);
+        await interaction.reply("sorry that subcommand isn't implemented yet");
       }
     }
+  },
+  async autocomplete(_, interaction) {
+    const focusedValue = interaction.options.getFocused(true);
+    if (focusedValue.name !== "cmd-name") return;
+    await interaction.respond(
+      Commands
+        .map(cmd => cmd.name)
+        .filter(name => name.startsWith(focusedValue.value))
+        .map(choice => ({
+          name: choice,
+          value: choice,
+        })),
+    );
   },
   description: "Reloads the bot's internal store",
   name: "reload",
   options: [
     {
+      name: "command",
+      description: "Reload a specific command",
+      type: ApplicationCommandOptionType.Subcommand,
+      options: [{
+        name: "cmd-name",
+        description: "Name of the command",
+        type: ApplicationCommandOptionType.String,
+        autocomplete: true,
+        required: true,
+      }],
+    },
+    {
       name: "store",
-      description: "The store type to reload.",
-      type: ApplicationCommandOptionType.String,
-      required: true,
-      choices: [
-        {
-          name: "FG Sparky Entries",
-          value: ReloadType.SparkyEntries,
-        },
-        {
-          name: "Numberhuman Entries",
-          value: ReloadType.Numberhumans,
-        },
-        {
-          name: "Numberdex Responses",
-          value: ReloadType.Responses,
-        },
-      ],
+      description: "Reload a data store",
+      type: ApplicationCommandOptionType.Subcommand,
+      options: [{
+        name: "store",
+        description: "The store type to reload.",
+        type: ApplicationCommandOptionType.String,
+        required: true,
+        choices: [
+          {
+            name: "FG Sparky Entries",
+            value: ReloadStoreType.SparkyEntries,
+          },
+          {
+            name: "Numberhuman Entries",
+            value: ReloadStoreType.Numberhumans,
+          },
+          {
+            name: "Numberdex Responses",
+            value: ReloadStoreType.Responses,
+          },
+        ],
+      }],
     },
   ],
   defaultMemberPermissions: PermissionFlagsBits.ManageChannels,
