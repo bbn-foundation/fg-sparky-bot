@@ -14,9 +14,9 @@ import {
   type CommandInteraction,
   MessageFlags,
 } from "discord.js";
-import { NumberdexBaker } from "../numberdex/cron.ts";
-import { setupCallback } from "../numberdex/handler.ts";
-import { Numberhumans } from "../stores.ts";
+import { NumberdexBaker } from "../../src/numberdex/cron.ts";
+import { setupCallback } from "../../src/numberdex/handler.ts";
+import { Numberhumans } from "../../src/stores.ts";
 import numberdexShowHumans from "./numberdex/show-humans.ts";
 import { NumberhumanSortingOrder } from "./numberdex/sorting.ts";
 

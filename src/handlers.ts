@@ -9,7 +9,6 @@ import { Logger } from "#utils/logger.ts";
 import { ActivityType, type Client, type Interaction } from "discord.js";
 import { execSync } from "node:child_process";
 import packageJson from "../package.json" with { type: "json" };
-import { Commands } from "./commands/commands.ts";
 import { handleSlashCommand } from "./commands/listener.ts";
 import { NumberdexBaker } from "./numberdex/cron.ts";
 

@@ -12,7 +12,7 @@ import {
   MessageFlags,
   PermissionFlagsBits,
 } from "discord.js";
-import { Numberhumans, Numbers, Responses } from "../stores.ts";
+import { Numberhumans, Numbers, Responses } from "../../src/stores.ts";
 
 enum ReloadType {
   SparkyEntries = "sparky-entries",
