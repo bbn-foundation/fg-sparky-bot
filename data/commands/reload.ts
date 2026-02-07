@@ -33,13 +33,33 @@ const Reload: Command = {
       }
     }
   },
+  async autocomplete(_, interaction) {
+    const focusedValue = interaction.options.getFocused(true);
+    if (focusedValue.name !== "cmd-name") return;
+    await interaction.respond(
+      Commands
+        .map(cmd => cmd.name)
+        .filter(name => name.startsWith(focusedValue.value))
+        .map(choice => ({
+          name: choice,
+          value: choice,
+        })),
+    );
+  },
   description: "Reloads the bot's internal store",
   name: "reload",
   options: [
     {
       name: "command",
-      description: "Reload the commands within the bot",
+      description: "Reload a specific command",
       type: ApplicationCommandOptionType.Subcommand,
+      options: [{
+        name: "cmd-name",
+        description: "Name of the command",
+        type: ApplicationCommandOptionType.String,
+        autocomplete: true,
+        required: true,
+      }],
     },
     {
       name: "store",
