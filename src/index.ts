@@ -5,14 +5,13 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { Logger } from "#utils/logger.ts";
-import type { Command } from "#utils/types.ts";
 import type { Client } from "discord.js";
 import { registerCommands } from "./commands/listener.ts";
 import { registerHandlers } from "./handlers.ts";
 
-export async function initClient(client: Client, token: string, commands: readonly Command[]): Promise<void> {
+export async function initClient(client: Client, token: string): Promise<void> {
   registerHandlers(client);
-  registerCommands(client, commands);
+  registerCommands(client);
 
   Logger.info("Logging in");
   await client.login(token);

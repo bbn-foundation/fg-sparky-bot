@@ -10,6 +10,7 @@ import type { AutocompleteInteraction } from "discord.js";
 import { type Client, type CommandInteraction, MessageFlags } from "discord.js";
 import { GuessCooldownCollection } from "./cooldowns/guesses.ts";
 import { CooldownCollection } from "./cooldowns/normal.ts";
+import { loadCommands } from "./loader.ts";
 
 const commandCooldowns = new CooldownCollection();
 export const guessCooldowns: GuessCooldownCollection = new GuessCooldownCollection();
@@ -84,15 +85,14 @@ export async function handleAutocomplete(
   await slashCommand.autocomplete?.(client, interaction);
 }
 
-export function registerCommands(client: Client, commands: readonly Command[]): void {
+export function registerCommands(client: Client): void {
   client.once("clientReady", async () => {
     if (!client.user || !client.application) {
       Logger.warn("Client is not loaded, refusing to register bot commands");
       return;
     }
 
-    Logger.info(`Registering ${commands.length.toString()} commands`);
-    await client.application.commands.set(commands);
+    globalThis.Commands = await loadCommands(client, commandFolder);
 
     Logger.info(`${client.user.username} is online`);
   });

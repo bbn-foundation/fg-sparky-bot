@@ -11,7 +11,6 @@ import { Logger } from "#utils/logger.ts";
 import type { Command as ApplicationCommand } from "#utils/types.ts";
 import { Command } from "commander";
 import { Client } from "discord.js";
-import { readdir } from "node:fs/promises";
 import packageJson from "../package.json" with { type: "json" };
 import { initClient } from "./index.ts";
 
@@ -53,23 +52,8 @@ declare global {
   }
 }
 
-Logger.notice(`Searching for commands...`);
-const commandFiles = await readdir(
-  Bun.fileURLToPath(import.meta.resolve(commandsFolder, import.meta.url)),
-  {
-    withFileTypes: true,
-  },
-);
-
-const commands: readonly ApplicationCommand[] = await Promise.all(
-  commandFiles.filter(entry => entry.isFile())
-    .map(entry => entry.name)
-    // oxlint-disable-next-line typescript/no-unsafe-return, no-unsafe-member-access
-    .map(async (src) => (await import(`${commandsFolder}/${src}`)).default),
-);
-
 globalThis.client = client;
-globalThis.Commands = commands;
+globalThis.commandFolder = commandsFolder;
 
 try {
   Logger.notice("Loading entries from numbers.json");
@@ -82,7 +66,7 @@ try {
   Logger.notice("Initializing database");
   await UsersDB.initialize();
 
-  await initClient(client, token, commands);
+  await initClient(client, token);
   await setupCronJobs(client, Numberhumans, NumberdexBaker);
   process.on("beforeExit", async () => {
     await NumberdexBaker.saveState();

@@ -36,7 +36,8 @@
       "#db": ["./src/db/index.ts"],
       "#utils/*": ["./src/utils/*"],
       "#numberdex/*": ["./src/numberdex/*"],
-      "#fg-sparky/*": ["./src/sparky/*"]
+      "#fg-sparky/*": ["./src/sparky/*"],
+      "#cmd-loader": ["./src/commands/loader.ts"]
     }
   },
   "include": ["**/*.ts"]

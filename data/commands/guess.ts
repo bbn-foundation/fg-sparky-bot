@@ -63,7 +63,7 @@ const Guess: Command = {
       type: ApplicationCommandOptionType.String,
       required: true,
       choices: [
-        { name: "Easy", value: "easy" },
+        { name: "Easyyyyyy", value: "easy" },
         { name: "Medium", value: "medium" },
         { name: "Hard", value: "hard" },
         { name: "Random", value: "random" },

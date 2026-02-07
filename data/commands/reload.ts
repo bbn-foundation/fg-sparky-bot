@@ -8,10 +8,11 @@ import { Logger } from "#utils/logger.ts";
 import type { Command } from "#utils/types.ts";
 import { ApplicationCommandOptionType, type Client, type CommandInteraction, PermissionFlagsBits } from "discord.js";
 import { ReloadStoreType } from "./reload/common.ts";
+import reloadCmdCommand from "./reload/reload-command.ts";
 import reloadStoreCommand from "./reload/reload-store.ts";
 
 const Reload: Command = {
-  async run(_client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
+  async run(client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
     if (interaction.user.id !== "1051147056481308744") {
       await interaction.reply("you do not have permissison to reload commands.");
@@ -19,6 +20,7 @@ const Reload: Command = {
     }
     switch (interaction.options.getSubcommand(true)) {
       case "command": {
+        await reloadCmdCommand(client, interaction);
         break;
       }
       case "store": {
@@ -31,19 +33,6 @@ const Reload: Command = {
       }
     }
   },
-  async autocomplete(_, interaction) {
-    const focusedValue = interaction.options.getFocused(true);
-    if (focusedValue.name !== "cmd-name") return;
-    await interaction.respond(
-      Commands
-        .map(cmd => cmd.name)
-        .filter(name => name.startsWith(focusedValue.value))
-        .map(choice => ({
-          name: choice,
-          value: choice,
-        })),
-    );
-  },
   description: "Reloads the bot's internal store",
   name: "reload",
   options: [
@@ -51,13 +40,6 @@ const Reload: Command = {
       name: "command",
       description: "Reload a specific command",
       type: ApplicationCommandOptionType.Subcommand,
-      options: [{
-        name: "cmd-name",
-        description: "Name of the command",
-        type: ApplicationCommandOptionType.String,
-        autocomplete: true,
-        required: true,
-      }],
     },
     {
       name: "store",

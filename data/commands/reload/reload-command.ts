@@ -1,11 +1,9 @@
+import { loadCommands } from "#cmd-loader";
 import { Logger } from "#utils/logger";
-import type { Command } from "#utils/types.ts";
 import { type ChatInputCommandInteraction, type Client, MessageFlags } from "discord.js";
 
-let reloadCount = 0;
-
 export default async function reloadCmdCommand(
-  _: Client,
+  client: Client,
   interaction: ChatInputCommandInteraction<"cached" | "raw">,
 ): Promise<void> {
   const commandName = interaction.options.getString("cmd-name", true);
@@ -18,24 +16,11 @@ export default async function reloadCmdCommand(
     return;
   }
 
-  Logger.notice(`trying to reload command ${commandName}...`);
+  Logger.notice(`trying to reload commands...`);
 
-  try {
-    // I sure hope the command's name matches what it's called
-    //
-    // oxlint-disable-next-line typescript/no-unsafe-type-assertion
-    const command = (await import(`${globalThis.commandFolder}/${commandName}?count=${reloadCount++}`))
-      // oxlint-disable-next-line typescript/no-unsafe-member-access
-      .default as Command;
-    await interaction.client.application.commands.edit(commandName, command);
-
-    Logger.notice(`successfully reloaded command ${commandName}!`);
-    await interaction.reply(`successfully reloaded /${commandName}`);
-  } catch {
-    Logger.error(`failed to reload commnd ${commandName}!`);
-    await interaction.reply({
-      content: `failed to reload command ${commandName}`,
-      flags: MessageFlags.Ephemeral,
-    });
+  if ((await loadCommands(client, globalThis.commandFolder)).length > 0) {
+    await interaction.reply("reloaded commands");
+  } else {
+    await interaction.reply("sorry i couldn't reload the commnds");
   }
 }
