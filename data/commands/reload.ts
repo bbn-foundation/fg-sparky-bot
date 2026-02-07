@@ -38,7 +38,7 @@ const Reload: Command = {
   options: [
     {
       name: "command",
-      description: "Reload a specific command",
+      description: "Reload the commands within the bot",
       type: ApplicationCommandOptionType.Subcommand,
     },
     {
