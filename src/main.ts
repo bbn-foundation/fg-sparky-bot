@@ -19,14 +19,12 @@ const program = new Command()
   .option(
     "-t, --token <token>",
     "The discord bot token to login with (env variable: DISCORD_TOKEN)",
-  )
-  .option("-l, --loglevel [loglevel]", "Logging level as a number (env variable: LOG_LEVEL)");
+  );
 
 program.parse(process.argv);
 
-const { token = process.env.DISCORD_TOKEN, loglevel = Number(process.env.LOG_LEVEL ?? 0) } = program.opts<{
+const { token = process.env.DISCORD_TOKEN } = program.opts<{
   token?: string;
-  loglevel?: number;
 }>();
 
 //
@@ -50,7 +48,6 @@ declare global {
 globalThis.client = client;
 
 try {
-  Logger.loglevel = loglevel;
   Logger.notice("Loading entries from numbers.json");
   await Numbers.load();
   Logger.notice("Loading entries from numberdex-data.json");

@@ -4,59 +4,30 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
-import chalk from "chalk";
-import { loggerFormatter } from "./formatter.ts";
+// Why do they call it winston, reminds me of winston churchill
+import { config, createLogger, format, type Logger as WinstonLogger, transports } from "winston";
 
-export const Logger = {
-  loglevel: 0,
-  debug(str: string, ...values: string[]): void {
-    if (this.loglevel > 0) return;
-    console.debug(
-      `[${loggerFormatter.format(Date.now())}] ${chalk.blue("[DEBUG]")}: ${str}`,
-      ...values,
-    );
-  },
-
-  info(str: string, ...values: string[]): void {
-    if (this.loglevel > 1) return;
-    console.log(
-      `[${loggerFormatter.format(Date.now())}] ${chalk.grey("[INFO]")}: ${str}`,
-      ...values,
-    );
-  },
-
-  notice(str: string, ...values: string[]): void {
-    if (this.loglevel > 2) return;
-    console.log(
-      `[${loggerFormatter.format(Date.now())}] ${chalk.whiteBright("[NOTICE]")}: ${str}`,
-      ...values,
-    );
-  },
-
-  warn(str: string, ...values: string[]): void {
-    if (this.loglevel > 3) return;
-    console.warn(
-      `[${loggerFormatter.format(Date.now())}] ${chalk.yellowBright("[WARN]")}: ${str}`,
-      ...values,
-    );
-  },
-
-  error(str: string, ...values: string[]): void {
-    if (this.loglevel > 4) return;
-    console.error(`[${loggerFormatter.format(Date.now())}] ${chalk.redBright("[ERROR]")}: ${str}`, ...values);
-  },
-
-  crit(str: string, ...values: string[]): void {
-    console.error(
-      `[${loggerFormatter.format(Date.now())}] ${chalk.magentaBright("[CRIT]")}: ${str}`,
-      ...values,
-    );
-  },
-
-  success(str: string, ...values: string[]): void {
-    console.log(
-      `[${loggerFormatter.format(Date.now())}] ${chalk.greenBright("[SUCCESS]")}: ${str}`,
-      ...values,
-    );
-  },
-};
+export const Logger: WinstonLogger = createLogger({
+  level: process.env.LOG_LEVEL ?? "info",
+  format: format.combine(
+    format.colorize({
+      colors: config.syslog.colors,
+      level: true,
+    }),
+    format.splat(),
+    format.timestamp({
+      format: "YYYY-MM-DD hh:mm:ss.SSS A",
+    }),
+    // oxlint-disable-next-line typescript/restrict-template-expressions
+    format.printf(({ level, message, timestamp }) => `${timestamp} [${level}]: ${message}`),
+  ),
+  levels: config.syslog.levels,
+  exitOnError: false,
+  transports: [
+    new transports.Console(),
+    new transports.File({
+      filename: `fg-sparky-bot.log`,
+      format: format.uncolorize(),
+    }),
+  ],
+});
