@@ -49,6 +49,7 @@ declare global {
   namespace globalThis {
     var client: Client;
     var Commands: readonly ApplicationCommand[];
+    var commandFolder: string;
   }
 }
 
@@ -59,6 +60,7 @@ const commandFiles = await readdir(
     withFileTypes: true,
   },
 );
+
 const commands: readonly ApplicationCommand[] = await Promise.all(
   commandFiles.filter(entry => entry.isFile())
     .map(entry => entry.name)
