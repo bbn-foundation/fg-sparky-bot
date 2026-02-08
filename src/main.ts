@@ -7,6 +7,7 @@
 import { UsersDB } from "#db";
 import { NumberdexBaker, setupCronJobs } from "#numberdex/cron.ts";
 import { Numberhumans, Numbers, Responses } from "#stores";
+import type { NumberhumanStore, NumberStore, ResponseStore } from "#stores-types";
 import { Logger } from "#utils/logger.ts";
 import type { Command as ApplicationCommand } from "#utils/types.ts";
 import { Command } from "commander";
@@ -49,6 +50,9 @@ declare global {
     var client: Client;
     var Commands: readonly ApplicationCommand[];
     var commandFolder: string;
+    var Numbers: NumberStore;
+    var Numberhumans: NumberhumanStore;
+    var Responses: ResponseStore;
   }
 }
 
@@ -57,11 +61,11 @@ globalThis.commandFolder = commandsFolder;
 
 try {
   Logger.notice("Loading entries from numbers.json");
-  await Numbers.load();
+  globalThis.Numbers = await Numbers.load();
   Logger.notice("Loading entries from numberdex-data.json");
-  await Numberhumans.load();
+  globalThis.Numberhumans = await Numberhumans.load();
   Logger.notice("Loading entries from responses.json");
-  await Responses.load();
+  globalThis.Responses = await Responses.load();
 
   Logger.notice("Initializing database");
   await UsersDB.initialize();

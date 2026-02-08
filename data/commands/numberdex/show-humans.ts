@@ -1,5 +1,4 @@
 import { type NumberhumanData, UserProfile } from "#db";
-import { Numberhumans } from "#stores";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { chatInputApplicationCommandMention, italic, type User } from "discord.js";
 import { getNumberhumansBy } from "./numberhumans.ts";

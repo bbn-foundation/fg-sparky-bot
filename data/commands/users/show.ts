@@ -1,6 +1,5 @@
 import { getUser, NumberhumanData } from "#db";
 import { EvolutionType } from "#numberdex/evolutions.ts";
-import { Numberhumans, Numbers } from "#stores";
 import { formatPercent, joinStringArray } from "#utils/formatter.ts";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { bold, chatInputApplicationCommandMention, type Client } from "discord.js";

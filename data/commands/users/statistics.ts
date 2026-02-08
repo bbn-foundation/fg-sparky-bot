@@ -1,5 +1,4 @@
 import { UserProfile } from "#db";
-import { Numbers } from "#stores";
 import { formatPercent, joinStringArray } from "#utils/formatter.ts";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import type { Client } from "discord.js";

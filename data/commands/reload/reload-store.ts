@@ -1,4 +1,3 @@
-import { Numberhumans, Numbers, Responses } from "#stores";
 import { type ChatInputCommandInteraction, type Client, MessageFlags } from "discord.js";
 import { ReloadStoreType } from "./common";
 
