@@ -1,5 +1,14 @@
 # changelog
 
+# 1.3.4 - Feburary 7th, 2026
+
+i am never saying anything again
+
+### Fixes
+
+- \[[`9fedb706`](https://github.com/skylafalls/fg-sparky-bot/commit/9fedb7068eceb4715930b9950420a9716eaa5064)\] - stores: make the stores global
+- \[[`9947ae53`](https://github.com/skylafalls/fg-sparky-bot/commit/9947ae5369e68b4edbde768252d637c1574abb4b)\] - use the correct logger function for warnings
+
 ## 1.3.3 - Feburary 7th, 2026
 
 Last update before v1.4 hopefully which would add achievements
