@@ -1,5 +1,23 @@
 # changelog
 
+## 1.3.3 - Feburary 7th, 2026
+
+Last update before v1.4 hopefully which would add achievements
+
+### Fixes
+
+- \[[`3e775666`](https://github.com/skylafalls/fg-sparky-bot/commit/3e7756664b91985c8ca445efebb75c829c65dd97)\] - entries: fix hash for waterifinity by @skylafalls
+
+### Refactors
+
+- \[[`1fd1d514`](https://github.com/skylafalls/fg-sparky-bot/commit/1fd1d5144939fde7da60399db09ae4721b81758f)\] - guess: move stats logic to separate file
+- \[[`9a2a54db`](https://github.com/skylafalls/fg-sparky-bot/commit/9a2a54dbbe376ee28ec9c5d689eab758b6ec82f3)\] - cmds: hot reload commands in ([#41](https://github.com/skylafalls/fg-sparky-bot/pull/41)) by @skylafalls
+- \[[`94f5a25c`](https://github.com/skylafalls/fg-sparky-bot/commit/94f5a25c68190718a98167bd3d44ed2d0ba6d6b5)\] - utils: use winston for formatting by @skylafalls
+
+### Chores
+
+- \[[`3a90247c`](https://github.com/skylafalls/fg-sparky-bot/commit/3a90247c11de0f4ed9b93e3969545ff5fb0f3dbe)\] - logger: show debug information in development by @skylafalls
+
 ## 1.3.2 - Feburary 4th, 2026
 
 turns out i could've just,,, reversed the save order,,,, and it would have fixed it........
