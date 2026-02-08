@@ -21,9 +21,7 @@ export async function handleSlashCommand(
   commands: readonly Command[],
 ): Promise<void> {
   if (!interaction.inGuild()) {
-    Logger.warn(
-      `user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,
-    );
+    Logger.warning(`user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,);
     await interaction.reply(
       "sorry, fg sparky currently doesn't support guesses outside of servers",
     );
@@ -68,9 +66,7 @@ export async function handleAutocomplete(
   commands: readonly Command[],
 ): Promise<void> {
   if (!interaction.inGuild()) {
-    Logger.warn(
-      `user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,
-    );
+    Logger.warning(`user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,);
     return;
   }
   Logger.debug(`Finding command ${interaction.commandName}`);
@@ -88,7 +84,7 @@ export async function handleAutocomplete(
 export function registerCommands(client: Client): void {
   client.once("clientReady", async () => {
     if (!client.user || !client.application) {
-      Logger.warn("Client is not loaded, refusing to register bot commands");
+      Logger.warning("Client is not loaded, refusing to register bot commands");
       return;
     }
 

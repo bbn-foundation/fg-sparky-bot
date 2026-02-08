@@ -32,9 +32,7 @@ const Gift: Command = {
     const giftingUser = await getUser(interaction.user.id, interaction.guildId);
 
     if (!giftingUser) {
-      Logger.warn(
-        `user ${interaction.user.displayName} tried gifting but they dont have a profile`,
-      );
+      Logger.warning(`user ${interaction.user.displayName} tried gifting but they dont have a profile`,);
       await interaction.reply({
         content: `You don't even have a profile, go play FG sparky first!`,
         flags: MessageFlags.Ephemeral,
@@ -43,9 +41,7 @@ const Gift: Command = {
     }
 
     if (giftingUser.tokens < amount) {
-      Logger.warn(
-        `user ${interaction.user.displayName} tried gifting but they dont have enough tokens`,
-      );
+      Logger.warning(`user ${interaction.user.displayName} tried gifting but they dont have enough tokens`,);
       await interaction.reply({
         content: `You don't have enough tokens to gift. You currently have ${giftingUser.tokens}.`,
         flags: MessageFlags.Ephemeral,
@@ -54,7 +50,7 @@ const Gift: Command = {
     }
 
     if (amount <= 0) {
-      Logger.warn(`user ${interaction.user.displayName} tried gifting an invalid amount of ${amount}`);
+      Logger.warning(`user ${interaction.user.displayName} tried gifting an invalid amount of ${amount}`);
       await interaction.reply({
         content: `You can't gift ${
           amount < 0
@@ -67,9 +63,7 @@ const Gift: Command = {
     }
 
     if (!userInDB) {
-      Logger.warn(
-        `user ${interaction.user.displayName} tried gifting to a person that doesnt have a profile`,
-      );
+      Logger.warning(`user ${interaction.user.displayName} tried gifting to a person that doesnt have a profile`,);
       await interaction.reply({
         content: `User ${
           userMention(
@@ -108,7 +102,7 @@ const Gift: Command = {
         clearTimeout(timeout);
         if (interact.customId === "gift-accept-button") {
           if (giftCollection.get(reply) !== interact.user.id) {
-            Logger.warn(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
+            Logger.warning(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
             await interact.reply({
               content: "You are not the person being gifted, greedy!",
               flags: MessageFlags.Ephemeral,
@@ -131,7 +125,7 @@ const Gift: Command = {
           );
         } else {
           if (giftCollection.get(reply) !== interact.user.id) {
-            Logger.warn(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
+            Logger.warning(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
             await interact.reply({
               content: "You are not the person being gifted, greedy!",
               flags: MessageFlags.Ephemeral,

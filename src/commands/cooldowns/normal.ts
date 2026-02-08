@@ -30,11 +30,9 @@ export class CooldownCollection extends Collection<string, Collection<string, nu
     if (timestamps.has(userId)) {
       const expirationTime = timestamps.get(userId)! + cooldownAmount;
       if (now < expirationTime) {
-        Logger.warn(
-          `User tried to run command ${command.name} but they're on cooldown for another ${
-            ((expirationTime - now) / 1000).toFixed(3)
-          } seconds`,
-        );
+        Logger.warning(`User tried to run command ${command.name} but they're on cooldown for another ${
+          ((expirationTime - now) / 1000).toFixed(3)
+        } seconds`,);
         const expiredTimestamp = Math.round(expirationTime / 1_000);
         return Option.from(expiredTimestamp);
       }

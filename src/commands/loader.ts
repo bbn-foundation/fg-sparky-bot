@@ -23,7 +23,7 @@ export async function loadCommands(client: Client, commandsFolder: string): Prom
   );
 
   const commands: readonly Command[] = await Promise.all(
-    commandFiles.filter(entry => entry.isFile())
+    commandFiles.filter(entry => entry.isFile() && entry.name.endsWith(".ts"))
       .map(entry => entry.name)
       // oxlint-disable-next-line typescript/no-unsafe-return, no-unsafe-member-access
       .map(async (src) => (await import(`${commandsFolder}/${src}?count=${reloadCount++}`)).default),
