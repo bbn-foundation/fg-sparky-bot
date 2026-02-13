@@ -24,9 +24,14 @@ export async function setupCronJobs(
   Logger.info(`re-adding callbacks to cron jobs...`);
   jobs.forEach(async (job, name) => {
     if (/numberdex-channel-[0-9]+/.test(name)) {
-      const channel = await client.channels.fetch(name.slice(name.lastIndexOf("-") + 1));
-      if (!channel || !channel.isSendable()) return;
-      return setupCallback(store, job, channel);
+      try {
+        const channel = await client.channels.fetch(name.slice(name.lastIndexOf("-") + 1));
+        if (!channel || !channel.isSendable()) return;
+        return setupCallback(store, job, channel);
+      } catch {
+        Logger.error(`failed to setup cron job: %s, removing job`, name);
+        job.destroy();
+      }
     }
 
     return job;
