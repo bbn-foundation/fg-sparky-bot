@@ -185,3 +185,4 @@ numbers/numberdex-cron-jobs.json
 *.sqlite-*
 build
 
+data/achievements/*
