@@ -16,7 +16,7 @@ export class GuessCooldownCollection extends Collection<string, boolean> {
       return false;
     }
 
-    Logger.warning(`A player in channel ${channelId} tried to run /guess but the previous guess hasn't finished yet!`,);
+    Logger.warning(`A player in channel ${channelId} tried to run /guess but the previous guess hasn't finished yet!`);
     return true;
   }
 }

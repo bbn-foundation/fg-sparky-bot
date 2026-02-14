@@ -1,5 +1,5 @@
 import { createNumberhuman, createUser, getUser } from "#db";
-;
+
 import type { NumberhumanInfo } from "#stores-types";
 import { formatPercent, joinStringArray } from "#utils/formatter.ts";
 import { Logger } from "#utils/logger.ts";

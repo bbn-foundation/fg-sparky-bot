@@ -4,7 +4,7 @@ import { joinStringArray } from "#utils/formatter";
 import { Logger } from "#utils/logger";
 import type { StoredNumberInfo } from "#utils/types";
 import type { Message, OmitPartialGroupDMChannel } from "discord.js";
-import handleSpecialGuess from "./special-handler";
+import handleSpecialGuess from "./special-handler.ts";
 
 export async function updateUserStats(
   message: OmitPartialGroupDMChannel<Message>,

@@ -6,8 +6,7 @@
  */
 import { Logger } from "#utils/logger";
 import type { Command } from "#utils/types.ts";
-import type { AutocompleteInteraction } from "discord.js";
-import { type Client, type CommandInteraction, MessageFlags } from "discord.js";
+import { type AutocompleteInteraction, type Client, type CommandInteraction, MessageFlags } from "discord.js";
 import { GuessCooldownCollection } from "./cooldowns/guesses.ts";
 import { CooldownCollection } from "./cooldowns/normal.ts";
 import { loadCommands } from "./loader.ts";
@@ -21,7 +20,9 @@ export async function handleSlashCommand(
   commands: readonly Command[],
 ): Promise<void> {
   if (!interaction.inGuild()) {
-    Logger.warning(`user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,);
+    Logger.warning(
+      `user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,
+    );
     await interaction.reply(
       "sorry, fg sparky currently doesn't support guesses outside of servers",
     );
@@ -66,7 +67,9 @@ export async function handleAutocomplete(
   commands: readonly Command[],
 ): Promise<void> {
   if (!interaction.inGuild()) {
-    Logger.warning(`user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,);
+    Logger.warning(
+      `user ${interaction.user.displayName} tried running command /${interaction.commandName} outside of a discord server`,
+    );
     return;
   }
   Logger.debug(`Finding command ${interaction.commandName}`);

@@ -1,4 +1,3 @@
-;
 import type { NumberhumanStore } from "#stores-types";
 import { NUMBERDEX_FLEE_DELAY } from "#utils/constants.ts";
 import { createGuessHandler } from "#utils/guess-handler.ts";

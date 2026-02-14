@@ -1,10 +1,11 @@
 import { type ChatInputCommandInteraction, type Client, MessageFlags } from "discord.js";
-import { ReloadStoreType } from "./common";
+import { ReloadStoreType } from "./common.ts";
 
 export default async function reloadStoreCommand(
   _: Client,
   interaction: ChatInputCommandInteraction<"raw" | "cached">,
 ): Promise<void> {
+  // oxlint-disable-next-line typescript/no-unsafe-type-assertion
   switch (interaction.options.getString("store", true) as ReloadStoreType) {
     case ReloadStoreType.Numberhumans: {
       await Numberhumans.reload();

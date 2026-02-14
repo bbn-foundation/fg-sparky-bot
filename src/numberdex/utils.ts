@@ -16,7 +16,6 @@ import {
   type Message,
   type SendableChannels,
 } from "discord.js";
-;
 
 export function createButtonRow(
   disabled?: boolean,

@@ -32,7 +32,7 @@ const Gift: Command = {
     const giftingUser = await getUser(interaction.user.id, interaction.guildId);
 
     if (!giftingUser) {
-      Logger.warning(`user ${interaction.user.displayName} tried gifting but they dont have a profile`,);
+      Logger.warning(`user ${interaction.user.displayName} tried gifting but they dont have a profile`);
       await interaction.reply({
         content: `You don't even have a profile, go play FG sparky first!`,
         flags: MessageFlags.Ephemeral,
@@ -41,7 +41,7 @@ const Gift: Command = {
     }
 
     if (giftingUser.tokens < amount) {
-      Logger.warning(`user ${interaction.user.displayName} tried gifting but they dont have enough tokens`,);
+      Logger.warning(`user ${interaction.user.displayName} tried gifting but they dont have enough tokens`);
       await interaction.reply({
         content: `You don't have enough tokens to gift. You currently have ${giftingUser.tokens}.`,
         flags: MessageFlags.Ephemeral,
@@ -63,7 +63,7 @@ const Gift: Command = {
     }
 
     if (!userInDB) {
-      Logger.warning(`user ${interaction.user.displayName} tried gifting to a person that doesnt have a profile`,);
+      Logger.warning(`user ${interaction.user.displayName} tried gifting to a person that doesnt have a profile`);
       await interaction.reply({
         content: `User ${
           userMention(
