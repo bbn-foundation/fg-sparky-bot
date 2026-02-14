@@ -12,7 +12,7 @@ import { CooldownCollection } from "./cooldowns/normal.ts";
 import { loadCommands } from "./loader.ts";
 
 const commandCooldowns = new CooldownCollection();
-export const guessCooldowns: GuessCooldownCollection = new GuessCooldownCollection();
+const guessCooldowns: GuessCooldownCollection = new GuessCooldownCollection();
 
 export async function handleSlashCommand(
   client: Client,
@@ -92,6 +92,8 @@ export function registerCommands(client: Client): void {
     }
 
     globalThis.Commands = await loadCommands(client, commandFolder);
+    globalThis.commandCooldowns = commandCooldowns;
+    globalThis.guessCooldowns = guessCooldowns;
 
     Logger.info(`${client.user.username} is online`);
   });

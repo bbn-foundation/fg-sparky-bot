@@ -13,6 +13,8 @@ import type { Command as ApplicationCommand } from "#utils/types.ts";
 import { Command } from "commander";
 import { Client } from "discord.js";
 import packageJson from "../package.json" with { type: "json" };
+import type { GuessCooldownCollection } from "./commands/cooldowns/guesses.ts";
+import type { CooldownCollection } from "./commands/cooldowns/normal.ts";
 import { initClient } from "./index.ts";
 
 const program = new Command()
@@ -53,6 +55,8 @@ declare global {
     var Numbers: NumberStore;
     var Numberhumans: NumberhumanStore;
     var Responses: ResponseStore;
+    var commandCooldowns: CooldownCollection;
+    var guessCooldowns: GuessCooldownCollection;
   }
 }
 

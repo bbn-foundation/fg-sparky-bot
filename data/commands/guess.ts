@@ -28,6 +28,7 @@ const Guess: Command = {
       | "random";
     const number = difficulty === "random" ? Numbers.getRandom() : Numbers.getRandomByDifficulty(difficulty);
     if (number.isNone()) {
+      globalThis.guessCooldowns.set(interaction.channelId, false);
       await interaction.reply("couldn't find a random number for you, sorry.");
       return;
     }

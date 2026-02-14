@@ -15,7 +15,6 @@ import {
   type Message,
   type OmitPartialGroupDMChannel,
 } from "discord.js";
-import { guessCooldowns } from "../../../src/commands/listener.ts";
 import handleSpecialGuess from "./special-handler.ts";
 
 const streakCollectionCollection = new Collection<string, StreakCollection>();
@@ -44,7 +43,7 @@ export function handleResponse(
     if (handlePlayerGuess(message.content, number)) {
       clearTimeout(timeout);
       client.off("messageCreate", handler);
-      guessCooldowns.set(interaction.channelId, false);
+      globalThis.guessCooldowns.set(interaction.channelId, false);
 
       const previousPerson = streakTracker.get(interaction.channelId);
       if (previousPerson !== `${message.author.id}.${message.guildId!}`) {
@@ -58,7 +57,7 @@ export function handleResponse(
     async () => {
       Logger.info("user failed to guess in time");
       client.off("messageCreate", handler);
-      guessCooldowns.set(interaction.channelId, false);
+      globalThis.guessCooldowns.set(interaction.channelId, false);
       await streakCollection.clear();
 
       const content = `no one guessed in time${number.number ? `, the correct answer was ${number.number}.` : "."}`;
