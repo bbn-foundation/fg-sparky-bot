@@ -4,6 +4,7 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import { getUser } from "#db";
 import { StreakCollection } from "#fg-sparky/streaks.ts";
 import { createGuessHandler } from "#utils/guess-handler.ts";
 import { Logger } from "#utils/logger.ts";
@@ -16,6 +17,7 @@ import {
   type OmitPartialGroupDMChannel,
 } from "discord.js";
 import handleSpecialGuess from "./special-handler.ts";
+import { updateUserStats } from "./update-stats.ts";
 
 const streakCollectionCollection = new Collection<string, StreakCollection>();
 const streakTracker = new Collection<string, string>();
@@ -50,6 +52,8 @@ export function handleResponse(
         streakCollection.resetStreak(message.author.id, message.guildId!);
         streakTracker.set(interaction.channelId, `${message.author.id}.${message.guildId!}`);
       }
+
+      await updateUserStats(message, await getUser(message.author.id, message.guildId!), streakCollection, number);
     }
   };
 
