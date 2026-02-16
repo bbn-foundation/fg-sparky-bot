@@ -27,13 +27,22 @@ const program = new Command()
   .option(
     "-c, --commands-folder <directory>",
     "Folder that has all of the bot's commands (default: $CWD/data/commands)",
+  )
+  .option(
+    "-c, --commands-folder <directory>",
+    "Folder that has all the achievements data (default: $CWD/data/achievements",
   );
 
 program.parse(process.argv);
 
-const { token = process.env.DISCORD_TOKEN, commandsFolder = `${process.cwd()}/data/commands` } = program.opts<{
+const {
+  token = process.env.DISCORD_TOKEN,
+  commandsFolder = `${process.cwd()}/data/commands`,
+  achievementsFolder = `${process.cwd()}/data/achievements`,
+} = program.opts<{
   token?: string;
   commandsFolder?: string;
+  achievementsFolder?: string;
 }>();
 
 if (!token) {
@@ -49,6 +58,7 @@ const client: Client = new Client({
 
 declare global {
   namespace globalThis {
+    var achievementsFolder: string;
     var client: Client;
     var Commands: readonly ApplicationCommand[];
     var commandFolder: string;
@@ -62,6 +72,7 @@ declare global {
 
 globalThis.client = client;
 globalThis.commandFolder = commandsFolder;
+globalThis.achievementsFolder = achievementsFolder;
 
 try {
   Logger.notice("Loading entries from numbers.json");
