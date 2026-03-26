@@ -11,7 +11,8 @@
     "lint": "oxlint . --type-check --type-aware --ignore-path=.gitignore",
     "lint:fix": "oxlint --type-check --type-aware --fix --fix-suggestions . --ignore-path=.gitignore",
     "fmt": "dprint fmt",
-    "typecheck": "tsgo -p tsconfig.json"
+    "typecheck": "tsgo -p tsconfig.json",
+    "kit": "drizzle-kit"
   },
   "dependencies": {
     "@sapphire/discord.js-utilities": "catalog:discord",
@@ -21,9 +22,7 @@
     "commander": "catalog:utils",
     "cronbake": "catalog:utils",
     "discord.js": "catalog:discord",
-    "reflect-metadata": "catalog:db",
-    "sqlite3": "catalog:db",
-    "typeorm": "catalog:db",
+    "drizzle-orm": "catalog:db",
     "zod": "catalog:types",
     "winston": "catalog:utils"
   },
@@ -33,14 +32,14 @@
     "@typescript/native-preview": "catalog:types",
     "dprint": "catalog:linting",
     "oxlint": "catalog:linting",
-    "oxlint-tsgolint": "catalog:linting"
+    "oxlint-tsgolint": "catalog:linting",
+    "drizzle-kit": "catalog:db"
   },
   "workspaces": {
     "catalogs": {
       "db": {
-        "reflect-metadata": "^0.2.2",
-        "sqlite3": "^6.0.1",
-        "typeorm": "^0.3.28"
+        "drizzle-orm": "1.0.0-beta.19",
+        "drizzle-kit": "^0.31.10"
       },
       "discord": {
         "@sapphire/discord.js-utilities": "^7.3.3",
