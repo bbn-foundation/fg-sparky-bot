@@ -39,7 +39,7 @@
     "catalogs": {
       "db": {
         "reflect-metadata": "^0.2.2",
-        "sqlite3": "^5.1.7",
+        "sqlite3": "^6.0.1",
         "typeorm": "^0.3.28"
       },
       "discord": {
@@ -48,14 +48,14 @@
         "discord.js": "^14.25.1"
       },
       "linting": {
-        "dprint": "^0.51.1",
-        "oxlint": "^1.47.0",
-        "oxlint-tsgolint": "^0.12.1"
+        "dprint": "^0.53.0",
+        "oxlint": "^1.57.0",
+        "oxlint-tsgolint": "^0.17.4"
       },
       "types": {
-        "@types/bun": "^1.3.9",
-        "@types/node": "^25.2.3",
-        "@typescript/native-preview": "7.0.0-dev.20260212.1",
+        "@types/bun": "^1.3.11",
+        "@types/node": "^25.5.0",
+        "@typescript/native-preview": "7.0.0-dev.20260325.1",
         "zod": "^4.3.6"
       },
       "utils": {
