@@ -8,7 +8,6 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "composite": true,
-    "isolatedDeclarations": true,
     "jsx": "preserve",
     "lib": ["ESNext"],
     "module": "preserve",
