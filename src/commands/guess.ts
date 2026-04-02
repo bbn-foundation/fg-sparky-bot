@@ -4,6 +4,7 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import { GuessCooldowns } from "#stores";
 import { Logger } from "#utils/logger.ts";
 import type { Command, Difficulties } from "#utils/types.ts";
 import { ApplicationCommandOptionType, AttachmentBuilder, type Client, type CommandInteraction } from "discord.js";
@@ -28,7 +29,7 @@ const Guess: Command = {
       | "random";
     const number = difficulty === "random" ? Numbers.getRandom() : Numbers.getRandomByDifficulty(difficulty);
     if (number.isNone()) {
-      globalThis.guessCooldowns.set(interaction.channelId, false);
+      GuessCooldowns.set(interaction.channelId, false);
       await interaction.reply("couldn't find a random number for you, sorry.");
       return;
     }

@@ -6,6 +6,7 @@
  */
 import { getUser } from "#db";
 import { StreakCollection } from "#fg-sparky/streaks.ts";
+import { GuessCooldowns } from "#stores";
 import { createGuessHandler } from "#utils/guess-handler.ts";
 import { Logger } from "#utils/logger.ts";
 import type { StoredNumberInfo } from "#utils/types.ts";
@@ -45,7 +46,7 @@ export function handleResponse(
     if (handlePlayerGuess(message.content, number)) {
       clearTimeout(timeout);
       client.off("messageCreate", handler);
-      globalThis.guessCooldowns.set(interaction.channelId, false);
+      GuessCooldowns.set(interaction.channelId, false);
 
       const previousPerson = streakTracker.get(interaction.channelId);
       if (previousPerson !== `${message.author.id}.${message.guildId!}`) {
@@ -61,7 +62,7 @@ export function handleResponse(
     async () => {
       Logger.info("user failed to guess in time");
       client.off("messageCreate", handler);
-      globalThis.guessCooldowns.set(interaction.channelId, false);
+      GuessCooldowns.set(interaction.channelId, false);
       await streakCollection.clear();
 
       const content = `no one guessed in time${number.number ? `, the correct answer was ${number.number}.` : "."}`;
