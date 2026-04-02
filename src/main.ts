@@ -4,6 +4,7 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import Commands from "#cmds";
 import { UsersDB } from "#db";
 import { NumberdexBaker, setupCronJobs } from "#numberdex/cron.ts";
 import { Numberhumans, Numbers, Responses } from "#stores";
@@ -57,7 +58,7 @@ try {
   Logger.notice("Initializing database");
   await UsersDB.initialize();
 
-  await initClient(client, token);
+  await initClient(client, token, Commands);
   await setupCronJobs(client, Numberhumans, NumberdexBaker);
   process.on("beforeExit", async () => {
     await NumberdexBaker.saveState();
