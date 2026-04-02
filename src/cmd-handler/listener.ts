@@ -4,12 +4,12 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import Commands from "#cmds";
 import { Logger } from "#utils/logger";
 import type { Command } from "#utils/types.ts";
 import { type AutocompleteInteraction, type Client, type CommandInteraction, MessageFlags } from "discord.js";
 import { GuessCooldownCollection } from "./cooldowns/guesses.ts";
 import { CooldownCollection } from "./cooldowns/normal.ts";
-import { loadCommands } from "./loader.ts";
 
 const commandCooldowns = new CooldownCollection();
 const guessCooldowns: GuessCooldownCollection = new GuessCooldownCollection();
@@ -17,7 +17,6 @@ const guessCooldowns: GuessCooldownCollection = new GuessCooldownCollection();
 export async function handleSlashCommand(
   client: Client,
   interaction: CommandInteraction,
-  commands: readonly Command[],
 ): Promise<void> {
   if (!interaction.inGuild()) {
     Logger.warning(
@@ -29,7 +28,7 @@ export async function handleSlashCommand(
     return;
   }
   Logger.debug(`Finding command ${interaction.commandName}`);
-  const slashCommand = commands.find((c) => c.name === interaction.commandName);
+  const slashCommand = Commands.find((c) => c.name === interaction.commandName);
   if (!slashCommand) {
     Logger.error(`User ${interaction.user.username} (${interaction.user.displayName})
       attempted to invoke a nonexistent command (/${interaction.commandName})`);
@@ -64,7 +63,6 @@ export async function handleSlashCommand(
 export async function handleAutocomplete(
   client: Client,
   interaction: AutocompleteInteraction,
-  commands: readonly Command[],
 ): Promise<void> {
   if (!interaction.inGuild()) {
     Logger.warning(
@@ -73,7 +71,7 @@ export async function handleAutocomplete(
     return;
   }
   Logger.debug(`Finding command ${interaction.commandName}`);
-  const slashCommand = commands.find((c) => c.name === interaction.commandName);
+  const slashCommand = Commands.find((c) => c.name === interaction.commandName);
   if (!slashCommand) {
     Logger.error(`User ${interaction.user.username} (${interaction.user.displayName})
       attempted to invoke a nonexistent command (/${interaction.commandName})`);
@@ -84,16 +82,15 @@ export async function handleAutocomplete(
   await slashCommand.autocomplete?.(client, interaction);
 }
 
-export function registerCommands(client: Client): void {
+export function registerCommands(client: Client, commands: readonly Command[]): void {
   client.once("clientReady", async () => {
     if (!client.user || !client.application) {
       Logger.warning("Client is not loaded, refusing to register bot commands");
       return;
     }
 
-    globalThis.Commands = await loadCommands(client, commandFolder);
-    globalThis.commandCooldowns = commandCooldowns;
-    globalThis.guessCooldowns = guessCooldowns;
+    Logger.info(`Registering ${commands.length.toString()} commands`);
+    await client.application.commands.set(commands);
 
     Logger.info(`${client.user.username} is online`);
   });
