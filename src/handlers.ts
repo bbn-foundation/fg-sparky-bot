@@ -9,7 +9,7 @@ import { Logger } from "#utils/logger.ts";
 import { ActivityType, type Client, type Interaction } from "discord.js";
 import { execSync } from "node:child_process";
 import packageJson from "../package.json" with { type: "json" };
-import { handleAutocomplete, handleSlashCommand } from "./commands/listener.ts";
+import { handleAutocomplete, handleSlashCommand } from "./cmd-handler/listener.ts";
 import { NumberdexBaker } from "./numberdex/cron.ts";
 
 const currentHash = () => execSync("git rev-parse --short HEAD").toString().trim();
