@@ -30,9 +30,9 @@ export function registerHandlers(client: Client): void {
 
   client.on("interactionCreate", async (interaction: Interaction) => {
     if (interaction.isCommand()) {
-      await handleSlashCommand(client, interaction, Commands);
+      await handleSlashCommand(client, interaction);
     } else if (interaction.isAutocomplete()) {
-      await handleAutocomplete(client, interaction, Commands);
+      await handleAutocomplete(client, interaction);
     }
   });
 }
