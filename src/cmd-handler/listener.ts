@@ -5,14 +5,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import Commands from "#cmds";
+import { CommandCooldowns, GuessCooldowns } from "#stores";
 import { Logger } from "#utils/logger";
 import type { Command } from "#utils/types.ts";
 import { type AutocompleteInteraction, type Client, type CommandInteraction, MessageFlags } from "discord.js";
-import { GuessCooldownCollection } from "./cooldowns/guesses.ts";
-import { CooldownCollection } from "./cooldowns/normal.ts";
-
-const commandCooldowns = new CooldownCollection();
-const guessCooldowns: GuessCooldownCollection = new GuessCooldownCollection();
 
 export async function handleSlashCommand(
   client: Client,
@@ -37,7 +33,7 @@ export async function handleSlashCommand(
   }
 
   Logger.info(`Making sure the command ${interaction.commandName} isn't on cooldown...`);
-  if (slashCommand.name === "guess" && guessCooldowns.check(slashCommand, interaction.channelId)) {
+  if (slashCommand.name === "guess" && GuessCooldowns.check(slashCommand, interaction.channelId)) {
     await interaction.reply({
       content:
         `Chill sis, the previous guess hasn't finished yet! Please answer correctly or wait for it to time out first.`,
@@ -47,7 +43,7 @@ export async function handleSlashCommand(
   }
 
   if (slashCommand.name !== "guess") {
-    for (const timestamp of commandCooldowns.check(slashCommand, interaction.user.id)) {
+    for (const timestamp of CommandCooldowns.check(slashCommand, interaction.user.id)) {
       // oxlint-disable-next-line no-await-in-loop: not a loop (using iterators to unwrap the option)
       await interaction.reply({
         content: `Chill man you can't run /${slashCommand.name}, you can try again <t:${timestamp.toString()}:R>.`,
