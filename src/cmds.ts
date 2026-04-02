@@ -17,6 +17,6 @@ const Commands: readonly Command[] = [
   Restart,
   Reload,
   Hello,
-]
+];
 
 export default Commands;
