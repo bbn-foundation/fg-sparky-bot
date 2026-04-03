@@ -23,7 +23,7 @@ const Guess: Command = {
       return;
     }
 
-    // oxlint-disable-next-line no-unsafe-type-assertion: guaranteed to not be anything else by the discord api
+    //
     const difficulty = interaction.options.get("difficulty", true).value as
       | Exclude<Difficulties, "legendary">
       | "random";
@@ -65,7 +65,7 @@ const Guess: Command = {
       type: ApplicationCommandOptionType.String,
       required: true,
       choices: [
-        { name: "Easyyyyyyyy", value: "easy" },
+        { name: "Easy", value: "easy" },
         { name: "Medium", value: "medium" },
         { name: "Hard", value: "hard" },
         { name: "Random", value: "random" },
