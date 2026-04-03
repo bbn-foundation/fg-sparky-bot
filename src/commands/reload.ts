@@ -73,7 +73,6 @@ const Reload: Command = {
       },
     ],
   }],
-  defaultMemberPermissions: PermissionFlagsBits.ManageChannels,
 };
 
 export default Reload;
