@@ -21,3 +21,7 @@ console.log(
     .filter((value) => value.value.missingImage)
     .map((value) => value.value),
 );
+console.log("NUMBERS MISSING IMAGES: ", entries
+    .filter((value) => value.status === "fulfilled")
+    .filter((value) => value.value.missingImage)
+    .map((value) => value.value).length)
