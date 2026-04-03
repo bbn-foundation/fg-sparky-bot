@@ -1,5 +1,14 @@
 # changelog
 
+## 1.3.6 - April 3rd, 2026
+
+okay NOW i should hopefully start working on features again
+
+### Fixes
+
+- \[[`77e1a9a0`](https://github.com/skylafalls/fg-sparky-bot/commit/77e1a9a0d55885fe24267b0c4b9c0f57aa877157)\] - numberdex: fix the logger by @skylafalls
+- \[[`92496482`](https://github.com/skylafalls/fg-sparky-bot/commit/92496482ea0777131dc4a72e7a8bd27ae9124171)\] - fix numberdex jobs and shutdown handler by @skylafalls
+
 ## 1.3.5 - April 2nd, 2026
 
 first release in a while (mostly because i quit fg)
