@@ -11,7 +11,11 @@ export const Logger: WinstonLogger = createLogger({
   level: process.env.LOG_LEVEL ?? (process.env.NODE_ENV === "development" ? "debug" : "info"),
   format: format.combine(
     format.colorize({
-      colors: config.syslog.colors,
+      colors: Object.assign(config.syslog.colors, {
+        notice: "white",
+        info: "gray",
+        warn: "yellow",
+      }),
       level: true,
     }),
     format.splat(),
@@ -21,7 +25,9 @@ export const Logger: WinstonLogger = createLogger({
     // oxlint-disable-next-line typescript/restrict-template-expressions
     format.printf(({ level, message, timestamp }) => `${timestamp} [${level}]: ${message}`),
   ),
-  levels: config.syslog.levels,
+  levels: Object.assign(config.syslog.levels, {
+    warn: 4,
+  }),
   exitOnError: false,
   transports: [
     new transports.Console(),

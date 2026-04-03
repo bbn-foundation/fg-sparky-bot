@@ -34,8 +34,8 @@ const Numberdex: Command = {
         const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
         const cron = NumberdexBaker.add({
           name: `numberdex-channel-${channel.id}`,
-          cron: "@every_20_minutes",
-          // oxlint-disable-next-line eslint/no-empty-function: will be immediately replaced
+          cron: "@every_minute",
+          //
           async callback(): Promise<void> {},
         });
         setupCallback(Numberhumans, cron, channel);
@@ -64,7 +64,7 @@ const Numberdex: Command = {
         const user = interaction.options.getUser("user", true);
         const pageNumber = interaction.options.getInteger("page", true);
         const dbUser = await getUser(user.id, interaction.guildId);
-        // oxlint-disable-next-line typescript/no-unsafe-type-assertion: should be fine
+        //
         const sortingOrder = interaction.options.getString("sorting") as NumberhumanSortingOrder | null
           ?? NumberhumanSortingOrder.ByCatchId;
         if (dbUser === null) {
