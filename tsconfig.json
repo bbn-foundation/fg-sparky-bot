@@ -37,7 +37,8 @@
       "#utils/*": ["./src/utils/*"],
       "#numberdex/*": ["./src/numberdex/*"],
       "#fg-sparky/*": ["./src/sparky/*"],
-      "#cmd-loader": ["./src/commands/loader.ts"]
+      "#cmd-loader": ["./src/cmd-handler/loader.ts"],
+      "#cmds": ["./src/cmds.ts"]
     }
   },
   "include": ["**/*.ts"]

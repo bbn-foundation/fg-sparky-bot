@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { getUser } from "#db";
+import { Numberhumans } from "#stores";
 import type { Command } from "#utils/types.ts";
 import {
   ApplicationCommandOptionType,
@@ -14,8 +15,8 @@ import {
   type CommandInteraction,
   MessageFlags,
 } from "discord.js";
-import { NumberdexBaker } from "../../src/numberdex/cron.ts";
-import { setupCallback } from "../../src/numberdex/handler.ts";
+import { NumberdexBaker } from "../numberdex/cron.ts";
+import { setupCallback } from "../numberdex/handler.ts";
 import numberdexShowHumans from "./numberdex/show-humans.ts";
 import { NumberhumanSortingOrder } from "./numberdex/sorting.ts";
 

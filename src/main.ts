@@ -4,17 +4,14 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import Commands from "#cmds";
 import { UsersDB } from "#db";
 import { NumberdexBaker, setupCronJobs } from "#numberdex/cron.ts";
 import { Numberhumans, Numbers, Responses } from "#stores";
-import type { NumberhumanStore, NumberStore, ResponseStore } from "#stores-types";
 import { Logger } from "#utils/logger.ts";
-import type { Command as ApplicationCommand } from "#utils/types.ts";
 import { Command } from "commander";
 import { Client } from "discord.js";
 import packageJson from "../package.json" with { type: "json" };
-import type { GuessCooldownCollection } from "./commands/cooldowns/guesses.ts";
-import type { CooldownCollection } from "./commands/cooldowns/normal.ts";
 import { initClient } from "./index.ts";
 
 const program = new Command()
@@ -23,17 +20,12 @@ const program = new Command()
   .option(
     "-t, --token <token>",
     "The discord bot token to login with (env variable: DISCORD_TOKEN)",
-  )
-  .option(
-    "-c, --commands-folder <directory>",
-    "Folder that has all of the bot's commands (default: $CWD/data/commands)",
   );
 
 program.parse(process.argv);
 
-const { token = process.env.DISCORD_TOKEN, commandsFolder = `${process.cwd()}/data/commands` } = program.opts<{
+const { token = process.env.DISCORD_TOKEN } = program.opts<{
   token?: string;
-  commandsFolder?: string;
 }>();
 
 if (!token) {
@@ -50,31 +42,23 @@ const client: Client = new Client({
 declare global {
   namespace globalThis {
     var client: Client;
-    var Commands: readonly ApplicationCommand[];
-    var commandFolder: string;
-    var Numbers: NumberStore;
-    var Numberhumans: NumberhumanStore;
-    var Responses: ResponseStore;
-    var commandCooldowns: CooldownCollection;
-    var guessCooldowns: GuessCooldownCollection;
   }
 }
 
 globalThis.client = client;
-globalThis.commandFolder = commandsFolder;
 
 try {
   Logger.notice("Loading entries from numbers.json");
-  globalThis.Numbers = await Numbers.load();
+  await Numbers.load();
   Logger.notice("Loading entries from numberdex-data.json");
-  globalThis.Numberhumans = await Numberhumans.load();
+  await Numberhumans.load();
   Logger.notice("Loading entries from responses.json");
-  globalThis.Responses = await Responses.load();
+  await Responses.load();
 
   Logger.notice("Initializing database");
   await UsersDB.initialize();
 
-  await initClient(client, token);
+  await initClient(client, token, Commands);
   await setupCronJobs(client, Numberhumans, NumberdexBaker);
   process.on("beforeExit", async () => {
     await NumberdexBaker.saveState();
