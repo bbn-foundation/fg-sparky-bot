@@ -6,7 +6,7 @@
  */
 import { joinStringArray } from "#utils/formatter.ts";
 import type { StoredNumberInfo } from "#utils/types.ts";
-import type { Message, OmitPartialGroupDMChannel } from "discord.js";
+import { type Message, type OmitPartialGroupDMChannel, userMention } from "discord.js";
 
 /**
  * Handle special guesses such as omni oridnal or when they follow the instructions literally.
@@ -23,6 +23,14 @@ export default async function handleSpecialGuess(
       && /^omni oridnal/imu.test(message.content)
     ) {
       await message.reply("omni oridnal");
+      return true;
+    }
+
+    if (
+      number.uuid === "17ff8a34-02af-45ac-b203-66478c962ab0"
+      && /^tue finality seled/imu.test(message.content)
+    ) {
+      await message.reply(`${userMention(message.author.id)} died`);
       return true;
     }
 
