@@ -10,7 +10,6 @@ import { ActivityType, type Client, type Interaction } from "discord.js";
 import { execSync } from "node:child_process";
 import packageJson from "../package.json" with { type: "json" };
 import { handleAutocomplete, handleSlashCommand } from "./cmd-handler/listener.ts";
-import { NumberdexBaker } from "./numberdex/cron.ts";
 
 const currentHash = () => execSync("git rev-parse --short HEAD").toString().trim();
 
@@ -18,8 +17,6 @@ export function registerHandlers(client: Client): void {
   client.once("clientReady", (client: Client<true>) => {
     const formattedDate = loginFormatter.format(Date.now());
     Logger.notice(`Bot running as ${client.user.username} (started at ${formattedDate})`);
-    Logger.notice(`Starting cron jobs...`);
-    NumberdexBaker.bakeAll();
     Logger.info(`Setting status`);
     client.user.setActivity({
       name: "custom-status",

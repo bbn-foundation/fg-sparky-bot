@@ -47,6 +47,18 @@ declare global {
 
 globalThis.client = client;
 
+const shutdownHandler = async () => {
+  process.off("SIGINT", shutdownHandler);
+  process.off("SIGTERM", shutdownHandler);
+  Logger.notice("shutting down bot");
+  await NumberdexBaker.saveState();
+  await UsersDB.destroy();
+  await Numbers.save();
+  await Numberhumans.save();
+  await Responses.save();
+  process.exit(0);
+};
+
 try {
   Logger.notice("Loading entries from numbers.json");
   await Numbers.load();
@@ -60,9 +72,10 @@ try {
 
   await initClient(client, token, Commands);
   await setupCronJobs(client, Numberhumans, NumberdexBaker);
-  process.on("beforeExit", async () => {
-    await NumberdexBaker.saveState();
-  });
+  Logger.notice(`Starting cron jobs...`);
+  NumberdexBaker.bakeAll();
+  process.on("SIGINT", shutdownHandler)
+    .on("SIGTERM", shutdownHandler);
 } catch (error) {
   if (!Error.isError(error)) throw error;
   Logger.error(`Failed to initialize bot client: ${error.message}`);
