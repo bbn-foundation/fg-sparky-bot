@@ -1,5 +1,23 @@
 # changelog
 
+## 1.3.7 - April 3rd, 2026
+
+mostly misc stuff
+
+### Features
+
+- \[[`c3673d17`](https://github.com/skylafalls/fg-sparky-bot/commit/c3673d170d3c3031d8401947ec515bafed2374e4)\] - guess: add easter egg for true finality by @skylafalls
+
+### Fixes
+
+- \[[`f2620d93`](https://github.com/skylafalls/fg-sparky-bot/commit/f2620d938188eb2010dc1c6605ed0994e3e76d89)\] - cmds/guess: fix difficulty typo by @skylafalls
+- \[[`15eb2826`](https://github.com/skylafalls/fg-sparky-bot/commit/15eb2826709fade332c610803faad44b981c7ad0)\] - cmds/reload: dont require permission to reload by @skylafalls
+
+### Chores
+
+- \[[`2ca04d7c`](https://github.com/skylafalls/fg-sparky-bot/commit/2ca04d7c451ef565306538f90374647ab0a0891b)\] - responses: add that thing about ONE by @skylafalls
+- \[[`1cf5ea6f`](https://github.com/skylafalls/fg-sparky-bot/commit/1cf5ea6f009231489bcc14d76556c9b9a247c023)\] - entries: add a lot of entries by @skylafalls
+
 ## 1.3.6 - April 3rd, 2026
 
 okay NOW i should hopefully start working on features again
