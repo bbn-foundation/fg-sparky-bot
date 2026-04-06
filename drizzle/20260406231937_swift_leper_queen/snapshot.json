@@ -1,7 +1,7 @@
 {
   "version": "7",
   "dialect": "sqlite",
-  "id": "9204e32f-6627-41fb-9e5d-f1d4a71685f1",
+  "id": "5d366a9e-00d9-4d72-b19b-3650e2e4392b",
   "prevIds": [
     "00000000-0000-0000-0000-000000000000"
   ],
@@ -90,6 +90,26 @@
       "autoincrement": false,
       "default": null,
       "generated": null,
+      "name": "caughtById",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "caughtByGuildId",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
       "name": "id",
       "entityType": "columns",
       "table": "user_profiles"
@@ -166,20 +186,51 @@
     },
     {
       "columns": [
+        "caughtById"
+      ],
+      "tableTo": "user_profiles",
+      "columnsTo": [
+        "id"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "nameExplicit": false,
+      "name": "fk_numberhuman_caughtById_user_profiles_id_fk",
+      "entityType": "fks",
+      "table": "numberhuman"
+    },
+    {
+      "columns": [
+        "caughtByGuildId"
+      ],
+      "tableTo": "user_profiles",
+      "columnsTo": [
+        "guildId"
+      ],
+      "onUpdate": "NO ACTION",
+      "onDelete": "NO ACTION",
+      "nameExplicit": false,
+      "name": "fk_numberhuman_caughtByGuildId_user_profiles_guildId_fk",
+      "entityType": "fks",
+      "table": "numberhuman"
+    },
+    {
+      "columns": [
+        "id",
+        "guildId"
+      ],
+      "nameExplicit": false,
+      "name": "user_profiles_pk",
+      "entityType": "pks",
+      "table": "user_profiles"
+    },
+    {
+      "columns": [
         "catchId"
       ],
       "nameExplicit": false,
       "name": "numberhuman_pk",
       "table": "numberhuman",
-      "entityType": "pks"
-    },
-    {
-      "columns": [
-        "id"
-      ],
-      "nameExplicit": false,
-      "name": "user_profiles_pk",
-      "table": "user_profiles",
       "entityType": "pks"
     }
   ],

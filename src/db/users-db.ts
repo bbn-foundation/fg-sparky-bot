@@ -6,8 +6,10 @@
  */
 import { Database } from "bun:sqlite";
 import { drizzle, type SQLiteBunDatabase } from "drizzle-orm/bun-sqlite";
+import { relations } from "./schema.ts";
 
 const sqlite = new Database(process.env.DB_FILE_NAME);
 export const UsersDB: SQLiteBunDatabase<Record<string, unknown>> = drizzle({
   client: sqlite,
+  relations,
 });
