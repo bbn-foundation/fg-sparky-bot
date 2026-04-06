@@ -1,0 +1,187 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "id": "9204e32f-6627-41fb-9e5d-f1d4a71685f1",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "name": "numberhuman",
+      "entityType": "tables"
+    },
+    {
+      "name": "user_profiles",
+      "entityType": "tables"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": true,
+      "default": null,
+      "generated": null,
+      "name": "catchId",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "ability",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "real",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "1",
+      "generated": null,
+      "name": "bonusHP",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "real",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "1",
+      "generated": null,
+      "name": "bonusAtk",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "level",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "evolution",
+      "entityType": "columns",
+      "table": "numberhuman"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "guildId",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "tokens",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "'[]'",
+      "generated": null,
+      "name": "guessedEntries",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "'[]'",
+      "generated": null,
+      "name": "uniqueGuessed",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "'[]'",
+      "generated": null,
+      "name": "numberhumansGuessed",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "'[]'",
+      "generated": null,
+      "name": "numberhumansGuessedUnique",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "type": "integer",
+      "notNull": false,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "bestStreak",
+      "entityType": "columns",
+      "table": "user_profiles"
+    },
+    {
+      "columns": [
+        "catchId"
+      ],
+      "nameExplicit": false,
+      "name": "numberhuman_pk",
+      "table": "numberhuman",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "user_profiles_pk",
+      "table": "user_profiles",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
