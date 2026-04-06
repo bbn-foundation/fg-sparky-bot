@@ -5,11 +5,11 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { Database } from "bun:sqlite";
-import { drizzle, type SQLiteBunDatabase } from "drizzle-orm/bun-sqlite";
+import { drizzle } from "drizzle-orm/bun-sqlite";
 import { relations } from "./schema.ts";
 
 const sqlite = new Database(process.env.DB_FILE_NAME);
-export const UsersDB: SQLiteBunDatabase<Record<string, unknown>> = drizzle({
+export const UsersDB = drizzle({
   client: sqlite,
   relations,
 });

@@ -12,12 +12,16 @@ export const numberhumans = sqliteTable("numberhuman", {
   catchId: int().primaryKey({ autoIncrement: true }),
   id: text(),
   ability: text(),
-  bonusHP: real().default(1),
-  bonusAtk: real().default(1),
-  level: int().default(0),
-  evolution: text().$type<EvolutionType>(),
-  caughtById: text().references(() => userProfiles.id),
-  caughtByGuildId: text().references(() => userProfiles.guildId),
+  bonusHP: real().notNull().default(1),
+  bonusAtk: real().notNull().default(1),
+  level: int().notNull().default(0),
+  evolution: text().notNull().$type<EvolutionType>(),
+  caughtById: text()
+    .notNull()
+    .references(() => userProfiles.id),
+  caughtByGuildId: text()
+    .notNull()
+    .references(() => userProfiles.guildId),
 });
 
 export const userProfiles = sqliteTable(
@@ -25,14 +29,24 @@ export const userProfiles = sqliteTable(
   {
     id: text().primaryKey(),
     guildId: text().primaryKey(),
-    tokens: int().default(0),
-    guessedEntries: text({ mode: "json" }).$type<string[]>().default([]),
-    uniqueGuessed: text({ mode: "json" }).$type<string[]>().default([]),
-    numberhumansGuessed: text({ mode: "json" }).$type<string[]>().default([]),
+    tokens: int().notNull().default(0),
+    guessedEntries: text({ mode: "json" })
+      .$type<string[]>()
+      .notNull()
+      .default([]),
+    uniqueGuessed: text({ mode: "json" })
+      .$type<string[]>()
+      .notNull()
+      .default([]),
+    numberhumansGuessed: text({ mode: "json" })
+      .$type<string[]>()
+      .notNull()
+      .default([]),
     numberhumansGuessedUnique: text({ mode: "json" })
       .$type<string[]>()
+      .notNull()
       .default([]),
-    bestStreak: int().default(0),
+    bestStreak: int().notNull().default(0),
   },
   (table) => [
     primaryKey({

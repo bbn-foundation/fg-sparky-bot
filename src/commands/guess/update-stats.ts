@@ -22,14 +22,16 @@ export async function updateUserStats(
     `tried looking up user ${message.author.id} (found: ${user ? "true" : "false"})`,
   );
 
-  const currentStreak = streakCollection.get(`${message.author.id}.${message.guildId!}`) ?? 0;
+  const currentStreak =
+    streakCollection.get(`${message.author.id}.${message.guildId!}`) ?? 0;
 
   if (user) {
     Logger.info(`user already exists, adding tokens`);
     // update the player stats first...
     user.tokens += gain;
     user.guessedEntries.push(number.uuid);
-    if (!user.uniqueGuessed.includes(number.uuid)) user.uniqueGuessed.push(number.uuid);
+    if (!user.uniqueGuessed.includes(number.uuid))
+      user.uniqueGuessed.push(number.uuid);
     // then reply.
     if (await handleSpecialGuess(message, number, "pre-parse")) {
       return;
@@ -37,8 +39,6 @@ export async function updateUserStats(
     await user.save();
   } else {
     Logger.info(`user not found, creating user and adding tokens`);
-    // @ts-expect-error: assertion fails for some reason even though the bot can only
-    // be installed in a guild
     const newUser = createUser(message.author.id, message.guildId);
     newUser.tokens += gain;
     newUser.guessedEntries.push(number.uuid);
@@ -58,7 +58,9 @@ export async function updateUserStats(
         "perhaps, a jet2 holiday may interest you?",
         "hey you guessed correctly, nice job!",
         tokenGainMessage,
-        currentStreak > 0 ? `You currently have a streak of ${currentStreak.toString()}, keep it up!` : "",
+        currentStreak > 0
+          ? `You currently have a streak of ${currentStreak.toString()}, keep it up!`
+          : "",
       ]),
     );
   }
@@ -66,7 +68,9 @@ export async function updateUserStats(
     joinStringArray([
       "hey you guessed correctly, nice job!",
       tokenGainMessage,
-      currentStreak > 0 ? `You currently have a streak of ${currentStreak.toString()}, keep it up!` : "",
+      currentStreak > 0
+        ? `You currently have a streak of ${currentStreak.toString()}, keep it up!`
+        : "",
     ]),
   );
   Logger.debug(`appending streak for user ${message.author.displayName}`);
