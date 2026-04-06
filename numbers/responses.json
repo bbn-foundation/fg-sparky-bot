@@ -51,7 +51,7 @@
   },
   {
     "uuid": "9768f839-65eb-46e7-8b18-9af5f2b37cdb",
-    "value": "I'm gonna save whoever just said that the embarrassment of being associated with that guess. You're welcome.",
+    "value": "I'm gonna save whoever just said {guess} the embarrassment of being associated with that guess. You're welcome.",
     "type": "fail"
   },
   {
@@ -291,7 +291,7 @@
   },
   {
     "uuid": "8ee869b0-d450-4282-833f-a3eb81af472f",
-    "value": "{mention} i shat myself because of how wrong your guess was",
+    "value": "{mention} i shat myself because of how wrong {guess} was",
     "type": "fail"
   },
   {
@@ -536,7 +536,7 @@
   },
   {
     "uuid": "52c2dcee-5a1a-4eaa-8ea0-6237282cf5e5",
-    "value": "{mention} Was that a typo?",
+    "value": "{mention} Was {guess} a typo?",
     "type": "fail"
   },
   {
@@ -2861,7 +2861,7 @@
   },
   {
     "uuid": "8faac076-f0d6-4d0d-b385-ffbe98da2b75",
-    "value": "{mention} I wish it was them too, bro.",
+    "value": "{mention} I wish it was {guess} too, bro.",
     "type": "fail"
   },
   {
@@ -3631,7 +3631,7 @@
   },
   {
     "uuid": "3f263215-3251-4886-9495-fa4ada0de768",
-    "value": "{mention} How do you NOT know what the name of this Numberhuman is?",
+    "value": "{mention} How do you NOT know the name of this Numberhuman?",
     "type": "fail"
   },
   {
