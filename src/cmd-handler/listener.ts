@@ -6,7 +6,7 @@
  */
 import Commands from "#cmds";
 import { CommandCooldowns, GuessCooldowns } from "#stores";
-import { Logger } from "#utils/logger";
+import { Logger } from "#utils/logger.ts";
 import type { Command } from "#utils/types.ts";
 import { type AutocompleteInteraction, type Client, type CommandInteraction, MessageFlags } from "discord.js";
 

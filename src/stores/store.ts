@@ -36,7 +36,7 @@ export class DataStore<T extends DataStoreEntry = DataStoreEntry> {
       const oldData = structuredClone(this.data);
       const newData = await this.schema
         .array()
-        .parseAsync((await Bun.file(this.file).json()) as unknown);
+        .parseAsync(JSON.parse(await Deno.readTextFile(this.file)) as unknown);
       const mergedData = Object.assign(oldData, newData);
       this.data = mergedData;
       await this.save();
@@ -52,7 +52,7 @@ export class DataStore<T extends DataStoreEntry = DataStoreEntry> {
    * @returns The fully initialized class.
    */
   async load(): Promise<this> {
-    const fileJSON = (await Bun.file(this.file).json()) as unknown;
+    const fileJSON = JSON.parse(await Deno.readTextFile(this.file)) as unknown;
     const validatedData = await this.schema.array().parseAsync(fileJSON);
     this.data = validatedData;
     return this;
@@ -63,7 +63,7 @@ export class DataStore<T extends DataStoreEntry = DataStoreEntry> {
    */
   async save(): Promise<void> {
     const data = JSON.stringify(this.data, undefined, 2);
-    await Bun.write(this.file, data);
+    await Deno.writeTextFile(this.file, data);
   }
 
   /**

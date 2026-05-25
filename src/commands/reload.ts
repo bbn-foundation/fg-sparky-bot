@@ -6,7 +6,7 @@
  */
 import { Numberhumans, Numbers, Responses } from "#stores";
 import type { Command } from "#utils/types.ts";
-import { ApplicationCommandOptionType, type Client, type CommandInteraction, MessageFlags, PermissionFlagsBits } from "discord.js";
+import { ApplicationCommandOptionType, type Client, type CommandInteraction, MessageFlags } from "discord.js";
 
 enum ReloadStoreType {
   SparkyEntries = "sparky-entries",

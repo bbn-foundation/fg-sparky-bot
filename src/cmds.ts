@@ -1,4 +1,4 @@
-import type { Command } from "#utils/types";
+import type { Command } from "#utils/types.ts";
 import Gift from "./commands/gift.ts";
 import Guess from "./commands/guess.ts";
 import Hello from "./commands/hello.ts";

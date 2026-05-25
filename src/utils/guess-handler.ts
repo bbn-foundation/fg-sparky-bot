@@ -1,4 +1,5 @@
 import { Logger } from "./logger.ts";
+import { createHash } from "node:crypto";
 
 export interface GuessObject {
   number: string | null;
@@ -8,9 +9,9 @@ export interface GuessObject {
 export type HandlerFunction<T extends object> = (message: string, number: T) => boolean;
 
 export function createGuessHandler<T extends GuessObject>(
-  hashAlgo: Bun.SupportedCryptoAlgorithms,
+  hashAlgo: string,
 ): HandlerFunction<T> {
-  const hasher = new Bun.CryptoHasher(hashAlgo);
+  const hasher = createHash(hashAlgo);
   return function(message: string, number: GuessObject): boolean {
     // Normalize the player's guess to a standard form to avoid weird os issues
     // like macos replacing "..." with "…" (elipis) or replacing ' with ’
@@ -19,7 +20,7 @@ export function createGuessHandler<T extends GuessObject>(
       .replaceAll(/’|‘/gu, "'")
       .replaceAll(/“|”/gu, "'")
       .replaceAll("…", "...");
-    const hashedGuess = hasher.update(guess, "utf-8").digest("hex");
+    const hashedGuess = hasher.copy().update(guess, "utf-8").digest("hex");
     Logger.debug(`User guessed: ${guess} (hashed: ${hashedGuess})`);
     Logger.debug(`Numberhuman: ${number.number ?? "<unknown>"} (hashed: ${number.hashedNumber})`);
     if (hashedGuess === number.hashedNumber) {

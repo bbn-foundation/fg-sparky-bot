@@ -14,9 +14,13 @@ const Poweroff: Command = {
       return;
     }
     await interaction.reply("Sorry I gotta sleep, see ya later!");
-    await Bun.$`/bin/systemctl poweroff`;
+    if (Deno.statSync("/bin/systemctl")) {
+      Deno.spawn("/bin/systemctl", ["poweroff"]);
+    } else {
+      Deno.exit(0);
+    }
     // Should never return
-    await Bun.sleep(Number.MAX_SAFE_INTEGER);
+    await new Promise(resolve => setTimeout(resolve, Number.MAX_SAFE_INTEGER));
   },
   description: "Turn the bot off",
   name: "poweroff",

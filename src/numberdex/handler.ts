@@ -15,6 +15,7 @@ import {
 } from "discord.js";
 import { updateUserStats } from "./users.ts";
 import { createButtonRow, spawnNumberhuman } from "./utils.ts";
+import { sleep } from "#utils/sleep.ts";
 
 const createGuessModal = (channelId: string): ModalComponentData => ({
   title: "yeah",
@@ -49,7 +50,7 @@ export function setupCallback(
       Logger.info(
         `spawning numberhuman in channel ${channel.id} after ${timeoutDuration.toFixed(0)} seconds`,
       );
-      await Bun.sleep(timeoutDuration * 1000);
+      await sleep(timeoutDuration * 1000);
       const number = await spawnNumberhuman(store, channel);
       if (number.isOk()) {
         const [okNumber, sentMessage] = number.unwrap();
