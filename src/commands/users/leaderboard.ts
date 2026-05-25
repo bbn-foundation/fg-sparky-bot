@@ -26,14 +26,14 @@ async function getProfilesByType(
     case LeaderboardDisplayType.Tokens: {
       return await UserProfile.find({
         order: { tokens: "DESC" },
-        select: ["id", "tokens"],
+        select: { id: true, tokens: true },
         where: { guildId },
         take: amount,
       });
     }
     case LeaderboardDisplayType.TotalEntries: {
       const profiles = await UserProfile.find({
-        select: ["id", "guessedEntries"],
+        select: { id: true, guessedEntries: true },
         where: { guildId },
       });
       return profiles
@@ -42,7 +42,7 @@ async function getProfilesByType(
     }
     case LeaderboardDisplayType.UniqueEntries: {
       const profiles = await UserProfile.find({
-        select: ["id", "uniqueGuessed"],
+        select: { id: true, uniqueGuessed: true },
         where: { guildId },
       });
       return profiles
@@ -52,7 +52,7 @@ async function getProfilesByType(
 
     case LeaderboardDisplayType.TotalNumberhumans: {
       const profiles = await UserProfile.find({
-        select: ["id", "numberhumansGuessed"],
+        select: { id: true, numberhumansGuessed: true },
         where: { guildId },
       });
 
@@ -61,7 +61,7 @@ async function getProfilesByType(
     }
     case LeaderboardDisplayType.UniqueNumberhumans: {
       const profiles = await UserProfile.find({
-        select: ["id", "numberhumansGuessedUnique"],
+        select: { id: true, numberhumansGuessedUnique: true },
         where: { guildId },
       });
 
@@ -89,7 +89,7 @@ async function getProfilesByType(
     case LeaderboardDisplayType.HighestStreak: {
       return await UserProfile.find({
         order: { bestStreak: "DESC" },
-        select: ["id", "bestStreak"],
+        select: { id: true, bestStreak: true },
         where: { guildId },
         take: amount,
       });
