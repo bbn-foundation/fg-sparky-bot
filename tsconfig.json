@@ -8,12 +8,11 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "composite": true,
-    "isolatedDeclarations": true,
     "jsx": "preserve",
-    "lib": ["ESNext"],
-    "module": "preserve",
+    "lib": ["ESNext", "Decorators.Legacy"],
+    "module": "NodeNext",
     "moduleDetection": "force",
-    "moduleResolution": "bundler",
+    "moduleResolution": "nodenext",
     "noEmit": true,
     "noErrorTruncation": true,
     "noImplicitOverride": true,
@@ -26,20 +25,10 @@
     "strict": true,
     "target": "esnext",
     "verbatimModuleSyntax": true,
-    "types": ["bun", "node"],
+    "types": ["deno", "node"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "paths": {
-      "#stores": ["./src/stores.ts"],
-      "#stores-types": ["./src/stores/index.ts"],
-      "#db": ["./src/db/index.ts"],
-      "#utils/*": ["./src/utils/*"],
-      "#numberdex/*": ["./src/numberdex/*"],
-      "#fg-sparky/*": ["./src/sparky/*"],
-      "#cmd-loader": ["./src/cmd-handler/loader.ts"],
-      "#cmds": ["./src/cmds.ts"]
-    }
   },
   "include": ["**/*.ts"]
 }

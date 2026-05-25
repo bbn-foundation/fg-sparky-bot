@@ -13,6 +13,7 @@ import { Command } from "commander";
 import { Client } from "discord.js";
 import packageJson from "../package.json" with { type: "json" };
 import { initClient } from "./index.ts";
+import "@std/dotenv/load";
 
 const program = new Command()
   .version(packageJson.version)

@@ -44,7 +44,7 @@ const Guess: Command = {
     const content = unwrappedEntry.difficulty === "legendary"
       ? `**DIFFICULTY: LEGENDARY**\nGuess the number, you have **60** seconds.`
       : `Difficulty: ${unwrappedEntry.difficulty}\nGuess the number, you have **40** seconds.`;
-    const image = new AttachmentBuilder(Buffer.from(await Bun.file(unwrappedEntry.image).bytes()))
+    const image = new AttachmentBuilder(Buffer.from(await Deno.readFile(unwrappedEntry.image)))
       .setName(unwrappedEntry.image.slice(unwrappedEntry.image.lastIndexOf("/") + 1))
       .setSpoiler(unwrappedEntry.uuid === "d828f344-b134-47a1-93c9-56e25d5c9e61");
 

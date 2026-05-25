@@ -7,11 +7,11 @@
 import { loginFormatter } from "#utils/formatter.ts";
 import { Logger } from "#utils/logger.ts";
 import { ActivityType, type Client, type Interaction } from "discord.js";
-import { execSync } from "node:child_process";
 import packageJson from "../package.json" with { type: "json" };
 import { handleAutocomplete, handleSlashCommand } from "./cmd-handler/listener.ts";
+import { execSync } from "node:child_process";
 
-const currentHash = () => execSync("git rev-parse --short HEAD").toString().trim();
+const currentHash = () => execSync("git rev-parse --short HEAD");
 
 export function registerHandlers(client: Client): void {
   client.once("clientReady", (client: Client<true>) => {

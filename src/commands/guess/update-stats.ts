@@ -1,8 +1,8 @@
 import { createUser, type UserProfile } from "#db";
-import type { StreakCollection } from "#fg-sparky/streaks";
-import { joinStringArray } from "#utils/formatter";
-import { Logger } from "#utils/logger";
-import type { StoredNumberInfo } from "#utils/types";
+import type { StreakCollection } from "#fg-sparky/streaks.ts";
+import { joinStringArray } from "#utils/formatter.ts";
+import { Logger } from "#utils/logger.ts";
+import type { StoredNumberInfo } from "#utils/types.ts";
 import type { Message, OmitPartialGroupDMChannel } from "discord.js";
 import handleSpecialGuess from "./special-handler.ts";
 
