@@ -30,6 +30,7 @@ const Guess: Command = {
       if (!Error.isError(err)) throw err;
       Logger.error(`Tried deferring reply but it was too late! Error:`);
       Logger.error(err.stack);
+      GuessCooldowns.set(interaction.channelId, false);
       return;
     }
     const difficulty = interaction.options.get("difficulty", true).value as

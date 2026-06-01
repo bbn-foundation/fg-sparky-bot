@@ -34,11 +34,17 @@ export async function handleSlashCommand(
 
   Logger.info(`Making sure the command ${interaction.commandName} isn't on cooldown...`);
   if (slashCommand.name === "guess" && GuessCooldowns.check(slashCommand, interaction.channelId)) {
-    await interaction.reply({
-      content:
-        `Chill sis, the previous guess hasn't finished yet! Please answer correctly or wait for it to time out first.`,
-      flags: MessageFlags.Ephemeral,
-    });
+    try {
+      await interaction.reply({
+        content:
+          `Chill sis, the previous guess hasn't finished yet! Please answer correctly or wait for it to time out first.`,
+        flags: MessageFlags.Ephemeral,
+      });
+    } catch (err) {
+      if (!Error.isError(err)) return;
+      Logger.error(`Failed to reply to guess command!`);
+      Logger.error(err.stack);
+    }
     return;
   }
 
