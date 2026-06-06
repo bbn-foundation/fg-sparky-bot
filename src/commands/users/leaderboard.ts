@@ -153,8 +153,8 @@ export async function userLeaderboardDisplay(
       const position = ordinalOf(index + 1);
       // Sometimes an IIFE looks better then chaining ternaries
       const header = ((index) => {
-        if (index % 5 === 0) return "##";
-        if (index % 5 === 1) return "###";
+        if (index % leaderboardChunk === 0) return "##";
+        if (index % leaderboardChunk === 1) return "###";
         return "";
       })(index);
       const template = `${header} ${position}: ${discordUsers[index]!.displayName}`;
