@@ -46,7 +46,7 @@ export function setupCallback(
   if (/numberdex-channel-[0-9]+/.test(job.name)) {
     Logger.debug(`setting up callback for cron job ${job.name}`);
     job.callback = async () => {
-      const timeoutDuration = process.env.NODE_ENV === "development" ? 0 : getRandomRange(0, 1200);
+      const timeoutDuration = process.env.NODE_ENV === "development" ? 0 : getRandomRange(0, 300);
       Logger.info(
         `spawning numberhuman in channel ${channel.id} after ${timeoutDuration.toFixed(0)} seconds`,
       );
