@@ -67,11 +67,6 @@ const User: Command = {
             { name: "highest-streaks", value: LeaderboardDisplayType.HighestStreak },
           ],
         },
-        {
-          name: "amount",
-          description: "The top amount of people to show (defaults to 10)",
-          type: ApplicationCommandOptionType.Number,
-        },
       ],
     },
     {

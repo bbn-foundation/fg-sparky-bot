@@ -14,6 +14,7 @@ import { Client } from "discord.js";
 import packageJson from "../package.json" with { type: "json" };
 import { initClient } from "./index.ts";
 import "@std/dotenv/load";
+import { PaginatedMessage } from "@sapphire/discord.js-utilities";
 
 const program = new Command()
   .version(packageJson.version)
@@ -70,6 +71,8 @@ try {
 
   Logger.notice("Initializing database");
   await UsersDB.initialize();
+
+  PaginatedMessage.defaultActions = PaginatedMessage.defaultActions.slice(1, 5);
 
   await initClient(client, token, Commands);
   await setupCronJobs(client, Numberhumans, NumberdexBaker);

@@ -5,6 +5,7 @@ import { formatPercent } from "#utils/formatter.ts";
 import { Logger } from "#utils/logger.ts";
 import { ordinalOf } from "#utils/numbers.ts";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
+import { PaginatedMessage } from "@sapphire/discord.js-utilities";
 import { italic, type Client, type User as DiscordUser } from "discord.js";
 
 export enum LeaderboardDisplayType {
@@ -20,7 +21,6 @@ export enum LeaderboardDisplayType {
 async function getProfilesByType(
   leaderboardType: LeaderboardDisplayType,
   guildId: string,
-  amount: number,
 ): Promise<NumberhumanData[] | UserProfile[]> {
   switch (leaderboardType) {
     case LeaderboardDisplayType.Tokens: {
@@ -28,7 +28,6 @@ async function getProfilesByType(
         order: { tokens: "DESC" },
         select: { id: true, tokens: true },
         where: { guildId },
-        take: amount,
       });
     }
     case LeaderboardDisplayType.TotalEntries: {
@@ -37,8 +36,7 @@ async function getProfilesByType(
         where: { guildId },
       });
       return profiles
-        .toSorted((a, b) => b.guessedEntries.length - a.guessedEntries.length)
-        .slice(0, amount);
+        .toSorted((a, b) => b.guessedEntries.length - a.guessedEntries.length);
     }
     case LeaderboardDisplayType.UniqueEntries: {
       const profiles = await UserProfile.find({
@@ -46,8 +44,7 @@ async function getProfilesByType(
         where: { guildId },
       });
       return profiles
-        .toSorted((a, b) => b.uniqueGuessed.length - a.uniqueGuessed.length)
-        .slice(0, amount);
+        .toSorted((a, b) => b.uniqueGuessed.length - a.uniqueGuessed.length);
     }
 
     case LeaderboardDisplayType.TotalNumberhumans: {
@@ -56,8 +53,7 @@ async function getProfilesByType(
         where: { guildId },
       });
 
-      return profiles.toSorted((a, b) => b.numberhumansGuessed.length - a.numberhumansGuessed.length)
-        .slice(0, amount);
+      return profiles.toSorted((a, b) => b.numberhumansGuessed.length - a.numberhumansGuessed.length);
     }
     case LeaderboardDisplayType.UniqueNumberhumans: {
       const profiles = await UserProfile.find({
@@ -65,8 +61,7 @@ async function getProfilesByType(
         where: { guildId },
       });
 
-      return profiles.toSorted((a, b) => b.numberhumansGuessedUnique.length - a.numberhumansGuessedUnique.length)
-        .slice(0, amount);
+      return profiles.toSorted((a, b) => b.numberhumansGuessedUnique.length - a.numberhumansGuessedUnique.length);
     }
     case LeaderboardDisplayType.BestNumberhuman: {
       const numberhumans = await NumberhumanData.find({
@@ -82,8 +77,7 @@ async function getProfilesByType(
       return numberhumans.toSorted((a, b) =>
         (b.totalHP(Numberhumans) + b.totalAtk(Numberhumans))
         - (a.totalHP(Numberhumans) + a.totalAtk(Numberhumans))
-      ).filter((value, index, array) => array.findIndex(v => v.caughtBy!.id === value.caughtBy!.id) === index)
-        .slice(0, amount);
+      ).filter((value, index, array) => array.findIndex(v => v.caughtBy!.id === value.caughtBy!.id) === index);
     }
 
     case LeaderboardDisplayType.HighestStreak: {
@@ -91,7 +85,6 @@ async function getProfilesByType(
         order: { bestStreak: "DESC" },
         select: { id: true, bestStreak: true },
         where: { guildId },
-        take: amount,
       });
     }
   }
@@ -103,7 +96,7 @@ export async function userLeaderboardDisplay(
 ): Promise<void> {
   await interaction.deferReply();
 
-  const displayAmount = interaction.options.getNumber("amount", false) ?? 10;
+  const leaderboardChunk = 5;
   // oxlint-disable-next-line no-unsafe-type-assertion: guarantened to be one of the types because of the discord api
   const leaderboardType = interaction.options.getString("type", true) as LeaderboardDisplayType;
 
@@ -112,7 +105,7 @@ export async function userLeaderboardDisplay(
   // Only take displayAmount from db to avoid fetching too many people and
   // getting rate-limited by discord
   console.time("/user-leaderboard: fetch user data from db");
-  const users = await getProfilesByType(leaderboardType, interaction.guildId, displayAmount);
+  const users = await getProfilesByType(leaderboardType, interaction.guildId);
   console.timeEnd("/user-leaderboard: fetch user data from db");
 
   console.time("/user-leaderboard: fetch user data from discord");
@@ -151,94 +144,69 @@ export async function userLeaderboardDisplay(
       }
     }
   })();
-  const content = `\
-    # User leaderboard for ${leaderboardHeader}: \n \
-    ${
-    users
-      .map((user, index) => {
-        if (index > Math.min(displayAmount, 25) - 1) return "no";
-        const position = ordinalOf(index + 1);
-        // Sometimes an IIFE looks better then chaining ternaries
-        const header = ((index) => {
-          if (index === 0) return "##";
-          if (index === 1) return "###";
-          return "";
-        })(index);
-        const template = `${header} ${position}: ${discordUsers[index]!.displayName}`;
-        if (user instanceof NumberhumanData) {
-          // above condition is always true when someone wants to see the best numberhumans
-          // and always false otherwise (see getProfilesByType)
-          const numberInStore = Numberhumans.get(user.id)
-            .expect("for the numberhuman to exist");
-          const stats = `${user.totalHP(Numberhumans).toFixed(2)} HP, ${user.totalAtk(Numberhumans).toFixed(2)} ATK`;
-          const toDisplay = user.evolution === EvolutionType.None
-            ? `"${numberInStore.name}", ${stats}`
-            : `${italic(user.evolution)} "${numberInStore.name}", ${stats}`;
-          return `${template} (${toDisplay})`;
+
+  const paginatedContent = new PaginatedMessage();
+
+  for (let i = 0; i < users.length; i += leaderboardChunk) {
+    const chunk = users.slice(i, i + leaderboardChunk).map((user, preIndex) => {
+      const index = preIndex + i;
+      const position = ordinalOf(index + 1);
+      // Sometimes an IIFE looks better then chaining ternaries
+      const header = ((index) => {
+        if (index % 5 === 0) return "##";
+        if (index % 5 === 1) return "###";
+        return "";
+      })(index);
+      const template = `${header} ${position}: ${discordUsers[index]!.displayName}`;
+
+      if (user instanceof NumberhumanData) {
+        // above condition is always true when someone wants to see the best numberhumans
+        // and always false otherwise (see getProfilesByType)
+        const numberInStore = Numberhumans.get(user.id)
+          .expect("for the numberhuman to exist");
+        const stats = `${user.totalHP(Numberhumans).toFixed(2)} HP, ${user.totalAtk(Numberhumans).toFixed(2)} ATK`;
+        const toDisplay = user.evolution === EvolutionType.None
+          ? `"${numberInStore.name}", ${stats}`
+          : `${italic(user.evolution)} "${numberInStore.name}", ${stats}`;
+        return `${template} (${toDisplay})`;
+      }
+
+      switch (leaderboardType) {
+        case LeaderboardDisplayType.Tokens: {
+          return `${template} (${user.tokens.toString()} <:terminusfinity:1444859277515690075>)`;
         }
-        // oxlint-disable-next-line typescript/switch-exhaustiveness-check
-        switch (leaderboardType) {
-          case LeaderboardDisplayType.Tokens: {
-            return `${template} (${user.tokens.toString()} <:terminusfinity:1444859277515690075>)`;
-          }
-          case LeaderboardDisplayType.TotalEntries: {
-            return `${template} (${user.guessedEntries.length.toString()} entries)`;
-          }
-          case LeaderboardDisplayType.UniqueEntries: {
-            return `${template} (${user.uniqueGuessed.length.toString()} entries) [${
-              formatPercent(user.uniqueGuessed.length / Numbers.UNIQUE_ENTRIES)
-            }]`;
-          }
-          case LeaderboardDisplayType.TotalNumberhumans: {
-            return `${template} (${user.numberhumansGuessed.length} entries)`;
-          }
-          case LeaderboardDisplayType.UniqueNumberhumans: {
-            return `${template} (${user.numberhumansGuessedUnique.length} entries) [${
-              formatPercent(user.numberhumansGuessedUnique.length / Numberhumans.UNIQUE_ENTRIES)
-            }]`;
-          }
-          case LeaderboardDisplayType.BestNumberhuman: {
-            return "should be handled in the above condition";
-          }
-          case LeaderboardDisplayType.HighestStreak: {
-            return `${template} (streak of ${user.bestStreak})`;
-          }
-          default: {
-            throw new TypeError("not implemented");
-          }
+        case LeaderboardDisplayType.TotalEntries: {
+          return `${template} (${user.guessedEntries.length.toString()} entries)`;
         }
-      })
-      .filter((value) => value !== "no")
-      .join("\n")
+        case LeaderboardDisplayType.UniqueEntries: {
+          return `${template} (${user.uniqueGuessed.length.toString()} entries) [${formatPercent(user.uniqueGuessed.length / Numbers.UNIQUE_ENTRIES)
+            }]`;
+        }
+        case LeaderboardDisplayType.TotalNumberhumans: {
+          return `${template} (${user.numberhumansGuessed.length} entries)`;
+        }
+        case LeaderboardDisplayType.UniqueNumberhumans: {
+          return `${template} (${user.numberhumansGuessedUnique.length} entries) [${formatPercent(user.numberhumansGuessedUnique.length / Numberhumans.UNIQUE_ENTRIES)
+            }]`;
+        }
+        case LeaderboardDisplayType.BestNumberhuman: {
+          return "should be handled in the above condition";
+        }
+        case LeaderboardDisplayType.HighestStreak: {
+          return `${template} (streak of ${user.bestStreak})`;
+        }
+        default: {
+          throw new TypeError("not implemented");
+        }
+      }
+    });
+    paginatedContent.addPage({
+      content: `\
+      # User leaderboard for ${leaderboardHeader}: \n\
+      ${chunk.join("\n")}
+      `
+    })
   }
-    `;
-  await interaction.editReply({ content });
 
-  // if (users.length > 25 && displayAmount > 25) {
-  //   Logger.debug("/user-leaderboard: generating extended user reply...");
-  //   const content = `\
-  //   # User leaderboard (cont.): \n \
-  //   ${
-  //     users
-  //       .slice(25)
-  //       .map((user, index) => {
-  //         if (index > displayAmount - 25) return "no";
-  //         const position = ordinalOf(index + 26);
-  //         // Sometimes an IIFE looks better then chaining ternaries
-  //         const header = ((index) => {
-  //           if (index === 0) return "##";
-  //           if (index === 1) return "###";
-  //           return "";
-  //         })(index);
-  //         return `${header} ${position}: ${
-  //           discordUsers[index + 25]!.displayName
-  //         } (${user.tokens.toString()} <:terminusfinity:1444859277515690075>)`;
-  //       })
-  //       .filter((value) => value !== "no")
-  //       .join("\n")
-  //   }
-  //   `;
-
-  //   await interaction.followUp({ content });
-  // }
+  paginatedContent.run(interaction);
 }
