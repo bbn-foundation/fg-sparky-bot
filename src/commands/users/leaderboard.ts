@@ -96,7 +96,7 @@ export async function userLeaderboardDisplay(
 ): Promise<void> {
   await interaction.deferReply();
 
-  const leaderboardChunk = 5;
+  const leaderboardChunk = 15;
   // oxlint-disable-next-line no-unsafe-type-assertion: guarantened to be one of the types because of the discord api
   const leaderboardType = interaction.options.getString("type", true) as LeaderboardDisplayType;
 
