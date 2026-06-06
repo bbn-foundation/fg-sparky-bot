@@ -56,7 +56,7 @@ export async function updateUserStats(
   newUser.guessedEntries.push(number.uuid);
   if (!newUser.uniqueGuessed.includes(number.uuid)) newUser.uniqueGuessed.push(number.uuid);
 
-  const achs = Achievements.check(ACHIEVEMENT_EVENT.SPARKY_GUESS_SUCCESS, [newUser, guess, gain]);
+  const achs = Achievements.check(ACHIEVEMENT_EVENT.SPARKY_GUESS_SUCCESS, newUser, [newUser, guess, gain]);
   if (achs) newUser.achievements = newUser.achievements.concat(achs);
 
   await newUser.save();
