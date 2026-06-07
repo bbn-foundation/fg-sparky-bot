@@ -63,9 +63,17 @@ export async function numberdexTrade(
 
   const traderHuman = await NumberhumanData.findOneBy({
     catchId: traderHumanID,
+    caughtBy: {
+      id: traderProfile.id,
+      guildId: traderProfile.guildId,
+    },
   });
   const recipientHuman = await NumberhumanData.findOneBy({
     catchId: recipientHumanID,
+    caughtBy: {
+      id: recipientProfile.id,
+      guildId: recipientProfile.guildId,
+    },
   });
 
   if (!traderHuman) {
@@ -106,6 +114,7 @@ export async function numberdexTrade(
     `- ${userMention(trader.id)} will give up a ${formatHuman(traderHuman, Numberhumans)}`,
     `- ${userMention(recipient.id)} will give away a ${formatHuman(recipientHuman, Numberhumans)}`,
     bold(`Do both of you accept the trade?`),
+    `-# This is a beta feature, please report any bugs you find.`,
   ];
 
   const reply = await interaction.reply({
@@ -126,6 +135,7 @@ export async function numberdexTrade(
       clearTimeout(timeout);
       if (interact.customId === "trade-accept-button") {
         if (tradeCollection.has(reply)) {
+          await interact.deferUpdate();
           // we already checked if the trade request exists
           if (!tradeCollection.get(reply)!.users.includes(interact.user.id)) {
             // neither the recipient nor trader acted on the button
@@ -148,10 +158,11 @@ export async function numberdexTrade(
               // player hasnt accepted
               tradeCollection.get(reply)!.accepted[0] = true;
               await interaction.editReply({
-                content: content.concat(`-# Proposer ${trader.displayName} has accepted the trade.`).join("\n"),
+                content: (await reply.fetch()).content.concat(`\n-# Proposer ${trader.displayName} has accepted the trade.`),
               });
               if (tradeCollection.get(reply)!.accepted.reduce((a, b) => a && b)) {
                 commenceTrade(interaction, traderProfile, recipientProfile, traderHuman, recipientHuman);
+                client.off("interactionCreate", handler);
               }
             }
           } else if (tradeCollection.get(reply)!.users[1] === interact.user.id) {
@@ -167,10 +178,11 @@ export async function numberdexTrade(
               // player hasnt accepted
               tradeCollection.get(reply)!.accepted[1] = true;
               await interaction.editReply({
-                content: content.concat(`-# Recipient ${recipient.displayName} has accepted the trade.`).join("\n"),
+                content: (await reply.fetch()).content.concat(`\n-# Recipient ${recipient.displayName} has accepted the trade.`),
               });
               if (tradeCollection.get(reply)!.accepted.reduce((a, b) => a && b)) {
                 commenceTrade(interaction, traderProfile, recipientProfile, traderHuman, recipientHuman);
+                client.off("interactionCreate", handler);
               }
             }
           }
@@ -188,8 +200,8 @@ export async function numberdexTrade(
           components: [createButtonRow(true)],
         });
         await interact.reply(`${interact.user.id === trader.id ? "Trader" : "Recipient"} ${userMention(interact.user.id)} has rejected the trade offer. Sorry.`);
+        client.off("interactionCreate", handler);
       }
-      client.off("interactionCreate", handler);
     }
   };
 
