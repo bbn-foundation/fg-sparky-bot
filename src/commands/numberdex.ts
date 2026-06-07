@@ -19,6 +19,8 @@ import { NumberdexBaker } from "../numberdex/cron.ts";
 import { setupCallback } from "../numberdex/handler.ts";
 import numberdexShowHumans from "./numberdex/show-humans.ts";
 import { NumberhumanSortingOrder } from "./numberdex/sorting.ts";
+import { Logger } from "#utils/logger.ts";
+import { numberdexTrade } from "./numberdex/trade.ts";
 
 const Numberdex: Command = {
   async run(_client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
@@ -75,8 +77,37 @@ const Numberdex: Command = {
         await numberdexShowHumans(interaction, user, sortingOrder);
         return;
       }
+      case "trade": {
+        const trader = interaction.user;
+        const recipient = interaction.options.getUser("recipient", true);
+        const traderProfile = await getUser(trader.id, interaction.guildId);
+        const recipientProfile = await getUser(recipient.id, interaction.guildId);
+
+        if (!traderProfile) {
+          await interaction.reply({
+            content: `you dont have a profile yet, you should catch some numberhumans first!`,
+            flags: MessageFlags.Ephemeral,
+          });
+          return;
+        }
+
+        if (!recipientProfile) {
+          await interaction.reply({
+            content: `the person you're trying to play with has no profile yet, get them to play numberdex first!`,
+            flags: MessageFlags.Ephemeral,
+          });
+          return;
+        }
+        await numberdexTrade(interaction, recipient, traderProfile, recipientProfile);
+        return;
+      }
       default: {
-        throw new TypeError("unknown subcommand");
+        Logger.warning(`[/numberdex] user tried invoking an invalid subcommand`);
+        await interaction.reply({
+          content: `sorry that subcommand has not been implemented yet`,
+          flags: MessageFlags.Ephemeral,
+        });
+        return;
       }
     }
   },
@@ -147,6 +178,31 @@ const Numberdex: Command = {
             },
           ],
         },
+      ],
+    },
+    {
+      name: "trade",
+      description: "Trade one of your numberhumans for another person's",
+      type: ApplicationCommandOptionType.Subcommand,
+      options: [
+        {
+          name: "trader-id",
+          description: "The catch ID of the numberhuman you want to give up",
+          type: ApplicationCommandOptionType.Integer,
+          required: true,
+        },
+        {
+          name: "recipient-id",
+          description: "The catch ID of the numberhuman you want to get",
+          type: ApplicationCommandOptionType.Integer,
+          required: true,
+        },
+        {
+          name: "recipient",
+          description: "The person you want to trade with",
+          type: ApplicationCommandOptionType.User,
+          required: true,
+        }
       ],
     },
   ],
