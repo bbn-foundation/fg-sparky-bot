@@ -3,13 +3,12 @@ import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { ActionRowBuilder, bold, ButtonBuilder, ButtonStyle, ComponentType, InteractionResponse, italic, MessageFlags, userMention, type Interaction, type User } from "discord.js";
 import { Numberhumans } from "#stores";
 import { Logger } from "#utils/logger.ts";
+import { formatHuman } from "#utils/formatter.ts";
 
-const giftCollection = new WeakMap<InteractionResponse, [string, string]>();
-
-function formatHuman(numberhuman: NumberhumanData): string {
-  const numberhumanData = Numberhumans.get(numberhuman.id).expect("should exist");
-  return `level ${bold(numberhuman.level.toString())}, ${italic(numberhuman.evolution)} ${numberhumanData.name} (HP: ${bold(numberhuman.totalHP(Numberhumans).toString())}, ATK: ${bold(numberhuman.totalAtk(Numberhumans).toString()}))`;
-}
+const tradeCollection = new WeakMap<InteractionResponse, {
+  users: [string, string];
+  accepted: [boolean, boolean];
+}>();
 
 function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuilder> {
   const acceptButton = ButtonBuilder.from({
@@ -31,6 +30,25 @@ function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuilder> {
   });
 
   return new ActionRowBuilder<ButtonBuilder>().addComponents(acceptButton, declineButton);
+}
+
+async function commenceTrade(interaction: ServerSlashCommandInteraction, traderProfile: UserProfile, recipientProfile: UserProfile, traderHuman: NumberhumanData, recipientHuman: NumberhumanData) {
+  traderHuman.caughtBy = recipientProfile;
+  recipientHuman.caughtBy = traderProfile;
+  await traderHuman.save();
+  await recipientHuman.save();
+  traderProfile.numberhumansGuessed = traderProfile.numberhumansGuessed.filter(uuid => uuid !== traderHuman.id).concat(recipientHuman.id);
+  traderProfile.numberhumansGuessedUnique = traderProfile.numberhumansGuessedUnique.filter(uuid => uuid !== traderHuman.id).concat(recipientHuman.id);
+  recipientProfile.numberhumansGuessed = recipientProfile.numberhumansGuessed.filter(uuid => uuid !== recipientHuman.id).concat(traderHuman.id);
+  recipientProfile.numberhumansGuessedUnique = recipientProfile.numberhumansGuessedUnique.filter(uuid => uuid !== recipientHuman.id).concat(traderHuman.id);
+  await traderProfile.save();
+  await recipientProfile.save();
+  await interaction.followUp({
+    content: [
+      `Both sides have accepted the trade. Numberhumans #${traderHuman.catchId} and #${recipientHuman.catchId} have swapped owners.`,
+      `-# This is a beta feature, please report any bugs you find.`,
+    ].join("\n"),
+  });
 }
 
 export async function numberdexTrade(
@@ -85,14 +103,18 @@ export async function numberdexTrade(
 
   const content = [
     `User ${userMention(trader.id)} wants to trade with ${userMention(recipient.id)}:`,
-    `- ${userMention(trader.id)} will give up a ${formatHuman(traderHuman)}`,
-    `- ${userMention(recipient.id)} will give away a ${formatHuman(recipientHuman)}`,
+    `- ${userMention(trader.id)} will give up a ${formatHuman(traderHuman, Numberhumans)}`,
+    `- ${userMention(recipient.id)} will give away a ${formatHuman(recipientHuman, Numberhumans)}`,
     bold(`Do both of you accept the trade?`),
   ];
 
-  await interaction.reply({
+  const reply = await interaction.reply({
     content: content.join("\n"),
     components: [createButtonRow(false)],
+  });
+  tradeCollection.set(reply, {
+    users: [trader.id, recipient.id],
+    accepted: [false, false],
   });
 
   const handler = async (interact: Interaction) => {
@@ -103,46 +125,69 @@ export async function numberdexTrade(
     ) {
       clearTimeout(timeout);
       if (interact.customId === "trade-accept-button") {
-        if (giftCollection.get(reply) !== interact.user.id) {
-          Logger.warning(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
-          await interact.reply({
-            content: "You are not the person being gifted, greedy!",
-            flags: MessageFlags.Ephemeral,
-          });
-          return;
+        if (tradeCollection.has(reply)) {
+          // we already checked if the trade request exists
+          if (!tradeCollection.get(reply)!.users.includes(interact.user.id)) {
+            // neither the recipient nor trader acted on the button
+            Logger.warning(`User ${interact.user.displayName} tried accepting someone else's trades`);
+            await interact.reply({
+              content: "You are not the person being traded with, greedy!",
+              flags: MessageFlags.Ephemeral,
+            });
+            return;
+          } else if (tradeCollection.get(reply)!.users[0] === interact.user.id) {
+            // trader accepted the deal
+            if (tradeCollection.get(reply)!.accepted[0]) {
+              // player already accepted
+              await interact.reply({
+                content: `You already accepted the trade deal, to change trades you need to reject it.`,
+                flags: MessageFlags.Ephemeral,
+              });
+              return;
+            } else {
+              // player hasnt accepted
+              tradeCollection.get(reply)!.accepted[0] = true;
+              await interaction.editReply({
+                content: content.concat(`-# Proposer ${trader.displayName} has accepted the trade.`).join("\n"),
+              });
+              if (tradeCollection.get(reply)!.accepted.reduce((a, b) => a && b)) {
+                commenceTrade(interaction, traderProfile, recipientProfile, traderHuman, recipientHuman);
+              }
+            }
+          } else if (tradeCollection.get(reply)!.users[1] === interact.user.id) {
+            // recipient accepted the deal
+            if (tradeCollection.get(reply)!.accepted[1]) {
+              // player already accepted
+              await interact.reply({
+                content: `You already accepted the trade deal, to change trades you need to reject it.`,
+                flags: MessageFlags.Ephemeral,
+              });
+              return;
+            } else {
+              // player hasnt accepted
+              tradeCollection.get(reply)!.accepted[1] = true;
+              await interaction.editReply({
+                content: content.concat(`-# Recipient ${recipient.displayName} has accepted the trade.`).join("\n"),
+              });
+              if (tradeCollection.get(reply)!.accepted.reduce((a, b) => a && b)) {
+                commenceTrade(interaction, traderProfile, recipientProfile, traderHuman, recipientHuman);
+              }
+            }
+          }
         }
-        Logger.info(`user ${user.displayName} accepted the gift`);
-        userInDB.tokens += Math.floor(amount * 0.95);
-        giftingUser.tokens -= amount;
-        giftCollection.delete(reply);
-        await userInDB.save();
-        await giftingUser.save();
-        await interaction.editReply({
-          components: [createButtonRow(false)],
-        });
-        await interaction.followUp(
-          // dprint-ignore
-          `${userMention(
-            user.id
-          )} has accepted your gift. I wish you two a happy life together.`,
-        );
       } else {
-        if (giftCollection.get(reply) !== interact.user.id) {
-          Logger.warning(`User ${interact.user.displayName} tried accepting someone else's gift (greedy...)`);
+        if (!tradeCollection.get(reply)!.users.includes(interact.user.id)) {
+          Logger.warning(`User ${interact.user.displayName} tried rejecting someone else's traders`);
           await interact.reply({
-            content: "You are not the person being gifted, greedy!",
+            content: "You cannot reject a trade that you aren't a part of! Maybe try convincing them it's a bad trade?",
             flags: MessageFlags.Ephemeral,
           });
           return;
         }
-        Logger.info(`user ${user.displayName} declined the gift`);
-        giftCollection.delete(reply);
         await interaction.editReply({
-          components: [createButtonRow(false)],
+          components: [createButtonRow(true)],
         });
-        await interaction.followUp(
-          `${userMention(user.id)} has dumped your tokens. Sorry about that.`,
-        );
+        await interact.reply(`${interact.user.id === trader.id ? "Trader" : "Recipient"} ${userMention(interact.user.id)} has rejected the trade offer. Sorry.`);
       }
       client.off("interactionCreate", handler);
     }
@@ -151,7 +196,7 @@ export async function numberdexTrade(
   const timeout = setTimeout(async () => {
     client.off("interactionCreate", handler);
     Logger.info(`neither ${trader.displayName} or ${recipient.displayName} accepted the trade in time.`);
-    giftCollection.delete(reply);
+    tradeCollection.delete(reply);
     await interaction.editReply({
       components: [createButtonRow(true)],
     });
