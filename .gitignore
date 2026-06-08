@@ -172,16 +172,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-numbers/easy/*
-numbers/medium/*
-numbers/hard/*
-numbers/legendary/*
-numbers/humans/**
-!numbers/humans/common
-!numbers/humans/rare
-!numbers/humans/epic
+numbers/*
+!numbers/
 *.tmp
-numbers/numberdex-cron-jobs.json
 *.sqlite-*
 build
-
