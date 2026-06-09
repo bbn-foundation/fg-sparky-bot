@@ -5,7 +5,7 @@ import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { italic, type Client} from "discord.js";
 
 export async function userAchievementsDisplay(
-  client: Client,
+  _client: Client,
   interaction: ServerSlashCommandInteraction,
 ): Promise<void> {
   await interaction.deferReply();

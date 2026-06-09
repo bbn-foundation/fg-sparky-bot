@@ -61,7 +61,7 @@ export async function updateUserStats(
 
   await newUser.save();
 
-  if (await handleSpecialGuess(message, number, "pre-parse")) {
+  if (await handleSpecialGuess(message, number, newUser, "post-parse")) {
     return;
   }
 
@@ -74,5 +74,5 @@ export async function updateUserStats(
   Logger.debug(`appending streak for user ${message.author.displayName}`);
   streakCollection.appendStreak(message.author.id, message.guildId!);
 
-  await handleSpecialGuess(message, number, "post-update");
+  await handleSpecialGuess(message, number, newUser, "post-update");
 }
