@@ -40,7 +40,9 @@ export function handleResponse(
   const handler = async (message: OmitPartialGroupDMChannel<Message>) => {
     if (message.channelId !== interaction.channelId || message.author.bot) return;
 
-    if (await handleSpecialGuess(message, number, "pre-parse")) {
+    const user = await getUser(message.author.id, message.guildId!);
+
+    if (await handleSpecialGuess(message, number, user, "pre-parse")) {
       return;
     }
     if (handlePlayerGuess(message.content, number)) {
@@ -54,7 +56,7 @@ export function handleResponse(
         streakTracker.set(interaction.channelId, `${message.author.id}.${message.guildId!}`);
       }
 
-      await updateUserStats(message, await getUser(message.author.id, message.guildId!), streakCollection, number);
+      await updateUserStats(message, user, streakCollection, number, message.content);
     }
   };
 

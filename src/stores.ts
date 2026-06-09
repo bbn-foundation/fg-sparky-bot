@@ -6,10 +6,11 @@
  */
 import { GuessCooldownCollection } from "./cmd-handler/cooldowns/guesses.ts";
 import { CooldownCollection } from "./cmd-handler/cooldowns/normal.ts";
-import { NumberhumanStore, NumberStore, ResponseStore } from "./stores/index.ts";
+import { NumberhumanStore, NumberStore, ResponseStore, AchievementStore } from "./stores/index.ts";
 
 export const Numbers: NumberStore = new NumberStore("numbers/numbers.json");
 export const Numberhumans: NumberhumanStore = new NumberhumanStore("numbers/numberhumans.json");
 export const Responses: ResponseStore = new ResponseStore("numbers/responses.json");
+export const Achievements: AchievementStore = new AchievementStore("../../numbers/achievements.ts");
 export const GuessCooldowns: GuessCooldownCollection = new GuessCooldownCollection();
 export const CommandCooldowns: CooldownCollection = new CooldownCollection();

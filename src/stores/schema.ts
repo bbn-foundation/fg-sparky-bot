@@ -4,6 +4,7 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import type { UserProfile } from "#db";
 import type { Difficulties, Rarities, Responses } from "#utils/types.ts";
 import { z, type ZodType } from "zod";
 
@@ -59,3 +60,25 @@ export const NumberInfo: ZodType<NumberInfo> = z.strictObject({
   name: z.string().nullable(),
   difficulty: z.enum(["easy", "medium", "hard", "legendary"]),
 });
+
+export enum ACHIEVEMENT_EVENT {
+  SPARKY_GUESS = 1,
+  SPARKY_GUESS_SUCCESS = 2,
+  NUMBERHUMAN_GUESS = 4,
+  NUMBERHUMAN_GUESS_SUCCESS = 8,
+}
+
+export interface ACHIEVEMENT_EVENT_DATA {
+  [ACHIEVEMENT_EVENT.SPARKY_GUESS]: [string];
+  [ACHIEVEMENT_EVENT.SPARKY_GUESS_SUCCESS]: [UserProfile, string, number];
+  [ACHIEVEMENT_EVENT.NUMBERHUMAN_GUESS]: [string];
+  [ACHIEVEMENT_EVENT.NUMBERHUMAN_GUESS_SUCCESS]: [UserProfile, string];
+}
+
+export interface Achievement {
+  event: ACHIEVEMENT_EVENT;
+  id: string;
+  name: string;
+  description: string;
+  check(data: unknown[]): boolean;
+}

@@ -60,6 +60,12 @@ export class UserProfile extends BaseEntity {
   bestStreak = 0;
 
   /**
+   * Array of achievements the player has earned.
+   */
+  @Column("json")
+  achievements: string[] = [];
+
+  /**
    * Array of numberhumans the player has caught.
    */
   // @OneToMany("NumberhumanData", (numberhuman: NumberhumanData) => numberhuman.caughtBy)

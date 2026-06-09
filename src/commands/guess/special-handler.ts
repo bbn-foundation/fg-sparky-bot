@@ -4,9 +4,12 @@
  * Copyright (C) 2025 Skylafalls
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
+import type { UserProfile } from "#db";
+import { Achievements } from "#stores";
+import { ACHIEVEMENT_EVENT } from "#stores-types";
 import { joinStringArray } from "#utils/formatter.ts";
 import type { StoredNumberInfo } from "#utils/types.ts";
-import { type Message, type OmitPartialGroupDMChannel, userMention } from "discord.js";
+import { italic, type Message, type OmitPartialGroupDMChannel, userMention } from "discord.js";
 
 /**
  * Handle special guesses such as omni oridnal or when they follow the instructions literally.
@@ -15,9 +18,22 @@ import { type Message, type OmitPartialGroupDMChannel, userMention } from "disco
 export default async function handleSpecialGuess(
   message: OmitPartialGroupDMChannel<Message>,
   number: StoredNumberInfo,
+  user: UserProfile | null,
   when: "pre-parse" | "post-parse" | "post-update",
 ): Promise<boolean> {
   if (when === "pre-parse") {
+    if (user) {
+      const achs = Achievements.check(ACHIEVEMENT_EVENT.SPARKY_GUESS, user, [message.content]);
+      if (achs) {
+        const achMessage = achs.map(id => {
+          const ach = Achievements.get(id)!;
+          return `## You've unlocked a new achievement: ${ach.name}!\n${italic(ach.description)}`;
+        }).join("\n");
+        user.achievements = user.achievements.concat(achs);
+        await message.reply(achMessage);
+        await user.save();
+      }
+    }
     if (
       number.uuid === "c380c246-8cb9-4d78-8e5c-2de6d0fd9aad"
       && /^omni oridnal/imu.test(message.content)

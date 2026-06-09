@@ -1,16 +1,42 @@
 import { createUser, type UserProfile } from "#db";
 import type { StreakCollection } from "#fg-sparky/streaks.ts";
-import { joinStringArray } from "#utils/formatter.ts";
 import { Logger } from "#utils/logger.ts";
 import type { StoredNumberInfo } from "#utils/types.ts";
-import type { Message, OmitPartialGroupDMChannel } from "discord.js";
+import { heading, italic, type Message, type OmitPartialGroupDMChannel } from "discord.js";
 import handleSpecialGuess from "./special-handler.ts";
+import { Achievements } from "#stores";
+import { ACHIEVEMENT_EVENT } from "#stores-types";
+
+function successMessage(args: {
+  tokens: number;
+  number: StoredNumberInfo;
+  streak?: number | undefined;
+  achs: string[]
+}): string {
+  const tokenGain = `you've earned ${args.tokens} <:terminusfinity:1444859277515690075>!`;
+  const header = args.number.uuid === "dd35acbf-4c92-4710-b4ed-7d6f9d4beca5"
+    ? `perhaps a jet 2 holiday may interest you?\nhey, you guessed correctly! nice job!`
+    : `hey, you guessed correctly! nice job!`;
+  const streakMessage = args.streak !== undefined ? `you currently have a ${args.streak} successful guess streak, keep it up!` : "";
+
+  if (args.achs.length > 0) {
+    const achData = args.achs.map(id => Achievements.get(id)).filter(a => a !== undefined);
+    const achMessage = achData.map(a => [
+      heading(`You've unlocked a new achievement: ${a.name}!`),
+      italic(a.description)
+    ].join("\n")).join(`\n\n`);
+    return `${achMessage}\n\n${header}\n${tokenGain}\n${streakMessage}`;
+  } else {
+    return `${header}\n${tokenGain}\n${streakMessage}`;
+  }
+}
 
 export async function updateUserStats(
   message: OmitPartialGroupDMChannel<Message>,
   user: UserProfile | null,
   streakCollection: StreakCollection,
   number: StoredNumberInfo,
+  guess: string,
 ): Promise<void> {
   const gain = streakCollection.getTokenGain(
     message.author.id,
@@ -22,55 +48,31 @@ export async function updateUserStats(
     `tried looking up user ${message.author.id} (found: ${user ? "true" : "false"})`,
   );
 
-  const currentStreak = streakCollection.get(`${message.author.id}.${message.guildId!}`) ?? 0;
+  const currentStreak = streakCollection.get(`${message.author.id}.${message.guildId!}`);
 
-  if (user) {
-    Logger.info(`user already exists, adding tokens`);
-    // update the player stats first...
-    user.tokens += gain;
-    user.guessedEntries.push(number.uuid);
-    if (!user.uniqueGuessed.includes(number.uuid)) user.uniqueGuessed.push(number.uuid);
-    // then reply.
-    if (await handleSpecialGuess(message, number, "pre-parse")) {
-      return;
-    }
-    await user.save();
-  } else {
-    Logger.info(`user not found, creating user and adding tokens`);
-    // @ts-expect-error: assertion fails for some reason even though the bot can only
-    // be installed in a guild
-    const newUser = createUser(message.author.id, message.guildId);
-    newUser.tokens += gain;
-    newUser.guessedEntries.push(number.uuid);
-    // this is a fresh new profile which means it is guaranteed to have zero unique guesses.
-    // so we can add it without checking.
-    newUser.uniqueGuessed.push(number.uuid);
-    await newUser.save();
+  const newUser = user ?? createUser(message.author.id, message.guildId!);
+
+  newUser.tokens += gain;
+  newUser.guessedEntries.push(number.uuid);
+  if (!newUser.uniqueGuessed.includes(number.uuid)) newUser.uniqueGuessed.push(number.uuid);
+
+  const achs = Achievements.check(ACHIEVEMENT_EVENT.SPARKY_GUESS_SUCCESS, newUser, [newUser, guess, gain]);
+  if (achs) newUser.achievements = newUser.achievements.concat(achs);
+
+  await newUser.save();
+
+  if (await handleSpecialGuess(message, number, newUser, "post-parse")) {
+    return;
   }
 
-  const tokenGainMessage = user
-    ? `you also earned ${gain.toString()} tokens and now you have ${user.tokens.toString()} <:terminusfinity:1444859277515690075>!`
-    : `i've also created a profile for you with ${gain.toString()} <:terminusfinity:1444859277515690075> (terminus tokens).`;
-
-  if (number.uuid === "dd35acbf-4c92-4710-b4ed-7d6f9d4beca5") {
-    await message.reply(
-      joinStringArray([
-        "perhaps, a jet2 holiday may interest you?",
-        "hey you guessed correctly, nice job!",
-        tokenGainMessage,
-        currentStreak > 0 ? `You currently have a streak of ${currentStreak.toString()}, keep it up!` : "",
-      ]),
-    );
-  }
-  await message.reply(
-    joinStringArray([
-      "hey you guessed correctly, nice job!",
-      tokenGainMessage,
-      currentStreak > 0 ? `You currently have a streak of ${currentStreak.toString()}, keep it up!` : "",
-    ]),
-  );
+  await message.reply(successMessage({
+    tokens: gain,
+    number: number,
+    achs: achs ?? [],
+    streak: currentStreak,
+  }));
   Logger.debug(`appending streak for user ${message.author.displayName}`);
   streakCollection.appendStreak(message.author.id, message.guildId!);
 
-  await handleSpecialGuess(message, number, "post-update");
+  await handleSpecialGuess(message, number, newUser, "post-update");
 }

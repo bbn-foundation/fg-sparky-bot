@@ -9,6 +9,7 @@ import { ApplicationCommandOptionType, type Client, type CommandInteraction } fr
 import { LeaderboardDisplayType, userLeaderboardDisplay } from "./users/leaderboard.ts";
 import userShow from "./users/show.ts";
 import serverStatisticsDisplay from "./users/statistics.ts";
+import { userAchievementsDisplay } from "./users/achievements.ts";
 
 const User: Command = {
   async run(client: Client, interaction: CommandInteraction<"raw" | "cached">): Promise<void> {
@@ -24,6 +25,10 @@ const User: Command = {
       }
       case "statistics": {
         await serverStatisticsDisplay(client, interaction);
+        return;
+      }
+      case "achievements": {
+        await userAchievementsDisplay(client, interaction);
         return;
       }
       default: {
@@ -73,6 +78,24 @@ const User: Command = {
       name: "statistics",
       description: "Show the server's statistics",
       type: ApplicationCommandOptionType.Subcommand,
+    },
+    {
+      name: "achievements",
+      description: "Show a person's achievements",
+      type: ApplicationCommandOptionType.Subcommand,
+      options: [
+        {
+          name: "user",
+          description: "The user to show the profile of",
+          type: ApplicationCommandOptionType.User,
+          required: true,
+        },
+        {
+          name: "page",
+          description: "Page number",
+          type: ApplicationCommandOptionType.Integer,
+        },
+      ]
     },
   ],
 };

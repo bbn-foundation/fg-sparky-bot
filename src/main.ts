@@ -7,7 +7,7 @@
 import Commands from "#cmds";
 import { UsersDB } from "#db";
 import { NumberdexBaker, setupCronJobs } from "#numberdex/cron.ts";
-import { Numberhumans, Numbers, Responses } from "#stores";
+import { Achievements, Numberhumans, Numbers, Responses } from "#stores";
 import { Logger } from "#utils/logger.ts";
 import { Command } from "commander";
 import { Client } from "discord.js";
@@ -68,6 +68,8 @@ try {
   await Numberhumans.load();
   Logger.notice("Loading entries from responses.json");
   await Responses.load();
+  Logger.notice("Loading entries from achievements.ts");
+  await Achievements.load();
 
   Logger.notice("Initializing database");
   await UsersDB.initialize();

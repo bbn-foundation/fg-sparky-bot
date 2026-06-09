@@ -1,7 +1,7 @@
 import { getUser, NumberhumanData } from "#db";
 import { EvolutionType } from "#numberdex/evolutions.ts";
 import { Numberhumans, Numbers } from "#stores";
-import { formatHuman, formatPercent, joinStringArray } from "#utils/formatter.ts";
+import { formatHuman, formatPercent } from "#utils/formatter.ts";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { PaginatedMessage } from "@sapphire/discord.js-utilities";
 import { bold, ButtonStyle, chatInputApplicationCommandMention, ComponentType, type Client } from "discord.js";

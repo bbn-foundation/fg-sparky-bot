@@ -11,7 +11,7 @@ import libSQL from "libsql";
 
 export const UsersDB: DataSource = new DataSource({
   type: "better-sqlite3",
-  database: "sparky-bot-db.sqlite",
+  database: "sparky-bot-db-dev.sqlite",
   synchronize: true,
   logging: true,
   entities: [UserProfile, NumberhumanData],
