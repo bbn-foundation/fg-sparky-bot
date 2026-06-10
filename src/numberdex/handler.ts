@@ -60,6 +60,7 @@ export function setupCallback(
 
           const content = Responses.getRandom({
             type: "flee",
+            correctHuman: okNumber.name,
           }).unwrapOr(`the numberhuman fled.`);
           await sentMessage.edit({ components: [createButtonRow(true)] });
           await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });

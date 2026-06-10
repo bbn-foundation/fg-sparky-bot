@@ -12,7 +12,7 @@ interface SpawnResponseArgs {
 
 interface FleeResponseArgs {
   type: "flee";
-  correctHuman?: string;
+  correctHuman: string;
   guessedHuman?: string;
   mentionId?: string;
 }
