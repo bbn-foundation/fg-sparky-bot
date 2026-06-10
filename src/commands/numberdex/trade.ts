@@ -43,6 +43,9 @@ async function commenceTrade(interaction: ServerSlashCommandInteraction, traderP
   recipientProfile.numberhumansGuessedUnique = recipientProfile.numberhumansGuessedUnique.filter(uuid => uuid !== recipientHuman.id).concat(traderHuman.id);
   await traderProfile.save();
   await recipientProfile.save();
+  await interaction.editReply({
+    components: [createButtonRow(true)],
+  });
   await interaction.followUp({
     content: [
       `Both sides have accepted the trade. Numberhumans #${traderHuman.catchId} and #${recipientHuman.catchId} have swapped owners.`,
