@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 import { getUser } from "#db";
+import { createButtonRow } from "#utils/interactions.ts";
 import { Logger } from "#utils/logger.ts";
 import type { Command } from "#utils/types.ts";
 import {
@@ -16,7 +17,6 @@ import {
   MessageFlags,
   userMention,
 } from "discord.js";
-import { createButtonRow } from "./gift/buttons.ts";
 
 const giftCollection = new WeakMap<InteractionResponse, string>();
 
@@ -98,7 +98,7 @@ const Gift: Command = {
     );
     const reply = await interaction.reply({
       content,
-      components: [createButtonRow()],
+      components: [createButtonRow("gift")],
     });
     giftCollection.set(reply, user.id);
 
@@ -125,7 +125,7 @@ const Gift: Command = {
           await userInDB.save();
           await giftingUser.save();
           await interaction.editReply({
-            components: [createButtonRow(false)],
+            components: [createButtonRow("gift", true)],
           });
           await interaction.followUp(
             // dprint-ignore
@@ -145,7 +145,7 @@ const Gift: Command = {
           Logger.info(`user ${user.displayName} declined the gift`);
           giftCollection.delete(reply);
           await interaction.editReply({
-            components: [createButtonRow(false)],
+            components: [createButtonRow("gift", true)],
           });
           await interaction.followUp(
             `${userMention(user.id)} has dumped your tokens. Sorry about that.`,
@@ -160,7 +160,7 @@ const Gift: Command = {
       Logger.info(`user ${user.displayName} took too long to accept`);
       giftCollection.delete(reply);
       await interaction.editReply({
-        components: [createButtonRow(false)],
+        components: [createButtonRow("gift", true)],
       });
       await interaction.followUp(
         `Sorry ${userMention(interaction.user.id)}, they ghosted you.`,

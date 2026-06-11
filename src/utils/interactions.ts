@@ -1,9 +1,9 @@
 import { ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType } from "discord.js";
 
-export function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuilder> {
+export function createButtonRow(id: string, disabled?: boolean): ActionRowBuilder<ButtonBuilder> {
   const acceptButton = ButtonBuilder.from({
     // @ts-expect-error THERE SHALL BE NO URL
-    customId: "gift-accept-button",
+    customId: `${id}-accept-button`,
     label: "Accept",
     style: ButtonStyle.Success,
     type: ComponentType.Button,
@@ -12,7 +12,7 @@ export function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuil
 
   const declineButton = ButtonBuilder.from({
     // @ts-expect-error THERE SHALL BE NO URL
-    customId: "gift-reject-button",
+    customId: `${id}-reject-button`,
     label: "Reject",
     style: ButtonStyle.Danger,
     type: ComponentType.Button,

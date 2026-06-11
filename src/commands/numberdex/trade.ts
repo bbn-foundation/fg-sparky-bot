@@ -1,36 +1,15 @@
 import { NumberhumanData, UserProfile } from "#db";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
-import { ActionRowBuilder, bold, ButtonBuilder, ButtonStyle, ComponentType, InteractionResponse, italic, MessageFlags, userMention, type Interaction, type User } from "discord.js";
+import { bold, InteractionResponse, MessageFlags, userMention, type Interaction, type User } from "discord.js";
 import { Numberhumans } from "#stores";
 import { Logger } from "#utils/logger.ts";
 import { formatHuman } from "#utils/formatter.ts";
+import { createButtonRow } from "#utils/interactions.ts";
 
 const tradeCollection = new WeakMap<InteractionResponse, {
   users: [string, string];
   accepted: [boolean, boolean];
 }>();
-
-function createButtonRow(disabled?: boolean): ActionRowBuilder<ButtonBuilder> {
-  const acceptButton = ButtonBuilder.from({
-    // @ts-expect-error THERE SHALL BE NO URL
-    customId: "trade-accept-button",
-    label: "Accept",
-    style: ButtonStyle.Success,
-    type: ComponentType.Button,
-    disabled,
-  });
-
-  const declineButton = ButtonBuilder.from({
-    // @ts-expect-error THERE SHALL BE NO URL
-    customId: "trade-reject-button",
-    label: "Reject",
-    style: ButtonStyle.Danger,
-    type: ComponentType.Button,
-    disabled,
-  });
-
-  return new ActionRowBuilder<ButtonBuilder>().addComponents(acceptButton, declineButton);
-}
 
 async function commenceTrade(interaction: ServerSlashCommandInteraction, traderProfile: UserProfile, recipientProfile: UserProfile, traderHuman: NumberhumanData, recipientHuman: NumberhumanData) {
   traderHuman.caughtBy = recipientProfile;
@@ -44,7 +23,7 @@ async function commenceTrade(interaction: ServerSlashCommandInteraction, traderP
   await traderProfile.save();
   await recipientProfile.save();
   await interaction.editReply({
-    components: [createButtonRow(true)],
+    components: [createButtonRow("trade", true)],
   });
   await interaction.followUp({
     content: [
@@ -122,7 +101,7 @@ export async function numberdexTrade(
 
   const reply = await interaction.reply({
     content: content.join("\n"),
-    components: [createButtonRow(false)],
+    components: [createButtonRow("false", true)],
   });
   tradeCollection.set(reply, {
     users: [trader.id, recipient.id],
@@ -200,7 +179,7 @@ export async function numberdexTrade(
           return;
         }
         await interaction.editReply({
-          components: [createButtonRow(true)],
+          components: [createButtonRow("trade", true)],
         });
         await interact.reply(`${interact.user.id === trader.id ? "Trader" : "Recipient"} ${userMention(interact.user.id)} has rejected the trade offer. Sorry.`);
         client.off("interactionCreate", handler);
@@ -213,7 +192,7 @@ export async function numberdexTrade(
     Logger.info(`neither ${trader.displayName} or ${recipient.displayName} accepted the trade in time.`);
     tradeCollection.delete(reply);
     await interaction.editReply({
-      components: [createButtonRow(true)],
+      components: [createButtonRow("trade", true)],
     });
     await interaction.followUp(
       `Neither parties have accepted the trade within time.`,
