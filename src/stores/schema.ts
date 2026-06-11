@@ -6,6 +6,7 @@
  */
 import type { UserProfile } from "#db";
 import type { Difficulties, Rarities, Responses } from "#utils/types.ts";
+import type { Interaction } from "discord.js";
 import { z, type ZodType } from "zod";
 
 export interface NumberhumanInfo {
@@ -83,4 +84,13 @@ export interface Achievement {
   name: string;
   description: string;
   check(data: unknown[]): boolean;
+}
+
+export interface ShopItem {
+  id: string;
+  name: string;
+  description: string;
+  cost: number;
+  rebuyable?: boolean;
+  onPurchase(interaction: Interaction): Promise<void> | void;
 }

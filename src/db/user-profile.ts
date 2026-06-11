@@ -66,6 +66,12 @@ export class UserProfile extends BaseEntity {
   achievements: string[] = [];
 
   /**
+  * Array of one-time shop items the player has bought.
+  */
+  @Column("json")
+  shopItems: string[] = [];
+
+  /**
    * Array of numberhumans the player has caught.
    */
   // @OneToMany("NumberhumanData", (numberhuman: NumberhumanData) => numberhuman.caughtBy)
