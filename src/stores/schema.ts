@@ -17,6 +17,7 @@ export interface NumberhumanInfo {
   baseHP: number;
   baseATK: number;
   ability: string | null;
+  isSpoilered?: boolean;
 }
 
 export const NumberhumanInfo: ZodType<NumberhumanInfo> = z.strictObject({

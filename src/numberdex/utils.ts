@@ -46,10 +46,7 @@ export async function spawnNumberhuman(
       const image = new AttachmentBuilder(okHuman.image)
         .setName(okHuman.image.slice(okHuman.image.lastIndexOf("/") + 1))
         .setDescription("The numberhuman you have to guess")
-        .setSpoiler(
-          okHuman.uuid === "c6e6c334-16cd-479c-bd75-d82d23af50cb"
-            || okHuman.uuid === "c9c69c3c-3637-49a1-b667-29efd687a518",
-        );
+        .setSpoiler(okHuman.isSpoilered);
       return Result.ok([
         okHuman,
         // oxlint-disable-next-line no-await-in-loop: still not a loop
