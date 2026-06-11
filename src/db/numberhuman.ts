@@ -68,7 +68,7 @@ export class NumberhumanData extends BaseEntity {
    */
   totalHP(store: NumberhumanStore): number {
     const baseData = store.get(this.id).expect("the numberhuman should exist");
-    const levelBuff = this.level <= 0 ? 1 : (1.5 ** (this.level / 2 + 1));
+    const levelBuff = 1.5 ** this.level;
     return (
       baseData.baseHP * this.bonusHP * getEvolutionBuff(this.evolution, "hp") * levelBuff
     );
@@ -79,7 +79,7 @@ export class NumberhumanData extends BaseEntity {
    */
   totalAtk(store: NumberhumanStore): number {
     const baseData = store.get(this.id).expect("the numberhuman should exist");
-    const levelBuff = this.level <= 0 ? 1 : (1.5 ** (this.level / 2 + 1));
+    const levelBuff = 1.5 ** this.level;
     return (
       baseData.baseATK * this.bonusAtk * getEvolutionBuff(this.evolution, "atk") * levelBuff
     );

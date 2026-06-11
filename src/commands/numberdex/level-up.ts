@@ -6,8 +6,7 @@ import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { bold, MessageFlags, type Interaction } from "discord.js";
 
 function levelBuff(currentLevel: number): number {
-  if (currentLevel === 0) return 2;
-  return (1.5 ** (currentLevel / 2 + 1));
+  return (1.5 ** currentLevel);
 }
 
 export async function numberdexLevelUp(interaction: ServerSlashCommandInteraction): Promise<void> {
