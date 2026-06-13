@@ -11,6 +11,7 @@ export enum EvolutionType {
   Transcendent = "transcendent",
   Corrupt = "corrupt",
   Absolute = "absolute",
+  Reverent = "reverent",
 }
 
 export const EvolutionMap: Record<EvolutionType, [number, number]> = {
@@ -26,6 +27,7 @@ export const EvolutionMap: Record<EvolutionType, [number, number]> = {
   [EvolutionType.Transcendent]: [5, 4],
   [EvolutionType.Corrupt]: [2, 6],
   [EvolutionType.Absolute]: [7, 7],
+  [EvolutionType.Reverent]: [9, 9],
 };
 
 export const EvolutionIntegerMap: Record<EvolutionType, number> = {
@@ -41,6 +43,7 @@ export const EvolutionIntegerMap: Record<EvolutionType, number> = {
   [EvolutionType.Transcendent]: 10,
   [EvolutionType.Corrupt]: 11,
   [EvolutionType.Absolute]: 12,
+  [EvolutionType.Reverent]: 13,
 };
 
 export function getEvolutionBuff(
