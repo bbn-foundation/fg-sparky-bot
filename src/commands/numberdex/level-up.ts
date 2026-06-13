@@ -63,7 +63,7 @@ export async function numberdexLevelUp(interaction: ServerSlashCommandInteractio
       clearTimeout(timeout);
       if (interact.customId === "level-up-accept-button") {
         if (interact.user.id !== interaction.user.id) {
-          await interact.reply({
+          await interact.followUp({
             content: "You cannot level up another person's numberhuman for them.",
             flags: MessageFlags.Ephemeral,
           });
@@ -82,7 +82,7 @@ export async function numberdexLevelUp(interaction: ServerSlashCommandInteractio
         );
       } else {
         if (interaction.user.id !== interact.user.id) {
-          await interact.reply({
+          await interact.followUp({
             content: "You cannot prevent someone else from leveling up their numberhuman.",
             flags: MessageFlags.Ephemeral,
           });

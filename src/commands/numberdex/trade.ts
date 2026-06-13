@@ -122,7 +122,7 @@ export async function numberdexTrade(
           if (!tradeCollection.get(reply)!.users.includes(interact.user.id)) {
             // neither the recipient nor trader acted on the button
             Logger.warning(`User ${interact.user.displayName} tried accepting someone else's trades`);
-            await interact.reply({
+            await interact.followUp({
               content: "You are not the person being traded with, greedy!",
               flags: MessageFlags.Ephemeral,
             });
@@ -131,7 +131,7 @@ export async function numberdexTrade(
             // trader accepted the deal
             if (tradeCollection.get(reply)!.accepted[0]) {
               // player already accepted
-              await interact.reply({
+              await interact.followUp({
                 content: `You already accepted the trade deal, to change trades you need to reject it.`,
                 flags: MessageFlags.Ephemeral,
               });
@@ -151,7 +151,7 @@ export async function numberdexTrade(
             // recipient accepted the deal
             if (tradeCollection.get(reply)!.accepted[1]) {
               // player already accepted
-              await interact.reply({
+              await interact.followUp({
                 content: `You already accepted the trade deal, to change trades you need to reject it.`,
                 flags: MessageFlags.Ephemeral,
               });
