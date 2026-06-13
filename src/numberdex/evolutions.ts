@@ -27,7 +27,7 @@ export const EvolutionMap: Record<EvolutionType, [number, number]> = {
   [EvolutionType.Transcendent]: [5, 4],
   [EvolutionType.Corrupt]: [2, 6],
   [EvolutionType.Absolute]: [7, 7],
-  [EvolutionType.Reverent]: [10, 10],
+  [EvolutionType.Reverent]: [9, 9],
 };
 
 export const EvolutionIntegerMap: Record<EvolutionType, number> = {
