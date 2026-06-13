@@ -8,20 +8,19 @@ this is (presumably) inspired by the gd sparky bot, a game where you have to gue
 
 ## how to run
 
-you'll need [bun](https://bun.sh/) to run the bot and install dependencies.\
+you'll need [deno](https://deno.com/) to run the bot and install dependencies.\
 if you don't have it, install it first.
 
 now install dependencies and build the bot:
 
 ```bash
-bun install --frozen-lockfile
-bun run build
+deno install
 ```
 
 and run the bot:
 
 ```bash
-bun run dist/main.js -t $DISCORD_TOKEN
+deno run -A src/main.ts -t $DISCORD_TOKEN
 ```
 
 or pass the bot token as an environment variable:
@@ -30,7 +29,7 @@ or pass the bot token as an environment variable:
 # in .env.local
 DISCORD_TOKEN=#bot token here#
 # on the terminal
-bun run dist/main.js
+deno run -A src/main.ts
 ```
 
 ## license
