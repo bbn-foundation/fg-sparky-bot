@@ -1,5 +1,17 @@
 # changelog
 
+## v1.4.1 - June 14th, 2026
+
+### Features
+
+- \[[`ee2b86c9`](https://github.com/skylafalls/fg-sparky-bot/commit/ee2b86c9b26e1b457257e83ea8b11f6003c395b9)\] - bot: add splash text
+- \[[`19be8823`](https://github.com/skylafalls/fg-sparky-bot/commit/19be88232fcbabd0a5f5eb4c34d3bf00047023b8)\] - numberdex: New evolution (#51) by @theuserwhoishere
+
+### Fixes
+
+- \[[`1d42b421`](https://github.com/skylafalls/fg-sparky-bot/commit/1d42b42131f4806beb752e13d9828e7a723ae850)\] - cmds: oops i forgot you need to follow up by @skylafalls
+- \[[`81f2864a`](https://github.com/skylafalls/fg-sparky-bot/commit/81f2864a2f2ce297d2f5586b58ec1f9e83ef51e8)\] - meta: update readme instructions by @skylafalls
+
 ## v1.4.0 - June 11th, 2026
 
 ### Features
