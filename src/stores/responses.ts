@@ -31,7 +31,11 @@ interface CorrectResponseArgs {
   mentionId: string;
 }
 
-type RandomResponseArgs = CorrectResponseArgs | FailResponseArgs | FleeResponseArgs | SpawnResponseArgs;
+interface SplashResponseArgs {
+  type: "splash";
+}
+
+type RandomResponseArgs = CorrectResponseArgs | FailResponseArgs | FleeResponseArgs | SpawnResponseArgs | SplashResponseArgs;
 
 export class ResponseStore extends DataStore<ResponseInfo> {
   /**
