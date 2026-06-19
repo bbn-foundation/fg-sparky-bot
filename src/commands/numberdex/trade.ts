@@ -101,7 +101,7 @@ export async function numberdexTrade(
 
   const reply = await interaction.reply({
     content: content.join("\n"),
-    components: [createButtonRow("false", false)],
+    components: [createButtonRow("trade", false)],
   });
   tradeCollection.set(reply, {
     users: [trader.id, recipient.id],
