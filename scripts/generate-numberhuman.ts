@@ -1,5 +1,5 @@
 import { NumberhumanInfo } from "#stores-types";
-import type { Rarities } from "#utils/types";
+import type { Rarities } from "#utils/types.ts";
 import { Command } from "commander";
 import { copyFile } from "node:fs/promises";
 
@@ -25,13 +25,12 @@ const args = command.opts<{
 const file = String(command.processedArgs[0]);
 
 const fileExtension = file.slice(file.lastIndexOf("."));
-const directoryPath = file.slice(0, file.lastIndexOf("/"));
 const numberUUID = crypto.randomUUID();
-const newFilePath = `${directoryPath}/${args.rarity}/${numberUUID}${fileExtension}`;
+const newFilePath = `numbers/humans/${args.rarity}/${numberUUID}${fileExtension}`;
 await copyFile(file, newFilePath);
 await Bun.file(file).delete();
 
-const numberhumanName = file.slice(file.lastIndexOf("/") + 1).slice(0, -5);
+const numberhumanName = file.slice(file.lastIndexOf("/") + 1).slice(0, -fileExtension.length);
 
 const hasher = new Bun.CryptoHasher("blake2b512");
 hasher.update(numberhumanName.toLowerCase());
