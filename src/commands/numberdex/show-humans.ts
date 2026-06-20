@@ -1,7 +1,7 @@
 import { type NumberhumanData, UserProfile } from "#db";
 import { Numberhumans } from "#stores";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
-import { italic, type User } from "discord.js";
+import { bold, italic, MessageFlags, type User } from "discord.js";
 import { getNumberhumansBy } from "./numberhumans.ts";
 import type { NumberhumanSortingOrder } from "./sorting.ts";
 import { PaginatedMessage } from "@sapphire/discord.js-utilities";
@@ -44,8 +44,15 @@ export default async function numberdexShowHumans(
     dbUser,
     Numberhumans,
   );
-  const numberhumanChunk = 10;
+  if (realNumbers.length <= 0) {
+    await interaction.reply({
+      content: `you do not have any numberhumans, please play NumberDex first.`,
+      flags: MessageFlags.Ephemeral,
+    });
+    return;
+  }
 
+  const numberhumanChunk = 25;
   const paginatedContent = new PaginatedMessage();
 
   for (let i = 0; i < realNumbers.length; i += numberhumanChunk) {

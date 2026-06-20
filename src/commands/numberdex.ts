@@ -64,7 +64,7 @@ const Numberdex: Command = {
         return;
       }
       case "show-humans": {
-        const user = interaction.options.getUser("user", true);
+        const user = interaction.options.getUser("user", false) ?? interaction.user;
         const dbUser = await getUser(user.id, interaction.guildId);
         const sortingOrder = interaction.options.getString("sorting") as NumberhumanSortingOrder | null
           ?? NumberhumanSortingOrder.ByCatchId;
@@ -154,7 +154,6 @@ const Numberdex: Command = {
           name: "user",
           description: "User you want to view the collection of",
           type: ApplicationCommandOptionType.User,
-          required: true,
         },
         {
           name: "sorting",
