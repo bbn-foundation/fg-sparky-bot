@@ -18,21 +18,6 @@ import {
   type SendableChannels,
 } from "discord.js";
 
-export function createButtonRow(
-  disabled?: boolean,
-): ActionRowBuilder<ButtonBuilder> {
-  const button = ButtonBuilder.from({
-    // @ts-expect-error THERE SHALL BE NO URL
-    customId: "numberhuman-catch-button",
-    label: "Catch",
-    style: ButtonStyle.Primary,
-    type: ComponentType.Button,
-    disabled,
-  });
-
-  return new ActionRowBuilder<ButtonBuilder>().addComponents(button);
-}
-
 export async function spawnNumberhuman(
   store: NumberhumanStore,
   channel: SendableChannels,
@@ -53,7 +38,6 @@ export async function spawnNumberhuman(
         await channel.send({
           content: randomSpawnMessage,
           files: [image],
-          components: [createButtonRow()],
         }),
       ]);
     }
