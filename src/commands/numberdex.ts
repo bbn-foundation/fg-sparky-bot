@@ -40,7 +40,8 @@ const Numberdex: Command = {
           await interaction.reply({
             content: "This channel already has numberdex set up.",
             flags: MessageFlags.Ephemeral,
-          })
+          });
+          return;
         }
         const cron = NumberdexBaker.add({
           name: `numberdex-channel-${channel.id}`,
