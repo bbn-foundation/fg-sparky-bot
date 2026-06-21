@@ -29,16 +29,22 @@ const Numberdex: Command = {
     switch (interaction.options.getSubcommand(true)) {
       case "add": {
         if (!interaction.memberPermissions.has("ManageChannels")) {
-          await interaction.reply(
-            "you do not have permissison to set which channel fg sparky bot can spawn numberhumans in.",
-          );
+          await interaction.reply({
+            content: "you do not have permissison to set which channel fg sparky bot can spawn numberhumans in.",
+            flags: MessageFlags.Ephemeral,
+          });
           return;
         }
         const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
+        if (NumberdexBaker.getJobNames().includes(`numberdex-channel-${channel.id}`)) {
+          await interaction.reply({
+            content: "This channel already has numberdex set up.",
+            flags: MessageFlags.Ephemeral,
+          })
+        }
         const cron = NumberdexBaker.add({
           name: `numberdex-channel-${channel.id}`,
-          cron: "@every_20_minutes",
-          //
+          cron: "@every_5_minutes",
           async callback(): Promise<void> {},
         });
         setupCallback(Numberhumans, cron, channel);
@@ -47,9 +53,10 @@ const Numberdex: Command = {
       }
       case "remove": {
         if (!interaction.memberPermissions.has("ManageChannels")) {
-          await interaction.reply(
-            "you do not have permissison to set which channel fg sparky bot can spawn numberhumans in.",
-          );
+          await interaction.reply({
+            content: "you do not have permissison to set which channel fg sparky bot can spawn numberhumans in.",
+            flags: MessageFlags.Ephemeral,
+          });
           return;
         }
         const channel = interaction.options.getChannel("channel", true, [ChannelType.GuildText]);
