@@ -56,7 +56,7 @@ export default async function numberdexShowHumans(
   const paginatedContent = new PaginatedMessage();
 
   for (let i = 0; i < realNumbers.length; i += numberhumanChunk) {
-    paginatedContent.addPageContent(createCollectionMessage(user, Math.floor(i / 10) + 1, realNumbers))
+    paginatedContent.addPageContent(createCollectionMessage(user, Math.floor(i / numberhumanChunk) + 1, realNumbers))
   }
 
   paginatedContent.run(interaction);
