@@ -17,10 +17,10 @@ import { updateUserStats } from "./users.ts";
 import { createButtonRow, spawnNumberhuman } from "./utils.ts";
 import { sleep } from "#utils/sleep.ts";
 
-const createGuessModal = (channelId: string): ModalComponentData => ({
+const createGuessModal = (channelId: string, interactionId: string): ModalComponentData => ({
   title: "yeah",
   id: channelId,
-  customId: `numberhuman-guess-modal-${channelId}`,
+  customId: `numberhuman-guess-modal-${interactionId}`,
   components: [
     {
       id: 0,
@@ -61,9 +61,10 @@ export function setupCallback(
 
         collector.on("collect", async (interaction) => {
           Logger.debug(`User ${interaction.user.displayName} clicked the button`);
-          await interaction.showModal(createGuessModal(interaction.channelId));
+          await interaction.showModal(createGuessModal(interaction.channelId, interaction.id));
 
           const submission = await interaction.awaitModalSubmit({
+            filter: i => i.customId === `numberhuman-guess-modal-${interaction.id}`,
             time: NUMBERDEX_FLEE_DELAY,
           }).catch(error => {
             Logger.error(error);
