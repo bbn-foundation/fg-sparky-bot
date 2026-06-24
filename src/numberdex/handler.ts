@@ -7,8 +7,8 @@ import { getRandomRange } from "#utils/numbers.ts";
 import type { ICron } from "cronbake";
 import {
   ComponentType,
-  type Interaction,
   type ModalComponentData,
+  ModalSubmitInteraction,
   type SendableChannels,
   TextInputStyle,
   userMention,
@@ -46,7 +46,7 @@ export function setupCallback(
   if (/numberdex-channel-[0-9]+/.test(job.name)) {
     Logger.debug(`setting up callback for cron job ${job.name}`);
     job.callback = async () => {
-      const timeoutDuration = getRandomRange(0, 300);
+      const timeoutDuration = getRandomRange(0, 0);
       Logger.info(
         `spawning numberhuman in channel ${channel.id} after ${timeoutDuration.toFixed(0)} seconds`,
       );
@@ -54,30 +54,17 @@ export function setupCallback(
       const number = await spawnNumberhuman(store, channel);
       if (number.isOk()) {
         const [okNumber, sentMessage] = number.unwrap();
-        const timeout = setTimeout(async () => {
-          Logger.info("user failed to catch in time");
-          client.off("interactionCreate", handler);
+        const collector = sentMessage.createMessageComponentCollector({
+          componentType: ComponentType.Button,
+          time: NUMBERDEX_FLEE_DELAY,
+        });
 
-          const content = Responses.getRandom({
-            type: "flee",
-            correctHuman: okNumber.name,
-          }).unwrapOr(`the numberhuman fled.`);
-          await sentMessage.edit({ components: [createButtonRow(true)] });
-          await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
-        }, NUMBERDEX_FLEE_DELAY);
-
-        const handler = async (interaction: Interaction) => {
-          if (interaction.channelId !== channel.id) return;
-          if (interaction.isButton() && interaction.message.id === sentMessage.id) {
-            Logger.debug(`User ${interaction.user.displayName} clicked the button`);
-            await interaction.showModal(createGuessModal(interaction.channelId));
-          } else if (
-            interaction.inGuild()
-            && interaction.isModalSubmit()
-            && interaction.isFromMessage()
-            && interaction.customId === `numberhuman-guess-modal-${interaction.channelId}`
-            && interaction.message.id === sentMessage.id
-          ) {
+        collector.on("collect", async (interaction) => {
+          Logger.debug(`User ${interaction.user.displayName} clicked the button`);
+          await interaction.showModal(createGuessModal(interaction.channelId));
+          interaction.awaitModalSubmit({
+            time: NUMBERDEX_FLEE_DELAY,
+          }).then(async (interaction) => {
             Logger.debug(
               `User ${interaction.user.displayName} submitted the numberhuman, verifying it's correct...`,
             );
@@ -87,12 +74,11 @@ export function setupCallback(
             if (
               handlePlayerGuess(guess, { number: okNumber.name, hashedNumber: okNumber.hashedName })
             ) {
-              client.off("interactionCreate", handler);
-              clearTimeout(timeout);
-              await interaction.update({
+              await sentMessage.edit({
                 components: [createButtonRow(true)],
               });
-              await updateUserStats(interaction, okNumber, guess);
+              collector.stop();
+              await updateUserStats(interaction as ModalSubmitInteraction<"raw" | "cached">, okNumber, guess);
             } else {
               const failMessage = Responses.getRandom({
                 type: "fail",
@@ -104,10 +90,20 @@ export function setupCallback(
               );
               await interaction.reply(failMessage);
             }
-          }
-        };
+          })
+        });
 
-        client.on("interactionCreate", handler);
+        collector.once("end", async (_, reason) => {
+          if (reason === "caught") return;
+          Logger.info("user failed to catch in time");
+
+          const content = Responses.getRandom({
+            type: "flee",
+            correctHuman: okNumber.name,
+          }).unwrapOr(`the numberhuman fled.`);
+          await sentMessage.edit({ components: [createButtonRow(true)] });
+          await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
+        });
       } else {
         const error = number.unwrapErr();
         Logger.error(`Failed to spawn numberhuman: ${error.message}`);

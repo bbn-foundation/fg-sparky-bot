@@ -5,11 +5,11 @@ import type { NumberhumanInfo } from "#stores-types";
 import { formatPercent, joinStringArray } from "#utils/formatter.ts";
 import { Logger } from "#utils/logger.ts";
 import { getRandomRange } from "#utils/numbers.ts";
-import { bold, italic, type ModalMessageModalSubmitInteraction, userMention } from "discord.js";
+import { bold, italic, type ModalSubmitInteraction, userMention } from "discord.js";
 import { EvolutionType, getEvolutionBuff } from "./evolutions.ts";
 
 export async function updateUserStats(
-  interaction: ModalMessageModalSubmitInteraction<"cached" | "raw">,
+  interaction: ModalSubmitInteraction<"cached" | "raw">,
   number: NumberhumanInfo,
   guessed: string,
 ): Promise<void> {
@@ -51,7 +51,7 @@ export async function updateUserStats(
     user.numberhumansGuessed.push(number.uuid);
     numberhuman.caughtBy = user;
     if (user.numberhumansGuessedUnique.includes(number.uuid)) {
-      await interaction.followUp(
+      await interaction.reply(
         joinStringArray([
           responseMessage,
           `(ATK: ${formatPercent(numberhuman.bonusAtk - 1)}, HP: ${formatPercent(numberhuman.bonusHP - 1)})`,
@@ -60,7 +60,7 @@ export async function updateUserStats(
       );
     } else {
       user.numberhumansGuessedUnique.push(number.uuid);
-      await interaction.followUp(
+      await interaction.reply(
         joinStringArray([
           responseMessage,
           `(ATK: ${formatPercent(numberhuman.bonusAtk - 1)}, HP: ${formatPercent(numberhuman.bonusHP - 1)})`,
@@ -80,7 +80,7 @@ export async function updateUserStats(
     // so we can add it without checking.
     newUser.numberhumansGuessedUnique.push(number.uuid);
     numberhuman.caughtBy = newUser;
-    await interaction.followUp(
+    await interaction.reply(
       joinStringArray([
         responseMessage,
         `i've also created a profile for you with that numberhuman.`,
