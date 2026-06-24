@@ -1,5 +1,28 @@
 # changelog
 
+## v1.4.2 - June 24th, 2026
+
+a lot of fixes, some refactoring, bleh
+
+### Fixes
+
+- \[[`ce5c1372`](https://github.com/skylafalls/fg-sparky-bot/commit/ce5c1372611c82b5abc7537f979d147897c24231)\] - numberdex: dont let multiple peole get it at the same time by @skylafalls
+- \[[`20cef1c6`](https://github.com/skylafalls/fg-sparky-bot/commit/20cef1c6f7b95aeb6b0f38af8cdc1e2200361b72)\] - numberdex: wtf discord by @skylafalls
+- \[[`a78e9827`](https://github.com/skylafalls/fg-sparky-bot/commit/a78e9827d33ab98065c88a08d7ba4ff928005980)\] - numberdex: fix modal submissions randomly crashing by @skylafalls
+- \[[`017eb30f`](https://github.com/skylafalls/fg-sparky-bot/commit/017eb30f0d715051a2083afd8e34f5f1f8b87224)\] - numberdex: you didnt update the value dumbass by @skylafalls
+- \[[`549b2254`](https://github.com/skylafalls/fg-sparky-bot/commit/549b2254e0e3b16ab7c932b236fb16832ef7b574)\] - numberdex: you didnt return dumbass by @skylafalls
+- \[[`034ab3db`](https://github.com/skylafalls/fg-sparky-bot/commit/034ab3dbd16a4ed892af4f2cc9271b5c205146bc)\] - numberdex: check if the channel already has numberdex set up by @skylafalls
+- \[[`a0441afd`](https://github.com/skylafalls/fg-sparky-bot/commit/a0441afd38ce43e36d3eac76d25852d4ebd941b5)\] - numberdex: some minor fixes by @skylafalls
+- \[[`8dc1cf94`](https://github.com/skylafalls/fg-sparky-bot/commit/8dc1cf94b62661a92b80242a2ff896735572290f)\] - trading: infinituum SONtinuum :sob: by @skylafalls
+- \[[`a7daa853`](https://github.com/skylafalls/fg-sparky-bot/commit/a7daa8536655e6ab75ef1fd20ea8716d32b0cdc4)\] - scripts: fix that damn script by @skylafalls
+- \[[`4e8cffcf`](https://github.com/skylafalls/fg-sparky-bot/commit/4e8cffcf0c53ed9eea12cd3c96395f0e75bfc734)\] - trading: actually enable the button by @skylafalls
+
+### Refactors
+
+- \[[`f0862d40`](https://github.com/skylafalls/fg-sparky-bot/commit/f0862d40e89aa67ac40f6e2e3f719c605aecb336)\] - fg-sparky: use message collectors, improve successful responses by @skylafalls
+- \[[`39eee073`](https://github.com/skylafalls/fg-sparky-bot/commit/39eee0735428252fd92e8339a9f7c8c19cff9066)\] - numberdex/show-humans: increase to 25 numbers per page by @skylafalls
+- \[[`cf53425b`](https://github.com/skylafalls/fg-sparky-bot/commit/cf53425b294783e915ec0b3466214e64b72c31cf)\] - numberdex: use component collectors by @skylafalls
+
 ## v1.4.1 - June 14th, 2026
 
 ### Features
