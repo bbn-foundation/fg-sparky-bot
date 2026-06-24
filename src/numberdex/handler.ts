@@ -62,14 +62,20 @@ export function setupCallback(
         collector.on("collect", async (interaction) => {
           Logger.debug(`User ${interaction.user.displayName} clicked the button`);
           await interaction.showModal(createGuessModal(interaction.channelId));
-          interaction.awaitModalSubmit({
+
+          const submission = await interaction.awaitModalSubmit({
             time: NUMBERDEX_FLEE_DELAY,
-          }).then(async (interaction) => {
+          }).catch(error => {
+            Logger.error(error);
+            return null;
+          });
+
+          if (submission) {
             Logger.debug(
               `User ${interaction.user.displayName} submitted the numberhuman, verifying it's correct...`,
             );
-            const guess = interaction.fields.getTextInputValue(
-              `numberhuman-guess-input-${interaction.channelId}`,
+            const guess = submission.fields.getTextInputValue(
+              `numberhuman-guess-input-${submission.channelId}`,
             );
             if (
               handlePlayerGuess(guess, { number: okNumber.name, hashedNumber: okNumber.hashedName })
@@ -77,8 +83,8 @@ export function setupCallback(
               await sentMessage.edit({
                 components: [createButtonRow(true)],
               });
-              collector.stop();
-              await updateUserStats(interaction as ModalSubmitInteraction<"raw" | "cached">, okNumber, guess);
+              collector.stop("caught");
+              await updateUserStats(submission as ModalSubmitInteraction<"raw" | "cached">, okNumber, guess);
             } else {
               const failMessage = Responses.getRandom({
                 type: "fail",
@@ -88,9 +94,9 @@ export function setupCallback(
               }).unwrapOr(
                 `yeah, i wished it was **${guess}**, ${userMention(interaction.user.id)}.`,
               );
-              await interaction.reply(failMessage);
+              await submission.reply(failMessage);
             }
-          })
+          }
         });
 
         collector.once("end", async (_, reason) => {
