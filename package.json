@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "license": "GPL-3.0-or-later",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "scripts": {
     "dev": "deno run --watch --allow-env --allow-read=.,/etc/alpine-release,/usr/bin/ldd --allow-write=.,fg-sparky-bot.log --allow-ffi=node_modules --allow-sys --allow-net=gateway.discord.gg,*.discord.gg,discord.com --allow-run=/bin/sh src/main.ts",
     "build": "deno run -E --allow-ffi=node_modules --allow-read=.,/usr/bin/ldd --allow-write=. npm:rolldown -c rolldown.config.ts",
