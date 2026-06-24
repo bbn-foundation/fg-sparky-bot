@@ -11,7 +11,7 @@ function capitalize<T extends string>(val: T): Capitalize<T> {
   return `${val.charAt(0).toUpperCase()}${val.slice(1)}` as Capitalize<T>;
 }
 
-function createCollectionMessage(user: User, page: number, numberhumans: NumberhumanData[]): string {
+function createCollectionMessage(user: User, page: number, numberhumans: NumberhumanData[], chunk: number): string {
   const header = `# Numberhuman collection for ${user.displayName} (${user.username})`;
 
   const body = numberhumans.map(value => {
@@ -24,7 +24,7 @@ function createCollectionMessage(user: User, page: number, numberhumans: Numberh
     }"${humanInStore.name}" (HP: ${totalHP}, ATK: ${totalAtk})`;
   });
 
-  return `${header}\n\n${body.slice((page - 1) * 10, page * 10).join("\n")}`;
+  return `${header}\n\n${body.slice((page - 1) * chunk, page * chunk).join("\n")}`;
 }
 
 export default async function numberdexShowHumans(
@@ -56,7 +56,7 @@ export default async function numberdexShowHumans(
   const paginatedContent = new PaginatedMessage();
 
   for (let i = 0; i < realNumbers.length; i += numberhumanChunk) {
-    paginatedContent.addPageContent(createCollectionMessage(user, Math.floor(i / numberhumanChunk) + 1, realNumbers))
+    paginatedContent.addPageContent(createCollectionMessage(user, Math.floor(i / numberhumanChunk) + 1, realNumbers, numberhumanChunk))
   }
 
   paginatedContent.run(interaction);
