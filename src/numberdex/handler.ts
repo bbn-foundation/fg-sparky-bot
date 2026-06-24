@@ -47,7 +47,7 @@ export function setupCallback(
 
         collector.on("collect", async (message: Message) => {
           if (message.author.bot) return;
-          if (collector.collected.size >= getRandomInt(5, 15)) {
+          if (collector.collected.size >= getRandomInt(10, 25)) {
             await message.reply(`Too many requests in 5 minutes. Try again later.`);
             collector.stop();
             return;
