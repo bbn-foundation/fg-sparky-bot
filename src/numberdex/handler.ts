@@ -58,6 +58,7 @@ export function setupCallback(
           componentType: ComponentType.Button,
           time: NUMBERDEX_FLEE_DELAY,
         });
+        let caught = false;
 
         collector.on("collect", async (interaction) => {
           Logger.debug(`User ${interaction.user.displayName} clicked the button`);
@@ -78,13 +79,18 @@ export function setupCallback(
             const guess = submission.fields.getTextInputValue(
               `numberhuman-guess-input-${submission.channelId}`,
             );
+            if (caught) {
+              await submission.reply(`oops someone stole the numberhuman from you ${userMention(submission.user.id)} sorry`);
+              return;
+            }
             if (
               handlePlayerGuess(guess, { number: okNumber.name, hashedNumber: okNumber.hashedName })
             ) {
+              caught = true;
+              collector.stop();
               await sentMessage.edit({
                 components: [createButtonRow(true)],
               });
-              collector.stop("caught");
               await updateUserStats(submission as ModalSubmitInteraction<"raw" | "cached">, okNumber, guess);
             } else {
               const failMessage = Responses.getRandom({
@@ -101,7 +107,7 @@ export function setupCallback(
         });
 
         collector.once("end", async (_, reason) => {
-          if (reason === "caught") return;
+          if (caught) return;
           Logger.info("user failed to catch in time");
 
           const content = Responses.getRandom({
