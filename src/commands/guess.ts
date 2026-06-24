@@ -63,7 +63,7 @@ const Guess: Command = {
     });
 
     Logger.debug("setting up timeout");
-    handleResponse(client, interaction, unwrappedEntry);
+    handleResponse(interaction, unwrappedEntry);
   },
   description: "Generates a number that you have to guess.",
   name: "guess",

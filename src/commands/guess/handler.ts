@@ -15,7 +15,6 @@ import {
   type Client,
   Collection,
   type Message,
-  type OmitPartialGroupDMChannel,
 } from "discord.js";
 import handleSpecialGuess from "./special-handler.ts";
 import { updateUserStats } from "./update-stats.ts";
@@ -25,8 +24,7 @@ const streakTracker = new Collection<string, string>();
 const handlePlayerGuess = createGuessHandler("sha512");
 
 export function handleResponse(
-  client: Client,
-  interaction: ChatInputCommandInteraction,
+  interaction: ChatInputCommandInteraction<"raw" | "cached">,
   number: StoredNumberInfo,
 ): void {
   const streakCollection = (() => {
@@ -37,17 +35,21 @@ export function handleResponse(
     return streakCollectionCollection.get(interaction.channelId)!;
   })();
 
-  const handler = async (message: OmitPartialGroupDMChannel<Message>) => {
-    if (message.channelId !== interaction.channelId || message.author.bot) return;
+  // fg sparky can only be run in text channels
+  const collector = interaction.channel!.createMessageCollector({
+    time: number.difficulty === "legendary" ? 60000 : 40000,
+  });
 
-    const user = await getUser(message.author.id, message.guildId!);
+  collector.on("collect", async (message: Message) => {
+    if (message.author.bot || !message.inGuild()) return;
+
+    const user = await getUser(message.author.id, message.guildId);
 
     if (await handleSpecialGuess(message, number, user, "pre-parse")) {
       return;
     }
     if (handlePlayerGuess(message.content, number)) {
-      clearTimeout(timeout);
-      client.off("messageCreate", handler);
+      collector.stop("success");
       GuessCooldowns.set(interaction.channelId, false);
 
       const previousPerson = streakTracker.get(interaction.channelId);
@@ -58,23 +60,18 @@ export function handleResponse(
 
       await updateUserStats(message, user, streakCollection, number, message.content);
     }
-  };
+  });
 
-  const timeout = setTimeout(
-    async () => {
-      Logger.info("user failed to guess in time");
-      client.off("messageCreate", handler);
-      GuessCooldowns.set(interaction.channelId, false);
-      await streakCollection.clear();
+  collector.once("end", async (_, reason) => {
+    if (reason === "success") return;
+    Logger.info("user failed to guess in time");
+    GuessCooldowns.set(interaction.channelId, false);
+    await streakCollection.clear();
 
-      const content = `no one guessed in time${number.number ? `, the correct answer was ${number.number}.` : "."}`;
-      await interaction.followUp({
-        content,
-        allowedMentions: { repliedUser: false },
-      });
-    },
-    number.difficulty === "legendary" ? 60000 : 40000,
-  );
-
-  client.on("messageCreate", handler);
+    const content = `no one guessed in time${number.number ? `, the correct answer was ${number.number}.` : "."}`;
+    await interaction.followUp({
+      content,
+      allowedMentions: { repliedUser: false },
+    });
+  });
 }

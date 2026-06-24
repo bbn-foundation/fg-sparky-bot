@@ -8,12 +8,12 @@ import { Achievements } from "#stores";
 import { ACHIEVEMENT_EVENT } from "#stores-types";
 
 function successMessage(args: {
-  tokens: number;
+  tokens: [number | undefined, number];
   number: StoredNumberInfo;
   streak?: number | undefined;
   achs: string[]
 }): string {
-  const tokenGain = `you've earned ${args.tokens} <:terminusfinity:1444859277515690075>!`;
+  const tokenGain = `you've earned ${args.tokens[1]} <:terminusfinity:1444859277515690075>${args.tokens[0] ? ` and you now have ${args.tokens[0]} <:terminusfinity:1444859277515690075>!` : ", and a user profile has been created for you."}`;
   const header = args.number.uuid === "dd35acbf-4c92-4710-b4ed-7d6f9d4beca5"
     ? `perhaps a jet 2 holiday may interest you?\nhey, you guessed correctly! nice job!`
     : `hey, you guessed correctly! nice job!`;
@@ -66,7 +66,7 @@ export async function updateUserStats(
   }
 
   await message.reply(successMessage({
-    tokens: gain,
+    tokens: [user?.tokens, gain],
     number: number,
     achs: achs ?? [],
     streak: currentStreak,
