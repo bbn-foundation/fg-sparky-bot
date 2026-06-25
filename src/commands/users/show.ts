@@ -11,6 +11,25 @@ const slashCommandMention = chatInputApplicationCommandMention(
   process.env.NODE_ENV === "development" ? "1469819026602590221" : "1452067362458308820",
 );
 
+function showLatestGuessed(latestGuessed: string | undefined, latestUniqueGuessed: string | undefined): string {
+  if (latestGuessed && latestUniqueGuessed) {
+    const latest = Numbers.get(latestGuessed).expect("the store should have the entry");
+    const latestUnique = Numbers.get(latestUniqueGuessed).expect("the store should have the entry");
+
+    return `Your latest number guessed was ${latest.name ?? "a legendary, which cannot be shown as those names are not stored"}, while your latest unique entry was ${latestUnique.name ?? "a legendary, which cannot be shown as those names are not stored."}.`;
+  }
+
+  return "You have not played FG sparky yet."
+}
+
+function showLatestCaught(latestCaught: NumberhumanData | undefined, latestUniqueCaught: NumberhumanData | undefined): string {
+  if (latestCaught && latestUniqueCaught) {
+    return `Your latest numberhuman caught was a ${formatHuman(latestCaught, Numberhumans)}, while your latest unique catch was a ${formatHuman(latestUniqueCaught, Numberhumans)}`;
+  }
+
+  return "You have not played NumberDex yet.";
+}
+
 export default async function userShow(
   _: Client,
   interaction: ServerSlashCommandInteraction,
@@ -80,6 +99,7 @@ export default async function userShow(
       `In total, you have guessed ${bold(guessedEntries.length.toString())
       } entries correctly. Out of those, ${uniqueGuessed.length.toString()} were a unique entry within the number store, meaning you are ${formatPercent(percentage.all)
       } of the way to completing FG sparky.`,
+      showLatestGuessed(guessedEntries.at(-1), uniqueGuessed.at(-1)),
       `### Numbers guessed by difficulty:`,
       `- Easy numbers: ${Numbers.countEntriesTotal("easy", guessedEntries).toString()} (total), ${Numbers.countEntriesUnique("easy", uniqueGuessed).toString()
       } (unique) [${formatPercent(percentage.easy)}]`,
@@ -96,6 +116,15 @@ export default async function userShow(
       - (a.totalHP(Numberhumans) + a.totalAtk(Numberhumans))
     )[0];
 
+    const uniqueNumberhumanIds: string[] = [];
+    const numberhumansUnique = numberhumans.filter(item => {
+      if (uniqueNumberhumanIds.includes(item.id)) return false;
+      else {
+        uniqueNumberhumanIds.push(item.id);
+        return true;
+      }
+    })
+
     message.addPageContent([
       `# Profile information for ${discordUser.displayName} (${discordUser.username})`,
       "## Numberdex stats:",
@@ -108,6 +137,7 @@ export default async function userShow(
       } of them were caught before v0.14.0, the update that added stats to numberhumans.`,
       `- ${numberhumans.filter(value => value.evolution !== EvolutionType.None).length} had an evolution.`,
       `- ${bestHuman ? `Your best numberhuman is catch #${bestHuman.catchId}, a ${formatHuman(bestHuman, Numberhumans)}` : `You have not caught a numberhuman yet, to determine the best one you have.`}`,
+      `- ${showLatestCaught(numberhumans.at(-1), numberhumansUnique.at(-1))}`,
       `View your numberhuman collection with ${slashCommandMention}.`,
     ].join("\n"));
 
