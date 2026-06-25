@@ -43,7 +43,7 @@ interface NumberhumanCreationOptions {
   bonusATK: number;
 }
 
-const EvolutionRarity: [EvolutionType, number][] = [
+export const EvolutionRarity: [EvolutionType, number][] = [
   [EvolutionType.Improper, 10000],
   [EvolutionType.Reverent, 1000],
   [EvolutionType.Absolute, 500],
