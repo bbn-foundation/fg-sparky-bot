@@ -66,7 +66,7 @@ export function setupCallback(
           ) {
             collector.stop("success");
             await sentMessage.edit({
-              content: sentMessage.content + `\n-# ✅ This message has been caught by ${userMention(message.author.id)}.`
+              content: sentMessage.content + `\n-# ✅ This numberhuman has been caught by ${userMention(message.author.id)}.`
             })
             await updateUserStats(message as Message<true>, okNumber);
           } else {
