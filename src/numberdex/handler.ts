@@ -65,7 +65,7 @@ export function setupCallback(
             handlePlayerGuess(message.content, { number: okNumber.name, hashedNumber: okNumber.hashedName })
           ) {
             collector.stop("success");
-            await sentMessage.reply({
+            await sentMessage.edit({
               content: sentMessage.content + `\n-# ✅ This message has been caught by ${userMention(message.author.id)}.`
             })
             await updateUserStats(message as Message<true>, okNumber);
