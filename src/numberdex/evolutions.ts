@@ -1,5 +1,6 @@
 export enum EvolutionType {
   None = "none",
+  Improper = "improper",
   Superscaled = "superscaled",
   Mastered = "mastered",
   Endfimidian = "endfimidian",
@@ -16,6 +17,7 @@ export enum EvolutionType {
 
 export const EvolutionMap: Record<EvolutionType, [number, number]> = {
   [EvolutionType.None]: [1, 1],
+  [EvolutionType.Improper]: [0.5, 0.5],
   [EvolutionType.Superscaled]: [1.5, 1.5],
   [EvolutionType.Mastered]: [2, 2],
   [EvolutionType.Endfimidian]: [2.5, 1.5],
@@ -44,6 +46,7 @@ export const EvolutionIntegerMap: Record<EvolutionType, number> = {
   [EvolutionType.Corrupt]: 11,
   [EvolutionType.Absolute]: 12,
   [EvolutionType.Reverent]: 13,
+  [EvolutionType.Improper]: 14,
 };
 
 export function getEvolutionBuff(

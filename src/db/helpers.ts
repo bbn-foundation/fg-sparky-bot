@@ -44,6 +44,7 @@ interface NumberhumanCreationOptions {
 }
 
 const EvolutionRarity: [EvolutionType, number][] = [
+  [EvolutionType.Improper, 10000],
   [EvolutionType.Reverent, 1000],
   [EvolutionType.Absolute, 500],
   [EvolutionType.Corrupt, 400],
