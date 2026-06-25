@@ -43,6 +43,9 @@ export function setupCallback(
             correctHuman: okNumber.name,
           }).unwrapOr(`the numberhuman fled.`);
           try {
+            await sentMessage.edit({
+              content: sentMessage.content + '\n-# ❌ This numberhuman has despawned before you could catch it.',
+            });
             await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
           } catch (err) {
             if (!Error.isError(err)) throw err;
@@ -62,6 +65,9 @@ export function setupCallback(
             handlePlayerGuess(message.content, { number: okNumber.name, hashedNumber: okNumber.hashedName })
           ) {
             collector.stop("success");
+            await sentMessage.reply({
+              content: sentMessage.content + `\n-# ✅ This message has been caught by ${userMention(message.author.id)}.`
+            })
             await updateUserStats(message as Message<true>, okNumber);
           } else {
             const failMessage = Responses.getRandom({
