@@ -114,6 +114,25 @@ const Numberdex: Command = {
         await numberdexLevelUp(interaction);
         return;
       }
+      case "channels": {
+        if (interaction.user.id !== "1051147056481308744") {
+          await interaction.reply({
+            content: "This command can only be used in the stratosphere.",
+            flags: MessageFlags.Ephemeral,
+          });
+          return;
+        }
+        const cronJobs = NumberdexBaker.getJobNames();
+        const channels = cronJobs.filter(id => id.match(/^numberdex-channel-[0-9]+/gi)).map(id => id.slice(id.lastIndexOf("-") + 1));
+        await interaction.reply({
+          content: [
+            `# List of numberdex channels:`,
+            channels.map(id => `<#${id}>`).join("\n"),
+          ].join("\n"),
+          flags: MessageFlags.Ephemeral,
+        });
+        return;
+      }
       default: {
         Logger.warning(`[/numberdex] user tried invoking an invalid subcommand`);
         await interaction.reply({
@@ -234,6 +253,11 @@ const Numberdex: Command = {
         },
       ],
     },
+    {
+      name: "channels",
+      description: "List channels that have numberdex setup (owner-only)",
+      type: ApplicationCommandOptionType.Subcommand,
+    }
   ],
 };
 
