@@ -7,6 +7,7 @@ import { ordinalOf } from "#utils/numbers.ts";
 import type { ServerSlashCommandInteraction } from "#utils/types.ts";
 import { PaginatedMessage } from "@sapphire/discord.js-utilities";
 import { italic, type Client, type User as DiscordUser } from "discord.js";
+import { getGlobalProfilesByType, getProfilesByType } from "./get-profiles.ts";
 
 export enum LeaderboardDisplayType {
   Tokens = "tokens",
@@ -18,84 +19,13 @@ export enum LeaderboardDisplayType {
   HighestStreak = "highest-streak",
 }
 
-async function getProfilesByType(
-  leaderboardType: LeaderboardDisplayType,
-  guildId: string,
-): Promise<NumberhumanData[] | UserProfile[]> {
-  switch (leaderboardType) {
-    case LeaderboardDisplayType.Tokens: {
-      return await UserProfile.find({
-        order: { tokens: "DESC" },
-        select: { id: true, tokens: true },
-        where: { guildId },
-      });
-    }
-    case LeaderboardDisplayType.TotalEntries: {
-      const profiles = await UserProfile.find({
-        select: { id: true, guessedEntries: true },
-        where: { guildId },
-      });
-      return profiles
-        .toSorted((a, b) => b.guessedEntries.length - a.guessedEntries.length);
-    }
-    case LeaderboardDisplayType.UniqueEntries: {
-      const profiles = await UserProfile.find({
-        select: { id: true, uniqueGuessed: true },
-        where: { guildId },
-      });
-      return profiles
-        .toSorted((a, b) => b.uniqueGuessed.length - a.uniqueGuessed.length);
-    }
-
-    case LeaderboardDisplayType.TotalNumberhumans: {
-      const profiles = await UserProfile.find({
-        select: { id: true, numberhumansGuessed: true },
-        where: { guildId },
-      });
-
-      return profiles.toSorted((a, b) => b.numberhumansGuessed.length - a.numberhumansGuessed.length);
-    }
-    case LeaderboardDisplayType.UniqueNumberhumans: {
-      const profiles = await UserProfile.find({
-        select: { id: true, numberhumansGuessedUnique: true },
-        where: { guildId },
-      });
-
-      return profiles.toSorted((a, b) => b.numberhumansGuessedUnique.length - a.numberhumansGuessedUnique.length);
-    }
-    case LeaderboardDisplayType.BestNumberhuman: {
-      const numberhumans = await NumberhumanData.find({
-        where: {
-          caughtBy: {
-            guildId,
-          },
-        },
-        relations: {
-          caughtBy: true,
-        },
-      });
-      return numberhumans.toSorted((a, b) =>
-        (b.totalHP(Numberhumans) + b.totalAtk(Numberhumans))
-        - (a.totalHP(Numberhumans) + a.totalAtk(Numberhumans))
-      ).filter((value, index, array) => array.findIndex(v => v.caughtBy!.id === value.caughtBy!.id) === index);
-    }
-
-    case LeaderboardDisplayType.HighestStreak: {
-      return await UserProfile.find({
-        order: { bestStreak: "DESC" },
-        select: { id: true, bestStreak: true },
-        where: { guildId },
-      });
-    }
-  }
-}
-
 export async function userLeaderboardDisplay(
   client: Client,
   interaction: ServerSlashCommandInteraction,
 ): Promise<void> {
   await interaction.deferReply();
 
+  const global = interaction.options.getBoolean("global") ?? false;
   const leaderboardChunk = 15;
   // oxlint-disable-next-line no-unsafe-type-assertion: guarantened to be one of the types because of the discord api
   const leaderboardType = interaction.options.getString("type", true) as LeaderboardDisplayType;
@@ -105,42 +35,46 @@ export async function userLeaderboardDisplay(
   // Only take displayAmount from db to avoid fetching too many people and
   // getting rate-limited by discord
   console.time("/user-leaderboard: fetch user data from db");
-  const users = await getProfilesByType(leaderboardType, interaction.guildId);
+  const users = (global
+    ? await getGlobalProfilesByType(leaderboardType)
+    : await getProfilesByType(leaderboardType, interaction.guildId)
+  );
   console.timeEnd("/user-leaderboard: fetch user data from db");
 
   console.time("/user-leaderboard: fetch user data from discord");
   const discordUsers: DiscordUser[] = await Promise.all(
-    users.map(async (profile) =>
+    users.map((profile) =>
       profile instanceof NumberhumanData
-        ? await client.users.fetch(profile.caughtBy!.id)
-        : await client.users.fetch(profile.id)
+        ? client.users.fetch(profile.caughtBy!.id)
+        : client.users.fetch(profile.id)
     ),
   );
   console.timeEnd("/user-leaderboard: fetch user data from discord");
 
   Logger.debug("/user-leaderboard: generating user reply...");
   const leaderboardHeader = (() => {
+    const globalIndicator = global ? "[global]" : "[server]";
     switch (leaderboardType) {
       case LeaderboardDisplayType.Tokens: {
-        return "Terminus Tokens";
+        return `Terminus Tokens ${globalIndicator}`;
       }
       case LeaderboardDisplayType.TotalEntries: {
-        return "total entries";
+        return `total entries ${globalIndicator}`;
       }
       case LeaderboardDisplayType.UniqueEntries: {
-        return "unique entries";
+        return `unique entries ${globalIndicator}`;
       }
       case LeaderboardDisplayType.TotalNumberhumans: {
-        return "total numberhuman catches";
+        return `total numberhuman catches ${globalIndicator}`;
       }
       case LeaderboardDisplayType.UniqueNumberhumans: {
-        return "unique numberhuman catches";
+        return `unique numberhuman catches ${globalIndicator}`;
       }
       case LeaderboardDisplayType.BestNumberhuman: {
-        return "best numberhuman (by HP + ATK)";
+        return `best numberhuman (by HP + ATK) ${globalIndicator}`;
       }
       case LeaderboardDisplayType.HighestStreak: {
-        return "highest streaks";
+        return `highest streaks ${globalIndicator}`;
       }
     }
   })();

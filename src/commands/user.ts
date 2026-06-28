@@ -72,6 +72,11 @@ const User: Command = {
             { name: "highest-streaks", value: LeaderboardDisplayType.HighestStreak },
           ],
         },
+        {
+          name: "global",
+          description: "Show user information across all servers, not just this one",
+          type: ApplicationCommandOptionType.Boolean,
+        }
       ],
     },
     {
