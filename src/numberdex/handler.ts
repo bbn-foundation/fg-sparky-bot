@@ -114,8 +114,14 @@ export function setupCallback(
             type: "flee",
             correctHuman: okNumber.name,
           }).unwrapOr(`the numberhuman fled.`);
-          await sentMessage.edit({ components: [createButtonRow(true)] });
-          await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
+          try {
+            await sentMessage.edit({ components: [createButtonRow(true)] });
+            await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
+          } catch (err) {
+            if (!Error.isError(err)) throw err;
+            Logger.error(`failed to edit/reply to spawn message:`);
+            Logger.error(err);
+          }
         });
       } else {
         const error = number.unwrapErr();
