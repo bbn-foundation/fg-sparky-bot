@@ -26,7 +26,11 @@ export async function setupCronJobs(
     if (/numberdex-channel-[0-9]+/.test(name)) {
       try {
         const channel = await client.channels.fetch(name.slice(name.lastIndexOf("-") + 1));
-        if (!channel || !channel.isSendable()) return;
+        if (!channel || !channel.isSendable()) {
+          Logger.error(`invalid numberdex channel for job ${name}, removing`);
+          job.destroy();
+          return;
+        }
         return setupCallback(store, job, channel);
       } catch {
         Logger.error(`failed to setup cron job: %s, removing job`, name);
