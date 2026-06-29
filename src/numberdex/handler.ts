@@ -56,11 +56,6 @@ export function setupCallback(
 
         collector.on("collect", async (message: Message) => {
           if (message.author.bot) return;
-          if (collector.collected.size >= getRandomInt(10, 25)) {
-            await message.reply(`Too many requests in 5 minutes. Try again later.`);
-            collector.stop();
-            return;
-          }
           if (
             handlePlayerGuess(message.content, { number: okNumber.name, hashedNumber: okNumber.hashedName })
           ) {
@@ -78,6 +73,11 @@ export function setupCallback(
             }).unwrapOr(
               `yeah, i wished it was **${message.content}**, ${userMention(message.author.id)}.`,
             );
+            if (collector.collected.size >= getRandomInt(10, 25)) {
+              await message.reply(`Too many requests in 5 minutes. Try again later.`);
+              collector.stop();
+              return;
+            }
             try {
               await message.reply(failMessage);
             } catch (error) {
