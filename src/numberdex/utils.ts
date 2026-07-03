@@ -18,6 +18,21 @@ import {
   type SendableChannels,
 } from "discord.js";
 
+export function createButtonRow(
+  disabled?: boolean,
+): ActionRowBuilder<ButtonBuilder> {
+  const button = ButtonBuilder.from({
+    // @ts-expect-error THERE SHALL BE NO URL
+    customId: "numberhuman-catch-button",
+    label: "Catch",
+    style: ButtonStyle.Primary,
+    type: ComponentType.Button,
+    disabled,
+  });
+
+  return new ActionRowBuilder<ButtonBuilder>().addComponents(button);
+}
+
 export async function spawnNumberhuman(
   store: NumberhumanStore,
   channel: SendableChannels,
@@ -32,14 +47,26 @@ export async function spawnNumberhuman(
         .setName(okHuman.image.slice(okHuman.image.lastIndexOf("/") + 1))
         .setDescription("The numberhuman you have to guess")
         .setSpoiler(okHuman.isSpoilered ?? false);
-      return Result.ok([
-        okHuman,
-        // oxlint-disable-next-line no-await-in-loop: still not a loop
-        await channel.send({
-          content: randomSpawnMessage,
-          files: [image],
-        }),
-      ]);
+      if (Deno.env.get("NUMBERDEX_BUTTON")) {
+        return Result.ok([
+          okHuman,
+          // oxlint-disable-next-line no-await-in-loop: still not a loop
+          await channel.send({
+            content: randomSpawnMessage,
+            files: [image],
+            components: [createButtonRow()],
+          }),
+        ]);
+      } else {
+        return Result.ok([
+          okHuman,
+          // oxlint-disable-next-line no-await-in-loop: still not a loop
+          await channel.send({
+            content: randomSpawnMessage,
+            files: [image],
+          }),
+        ]);
+      }
     }
     return Result.err(new ReferenceError("no numberhuman was found"));
   } catch (err) {

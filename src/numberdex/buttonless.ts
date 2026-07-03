@@ -1,14 +1,78 @@
-import { createNumberhuman, createUser, getUser } from "#db";
-
+import { createNumberhuman, getUser, createUser } from "#db";
 import { Responses } from "#stores";
 import type { NumberhumanInfo } from "#stores-types";
-import { formatPercent, joinStringArray } from "#utils/formatter.ts";
+import { NUMBERDEX_FLEE_DELAY } from "#utils/constants.ts";
+import{ joinStringArray, formatPercent } from "#utils/formatter.ts";
+import { getRandomInt, getRandomRange } from "#utils/numbers.ts";
+import { Message, userMention, italic, bold } from "discord.js";
 import { Logger } from "#utils/logger.ts";
-import { getRandomRange } from "#utils/numbers.ts";
-import { bold, italic, Message, userMention } from "discord.js";
 import { EvolutionType, getEvolutionBuff } from "./evolutions.ts";
+import { createGuessHandler } from "#utils/guess-handler.ts";
 
-export async function updateUserStats(
+const handlePlayerGuess = createGuessHandler("blake2b512");
+
+export function messageHandler(okNumber: NumberhumanInfo, sentMessage: Message) {
+  const collector = sentMessage.channel.createMessageCollector({
+    dispose: true,
+    time: NUMBERDEX_FLEE_DELAY - 1,
+  });
+
+  collector.once("end", async (_, reason: string) => {
+    if (reason === "success") return;
+    Logger.info("user failed to catch in time");
+    collector.stop();
+
+    const content = Responses.getRandom({
+      type: "flee",
+      correctHuman: okNumber.name,
+    }).unwrapOr(`the numberhuman fled.`);
+    try {
+      await sentMessage.edit({
+        content: sentMessage.content + '\n-# ❌ This numberhuman has despawned before you could catch it.',
+      });
+      await sentMessage.reply({ content, allowedMentions: { repliedUser: false } });
+    } catch (err) {
+      if (!Error.isError(err)) throw err;
+      Logger.error(`failed to edit/reply to spawn message:`);
+      Logger.error(err);
+    }
+  });
+
+  collector.on("collect", async (message: Message) => {
+    if (message.author.bot) return;
+    if (
+      handlePlayerGuess(message.content, { number: okNumber.name, hashedNumber: okNumber.hashedName })
+    ) {
+      collector.stop("success");
+      await sentMessage.edit({
+        content: sentMessage.content + `\n-# ✅ This numberhuman has been caught by ${userMention(message.author.id)}.`
+      })
+      await updateUserStats(message as Message<true>, okNumber);
+    } else {
+      const failMessage = Responses.getRandom({
+        type: "fail",
+        correctHuman: okNumber.name,
+        guessedHuman: message.content,
+        mentionId: message.author.id,
+      }).unwrapOr(
+        `yeah, i wished it was **${message.content}**, ${userMention(message.author.id)}.`,
+      );
+      if (collector.collected.size >= getRandomInt(10, 25)) {
+        await message.reply(`Too many requests in 5 minutes. Try again later.`);
+        collector.stop();
+        return;
+      }
+      try {
+        await message.reply(failMessage);
+      } catch (error) {
+        if (!Error.isError(error)) throw error;
+        return;
+      }
+    }
+  });
+}
+
+async function updateUserStats(
   message: Message<true>,
   number: NumberhumanInfo,
 ): Promise<void> {
