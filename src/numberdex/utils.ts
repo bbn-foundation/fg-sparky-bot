@@ -47,15 +47,26 @@ export async function spawnNumberhuman(
         .setName(okHuman.image.slice(okHuman.image.lastIndexOf("/") + 1))
         .setDescription("The numberhuman you have to guess")
         .setSpoiler(okHuman.isSpoilered ?? false);
-      return Result.ok([
-        okHuman,
-        // oxlint-disable-next-line no-await-in-loop: still not a loop
-        await channel.send({
-          content: randomSpawnMessage,
-          files: [image],
-          components: [createButtonRow()],
-        }),
-      ]);
+      if (Deno.env.get("NUMBERDEX_BUTTON")) {
+        return Result.ok([
+          okHuman,
+          // oxlint-disable-next-line no-await-in-loop: still not a loop
+          await channel.send({
+            content: randomSpawnMessage,
+            files: [image],
+            components: [createButtonRow()],
+          }),
+        ]);
+      } else {
+        return Result.ok([
+          okHuman,
+          // oxlint-disable-next-line no-await-in-loop: still not a loop
+          await channel.send({
+            content: randomSpawnMessage,
+            files: [image],
+          }),
+        ]);
+      }
     }
     return Result.err(new ReferenceError("no numberhuman was found"));
   } catch (err) {
